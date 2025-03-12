@@ -1,0 +1,8 @@
+2025-03-12 17:52:48,975 | INFO | Config | Modo de execução: DEBUG
+2025-03-12 17:52:48,976 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
+2025-03-12 17:52:48,977 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
+2025-03-12 17:52:49,354 | INFO | Config | Modo de execução: DEBUG
+2025-03-12 17:52:49,354 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
+2025-03-12 17:52:49,358 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
+2025-03-12 17:52:53,782 | INFO | route log | Página principal acessada.
+2025-03-12 17:52:58,825 | INFO | route log | Requisição GET para listar produtos.
