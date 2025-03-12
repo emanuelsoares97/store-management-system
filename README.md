@@ -34,6 +34,7 @@ Este projeto acompanha minha evolução no **Flask**, aplicando conceitos avanç
   ├── app.py           # Ponto de entrada da aplicação Flask
   ├── config.py        # Configurações globais do projeto
   ├── routes.py        # Definição das rotas da API
+  ├── requirements.txt # dependencias
   ├── README.md        # Documentação do projeto
 ```
 
