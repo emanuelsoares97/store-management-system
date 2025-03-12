@@ -12,6 +12,7 @@ LoggerCarregar = get_logger("Carregar Lista")
 
 def carregar_lista():
     """Carrega a lista de produtos de um arquivo JSON."""
+    LoggerCarregar.debug(f"Tentando carregar dados do arquivo: {ARQUIVO_JSON}")
     if not os.path.exists(ARQUIVO_JSON):  
         LoggerCarregar.warning(f"Arquivo '{ARQUIVO_JSON}' não encontrado. Criando uma nova lista.")
         return []
