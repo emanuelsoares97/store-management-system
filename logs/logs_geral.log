@@ -1,0 +1,829 @@
+2025-03-11 12:40:52,766 | ERROR | Carregar Lista | Erro ao tentar carregar [Errno 2] No such file or directory: './listaprodutos/listaprodutos.json', lista vai ser criada.
+2025-03-11 12:46:03,684 | ERROR | Carregar Lista | Erro ao tentar carregar [Errno 2] No such file or directory: 'listaprodutos.json', lista vai ser criada.
+2025-03-11 13:46:05,553 | WARNING | Carregar Lista | Arquivo 'c:\Users\tutas\Documents\Estudo Dweb\POO\listaprodutos\listaprodutos.json' não encontrado. Criando uma nova lista.
+2025-03-11 13:51:37,003 | WARNING | Carregar Lista | Arquivo 'C:\Users\tutas\Documents\Estudo Dweb\POO\listaprodutos\listaprodutos.json' não encontrado. Criando uma nova lista.
+2025-03-11 13:52:18,706 | WARNING | Carregar Lista | Arquivo 'C:\Users\tutas\Documents\Estudo Dweb\POO\listaprodutos\listaprodutos.json' não encontrado. Criando uma nova lista.
+2025-03-11 14:03:03,533 | WARNING | Carregar Lista | Arquivo 'C:\Users\tutas\Documents\Estudo Dweb\POO\listaprodutos\listaprodutos.json' não encontrado. Criando uma nova lista.
+2025-03-11 14:03:13,262 | WARNING | Carregar Lista | Arquivo 'C:\Users\tutas\Documents\Estudo Dweb\POO\listaprodutos\listaprodutos.json' não encontrado. Criando uma nova lista.
+2025-03-11 14:03:31,297 | WARNING | Carregar Lista | Arquivo 'C:\Users\tutas\Documents\Estudo Dweb\POO\listaprodutos\listaprodutos.json' não encontrado. Criando uma nova lista.
+2025-03-11 14:03:31,299 | INFO | Produto | Produto convertido para dicionario, banana | 2
+2025-03-11 14:03:31,299 | INFO | Guardar Lista | Lista guardada com sucesso! Total de produtos: 1
+2025-03-11 14:03:41,372 | ERROR | Carregar Lista | Erro inesperado ao carregar lista: type object 'Produto' has no attribute 'logger'
+2025-03-11 14:03:41,373 | INFO | Produto | Produto convertido para dicionario, banana | 2
+2025-03-11 14:03:41,374 | INFO | Guardar Lista | Lista guardada com sucesso! Total de produtos: 1
+2025-03-11 14:04:43,595 | ERROR | Carregar Lista | Erro inesperado ao carregar lista: type object 'Produto' has no attribute 'logger'
+2025-03-11 14:04:43,595 | WARNING | Guardar Lista | Lista está vazia, nada foi guardado.
+2025-03-11 14:05:00,653 | ERROR | Carregar Lista | Erro inesperado ao carregar lista: type object 'Produto' has no attribute 'logger'
+2025-03-11 14:05:00,653 | WARNING | Guardar Lista | Lista está vazia, nada foi guardado.
+2025-03-11 14:06:09,307 | ERROR | Carregar Lista | Erro inesperado ao carregar lista: type object 'Produto' has no attribute 'logger'
+2025-03-11 14:06:09,308 | WARNING | Guardar Lista | Lista está vazia, nada foi guardado.
+2025-03-11 14:08:30,575 | ERROR | Carregar Lista | Erro inesperado ao carregar lista: type object 'Produto' has no attribute 'logger'
+2025-03-11 14:08:30,575 | WARNING | Guardar Lista | Lista está vazia, nada foi guardado.
+2025-03-11 14:52:26,575 | ERROR | Carregar Lista | Erro inesperado ao carregar lista: type object 'Produto' has no attribute 'logger'
+2025-03-11 14:52:26,576 | INFO | Produto | Produto convertido para dicionario, maça | 3
+2025-03-11 14:52:26,577 | INFO | Guardar Lista | Lista guardada com sucesso! Total de produtos: 1
+2025-03-11 14:52:52,322 | ERROR | Carregar Lista | Erro inesperado ao carregar lista: type object 'Produto' has no attribute 'logger'
+2025-03-11 14:52:52,322 | INFO | Produto | Produto convertido para dicionario, pera | 3
+2025-03-11 14:52:52,324 | INFO | Guardar Lista | Lista guardada com sucesso! Total de produtos: 1
+2025-03-11 14:53:51,283 | ERROR | Carregar Lista | Erro inesperado ao carregar lista: type object 'Produto' has no attribute 'logger'
+2025-03-11 14:53:51,284 | INFO | Produto | Produto convertido para dicionario, pera | 3
+2025-03-11 14:53:51,284 | INFO | Guardar Lista | Lista guardada com sucesso! Total de produtos: 1
+2025-03-11 14:54:02,402 | ERROR | Carregar Lista | Erro inesperado ao carregar lista: type object 'Produto' has no attribute 'logger'
+2025-03-11 14:54:32,522 | ERROR | Carregar Lista | Erro inesperado ao carregar lista: type object 'Produto' has no attribute 'logger'
+2025-03-11 14:54:55,151 | ERROR | Carregar Lista | Erro inesperado ao carregar lista: type object 'Produto' has no attribute 'logger'
+2025-03-11 14:55:06,800 | ERROR | Carregar Lista | Erro inesperado ao carregar lista: type object 'Produto' has no attribute 'logger'
+2025-03-11 14:55:06,800 | INFO | Produto | Produto convertido para dicionario, banana | 3
+2025-03-11 14:55:06,800 | INFO | Guardar Lista | Lista guardada com sucesso! Total de produtos: 1
+2025-03-11 14:56:58,076 | ERROR | Carregar Lista | Erro inesperado ao carregar lista: type object 'Produto' has no attribute 'logger'
+2025-03-11 14:58:32,567 | ERROR | Carregar Lista | Erro inesperado ao carregar lista: type object 'Produto' has no attribute 'logger'
+2025-03-11 14:58:50,909 | ERROR | Carregar Lista | Erro inesperado ao carregar lista: type object 'Produto' has no attribute 'logger'
+2025-03-11 14:58:50,909 | INFO | Produto | Produto convertido para dicionario, banana | 3
+2025-03-11 14:58:50,911 | INFO | Guardar Lista | Lista guardada com sucesso! Total de produtos: 1
+2025-03-11 14:59:29,281 | ERROR | Carregar Lista | Erro inesperado ao carregar lista: type object 'Produto' has no attribute 'logger'
+2025-03-11 14:59:29,281 | INFO | Produto | Produto convertido para dicionario, banana | 3
+2025-03-11 14:59:29,282 | INFO | Guardar Lista | Lista guardada com sucesso! Total de produtos: 1
+2025-03-11 15:00:30,935 | ERROR | Carregar Lista | Erro inesperado ao carregar lista: type object 'Produto' has no attribute 'logger'
+2025-03-11 15:00:30,935 | INFO | Produto | Produto convertido para dicionario, banana | 3
+2025-03-11 15:00:30,935 | INFO | Guardar Lista | Lista guardada com sucesso! Total de produtos: 1
+2025-03-11 15:00:30,936 | INFO | Produto | Produto convertido para dicionario, banana | 3
+2025-03-11 15:00:30,936 | INFO | Produto | Produto convertido para dicionario, couve | 6
+2025-03-11 15:00:30,936 | INFO | Guardar Lista | Lista guardada com sucesso! Total de produtos: 2
+2025-03-11 15:00:42,668 | ERROR | Carregar Lista | Erro inesperado ao carregar lista: type object 'Produto' has no attribute 'logger'
+2025-03-11 15:00:42,669 | WARNING | Guardar Lista | Lista está vazia, nada foi guardado.
+2025-03-11 15:00:42,669 | INFO | Produto | Produto convertido para dicionario, couve | 6
+2025-03-11 15:00:42,669 | INFO | Guardar Lista | Lista guardada com sucesso! Total de produtos: 1
+2025-03-11 15:00:52,551 | ERROR | Carregar Lista | Erro inesperado ao carregar lista: type object 'Produto' has no attribute 'logger'
+2025-03-11 15:00:52,551 | WARNING | Guardar Lista | Lista está vazia, nada foi guardado.
+2025-03-11 15:00:57,519 | ERROR | Carregar Lista | Erro inesperado ao carregar lista: type object 'Produto' has no attribute 'logger'
+2025-03-11 15:00:57,519 | WARNING | Guardar Lista | Lista está vazia, nada foi guardado.
+2025-03-11 15:03:20,784 | ERROR | Carregar Lista | Erro inesperado ao carregar lista: type object 'Produto' has no attribute 'logger'
+2025-03-11 15:03:27,866 | ERROR | Carregar Lista | Erro inesperado ao carregar lista: type object 'Produto' has no attribute 'logger'
+2025-03-11 15:04:53,427 | ERROR | Carregar Lista | Erro inesperado ao carregar lista: type object 'Produto' has no attribute 'logger'
+2025-03-11 15:05:03,391 | ERROR | Carregar Lista | Erro inesperado ao carregar lista: type object 'Produto' has no attribute 'logger'
+2025-03-11 15:05:43,590 | ERROR | Carregar Lista | Erro inesperado ao carregar lista: type object 'Produto' has no attribute 'logger'
+2025-03-11 15:17:41,114 | INFO | Produto | Produto convertido para dicionario, couve | 6
+2025-03-11 15:17:41,114 | INFO | Guardar Lista | Lista guardada com sucesso! Total de produtos: 1
+2025-03-11 15:18:05,149 | INFO | Produto | Produto convertido para dicionario, couve | 6
+2025-03-11 15:18:05,150 | INFO | Guardar Lista | Lista guardada com sucesso! Total de produtos: 1
+2025-03-11 15:19:12,984 | INFO | Produto | Produto convertido para dicionario, couve | 6
+2025-03-11 15:19:12,984 | INFO | Guardar Lista | Lista guardada com sucesso! Total de produtos: 1
+2025-03-11 15:29:19,447 | ERROR | Carregar Lista | Erro ao decodificar JSON em 'C:\Users\tutas\Documents\Estudo Dweb\POO\listaprodutos\listaprodutos.json'. O arquivo pode estar corrompido.
+2025-03-11 15:29:19,447 | ERROR | Carregar Lista | Erro ao decodificar JSON em 'C:\Users\tutas\Documents\Estudo Dweb\POO\listaprodutos\listaprodutos.json'. O arquivo pode estar corrompido.
+2025-03-11 15:29:23,491 | ERROR | Carregar Lista | Erro ao decodificar JSON em 'C:\Users\tutas\Documents\Estudo Dweb\POO\listaprodutos\listaprodutos.json'. O arquivo pode estar corrompido.
+2025-03-11 15:29:23,492 | ERROR | Carregar Lista | Erro ao decodificar JSON em 'C:\Users\tutas\Documents\Estudo Dweb\POO\listaprodutos\listaprodutos.json'. O arquivo pode estar corrompido.
+2025-03-11 15:45:51,325 | WARNING | Guardar Lista | Lista está vazia, nada foi guardado.
+2025-03-11 15:46:05,602 | WARNING | Guardar Lista | Lista está vazia, nada foi guardado.
+2025-03-11 15:47:04,207 | INFO | ProdutoManager | Antes da remoção: [<classes.produto.Produto object at 0x000001729A02FE30>]
+2025-03-11 15:47:04,207 | INFO | ProdutoManager | Depois da remoção: []
+2025-03-11 15:47:04,207 | WARNING | Guardar Lista | Lista está vazia, nada foi guardado.
+2025-03-11 15:51:30,508 | INFO | ProdutoManager | Antes da remoção: [<classes.produto.Produto object at 0x0000022CBFF93E00>]
+2025-03-11 15:51:30,508 | INFO | ProdutoManager | Depois da remoção: []
+2025-03-11 15:51:30,509 | INFO | Guardar Lista | Lista guardada com sucesso! Total de produtos: 0
+2025-03-11 15:52:58,013 | INFO | Produto | Produto convertido para dicionario, quijo | 44
+2025-03-11 15:52:58,013 | INFO | Guardar Lista | Lista guardada com sucesso! Total de produtos: 1 produtos
+2025-03-11 15:52:58,013 | INFO | Produto | Produto convertido para dicionario, quijo | 44
+2025-03-11 15:52:58,013 | INFO | Produto | Produto convertido para dicionario, qui3jo | 45
+2025-03-11 15:52:58,013 | INFO | Guardar Lista | Lista guardada com sucesso! Total de produtos: 2 produtos
+2025-03-11 15:52:58,013 | INFO | Produto | Produto convertido para dicionario, quijo | 44
+2025-03-11 15:52:58,014 | INFO | Produto | Produto convertido para dicionario, qui3jo | 45
+2025-03-11 15:52:58,014 | INFO | Produto | Produto convertido para dicionario, quij4o | 46
+2025-03-11 15:52:58,014 | INFO | Guardar Lista | Lista guardada com sucesso! Total de produtos: 3 produtos
+2025-03-11 15:52:58,014 | INFO | Produto | Produto convertido para dicionario, quijo | 44
+2025-03-11 15:52:58,014 | INFO | Produto | Produto convertido para dicionario, qui3jo | 45
+2025-03-11 15:52:58,014 | INFO | Produto | Produto convertido para dicionario, quij4o | 46
+2025-03-11 15:52:58,014 | INFO | Produto | Produto convertido para dicionario, quijo5 | 48
+2025-03-11 15:52:58,014 | INFO | Guardar Lista | Lista guardada com sucesso! Total de produtos: 4 produtos
+2025-03-11 15:52:58,014 | INFO | Produto | Produto convertido para dicionario, quijo | 44
+2025-03-11 15:52:58,014 | INFO | Produto | Produto convertido para dicionario, qui3jo | 45
+2025-03-11 15:52:58,016 | INFO | Produto | Produto convertido para dicionario, quij4o | 46
+2025-03-11 15:52:58,016 | INFO | Produto | Produto convertido para dicionario, quijo5 | 48
+2025-03-11 15:52:58,016 | INFO | Produto | Produto convertido para dicionario, quijo4 | 41
+2025-03-11 15:52:58,016 | INFO | Guardar Lista | Lista guardada com sucesso! Total de produtos: 5 produtos
+2025-03-11 15:55:44,403 | INFO | Produto | Produto convertido para dicionario, queijo | 44
+2025-03-11 15:55:44,403 | INFO | Produto | Produto convertido para dicionario, qui3jo | 45
+2025-03-11 15:55:44,403 | INFO | Produto | Produto convertido para dicionario, quij4o | 46
+2025-03-11 15:55:44,403 | INFO | Produto | Produto convertido para dicionario, quijo5 | 48
+2025-03-11 15:55:44,403 | INFO | Produto | Produto convertido para dicionario, quijo4 | 41
+2025-03-11 15:55:44,404 | INFO | Guardar Lista | Lista guardada com sucesso! Total de produtos: 5 produtos
+2025-03-11 16:31:29,684 | INFO | werkzeug | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-11 16:31:29,684 | INFO | werkzeug | [33mPress CTRL+C to quit[0m
+2025-03-11 16:31:29,687 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:31:29,982 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 16:31:29,985 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 16:32:16,179 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:32:16] "GET / HTTP/1.1" 200 -
+2025-03-11 16:32:25,439 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:32:25] "GET / HTTP/1.1" 200 -
+2025-03-11 16:32:25,781 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 16:32:25,837 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:32:26,152 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 16:32:26,155 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 16:32:26,178 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:32:26] "GET / HTTP/1.1" 200 -
+2025-03-11 16:32:30,250 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 16:32:30,299 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:32:30,606 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 16:32:30,609 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 16:33:49,737 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 16:33:49,786 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:34:40,456 | INFO | werkzeug | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-11 16:34:40,456 | INFO | werkzeug | [33mPress CTRL+C to quit[0m
+2025-03-11 16:34:40,457 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:34:40,777 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 16:34:40,780 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 16:34:50,444 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:34:50] "[35m[1mGET /produtos HTTP/1.1[0m" 500 -
+2025-03-11 16:34:50,543 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:34:50] "GET /produtos?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-03-11 16:34:50,565 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:34:50] "GET /produtos?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-03-11 16:34:50,614 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:34:50] "GET /produtos?__debugger__=yes&cmd=resource&f=console.png&s=WHqZpbaRT2tuOCxzBZXj HTTP/1.1" 200 -
+2025-03-11 16:34:50,670 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:34:50] "GET /produtos?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-03-11 16:35:11,960 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:35:11] "GET / HTTP/1.1" 200 -
+2025-03-11 16:35:18,238 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:35:18] "[35m[1mGET /produtos HTTP/1.1[0m" 500 -
+2025-03-11 16:35:18,324 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:35:18] "[36mGET /produtos?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-03-11 16:35:18,361 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:35:18] "[36mGET /produtos?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-03-11 16:35:18,378 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:35:18] "[36mGET /produtos?__debugger__=yes&cmd=resource&f=console.png&s=WHqZpbaRT2tuOCxzBZXj HTTP/1.1[0m" 304 -
+2025-03-11 16:35:42,661 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 16:35:42,715 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:36:02,647 | INFO | werkzeug | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-11 16:36:02,647 | INFO | werkzeug | [33mPress CTRL+C to quit[0m
+2025-03-11 16:36:02,649 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:36:02,966 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 16:36:02,968 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 16:36:03,004 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:36:03] "[35m[1mGET /produtos HTTP/1.1[0m" 500 -
+2025-03-11 16:36:03,116 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:36:03] "[36mGET /produtos?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-03-11 16:36:03,144 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:36:03] "[36mGET /produtos?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-03-11 16:36:03,188 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:36:03] "GET /produtos?__debugger__=yes&cmd=resource&f=console.png&s=z09kF0DUEr6P1iCmAOVH HTTP/1.1" 200 -
+2025-03-11 16:36:03,247 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:36:03] "[36mGET /produtos?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-03-11 16:38:05,767 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\gestãoprodutos\\tratamentolista.py', reloading
+2025-03-11 16:38:05,817 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:38:06,136 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 16:38:06,138 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 16:38:09,212 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\gestãoprodutos\\tratamentolista.py', reloading
+2025-03-11 16:38:09,273 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:38:09,611 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 16:38:09,614 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 16:38:11,671 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\gestãoprodutos\\tratamentolista.py', reloading
+2025-03-11 16:38:11,730 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:38:12,050 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 16:38:12,052 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 16:38:14,107 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\gestãoprodutos\\tratamentolista.py', reloading
+2025-03-11 16:38:14,158 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:38:14,542 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 16:38:14,546 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 16:38:37,337 | INFO | werkzeug | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-11 16:38:37,337 | INFO | werkzeug | [33mPress CTRL+C to quit[0m
+2025-03-11 16:38:37,338 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:38:37,677 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 16:38:37,679 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 16:38:45,693 | ERROR | Carregar Lista | Erro ao decodificar JSON em 'C:\Users\tutas\Documents\Estudo Dweb\POO\listaprodutos\listaprodutos.json'. Criando um novo arquivo limpo.
+2025-03-11 16:38:45,696 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:38:45] "GET /produtos HTTP/1.1" 200 -
+2025-03-11 16:39:17,029 | ERROR | Carregar Lista | Erro ao decodificar JSON em 'C:\Users\tutas\Documents\Estudo Dweb\POO\listaprodutos\listaprodutos.json'. Criando um novo arquivo limpo.
+2025-03-11 16:39:17,032 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:39:17] "GET /produtos HTTP/1.1" 200 -
+2025-03-11 16:39:23,709 | ERROR | Carregar Lista | Erro ao decodificar JSON em 'C:\Users\tutas\Documents\Estudo Dweb\POO\listaprodutos\listaprodutos.json'. Criando um novo arquivo limpo.
+2025-03-11 16:39:23,712 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:39:23] "GET /produtos HTTP/1.1" 200 -
+2025-03-11 16:39:44,646 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\gestãoprodutos\\tratamentolista.py', reloading
+2025-03-11 16:39:44,695 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:39:45,013 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 16:39:45,017 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 16:39:47,725 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:39:47] "GET /produtos HTTP/1.1" 200 -
+2025-03-11 16:40:12,422 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\gestãoprodutos\\tratamentolista.py', reloading
+2025-03-11 16:40:12,482 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:40:12,873 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 16:40:12,876 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 16:40:14,941 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\gestãoprodutos\\tratamentolista.py', reloading
+2025-03-11 16:40:14,988 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:40:15,297 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 16:40:15,299 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 16:40:26,474 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\gestãoprodutos\\tratamentolista.py', reloading
+2025-03-11 16:40:26,554 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:40:26,993 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 16:40:26,996 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 16:41:02,516 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 16:41:02,570 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:41:02,873 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 16:41:02,876 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 16:41:34,365 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 16:41:34,414 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:44:06,788 | INFO | werkzeug | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-11 16:44:06,788 | INFO | werkzeug | [33mPress CTRL+C to quit[0m
+2025-03-11 16:44:06,789 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:44:07,093 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 16:44:07,096 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 16:44:09,537 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:44:09] "GET /produtos HTTP/1.1" 200 -
+2025-03-11 16:44:12,447 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:44:12] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:44:24,374 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 16:44:24,430 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:44:24,748 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 16:44:24,750 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 16:44:26,808 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 16:44:26,856 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:44:27,203 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 16:44:27,207 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 16:44:28,251 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 16:44:28,300 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:44:28,597 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 16:44:28,600 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 16:44:30,654 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 16:44:30,702 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:44:31,001 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 16:44:31,005 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 16:44:35,094 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 16:44:35,143 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:44:35,455 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 16:44:35,458 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 16:44:38,228 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:44:38] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:44:38,522 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 16:44:38,576 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:44:38,897 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 16:44:38,900 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 16:44:38,921 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:44:38] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:44:39,661 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:44:39] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:44:40,390 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:44:40] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:44:40,676 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:44:40] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:44:40,844 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:44:40] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:44:41,009 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:44:41] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:44:41,172 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:44:41] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:44:41,312 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:44:41] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:44:41,457 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:44:41] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:44:41,611 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:44:41] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:44:41,779 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:44:41] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:44:41,932 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:44:41] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:44:42,104 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:44:42] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:44:42,262 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:44:42] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:44:45,863 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:44:45] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:44:49,278 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:44:49] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:44:49,797 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:44:49] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:44:51,614 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:44:51] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:44:51,998 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:44:51] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:44:53,720 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:44:53] "GET /produtos HTTP/1.1" 200 -
+2025-03-11 16:44:55,896 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:44:55] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:47:56,266 | INFO | werkzeug | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-11 16:47:56,266 | INFO | werkzeug | [33mPress CTRL+C to quit[0m
+2025-03-11 16:47:56,267 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:47:56,570 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 16:47:56,573 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 16:48:00,211 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:48:00] "GET /produtos HTTP/1.1" 200 -
+2025-03-11 16:48:01,017 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:48:01] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:48:01,427 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:48:01] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:48:02,428 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:48:02] "GET /produtos HTTP/1.1" 200 -
+2025-03-11 16:48:05,276 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:48:05] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:49:15,740 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 16:49:15,794 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:49:16,102 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 16:49:16,105 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 16:49:18,029 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:18] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:49:18,429 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:18] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:49:19,127 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:19] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:49:19,748 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:19] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:49:20,076 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:20] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:49:20,493 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:20] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:49:21,117 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:21] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:49:21,364 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:21] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:49:21,597 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:21] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:49:21,813 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:21] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:49:22,011 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:22] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:49:22,210 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:22] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:49:22,404 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:22] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:49:22,610 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:22] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:49:22,827 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:22] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:49:23,025 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:23] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:49:23,274 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:23] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:49:23,483 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:23] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:49:26,964 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:26] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:49:27,733 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:27] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:49:35,949 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:35] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:49:36,365 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:36] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:49:36,405 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 16:49:36,485 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:49:36,801 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 16:49:36,805 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 16:49:38,367 | ERROR | applog | Erro: ProdutoManager.adicionar_produto() missing 1 required positional argument: 'preco'
+2025-03-11 16:49:38,371 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:38] "[35m[1mGET /produto HTTP/1.1[0m" 500 -
+2025-03-11 16:49:38,440 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:38] "GET /produto?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-03-11 16:49:38,454 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:38] "GET /produto?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-03-11 16:49:38,499 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:38] "GET /produto?__debugger__=yes&cmd=resource&f=console.png&s=21ErtZDP1GyTM9ldPyjH HTTP/1.1" 200 -
+2025-03-11 16:49:38,557 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:38] "GET /produto?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-03-11 16:49:39,348 | ERROR | applog | Erro: ProdutoManager.adicionar_produto() missing 1 required positional argument: 'preco'
+2025-03-11 16:49:39,351 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:39] "[35m[1mGET /produto HTTP/1.1[0m" 500 -
+2025-03-11 16:49:39,381 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:39] "[36mGET /produto?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-03-11 16:49:39,384 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:39] "[36mGET /produto?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-03-11 16:49:39,457 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:39] "[36mGET /produto?__debugger__=yes&cmd=resource&f=console.png&s=21ErtZDP1GyTM9ldPyjH HTTP/1.1[0m" 304 -
+2025-03-11 16:49:39,508 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:39] "[36mGET /produto?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-03-11 16:49:46,979 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 16:49:47,033 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:49:47,383 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 16:49:47,386 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 16:49:48,437 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 16:49:48,508 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:49:48,892 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 16:49:48,895 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 16:49:48,928 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:48] "[35m[1mGET /produto HTTP/1.1[0m" 500 -
+2025-03-11 16:49:49,009 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:49] "[36mGET /produto?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-03-11 16:49:49,035 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:49] "[36mGET /produto?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-03-11 16:49:49,059 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:49] "GET /produto?__debugger__=yes&cmd=resource&f=console.png&s=BGq8TyZJ6rjQ9nOHcDkX HTTP/1.1" 200 -
+2025-03-11 16:49:49,135 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:49] "[36mGET /produto?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-03-11 16:49:52,289 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:52] "[35m[1mGET /produto HTTP/1.1[0m" 500 -
+2025-03-11 16:49:52,335 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:52] "[36mGET /produto?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-03-11 16:49:52,341 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:52] "[36mGET /produto?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-03-11 16:49:52,403 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:52] "[36mGET /produto?__debugger__=yes&cmd=resource&f=console.png&s=BGq8TyZJ6rjQ9nOHcDkX HTTP/1.1[0m" 304 -
+2025-03-11 16:49:52,413 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:52] "[36mGET /produto?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-03-11 16:49:52,665 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:52] "[35m[1mGET /produto HTTP/1.1[0m" 500 -
+2025-03-11 16:49:52,698 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:52] "[36mGET /produto?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-03-11 16:49:52,699 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:52] "[36mGET /produto?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-03-11 16:49:52,760 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:52] "[36mGET /produto?__debugger__=yes&cmd=resource&f=console.png&s=BGq8TyZJ6rjQ9nOHcDkX HTTP/1.1[0m" 304 -
+2025-03-11 16:49:52,767 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:52] "[36mGET /produto?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-03-11 16:49:53,082 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:53] "[35m[1mGET /produto HTTP/1.1[0m" 500 -
+2025-03-11 16:49:53,107 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:53] "[36mGET /produto?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-03-11 16:49:53,114 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:53] "[36mGET /produto?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-03-11 16:49:53,172 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:53] "[36mGET /produto?__debugger__=yes&cmd=resource&f=console.png&s=BGq8TyZJ6rjQ9nOHcDkX HTTP/1.1[0m" 304 -
+2025-03-11 16:49:53,181 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:53] "[36mGET /produto?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-03-11 16:49:53,370 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:53] "[35m[1mGET /produto HTTP/1.1[0m" 500 -
+2025-03-11 16:49:53,392 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:53] "[36mGET /produto?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-03-11 16:49:53,402 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:53] "[36mGET /produto?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-03-11 16:49:53,464 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:53] "[36mGET /produto?__debugger__=yes&cmd=resource&f=console.png&s=BGq8TyZJ6rjQ9nOHcDkX HTTP/1.1[0m" 304 -
+2025-03-11 16:49:53,523 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:53] "[36mGET /produto?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-03-11 16:49:53,548 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:53] "[35m[1mGET /produto HTTP/1.1[0m" 500 -
+2025-03-11 16:49:53,590 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:53] "[36mGET /produto?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-03-11 16:49:53,597 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:53] "[36mGET /produto?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-03-11 16:49:53,653 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:53] "[36mGET /produto?__debugger__=yes&cmd=resource&f=console.png&s=BGq8TyZJ6rjQ9nOHcDkX HTTP/1.1[0m" 304 -
+2025-03-11 16:49:53,664 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:53] "[36mGET /produto?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-03-11 16:49:55,605 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:55] "[35m[1mGET /produto HTTP/1.1[0m" 500 -
+2025-03-11 16:49:55,651 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:55] "[36mGET /produto?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-03-11 16:49:55,656 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:55] "[36mGET /produto?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-03-11 16:49:55,728 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:55] "[36mGET /produto?__debugger__=yes&cmd=resource&f=console.png&s=BGq8TyZJ6rjQ9nOHcDkX HTTP/1.1[0m" 304 -
+2025-03-11 16:49:55,772 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:55] "[36mGET /produto?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-03-11 16:49:56,002 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:56] "[35m[1mGET /produto HTTP/1.1[0m" 500 -
+2025-03-11 16:49:56,039 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:56] "[36mGET /produto?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-03-11 16:49:56,040 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:56] "[36mGET /produto?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-03-11 16:49:56,096 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:56] "[36mGET /produto?__debugger__=yes&cmd=resource&f=console.png&s=BGq8TyZJ6rjQ9nOHcDkX HTTP/1.1[0m" 304 -
+2025-03-11 16:49:56,106 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:56] "[36mGET /produto?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-03-11 16:49:57,678 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:49:57] "GET /produtos HTTP/1.1" 200 -
+2025-03-11 16:50:00,388 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:50:00] "[35m[1mGET /produto HTTP/1.1[0m" 500 -
+2025-03-11 16:50:00,466 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:50:00] "[36mGET /produto?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-03-11 16:50:00,500 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:50:00] "[36mGET /produto?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-03-11 16:50:00,514 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:50:00] "[36mGET /produto?__debugger__=yes&cmd=resource&f=console.png&s=BGq8TyZJ6rjQ9nOHcDkX HTTP/1.1[0m" 304 -
+2025-03-11 16:50:26,457 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 16:50:26,511 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:50:26,830 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 16:50:26,832 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 16:50:27,874 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 16:50:27,926 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:50:28,272 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 16:50:28,275 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 16:50:29,325 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 16:50:29,380 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:50:29,696 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 16:50:29,699 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 16:50:32,765 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 16:50:32,825 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:50:33,185 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 16:50:33,188 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 16:50:35,245 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 16:50:35,292 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:50:35,603 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 16:50:35,606 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 16:50:40,704 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 16:50:40,769 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:50:41,167 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 16:50:41,170 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 16:50:44,240 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 16:50:44,288 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:50:44,589 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 16:50:44,592 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 16:50:47,669 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 16:50:47,717 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:50:48,056 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 16:50:48,059 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 16:50:50,117 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 16:50:50,166 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:50:50,481 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 16:50:50,484 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 16:50:53,549 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 16:50:53,601 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:50:53,924 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 16:50:53,927 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 16:50:58,010 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 16:50:58,060 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:50:58,356 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 16:50:58,359 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 16:51:01,426 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 16:51:01,477 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:51:01,784 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 16:51:01,787 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 16:51:05,869 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 16:51:05,916 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:51:06,211 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 16:51:06,214 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 16:51:09,284 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 16:51:09,334 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:51:09,648 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 16:51:09,651 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 16:51:18,263 | ERROR | Guardar Lista | Erro ao tentar guardar a lista: 'dict' object has no attribute 'to_dict'
+2025-03-11 16:51:18,263 | INFO | ProdutoManager | Produto adicinonado com sucesso: {nome_produto}
+2025-03-11 16:51:18,264 | ERROR | Carregar Lista | Erro ao decodificar JSON em 'C:\Users\tutas\Documents\Estudo Dweb\POO\listaprodutos\listaprodutos.json'. Criando um novo arquivo limpo.
+2025-03-11 16:51:18,266 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:51:18] "GET /produto HTTP/1.1" 200 -
+2025-03-11 16:51:37,013 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:51:37] "GET /produtos HTTP/1.1" 200 -
+2025-03-11 16:52:04,297 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:52:04] "GET /produtos HTTP/1.1" 200 -
+2025-03-11 16:52:16,147 | ERROR | Guardar Lista | Erro ao tentar guardar a lista: 'dict' object has no attribute 'to_dict'
+2025-03-11 16:52:16,147 | INFO | ProdutoManager | Produto adicinonado com sucesso: {nome_produto}
+2025-03-11 16:52:16,148 | ERROR | Carregar Lista | Erro ao decodificar JSON em 'C:\Users\tutas\Documents\Estudo Dweb\POO\listaprodutos\listaprodutos.json'. Criando um novo arquivo limpo.
+2025-03-11 16:52:16,150 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:52:16] "GET /produto HTTP/1.1" 200 -
+2025-03-11 16:52:38,936 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 16:52:38,986 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:52:39,290 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 16:52:39,293 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 16:52:54,522 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:52:54] "GET /produtos HTTP/1.1" 200 -
+2025-03-11 16:52:57,527 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:52:57] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:52:57,717 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:52:57] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:54:28,870 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 16:54:28,920 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:54:29,232 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 16:54:29,235 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 16:54:31,286 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 16:54:31,337 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:54:31,643 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 16:54:31,646 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 16:54:32,685 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 16:54:32,754 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:54:33,099 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 16:54:33,102 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 16:54:34,144 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 16:54:34,192 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:54:34,514 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 16:54:34,517 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 16:54:36,575 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 16:54:36,623 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:54:36,938 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 16:54:36,941 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 16:54:54,607 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:54:54] "GET / HTTP/1.1" 200 -
+2025-03-11 16:54:59,251 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:54:59] "GET /produtos HTTP/1.1" 200 -
+2025-03-11 16:55:01,782 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:55:01] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:55:01,980 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:55:01] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:55:04,402 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:55:04] "GET /produtos HTTP/1.1" 200 -
+2025-03-11 16:55:56,075 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 16:55:56,125 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:55:56,456 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 16:55:56,458 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 16:55:58,512 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 16:55:58,568 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:55:58,882 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 16:55:58,885 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 16:56:01,666 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:56:01] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:56:01,870 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:56:01] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:56:04,110 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:56:04] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:56:06,103 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:56:06] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:56:06,567 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:56:06] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:56:06,862 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:56:06] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:56:07,096 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:56:07] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:56:12,870 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:56:12] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:56:13,117 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 16:56:13,173 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:56:13,493 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 16:56:13,496 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 16:56:13,518 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:56:13] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:56:13,662 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:56:13] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:56:13,830 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:56:13] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:56:14,014 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:56:14] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:56:14,199 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:56:14] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:56:14,383 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:56:14] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:56:14,532 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:56:14] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:56:14,717 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:56:14] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:56:14,870 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:56:14] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:56:15,054 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:56:15] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:56:15,247 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:56:15] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:56:15,414 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:56:15] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:56:15,598 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:56:15] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:56:15,816 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:56:15] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:56:15,999 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:56:15] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:56:16,183 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:56:16] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:56:16,335 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:56:16] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:56:24,935 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:56:24] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 16:56:28,749 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 16:56:28,804 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 16:56:29,122 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 16:56:29,125 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 16:56:29,518 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 16:56:29] "GET /produto HTTP/1.1" 200 -
+2025-03-11 16:56:37,266 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 16:56:37,320 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 17:00:38,326 | INFO | werkzeug | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-11 17:00:38,326 | INFO | werkzeug | [33mPress CTRL+C to quit[0m
+2025-03-11 17:00:38,328 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 17:00:38,636 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 17:00:38,639 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 17:00:41,982 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 17:00:41] "GET /produtos HTTP/1.1" 200 -
+2025-03-11 17:00:45,401 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 17:00:45] "[31m[1mGET /produto HTTP/1.1[0m" 415 -
+2025-03-11 17:00:45,560 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 17:00:45] "[31m[1mGET /produto HTTP/1.1[0m" 415 -
+2025-03-11 17:03:01,672 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 17:03:01,729 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 17:03:02,051 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 17:03:02,053 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 17:03:08,166 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 17:03:08,218 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 17:03:08,544 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 17:03:08,546 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 17:03:13,644 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 17:03:13,691 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 17:03:14,000 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 17:03:14,002 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 17:03:16,058 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 17:03:16,109 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 17:03:16,431 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 17:03:16,434 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 17:03:19,504 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 17:03:19,561 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 17:32:47,694 | INFO | werkzeug | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-11 17:32:47,696 | INFO | werkzeug | [33mPress CTRL+C to quit[0m
+2025-03-11 17:32:47,697 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 17:32:48,000 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 17:32:48,002 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 17:36:07,461 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 17:36:07] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 17:36:19,234 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 17:36:19] "GET /produtos HTTP/1.1" 200 -
+2025-03-11 17:36:21,210 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 17:36:21] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 17:36:21,364 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 17:36:21] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 17:36:56,336 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 17:36:56,394 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 17:37:35,273 | INFO | werkzeug | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-11 17:37:35,273 | INFO | werkzeug | [33mPress CTRL+C to quit[0m
+2025-03-11 17:37:35,274 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 17:37:35,579 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 17:37:35,581 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 17:37:37,176 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 17:37:37] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 17:37:37,961 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 17:37:37] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 17:37:38,551 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 17:37:38] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 17:37:38,823 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 17:37:38] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 17:37:38,993 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 17:37:38] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 17:37:39,155 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 17:37:39] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 17:37:39,317 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 17:37:39] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 17:37:39,486 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 17:37:39] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 17:37:39,639 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 17:37:39] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 17:37:39,808 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 17:37:39] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 17:37:39,959 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 17:37:39] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 17:37:40,103 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 17:37:40] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 17:37:40,270 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 17:37:40] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 17:37:40,423 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 17:37:40] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 17:37:40,585 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 17:37:40] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 17:37:40,751 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 17:37:40] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 17:37:40,903 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 17:37:40] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 17:37:41,072 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 17:37:41] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 17:37:41,224 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 17:37:41] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 17:37:41,391 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 17:37:41] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 17:37:41,552 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 17:37:41] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 17:37:41,699 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 17:37:41] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 17:37:41,856 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 17:37:41] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 17:37:51,118 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 17:37:51] "GET /produtos HTTP/1.1" 200 -
+2025-03-11 17:37:53,283 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 17:37:53] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 17:37:53,425 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 17:37:53] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 17:38:32,389 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 17:38:32,439 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 17:38:32,763 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 17:38:32,766 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 17:39:00,936 | INFO | werkzeug | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-11 17:39:00,936 | INFO | werkzeug | [33mPress CTRL+C to quit[0m
+2025-03-11 17:39:00,938 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 17:39:01,235 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 17:39:01,238 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 17:39:03,409 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 17:39:03] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 17:40:06,202 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 17:40:06,253 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 17:40:06,560 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 17:40:06,562 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 17:40:10,973 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 17:40:10] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 17:40:11,788 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 17:40:11] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 17:40:12,370 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 17:40:12] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 17:40:12,644 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 17:40:12] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 17:40:14,559 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 17:40:14] "GET /produtos HTTP/1.1" 200 -
+2025-03-11 17:40:22,094 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 17:40:22] "GET /produtos HTTP/1.1" 200 -
+2025-03-11 17:40:23,108 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 17:40:23] "GET /produtos HTTP/1.1" 200 -
+2025-03-11 17:40:23,707 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 17:40:23] "GET /produtos HTTP/1.1" 200 -
+2025-03-11 17:48:58,063 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 17:48:58] "GET /produtos HTTP/1.1" 200 -
+2025-03-11 17:49:14,889 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 17:49:14,942 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 17:49:15,304 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 17:49:15,307 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 17:49:16,357 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 17:49:16] "GET /produto HTTP/1.1" 200 -
+2025-03-11 17:49:24,454 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 17:49:24,511 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 17:49:24,839 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 17:49:24,842 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 17:49:25,581 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 17:49:25] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 17:53:14,058 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 17:53:14,113 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 17:53:14,435 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 17:53:14,438 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 17:53:16,491 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 17:53:16,540 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 18:12:49,981 | INFO | werkzeug | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-11 18:12:49,981 | INFO | werkzeug | [33mPress CTRL+C to quit[0m
+2025-03-11 18:12:49,983 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 18:12:50,312 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 18:12:50,315 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 18:13:00,390 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 18:13:00] "GET /produtos HTTP/1.1" 200 -
+2025-03-11 18:15:56,916 | INFO | werkzeug | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-11 18:15:56,916 | INFO | werkzeug | [33mPress CTRL+C to quit[0m
+2025-03-11 18:15:56,917 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 18:15:57,231 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 18:15:57,235 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 18:17:36,689 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 18:17:36] "GET /produtos HTTP/1.1" 200 -
+2025-03-11 18:17:46,654 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 18:17:46] "[35m[1mPOST /produto HTTP/1.1[0m" 201 -
+2025-03-11 20:13:22,046 | INFO | werkzeug | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-11 20:13:22,046 | INFO | werkzeug | [33mPress CTRL+C to quit[0m
+2025-03-11 20:13:22,053 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 20:13:22,737 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 20:13:22,745 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 20:13:47,798 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 20:13:47] "[31m[1mGET /produto HTTP/1.1[0m" 405 -
+2025-03-11 20:14:12,516 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 20:14:12] "[31m[1mPOST /produto HTTP/1.1[0m" 400 -
+2025-03-11 20:15:44,541 | ERROR | Guardar Lista | Erro ao tentar guardar a lista: 'dict' object has no attribute 'to_dict'
+2025-03-11 20:15:44,541 | INFO | ProdutoManager | Produto adicinonado com sucesso: {nome_produto}
+2025-03-11 20:15:44,541 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 20:15:44] "[35m[1mPOST /produto HTTP/1.1[0m" 201 -
+2025-03-11 20:17:39,657 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 20:17:39] "[35m[1mGET /produtos HTTP/1.1[0m" 500 -
+2025-03-11 20:17:48,343 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 20:17:48] "[35m[1mGET /produtos HTTP/1.1[0m" 500 -
+2025-03-11 20:18:13,219 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 20:18:13,390 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 20:18:14,148 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 20:18:14,157 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 20:19:26,473 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 20:19:26,565 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 20:19:27,337 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 20:19:27,345 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 20:19:28,059 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 20:19:28] "[35m[1mGET /produtos HTTP/1.1[0m" 500 -
+2025-03-11 20:19:30,006 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 20:19:30] "[35m[1mGET /produtos HTTP/1.1[0m" 500 -
+2025-03-11 20:19:38,366 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 20:19:38] "[35m[1mGET /produtos HTTP/1.1[0m" 500 -
+2025-03-11 20:19:42,082 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 20:19:42] "[35m[1mGET /produtos HTTP/1.1[0m" 500 -
+2025-03-11 20:21:53,467 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\gestãoprodutos\\tratamentolista.py', reloading
+2025-03-11 20:21:53,557 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 20:21:54,307 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 20:21:54,321 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 20:21:59,281 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 20:21:59] "[35m[1mGET /produtos HTTP/1.1[0m" 500 -
+2025-03-11 20:22:01,180 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 20:22:01] "[35m[1mGET /produtos HTTP/1.1[0m" 500 -
+2025-03-11 20:22:04,928 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 20:22:04] "[35m[1mGET /produtos HTTP/1.1[0m" 500 -
+2025-03-11 20:22:10,720 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 20:22:10] "[35m[1mGET /produtos HTTP/1.1[0m" 500 -
+2025-03-11 20:22:52,246 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 20:22:52,401 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 20:22:53,168 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 20:22:53,205 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 20:22:55,355 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 20:22:55,455 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 20:22:56,199 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 20:22:56,216 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 20:23:09,311 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 20:23:09] "[35m[1mGET /produtos HTTP/1.1[0m" 500 -
+2025-03-11 20:23:12,906 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 20:23:12] "[35m[1mGET /produtos HTTP/1.1[0m" 500 -
+2025-03-11 20:23:35,547 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 20:23:35,633 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 20:23:36,451 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 20:23:36,459 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 20:23:37,426 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 20:23:37] "GET /produtos HTTP/1.1" 200 -
+2025-03-11 20:23:46,847 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 20:23:46,956 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 20:23:47,681 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 20:23:47,745 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 20:24:16,874 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 20:24:16,964 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 20:24:17,673 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 20:24:17,733 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 20:25:58,153 | ERROR | Guardar Lista | Erro ao tentar guardar a lista: 'dict' object has no attribute 'to_dict'
+2025-03-11 20:25:58,153 | INFO | ProdutoManager | Produto adicinonado com sucesso: {nome_produto}
+2025-03-11 20:25:58,155 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 20:25:58] "[35m[1mPOST /produto HTTP/1.1[0m" 201 -
+2025-03-11 20:26:19,070 | ERROR | Guardar Lista | Erro ao tentar guardar a lista: 'dict' object has no attribute 'to_dict'
+2025-03-11 20:26:19,070 | INFO | ProdutoManager | Produto adicinonado com sucesso: {nome_produto}
+2025-03-11 20:26:19,070 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 20:26:19] "[35m[1mPOST /produto HTTP/1.1[0m" 201 -
+2025-03-11 20:30:07,209 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\classes\\produtomanager.py', reloading
+2025-03-11 20:30:07,312 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 20:30:08,040 | ERROR | Carregar Lista | Erro ao decodificar JSON em 'C:\Users\tutas\Documents\Estudo Dweb\POO\listaprodutos\listaprodutos.json'. Criando um novo arquivo limpo.
+2025-03-11 20:30:08,142 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 20:30:08,148 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 20:30:10,302 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\classes\\produtomanager.py', reloading
+2025-03-11 20:30:10,394 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 20:30:11,154 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 20:30:11,164 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 20:31:36,274 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\classes\\produtomanager.py', reloading
+2025-03-11 20:31:36,361 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 20:31:37,127 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 20:31:37,135 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 20:31:39,260 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\classes\\produtomanager.py', reloading
+2025-03-11 20:31:39,381 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 20:31:40,115 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 20:31:40,124 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 20:31:54,128 | INFO | Produto | Produto convertido para dicionario, Teclado Mecânico RGB | 199.99
+2025-03-11 20:31:54,128 | ERROR | Guardar Lista | Erro ao tentar guardar a lista: 'dict' object has no attribute 'to_dict'
+2025-03-11 20:31:54,128 | INFO | ProdutoManager | Produto adicionado com sucesso: Teclado Mecânico RGB
+2025-03-11 20:31:54,128 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 20:31:54] "[35m[1mPOST /produto HTTP/1.1[0m" 201 -
+2025-03-11 20:32:08,366 | INFO | Produto | Produto convertido para dicionario, Teclado Mecânico RGB | 199.99
+2025-03-11 20:32:08,366 | ERROR | Guardar Lista | Erro ao tentar guardar a lista: 'dict' object has no attribute 'to_dict'
+2025-03-11 20:32:08,366 | INFO | ProdutoManager | Produto adicionado com sucesso: Teclado Mecânico RGB
+2025-03-11 20:32:08,371 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 20:32:08] "[35m[1mPOST /produto HTTP/1.1[0m" 201 -
+2025-03-11 20:33:41,308 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\gestãoprodutos\\tratamentolista.py', reloading
+2025-03-11 20:33:41,419 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 20:34:25,807 | ERROR | Carregar Lista | Erro ao decodificar JSON em 'C:\Users\tutas\Documents\Estudo Dweb\POO\listaprodutos\listaprodutos.json'. Criando um novo arquivo limpo.
+2025-03-11 20:34:25,899 | INFO | werkzeug | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-11 20:34:25,899 | INFO | werkzeug | [33mPress CTRL+C to quit[0m
+2025-03-11 20:34:25,903 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 20:34:26,584 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 20:34:26,590 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 20:34:31,981 | INFO | Produto | Produto convertido para dicionario, Teclado Mecânico RGB | 199.99
+2025-03-11 20:34:31,981 | INFO | Guardar Lista | Lista guardada com sucesso! Total de produtos: 1 produtos
+2025-03-11 20:34:31,981 | INFO | ProdutoManager | Produto adicionado com sucesso: Teclado Mecânico RGB
+2025-03-11 20:34:31,981 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 20:34:31] "[35m[1mPOST /produto HTTP/1.1[0m" 201 -
+2025-03-11 20:35:51,550 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 20:35:51,630 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 20:35:52,360 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 20:35:52,368 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 20:35:53,492 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\app.py', reloading
+2025-03-11 20:35:53,586 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 20:38:35,625 | INFO | werkzeug | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-11 20:38:35,627 | INFO | werkzeug | [33mPress CTRL+C to quit[0m
+2025-03-11 20:38:35,628 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 20:38:36,417 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 20:38:36,418 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 20:38:38,023 | INFO | Produto | Produto convertido para dicionario, Monitor Gamer 144Hz 27'' | 1299.0
+2025-03-11 20:38:38,023 | INFO | Guardar Lista | Lista guardada com sucesso! Total de produtos: 2 produtos
+2025-03-11 20:38:38,023 | INFO | ProdutoManager | Produto adicionado com sucesso: Monitor Gamer 144Hz 27''
+2025-03-11 20:38:38,023 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 20:38:38] "[35m[1mPOST /produto HTTP/1.1[0m" 201 -
+2025-03-11 20:38:57,865 | INFO | Produto | Produto convertido para dicionario, Headset HyperX Cloud II | 499.99
+2025-03-11 20:38:57,865 | INFO | Guardar Lista | Lista guardada com sucesso! Total de produtos: 3 produtos
+2025-03-11 20:38:57,865 | INFO | ProdutoManager | Produto adicionado com sucesso: Headset HyperX Cloud II
+2025-03-11 20:38:57,865 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 20:38:57] "[35m[1mPOST /produto HTTP/1.1[0m" 201 -
+2025-03-11 20:41:12,629 | INFO | ProdutoManager | Antes da remoção: [{'id': 1, 'nome': 'Teclado Mecânico RGB', 'preco': 199.99}, {'id': 3, 'nome': "Monitor Gamer 144Hz 27''", 'preco': 1299.0}, {'id': 4, 'nome': 'Headset HyperX Cloud II', 'preco': 499.99}]
+2025-03-11 20:41:12,651 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 20:41:12] "[35m[1mDELETE /produto/4 HTTP/1.1[0m" 500 -
+2025-03-11 20:42:12,128 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\classes\\produtomanager.py', reloading
+2025-03-11 20:42:12,214 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 20:42:21,248 | INFO | werkzeug | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-11 20:42:21,248 | INFO | werkzeug | [33mPress CTRL+C to quit[0m
+2025-03-11 20:42:21,248 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 20:42:21,976 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 20:42:21,986 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 20:42:24,581 | INFO | ProdutoManager | Antes da remoção: [{'id': 1, 'nome': 'Teclado Mecânico RGB', 'preco': 199.99}, {'id': 3, 'nome': "Monitor Gamer 144Hz 27''", 'preco': 1299.0}, {'id': 4, 'nome': 'Headset HyperX Cloud II', 'preco': 499.99}]
+2025-03-11 20:42:24,581 | INFO | ProdutoManager | Depois da remoção: [{'id': 1, 'nome': 'Teclado Mecânico RGB', 'preco': 199.99}, {'id': 3, 'nome': "Monitor Gamer 144Hz 27''", 'preco': 1299.0}]
+2025-03-11 20:42:24,581 | INFO | Guardar Lista | Lista guardada com sucesso! Total de produtos: 2 produtos
+2025-03-11 20:42:24,588 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 20:42:24] "DELETE /produto/4 HTTP/1.1" 200 -
+2025-03-11 21:05:39,669 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\classes\\produtomanager.py', reloading
+2025-03-11 21:05:39,760 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 21:05:40,517 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 21:05:40,524 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 21:05:42,651 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\classes\\produtomanager.py', reloading
+2025-03-11 21:05:42,742 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 21:12:25,641 | INFO | werkzeug | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-11 21:12:25,641 | INFO | werkzeug | [33mPress CTRL+C to quit[0m
+2025-03-11 21:12:25,651 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 21:12:26,385 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 21:12:26,394 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 21:12:28,536 | INFO | Guardar Lista | Lista guardada com sucesso! Total de produtos: 2 produtos
+2025-03-11 21:12:28,545 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 21:12:28] "PUT /produto/3 HTTP/1.1" 200 -
+2025-03-11 21:22:12,085 | INFO | werkzeug |  * Detected change in 'C:\\Users\\tutas\\Documents\\Estudo Dweb\\POO\\classes\\produtomanager.py', reloading
+2025-03-11 21:22:12,171 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 21:28:40,160 | INFO | werkzeug | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-11 21:28:40,160 | INFO | werkzeug | [33mPress CTRL+C to quit[0m
+2025-03-11 21:28:40,162 | INFO | werkzeug |  * Restarting with stat
+2025-03-11 21:28:40,953 | WARNING | werkzeug |  * Debugger is active!
+2025-03-11 21:28:40,961 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-11 21:28:45,860 | INFO | Produto | Produto convertido para dicionario, Monitor alez | 3.0
+2025-03-11 21:28:45,860 | INFO | Guardar Lista | Lista guardada com sucesso! Total de produtos: 3 produtos
+2025-03-11 21:28:45,860 | INFO | ProdutoManager | Produto adicionado com sucesso: Monitor alez
+2025-03-11 21:28:45,860 | INFO | werkzeug | 127.0.0.1 - - [11/Mar/2025 21:28:45] "[35m[1mPOST /produto HTTP/1.1[0m" 201 -
+2025-03-12 10:28:10,461 | INFO | werkzeug | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-12 10:28:10,461 | INFO | werkzeug | [33mPress CTRL+C to quit[0m
+2025-03-12 10:28:10,464 | INFO | werkzeug |  * Restarting with stat
+2025-03-12 10:28:10,762 | WARNING | werkzeug |  * Debugger is active!
+2025-03-12 10:28:10,767 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-12 10:28:32,101 | INFO | werkzeug | 127.0.0.1 - - [12/Mar/2025 10:28:32] "GET /produtos HTTP/1.1" 200 -
+2025-03-12 10:28:58,746 | INFO | Produto | Produto convertido para dicionario, Rato GodZilla | 6.0
+2025-03-12 10:28:58,747 | INFO | Guardar Lista | Lista guardada com sucesso! Total de produtos: 4 produtos
+2025-03-12 10:28:58,747 | INFO | ProdutoManager | Produto adicionado com sucesso: Rato GodZilla
+2025-03-12 10:28:58,747 | INFO | werkzeug | 127.0.0.1 - - [12/Mar/2025 10:28:58] "[35m[1mPOST /produto HTTP/1.1[0m" 201 -
+2025-03-12 10:37:07,633 | INFO | werkzeug | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-12 10:37:07,633 | INFO | werkzeug | [33mPress CTRL+C to quit[0m
+2025-03-12 10:37:07,635 | INFO | werkzeug |  * Restarting with stat
+2025-03-12 10:37:07,952 | WARNING | werkzeug |  * Debugger is active!
+2025-03-12 10:37:07,955 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-12 10:37:31,755 | INFO | Produto | Produto convertido para dicionario, Teclado Fire | 7.0
+2025-03-12 10:37:31,756 | INFO | Guardar Lista | Lista guardada com sucesso! Total de produtos: 5 produtos
+2025-03-12 10:37:31,757 | INFO | ProdutoManager | Produto adicionado com sucesso: Teclado Fire
+2025-03-12 10:37:31,757 | INFO | werkzeug | 127.0.0.1 - - [12/Mar/2025 10:37:31] "[35m[1mPOST /produto HTTP/1.1[0m" 201 -
+2025-03-12 10:37:38,748 | INFO | werkzeug | 127.0.0.1 - - [12/Mar/2025 10:37:38] "GET /produtos HTTP/1.1" 200 -
+2025-03-12 10:37:54,151 | INFO | Produto | Produto convertido para dicionario, Teclado Fire | 7.0
+2025-03-12 10:37:54,152 | INFO | Guardar Lista | Lista guardada com sucesso! Total de produtos: 6 produtos
+2025-03-12 10:37:54,152 | INFO | ProdutoManager | Produto adicionado com sucesso: Teclado Fire
+2025-03-12 10:37:54,153 | INFO | werkzeug | 127.0.0.1 - - [12/Mar/2025 10:37:54] "[35m[1mPOST /produto HTTP/1.1[0m" 201 -
+2025-03-12 10:38:05,615 | INFO | werkzeug | 127.0.0.1 - - [12/Mar/2025 10:38:05] "GET /produtos HTTP/1.1" 200 -
+2025-03-12 10:38:34,232 | INFO | werkzeug | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-12 10:38:34,232 | INFO | werkzeug | [33mPress CTRL+C to quit[0m
+2025-03-12 10:38:34,234 | INFO | werkzeug |  * Restarting with stat
+2025-03-12 10:38:34,567 | WARNING | werkzeug |  * Debugger is active!
+2025-03-12 10:38:34,571 | INFO | werkzeug |  * Debugger PIN: 784-728-652
+2025-03-12 10:38:37,343 | INFO | werkzeug | 127.0.0.1 - - [12/Mar/2025 10:38:37] "GET /produtos HTTP/1.1" 200 -
