@@ -1,5 +1,5 @@
 from util.logger_util   import get_logger
-from gestãoprodutos.tratamentolista import  guardar_lista, carregar_lista
+from data.json_manager import  guardar_lista, carregar_lista
 from models.produto import Produto
 
 class ProdutoManager:

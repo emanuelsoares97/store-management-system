@@ -1,6 +1,6 @@
 from flask import jsonify, request
 from services.produtomanager import ProdutoManager
-from gestãoprodutos.tratamentolista import carregar_lista
+from data.json_manager import carregar_lista
 from config import DEBUG
 from util.logger_util import get_logger
 
