@@ -42,3 +42,35 @@
 2025-03-13 10:22:57,105 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
 2025-03-13 10:22:57,105 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
 2025-03-13 10:22:57,106 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
+2025-03-13 10:56:21,855 | INFO | Config | Modo de execução: DEBUG
+2025-03-13 10:56:21,856 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
+2025-03-13 10:56:21,857 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
+2025-03-13 10:56:21,857 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
+2025-03-13 10:56:21,859 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
+2025-03-13 10:56:22,203 | INFO | Config | Modo de execução: DEBUG
+2025-03-13 10:56:22,203 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
+2025-03-13 10:56:22,204 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
+2025-03-13 10:56:22,204 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
+2025-03-13 10:56:22,206 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
+2025-03-13 10:56:23,786 | INFO | route log | Página principal acessada.
+2025-03-13 10:58:06,909 | INFO | Config | Modo de execução: DEBUG
+2025-03-13 10:58:06,910 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
+2025-03-13 10:58:06,911 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
+2025-03-13 10:58:06,911 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
+2025-03-13 10:58:06,912 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
+2025-03-13 10:58:07,284 | INFO | Config | Modo de execução: DEBUG
+2025-03-13 10:58:07,284 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
+2025-03-13 10:58:07,285 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
+2025-03-13 10:58:07,285 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
+2025-03-13 10:58:07,286 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
+2025-03-13 10:58:08,562 | INFO | route log | Página principal acessada.
+2025-03-13 10:58:24,980 | INFO | Config | Modo de execução: DEBUG
+2025-03-13 10:58:24,980 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
+2025-03-13 10:58:24,981 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
+2025-03-13 10:58:24,983 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
+2025-03-13 10:58:24,984 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
+2025-03-13 10:58:26,434 | INFO | Config | Modo de execução: DEBUG
+2025-03-13 10:58:26,434 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
+2025-03-13 10:58:26,436 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
+2025-03-13 10:58:26,436 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
+2025-03-13 10:58:26,437 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
