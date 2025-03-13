@@ -1,8 +1,13 @@
-from flask import jsonify, request, render_template
+from flask import jsonify, request, render_template, make_response, session
 from services.produtomanager import ProdutoManager
 from data.json_manager import carregar_lista
-from config import DEBUG
+from config import DEBUG, SECRET_KEY
+from util.auth import token_required
 from util.logger_util import get_logger
+import jwt
+from datetime import datetime, timedelta
+
+
 
 routelog = get_logger("route log")
 manager = ProdutoManager()
@@ -12,12 +17,44 @@ def init_routes(app):
 
     @app.route("/")
     def homepage():
-        try:
-            routelog.info("Página principal acessada.")
-            return "Como familia", 201
-        except Exception as e:
-            routelog.error(f"Erro ao carregar homepage: {str(e)}")
-            return jsonify({"erro": "Erro ao acessar a página principal."}), 500
+        if not session.get("logged_in"):
+            return render_template("login.html")
+        else:
+            return "Login com sucesso"
+
+
+    @app.route("/public")
+    def public():
+        return "Public"
+    
+
+    @app.route("/login", methods=["POST"])
+    def login():
+        """Autenticação de usuário (Apenas um exemplo básico)"""
+        data = request.get_json()
+
+        username = data.get("username")
+        password = data.get("password")
+
+        # Simulação de verificação de credenciais (Idealmente, isso viria do banco de dados)
+        if username == "admin" and password == "123456":
+            session["logged_in"] = True
+            token = jwt.encode(
+                {
+                    "user": username,
+                    "exp": datetime.utcnow() + timedelta(seconds=120)  # Token expira em 2 minutos
+                }, 
+                SECRET_KEY,
+                algorithm="HS256"
+            )
+            return jsonify({"token": token})
+        else:
+            return make_response(jsonify({"erro": "Credenciais inválidas"}), 403)
+
+    @app.route("/auth", methods=["GET"])
+    @token_required
+    def auth():
+        return jsonify({"mensagem": "JWT verificado, bem-vindo!"})
 
     @app.route("/produtos", methods=["GET"])
     def lista_produtos():
@@ -100,6 +137,8 @@ def init_routes(app):
         except Exception as e:
             routelog.error(f"Erro ao atualizar produto: {str(e)}")
             return jsonify({"erro": "Erro ao atualizar produto."}), 500
+
+
 
     @app.route("/<string:nome>")
     def error(nome):
