@@ -9,6 +9,7 @@ manager = ProdutoManager()
 produtos = carregar_lista()
 
 def init_routes(app):
+    
     @app.route("/")
     def homepage():
         try:
