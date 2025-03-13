@@ -14,7 +14,9 @@ if not os.path.exists(pasta_json):
 
 # Caminhos dos arquivos JSON
 ARQUIVO_JSON = os.path.join(pasta_json, "listaprodutos.json")
+ARQUIVO_TEMP = os.path.join(pasta_json, "produtos_temp.json")
 ARQUIVO_BACKUP = os.path.join(pasta_json, "listaprodutos_backup.json")
+
 
 # Configurações do Flask
 DEBUG = True  # Pode ser alterado para False em produção
