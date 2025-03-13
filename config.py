@@ -1,5 +1,8 @@
 import os
 from util.logger_util import get_logger
+from flask import jsonify, request
+from functools import wraps
+import jwt
 
 # Criar logger para as configurações
 config_log = get_logger("Config")
@@ -21,3 +24,4 @@ ARQUIVO_BACKUP = os.path.join(pasta_json, "listaprodutos_backup.json")
 # Configurações do Flask
 DEBUG = True  # Pode ser alterado para False em produção
 config_log.info(f"Modo de execução: {'DEBUG' if DEBUG else 'PRODUÇÃO'}")
+SECRET_KEY = os.urandom(24)
