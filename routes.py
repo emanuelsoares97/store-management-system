@@ -1,4 +1,4 @@
-from flask import jsonify, request
+from flask import jsonify, request, render_template
 from services.produtomanager import ProdutoManager
 from data.json_manager import carregar_lista
 from config import DEBUG
@@ -9,7 +9,7 @@ manager = ProdutoManager()
 produtos = carregar_lista()
 
 def init_routes(app):
-    
+
     @app.route("/")
     def homepage():
         try:
@@ -100,3 +100,8 @@ def init_routes(app):
         except Exception as e:
             routelog.error(f"Erro ao atualizar produto: {str(e)}")
             return jsonify({"erro": "Erro ao atualizar produto."}), 500
+
+    @app.route("/<string:nome>")
+    def error(nome):
+        variavel= f"Está pagina '{nome}', não existe"
+        return render_template("error.html", variavel=variavel), 404
