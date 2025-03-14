@@ -74,7 +74,7 @@ A API estará disponível em **http://127.0.0.1:5000/**.
 ---
 
 ## 📌 **Próximos Passos**
-- [ ] Implementar autenticação com **JWT** 🔐
+- [ check ] Implementar autenticação com **JWT** 🔐
 - [ ] Integrar **SQL** para persistência de dados 💾
 - [ ] Criar testes automatizados 🧪
 
