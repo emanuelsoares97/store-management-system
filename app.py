@@ -1,5 +1,5 @@
 from flask import Flask
-from routes import init_routes
+from routes.api import init_routes
 from config import DEBUG,SECRET_KEY
 
 app = Flask(__name__)
