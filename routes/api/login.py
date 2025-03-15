@@ -1,5 +1,5 @@
 from flask import jsonify, request, render_template, make_response, session, Blueprint
-from services.produtomanager import ProdutoManager
+
 from data.json_manager import carregar_lista
 from config import DEBUG, SECRET_KEY
 from util.auth import token_required
@@ -12,9 +12,6 @@ login_bp=Blueprint("login", __name__)
 
 routelog = get_logger("login_routes")
 
-manager = ProdutoManager()
-
-produtos = carregar_lista()
 
 
 
