@@ -1,10 +1,13 @@
 from flask import Flask
-from routes.api.produtos import produto_bp
-from routes.api.login import login_bp
+from routes.api import produtos, login, utilizador  # Importa os módulos das rotas
 
 def init_routes(app: Flask):
     """Registra todos os Blueprints da aplicação"""
-    blueprints = [produto_bp, login_bp]  # Lista de Blueprints
+    blueprints = [
+        (produtos.produto_bp, "/api/produto"),
+        (login.login_bp, "/api/login"),
+        (utilizador.utilizador_bp, "/api/utilizador")
+    ]  # Lista de Blueprints com seus prefixos individuais
 
-    for bp in blueprints:
-        app.register_blueprint(bp, url_prefix="/api")  # Registra cada um
+    for bp, prefix in blueprints:
+        app.register_blueprint(bp, url_prefix=prefix)  # Registra cada um dinamicamente
