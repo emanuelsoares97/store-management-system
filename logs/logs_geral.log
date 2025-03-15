@@ -1021,3 +1021,102 @@
 2025-03-14 15:29:27,633 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
 2025-03-14 15:29:27,639 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
 2025-03-14 15:29:27,640 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
+2025-03-14 18:01:28,840 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 18:02:35,689 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 18:02:51,880 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 18:02:53,495 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 18:02:59,084 | ERROR | produto_routes | Erro ao adicionar produto: Erro ao tentar adicionar produto
+2025-03-14 18:04:37,237 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 18:07:07,462 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 18:07:07,464 | INFO | Config | Pasta 'C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\database' criada para armazenar a base de dados.
+2025-03-14 18:07:08,960 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 18:07:12,615 | ERROR | produto_routes | Erro ao adicionar produto: Erro ao tentar adicionar produto
+2025-03-14 18:09:39,973 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 18:09:49,691 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 18:10:04,280 | ERROR | produto_routes | Erro ao adicionar produto: Erro ao tentar adicionar produto
+2025-03-14 18:14:39,150 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 18:14:40,695 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 18:15:02,547 | ERROR | produto_routes | Erro ao adicionar produto: Erro ao tentar adicionar produto
+2025-03-14 18:15:06,298 | ERROR | produto_routes | Erro ao adicionar produto: Erro ao tentar adicionar produto
+2025-03-14 18:15:07,863 | ERROR | produto_routes | Erro ao adicionar produto: Erro ao tentar adicionar produto
+2025-03-14 18:21:48,023 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 18:21:49,696 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 18:21:52,297 | ERROR | produto_routes | Erro ao adicionar produto: Erro ao tentar adicionar produto
+2025-03-14 18:23:27,565 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 18:23:29,272 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 18:23:29,764 | ERROR | produto_routes | Erro ao adicionar produto: Erro ao tentar adicionar produto
+2025-03-14 18:29:20,268 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 18:29:21,967 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 18:29:23,804 | ERROR | produto_routes | Erro ao adicionar produto: Erro ao tentar adicionar produto
+2025-03-14 18:37:16,895 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 18:37:18,512 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 18:37:20,607 | ERROR | produto_routes | Erro ao adicionar produto: Erro ao tentar adicionar produto
+2025-03-14 18:38:17,920 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 18:38:19,554 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 18:46:45,562 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 18:46:45,564 | INFO | Config | Pasta 'C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\database' criada para armazenar a base de dados.
+2025-03-14 18:46:47,159 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 18:53:58,013 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 18:53:58,016 | INFO | Config | Pasta 'C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\database' criada para armazenar a base de dados.
+2025-03-14 18:53:58,054 | INFO | Config | Tabelas criadas com sucesso!
+2025-03-14 18:53:59,624 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 18:53:59,660 | INFO | Config | Tabelas criadas com sucesso!
+2025-03-14 18:56:14,388 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 18:56:14,389 | INFO | Config | Pasta 'C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\database' criada para armazenar a base de dados.
+2025-03-14 18:56:14,435 | INFO | Config | Tabelas criadas com sucesso!
+2025-03-14 19:01:20,157 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 19:01:20,158 | INFO | Config | Pasta 'C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\database' criada para armazenar a base de dados.
+2025-03-14 19:01:20,192 | INFO | Config | Tabelas criadas com sucesso!
+2025-03-14 21:23:05,551 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 21:23:05,553 | INFO | Config | Pasta 'C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\database' criada para armazenar a base de dados.
+2025-03-14 21:24:14,764 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 21:24:48,289 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 21:24:48,310 | INFO | Config | Tabelas criadas com sucesso!
+2025-03-14 21:24:49,121 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 21:24:49,137 | INFO | Config | Tabelas criadas com sucesso!
+2025-03-14 21:29:02,562 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 21:29:02,563 | INFO | Config | Pasta 'C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\database' criada para armazenar a base de dados.
+2025-03-14 21:29:02,582 | INFO | Config | Tabelas criadas com sucesso!
+2025-03-14 21:29:44,662 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 21:29:44,681 | INFO | Config | Tabelas criadas com sucesso!
+2025-03-14 21:37:40,405 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 21:37:40,406 | INFO | Config | Pasta 'C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\database' criada para armazenar a base de dados.
+2025-03-14 21:38:05,985 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 21:38:06,001 | INFO | Config | Tabelas criadas com sucesso!
+2025-03-14 21:38:06,687 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 21:38:06,702 | INFO | Config | Tabelas criadas com sucesso!
+2025-03-14 21:41:42,396 | INFO | Config | Tabelas criadas com sucesso!
+2025-03-14 22:05:35,624 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 22:05:35,626 | INFO | Config | Pasta 'C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\database' criada para armazenar a base de dados.
+2025-03-14 22:05:35,658 | INFO | Config | Tabelas criadas com sucesso!
+2025-03-14 22:05:37,191 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 22:05:37,222 | INFO | Config | Tabelas criadas com sucesso!
+2025-03-14 22:07:36,021 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 22:07:36,022 | INFO | Config | Pasta 'C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\database' criada para armazenar a base de dados.
+2025-03-14 22:07:36,056 | INFO | Config | Tabelas criadas com sucesso!
+2025-03-14 22:07:37,577 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 22:07:37,610 | INFO | Config | Tabelas criadas com sucesso!
+2025-03-14 22:15:55,169 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 22:15:55,171 | INFO | Config | Pasta 'C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\database' criada para armazenar a base de dados.
+2025-03-14 22:15:55,201 | INFO | Config | Tabelas criadas com sucesso!
+2025-03-14 22:15:56,762 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 22:15:56,788 | INFO | Config | Tabelas criadas com sucesso!
+2025-03-14 22:22:30,026 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 22:23:35,642 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 22:23:37,262 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 22:47:40,284 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 22:48:12,426 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 22:48:31,669 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 22:48:33,185 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 22:50:37,411 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 22:50:39,051 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 22:51:20,934 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 22:51:45,079 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 22:51:46,632 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 22:58:05,952 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 22:58:07,486 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 23:24:19,103 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 23:24:20,714 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 23:26:58,437 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 23:29:43,653 | INFO | Config | Modo de execução: DEBUG
+2025-03-14 23:29:45,215 | INFO | Config | Modo de execução: DEBUG
