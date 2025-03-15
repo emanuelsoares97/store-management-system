@@ -1,20 +1,13 @@
-from abc import ABC, abstractmethod
+from database import Base
 
-class EntidadeBase(ABC):
-    @abstractmethod
-    def __init__(self, id):
-        self._id=id
+class BaseModel(Base):
+    __abstract__ = True  # ✅ Define que esta classe não vira tabela diretamente
 
-    @property
-    def id(self):
-        """O ID da entidade não pode ser alterado depois de criado"""
-        return self._id
-
-    @abstractmethod
     def to_dict(self):
-        pass
+        """Converte um objeto SQLAlchemy para dicionário JSON"""
+        return {column.name: getattr(self, column.name) for column in self.__table__.columns}
 
-    @classmethod #de forma a não ser usado o self, e assim não requer propriamente da classe
-    @abstractmethod
+    @classmethod
     def from_dict(cls, data):
-        pass
+        """Cria um objeto da classe a partir de um dicionário"""
+        return cls(**data)
