@@ -1,7 +1,17 @@
-from database import Base
+from sqlalchemy import Column, Integer
 
-class BaseModel(Base):
-    __abstract__ = True  # ✅ Define que esta classe não vira tabela diretamente
+class BaseModel:
+    """Classe base abstrata para os modelos"""
+    __abstract__ = True
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+
+    @classmethod
+    def get_base(cls):
+        """Importa Database dentro do método para evitar import circular"""
+        from database import Database
+        return Database().Base
+
 
     def to_dict(self):
         """Converte um objeto SQLAlchemy para dicionário JSON"""
