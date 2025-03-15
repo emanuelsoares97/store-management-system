@@ -1,26 +1,18 @@
-import os
+
 from util.logger_util import get_logger
 
+class Config:
+    """Classe para armazenar as configurações da aplicação"""
+    
+    DEBUG = True  # Pode ser alterado para False em produção
+    SECRET_KEY = "chave_super_secreta_que_deves_alterar"  # 🔥 Define uma chave fixa
 
 
-# Criar logger para as configurações
-config_log = get_logger("Config")
+    @classmethod
+    def init_app(cls):
+        """Inicializa a configuração e exibe logs relevantes"""
+        config_log = get_logger("Config")
+        config_log.info(f"Modo de execução: {'DEBUG' if cls.DEBUG else 'PRODUÇÃO'}")
 
-# Caminho da pasta onde os arquivos JSON serão armazenados
-pasta_json = os.path.join(os.getcwd(), "listaprodutos")
-
-# Criar pasta se não existir
-if not os.path.exists(pasta_json):
-    os.makedirs(pasta_json, exist_ok=True)
-    config_log.info(f"Pasta '{pasta_json}' criada para armazenar os arquivos JSON.")
-
-# Caminhos dos arquivos JSON
-ARQUIVO_JSON = os.path.join(pasta_json, "listaprodutos.json")
-ARQUIVO_TEMP = os.path.join(pasta_json, "produtos_temp.json")
-ARQUIVO_BACKUP = os.path.join(pasta_json, "listaprodutos_backup.json")
-
-
-# Configurações do Flask
-DEBUG = True  # Pode ser alterado para False em produção
-config_log.info(f"Modo de execução: {'DEBUG' if DEBUG else 'PRODUÇÃO'}")
-SECRET_KEY = os.urandom(24)
+# Inicializa as configurações no momento da importação
+Config.init_app()
