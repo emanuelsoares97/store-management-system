@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, String, Float
 from models.abstrata import BaseModel
 
-class Produto(BaseModel):  
+class Produto(BaseModel.get_base()):  
     __tablename__ = "produtos"
 
     id = Column(Integer, primary_key=True, autoincrement=True)
