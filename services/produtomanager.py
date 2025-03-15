@@ -1,5 +1,5 @@
 from models.produto import Produto
-from database import get_session  # ✅ Importar a função para obter uma sessão
+from database import Database
 import logging
 
 class ProdutoService:
@@ -7,20 +7,22 @@ class ProdutoService:
     
     logger = logging.getLogger("ProdutoService")
 
+    
+
     @classmethod
     def listar_produtos(cls):
         """Retorna a lista de produtos como dicionário"""
-        session = get_session()  # 🔥 Criar sessão dentro do método
+        session= Database.get_session()
         try:
             produtos = session.query(Produto).all()
             return [produto.to_dict() for produto in produtos]  # Retorna JSON
         finally:
-            session.close()  # 🔥 Fechar sessão após uso
+            session.close()  #Fechar sessão após uso
 
     @classmethod
     def adicionar_produto(cls, nome_produto, preco):
         """Adiciona um produto ao banco de dados se não existir um com o mesmo nome"""
-        session = get_session()  # 🔥 Criar sessão dentro do método
+        session= Database.get_session() 
         try:
             produto_existente = session.query(Produto).filter_by(nome=nome_produto).first()
             if produto_existente:
@@ -35,7 +37,7 @@ class ProdutoService:
             novo_produto = Produto(nome=nome_produto, preco=preco)
             session.add(novo_produto)
             session.commit()
-            session.refresh(novo_produto)  # 🔥 Atualizar produto com ID gerado pelo banco
+            session.refresh(novo_produto)  
             cls.logger.info(f"Produto adicionado: {novo_produto.nome}, Preço: {novo_produto.preco}")
 
             return novo_produto.to_dict()  # Retorna um dicionário!
@@ -50,7 +52,7 @@ class ProdutoService:
     @classmethod
     def atualizar_dados(cls, produto_id, produto_nome=None, produto_preco=None):
         """Atualiza nome e/ou preço de um produto pelo ID"""
-        session = get_session()
+        session= Database.get_session()
         try:
             produto = session.query(Produto).filter_by(id=produto_id).first()
 
@@ -74,7 +76,7 @@ class ProdutoService:
     @classmethod
     def remover_produto(cls, produto_id):
         """Remove um produto pelo ID"""
-        session = get_session()
+        session= Database.get_session()
         try:
             produto = session.query(Produto).filter_by(id=produto_id).first()
 
