@@ -1,70 +1,92 @@
-from util.logger_util   import get_logger
-from data.json_manager import  guardar_lista, carregar_lista
 from models.produto import Produto
+from database import get_session  # ✅ Importar a função para obter uma sessão
+import logging
 
-class ProdutoManager:
-    """classe para CRUD"""
-    def __init__(self):
-        self.listaprodutos=carregar_lista()
-        self.logger=get_logger(self.__class__.__name__)
-
-    def gerar_novo_id(self):
-        """Gera um novo ID único baseado no maior ID existente"""
-        if not self.listaprodutos:  # Se a lista estiver vazia, começa do 1
-            return 1
-        return max(produto["id"] for produto in self.listaprodutos) + 1  # Pega o maior ID e soma 1
-
-
-    def _validar_produto(self, nome_produto):
-        for produto in self.listaprodutos:
-            if produto.nome == nome_produto:
-                return produto
-        return None
+class ProdutoService:
+    """Classe responsável pelo gerenciamento de produtos no banco de dados"""
     
-    def adicionar_produto(self, nome_produto, preco):
-        """Adiciona um produto sem IDs duplicados"""
+    logger = logging.getLogger("ProdutoService")
+
+    @classmethod
+    def listar_produtos(cls):
+        """Retorna a lista de produtos como dicionário"""
+        session = get_session()  # 🔥 Criar sessão dentro do método
         try:
-            novo_id = self.gerar_novo_id()  # Gera um ID automático
-            novo_produto = Produto(novo_id, nome_produto, preco)
-            self.listaprodutos.append(novo_produto.to_dict())  # Adiciona como dicionário
-            guardar_lista(self.listaprodutos)  # Salva no JSON
-            self.logger.info(f"Produto adicionado com sucesso: {novo_produto.nome}")
+            produtos = session.query(Produto).all()
+            return [produto.to_dict() for produto in produtos]  # Retorna JSON
+        finally:
+            session.close()  # 🔥 Fechar sessão após uso
+
+    @classmethod
+    def adicionar_produto(cls, nome_produto, preco):
+        """Adiciona um produto ao banco de dados se não existir um com o mesmo nome"""
+        session = get_session()  # 🔥 Criar sessão dentro do método
+        try:
+            produto_existente = session.query(Produto).filter_by(nome=nome_produto).first()
+            if produto_existente:
+                cls.logger.warning(f"Produto já existe: {nome_produto}")
+                raise ValueError("Já existe um produto com esse nome!")
+
+            if not nome_produto or preco is None:
+                cls.logger.warning("Tentativa de adicionar produto com dados inválidos.")
+                raise TypeError("Tentativa de adicionar dados inválidos.")
+
+            # Criar novo produto
+            novo_produto = Produto(nome=nome_produto, preco=preco)
+            session.add(novo_produto)
+            session.commit()
+            session.refresh(novo_produto)  # 🔥 Atualizar produto com ID gerado pelo banco
+            cls.logger.info(f"Produto adicionado: {novo_produto.nome}, Preço: {novo_produto.preco}")
+
+            return novo_produto.to_dict()  # Retorna um dicionário!
+
         except Exception as e:
-            self.logger.error(f"Erro ao tentar adicionar produto: {e}")
-            raise "Erro ao tentar adicionar produto"
+            session.rollback()
+            cls.logger.error(f"Erro ao adicionar produto: {e}")
+            raise Exception("Erro ao tentar adicionar produto")
+        finally:
+            session.close()  # 🔥 Fechar sessão após uso
 
+    @classmethod
+    def atualizar_dados(cls, produto_id, produto_nome=None, produto_preco=None):
+        """Atualiza nome e/ou preço de um produto pelo ID"""
+        session = get_session()
+        try:
+            produto = session.query(Produto).filter_by(id=produto_id).first()
 
+            if not produto:
+                raise ValueError("Produto não encontrado!")
 
+            if produto_nome:
+                produto.nome = produto_nome
+            if produto_preco:
+                produto.preco = produto_preco
 
-    
-    def mostrar_produtos(self):
-        """lista de todos os produtos"""
-        for produto in self.listaprodutos:
-            print(f"Produto: {produto.nome} | Preço: {produto.preco}")
+            session.commit()
+            return produto.to_dict()
 
+        except Exception as e:
+            session.rollback()
+            raise Exception(f"Erro ao atualizar produto: {e}")
+        finally:
+            session.close()
 
-    def atualizar_produto(self, id, novo_nome=None, novo_preco=None):
-        """Atualiza nome e/ou preço do produto pelo ID"""
-        produto_encontrado = False
-        for produto in self.listaprodutos:
-            if produto["id"] == id:
-                if novo_nome:
-                    produto["nome"] = novo_nome
-                if novo_preco:
-                    produto["preco"] = novo_preco
-                produto_encontrado = True
-                break  # Produto encontrado, podemos sair do loop
+    @classmethod
+    def remover_produto(cls, produto_id):
+        """Remove um produto pelo ID"""
+        session = get_session()
+        try:
+            produto = session.query(Produto).filter_by(id=produto_id).first()
 
-        if not produto_encontrado:
-            return False  # Retorna falso se o produto não for encontrado
+            if not produto:
+                raise ValueError("Produto não encontrado!")
 
-        guardar_lista(self.listaprodutos)  # Salva a lista atualizada no JSON
-        return True  # Retorna verdadeiro se foi atualizado
+            session.delete(produto)
+            session.commit()
+            return {"mensagem": f"Produto '{produto.nome}' removido com sucesso!"}
 
-
-    def remover_produto_id(self, id):
-        self.logger.info(f"Antes da remoção: {self.listaprodutos}")
-        self.listaprodutos=[produto for produto in self.listaprodutos if produto["id"]!=id]
-        self.logger.info(f"Depois da remoção: {self.listaprodutos}")
-        guardar_lista(self.listaprodutos)
-
+        except Exception as e:
+            session.rollback()
+            raise Exception(f"Erro ao tentar remover produto: {e}")
+        finally:
+            session.close()
