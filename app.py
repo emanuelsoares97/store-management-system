@@ -1,12 +1,18 @@
 from flask import Flask
-from database import Base, engine, registrar_modelos
-from sqlalchemy import inspect
+from config import Config
+from database import Database 
+from routes.api import init_routes
 
 app = Flask(__name__)
 
-print("===> Iniciando criação das tabelas...")
+# Aplicar configurações do Flask
+app.config.from_object(Config)
 
-registrar_modelos()
+# Registrar modelos e garantir que o banco de dados está configurado corretamente
+Database.registrar_modelos()
+
+# Inicializar rotas da API
+init_routes(app)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=Config.DEBUG)
