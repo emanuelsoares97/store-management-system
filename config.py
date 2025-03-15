@@ -1,8 +1,7 @@
 import os
 from util.logger_util import get_logger
-from flask import jsonify, request
-from functools import wraps
-import jwt
+
+
 
 # Criar logger para as configurações
 config_log = get_logger("Config")
