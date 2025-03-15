@@ -1,14 +1,12 @@
 from flask import Flask
-from routes.api import init_routes
-from config import DEBUG,SECRET_KEY
+from database import Base, engine, registrar_modelos
+from sqlalchemy import inspect
 
 app = Flask(__name__)
-app.config["SECRET_KEY"]= SECRET_KEY
-app.config["DEBUG"] = DEBUG
 
+print("===> Iniciando criação das tabelas...")
 
-# Inicializa as rotas
-init_routes(app)
+registrar_modelos()
 
 if __name__ == "__main__":
-    app.run(debug=app.config["DEBUG"])
+    app.run(debug=True)
