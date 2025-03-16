@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String, Boolean
 from models.abstrata import BaseModel
 
 class Utilizador(BaseModel.get_base()):  
@@ -9,3 +9,4 @@ class Utilizador(BaseModel.get_base()):
     email= Column(String, nullable=False)
     password=Column(String, nullable=False)
     role = Column(String, default="user") 
+    ativo = Column(Boolean, default=True)
