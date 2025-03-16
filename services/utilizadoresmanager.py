@@ -19,7 +19,7 @@ class UtilizadorService:
         return None
 
     @classmethod
-    def criar_utilizador(cls, nome, email, password, role="user"):  # 🔥 Agora role pode ser definido (default="user")
+    def criar_utilizador(cls, nome, email, password, role="user", user_role=None):  # Agora role pode ser definido (default="user")
         """Cria um novo utilizador se não existir"""
         session = Database.get_session()
 
@@ -31,6 +31,10 @@ class UtilizadorService:
 
         if session.query(Utilizador).filter_by(email=email).first():
             return {"erro": "Já existe um utilizador com este email!"}, 400
+        
+        if role == "admin" and user_role != "admin":
+            return {"erro": "Apenas administradores podem criar contas com permissão de admin."}, 403
+
 
         
         hashed_password = generate_password_hash(password)
@@ -50,11 +54,17 @@ class UtilizadorService:
 
 
     @classmethod
-    def listar_utilizadores(cls):
-        """Lista todos os utilizadores registrados"""
+    def listar_utilizadores(cls, ativos=True):
+        """Lista utilizadores, podendo filtrar apenas os ativos"""
         session = Database.get_session()
-        utilizadores = session.query(Utilizador).all()
-        return [{"id": u.id, "nome": u.nome, "email": u.email, "role": u.role} for u in utilizadores]
+
+        if ativos:
+            utilizadores = session.query(Utilizador).filter_by(ativo=True).all()
+        else:
+            utilizadores = session.query(Utilizador).all()
+
+        return [{"id": u.id, "nome": u.nome, "email": u.email, "role": u.role, "ativo": u.ativo} for u in utilizadores]
+
 
     @classmethod
     def atualizar_utilizador(cls, utilizador_id, nome=None, email=None, password=None, role=None, user_role=None):
@@ -74,9 +84,9 @@ class UtilizadorService:
         if password:
             utilizador.password = generate_password_hash(password)
 
-        # 🔥 Somente admins podem alterar a role de outro utilizador
+        # Somente admins podem alterar a role de outro utilizador
         if role:
-            if user_role != "admin":  # 🔥 O user autenticado precisa ser admin para mudar role!
+            if user_role != "admin":  # O user autenticado precisa ser admin para mudar role!
                 return {"erro": "Apenas administradores podem alterar permissões de utilizadores."}, 403
             if role not in ["admin", "gerente", "estoque", "user"]:
                 return {"erro": "Tipo de role inválido!"}, 400
@@ -89,20 +99,40 @@ class UtilizadorService:
                 "id": utilizador.id,
                 "nome": utilizador.nome,
                 "email": utilizador.email,
-                "role": utilizador.role 
+                "role": utilizador.role, 
             }
         }
 
 
     @classmethod
     def remover_utilizador(cls, utilizador_id):
-        """Remove um utilizador pelo ID"""
+        """Marca um utilizador como inativo em vez de remover"""
         session = Database.get_session()
         utilizador = session.query(Utilizador).filter_by(id=utilizador_id).first()
 
         if not utilizador:
             return {"erro": "Utilizador não encontrado!"}, 404
 
-        session.delete(utilizador)
+        utilizador.ativo = False  # nao elimina da db apenas coloca como inativo
         session.commit()
-        return {"mensagem": f"Utilizador '{utilizador.nome}' removido com sucesso!"}, 200
+
+        return {"mensagem": f"Utilizador '{utilizador.nome}' desativado com sucesso!"}, 200
+    
+    @classmethod
+    def reativar_utilizador(cls, utilizador_id):
+        """Reativa um utilizador marcado como inativo"""
+        session = Database.get_session()
+        utilizador = session.query(Utilizador).filter_by(id=utilizador_id).first()
+
+        if not utilizador:
+            return {"erro": "Utilizador não encontrado!"}, 404
+
+        if utilizador.ativo:
+            return {"erro": "O utilizador já está ativo!"}, 400
+
+        utilizador.ativo = True  # reativar o utilizador
+        session.commit()
+
+        return {"mensagem": f"Utilizador '{utilizador.nome}' foi reativado com sucesso!"}, 200
+
+
