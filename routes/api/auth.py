@@ -8,7 +8,7 @@ logger = get_logger("route_auth")
 
 auth_bp = Blueprint("auth", __name__)
 
-@auth_bp.route("/", methods=["POST"])
+@auth_bp.route("/login", methods=["POST"])
 def login():
     """Autenticação de utilizador"""
     try:
@@ -16,13 +16,13 @@ def login():
 
         if not data or "email" not in data or "password" not in data:
             logger.warning("Tentativa de login sem credenciais fornecidas.")
-            return make_response(jsonify({"erro": "Email e senha são obrigatórios!"}), 400)
+            return jsonify({"erro": "Email e senha são obrigatórios!"}), 400
 
-        utilizador = UtilizadorService.buscar_por_email(data.get("email"))
+        utilizador = UtilizadorService.autenticar(data.get("email"), data.get("password"))
 
         if not utilizador:
             logger.warning(f"Falha na autenticação para o email: {data.get('email')}")
-            return make_response(jsonify({"erro": "Credenciais inválidas"}), 403)
+            return jsonify({"erro": "Credenciais inválidas"}), 403
 
         access_token, refresh_token = AuthService.gerar_tokens(utilizador)
 
@@ -39,7 +39,8 @@ def login():
 
     except Exception as e:
         logger.error(f"Erro inesperado no login: {str(e)}", exc_info=True)
-        return make_response(jsonify({"erro": "Erro interno no servidor"}), 500)
+        return jsonify({"erro": "Erro interno no servidor"}), 500
+
 
 
 @auth_bp.route("/auth", methods=["GET"])
