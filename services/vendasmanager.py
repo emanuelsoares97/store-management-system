@@ -1,12 +1,12 @@
 from models.vendas import Venda
 from models.produto import Produto
 from database import Database
-import logging
+from util.logger_util import get_logger
 
 class VendaService:
     """Gerencia as vendas no sistema"""
     
-    logger = logging.getLogger("VendaService")
+    logger = get_logger("VendaService")
 
     @classmethod
     def listar_vendas(cls):
@@ -14,6 +14,7 @@ class VendaService:
         session = Database.get_session()
         try:
             vendas = session.query(Venda).all()
+            cls.logger.info(f"Lista de vendas carregadas, com {len(vendas)} vendas.")
             return [venda.to_dict() for venda in vendas]
         finally:
             session.close()
@@ -25,12 +26,15 @@ class VendaService:
         try:
             produto = session.query(Produto).filter_by(id=produto_id).first()
             if not produto:
+                cls.logger.info(f"Tentativa de procurar produto não registado, {produto_id}.")
                 raise ValueError("Produto não encontrado!")
 
             if quantidade <= 0:
+                cls.logger.warning("A quantidade deve ser maior que zero!")
                 raise ValueError("A quantidade deve ser maior que zero!")
 
             if produto.quantidade_estoque < quantidade:
+                cls.logger.warning("Estoque insuficiente para essa venda!")
                 raise ValueError("Estoque insuficiente para essa venda!")
 
             valor_total = produto.preco * quantidade
