@@ -1,5 +1,5 @@
 import jwt
-from flask import request, jsonify
+from flask import request, jsonify, g  # Importa g
 from functools import wraps
 from config import Config
 from datetime import datetime, timedelta
@@ -48,7 +48,12 @@ class AuthService:
             if error:
                 return jsonify({"Alerta": error}), 401
 
-            request.user_role = payload["role"]  # Define a role do utilizador na request
+            # guarda os dados o utilizador na variavel `g` que torna algo global
+            g.current_user = {
+                "email": payload["email"],
+                "role": payload["role"]
+            }
+
             return f(*args, **kwargs)
 
         return decorated
@@ -59,7 +64,7 @@ class AuthService:
         def decorator(f):
             @wraps(f)
             def decorated_function(*args, **kwargs):
-                user_role = request.user_role  # Pegamos a role da request
+                user_role = g.current_user["role"]  # Agora pegamos do `g`
 
                 if user_role not in required_roles:
                     return jsonify({"Alerta": f"Acesso negado, utilizador '{user_role}' sem permissão!"}), 403
