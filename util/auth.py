@@ -1,24 +1,45 @@
 import jwt
-from flask import request, jsonify, g  # Importa g
+import uuid  #uuid para gerar identificadores únicos
+from flask import request, jsonify, g 
 from functools import wraps
 from config import Config
 from datetime import datetime, timedelta
+from services.tokenrevogadomanager import TokenService
 
 class AuthService:
     """Classe responsável por gerenciar autenticação JWT"""
 
     @staticmethod
-    def gerar_token(utilizador):
-        """Gera um token JWT com a role do utilizador"""
-        return jwt.encode(
+    def gerar_tokens(utilizador):
+        """Gera um access token (curto prazo) e um refresh token (longo prazo) com `jti`"""
+        jti_access = str(uuid.uuid4())  #identificador único para o access token
+        jti_refresh = str(uuid.uuid4())  #identificador único para o refresh token
+
+        access_token = jwt.encode(
             {
+                "id": utilizador["id"],
                 "email": utilizador["email"],
                 "role": utilizador["role"],
-                "exp": datetime.utcnow() + timedelta(hours=1)
+                "jti": jti_access,  # Adicionamos `jti` ao access token
+                "exp": datetime.utcnow() + timedelta(minutes=15)  # Expira em 15 min
             },
             Config.SECRET_KEY,
             algorithm="HS256"
         )
+
+        refresh_token = jwt.encode(
+            {
+                "id": utilizador["id"],
+                "jti": jti_refresh,  # Adicionamos `jti` ao refresh token
+                "exp": datetime.utcnow() + timedelta(days=7)  # Expira em 7 dias
+            },
+            Config.SECRET_KEY,
+            algorithm="HS256"
+        )
+
+        return access_token, refresh_token
+
+
 
     @staticmethod
     def validar_token(token):
@@ -31,11 +52,17 @@ class AuthService:
 
         try:
             payload = jwt.decode(token, Config.SECRET_KEY, algorithms=["HS256"])
-            return payload, None  # Retorna os dados decodificados
+
+            # Verifica se o token está na blacklist
+            if TokenService.esta_na_blacklist(payload["jti"]):
+                return None, "Token inválido. Faça login novamente."
+
+            return payload, None
         except jwt.ExpiredSignatureError:
-            return None, "Token expirado"
+            return None, "Token expirado. Faça login novamente."
         except jwt.InvalidTokenError:
-            return None, "Token inválido"
+            return None, "Token inválido."
+
 
     @staticmethod
     def token_required(f):
@@ -48,15 +75,17 @@ class AuthService:
             if error:
                 return jsonify({"Alerta": error}), 401
 
-            # guarda os dados o utilizador na variavel `g` que torna algo global
+            
             g.current_user = {
                 "email": payload["email"],
-                "role": payload["role"]
+                "role": payload["role"],
+                "jti": payload["jti"]  # identificador único do token
             }
 
             return f(*args, **kwargs)
 
         return decorated
+
 
     @staticmethod
     def role_required(*required_roles):
@@ -64,7 +93,7 @@ class AuthService:
         def decorator(f):
             @wraps(f)
             def decorated_function(*args, **kwargs):
-                user_role = g.current_user["role"]  # Agora pegamos do `g`
+                user_role = g.current_user["role"]
 
                 if user_role not in required_roles:
                     return jsonify({"Alerta": f"Acesso negado, utilizador '{user_role}' sem permissão!"}), 403
