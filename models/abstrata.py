@@ -39,3 +39,15 @@ class BaseModel:
     def from_dict(cls, data):
         """Cria um objeto da classe a partir de um dicionário"""
         return cls(**data)
+
+    @classmethod
+    def criar_tabelas(cls):
+        """Garante que as tabelas sejam criadas corretamente no pytest"""
+        try:
+            from database import Database
+            db = Database.get_session()
+            cls.get_base().metadata.create_all(db.get_bind())  # Cria as tabelas no banco
+            logger.info("Tabelas criadas para testes.")
+        except Exception as e:
+            logger.error(f"Erro ao criar tabelas: {e}")
+            raise
