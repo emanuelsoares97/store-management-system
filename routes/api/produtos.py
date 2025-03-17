@@ -1,23 +1,27 @@
 from flask import Blueprint, jsonify, request
 from services.produtomanager import ProdutoService
 from util.logger_util import get_logger
+from util.auth import AuthService
 
 produto_bp = Blueprint("produto", __name__)
 routelog = get_logger("produto_routes")
 
 """
     ROTAS PRODUTOS:
-    - GET    /api/produto/           -> Listar todos os produtos
-    - POST   /api/produto/novo       -> Adicionar um novo produto
-    - DELETE /api/produto/<id>/remover  -> Remover um produto
-    - PUT    /api/produto/<id>/editar   -> Editar um produto
+    - GET    /api/produto/             -> Listar todos os produtos ativos
+    - POST   /api/produto/novo         -> Criar um novo produto
+    - PUT    /api/produto/<id>/editar  -> Editar um produto
+    - PATCH  /api/produto/<id>/desativar -> Desativar um produto
+    - PATCH  /api/produto/<id>/reativar -> Reativar um produto
 """
 
 @produto_bp.route("/", methods=["GET"])
-def lista_produtos():
-    """Endpoint para listar todos os produtos"""
+@AuthService.token_required
+@AuthService.role_required("admin", "gerente", "estoque", "user") 
+def listar_produtos():
+    """Endpoint para listar todos os produtos ativos"""
     try:
-        routelog.info("Requisição GET para listar produtos.")
+        routelog.info("Listando produtos ativos.")
         produtos = ProdutoService.listar_produtos()
         return jsonify({"produtos": produtos}), 200
     except Exception as e:
@@ -26,65 +30,50 @@ def lista_produtos():
 
 
 @produto_bp.route("/novo", methods=["POST"])
-def adicionar_produto():
-    """Endpoint para adicionar um novo produto"""
+@AuthService.token_required
+@AuthService.role_required("admin", "gerente") 
+def criar_produto():
+    """Endpoint para criar um novo produto"""
     try:
         data = request.get_json()
-
         if not data:
             return jsonify({"erro": "Nenhum dado enviado!"}), 400
 
-        nome_produto = data.get("nome")
+        nome = data.get("nome")
         preco = data.get("preco")
+        estoque = data.get("estoque")
+        categoria_id = data.get("categoria_id")
 
-        if not nome_produto or preco is None:
-            return jsonify({"erro": "Nome e preço são obrigatórios!"}), 400
-
-        routelog.debug(f"Adicionando novo produto: {nome_produto}, Preço: {preco}")
-
-        novo_produto = ProdutoService.adicionar_produto(nome_produto, preco)
-
-        return jsonify({"mensagem": "Produto adicionado com sucesso!", "produto": novo_produto}), 201
+        novo_produto = ProdutoService.criar_produto(nome, preco, estoque, categoria_id)
+        return jsonify({"mensagem": "Produto criado com sucesso!", "produto": novo_produto}), 201
 
     except ValueError as e:
         routelog.warning(f"Erro de validação: {str(e)}")
         return jsonify({"erro": str(e)}), 400
 
     except Exception as e:
-        routelog.error(f"Erro inesperado ao adicionar produto: {str(e)}")
-        return jsonify({"erro": "Erro ao adicionar produto."}), 500
-
-
-@produto_bp.route("/<int:produto_id>/remover", methods=["DELETE"])
-def remover_produto(produto_id):
-    """Endpoint para remover um produto pelo ID"""
-    try:
-        routelog.info(f"Tentando remover produto ID: {produto_id}")
-        resultado = ProdutoService.remover_produto(produto_id)
-        return jsonify({"mensagem": resultado}), 200
-    except ValueError as e:
-        routelog.warning(f"Erro ao remover produto: {str(e)}")
-        return jsonify({"erro": str(e)}), 400
-    except Exception as e:
-        routelog.error(f"Erro inesperado ao remover produto: {str(e)}")
-        return jsonify({"erro": "Erro ao remover produto."}), 500
+        routelog.error(f"Erro inesperado ao criar produto: {str(e)}")
+        return jsonify({"erro": "Erro ao criar produto."}), 500
 
 
 @produto_bp.route("/<int:produto_id>/editar", methods=["PUT"])
+@AuthService.token_required
+@AuthService.role_required("admin", "gerente") 
 def atualizar_produto(produto_id):
     """Endpoint para atualizar um produto"""
     try:
         data = request.get_json()
-        
         if not data:
             return jsonify({"erro": "Nenhum dado enviado!"}), 400
 
-        novo_nome = data.get("nome")
-        novo_preco = data.get("preco")
-
-        routelog.debug(f"Atualizando produto ID: {produto_id}")
-
-        resultado = ProdutoService.atualizar_dados(produto_id, novo_nome, novo_preco)
+        resultado = ProdutoService.atualizar_dados(
+            produto_id,
+            nome=data.get("nome"),
+            preco=data.get("preco"),
+            estoque=data.get("estoque"),
+            ativo=data.get("ativo"),
+            categoria_id=data.get("categoria_id")
+        )
 
         return jsonify({"mensagem": "Produto atualizado com sucesso!", "produto": resultado}), 200
 
@@ -96,3 +85,29 @@ def atualizar_produto(produto_id):
         routelog.error(f"Erro inesperado ao atualizar produto: {str(e)}")
         return jsonify({"erro": "Erro ao atualizar produto."}), 500
 
+
+@produto_bp.route("/<int:produto_id>/reativar", methods=["PATCH"])
+@AuthService.token_required
+@AuthService.role_required("admin", "gerente") 
+def reativar_produto(produto_id):
+    """Endpoint para reativar um produto"""
+    try:
+        resultado = ProdutoService.reativar_produto(produto_id)
+        return jsonify(resultado), 200
+    except ValueError as e:
+        return jsonify({"erro": str(e)}), 400
+    except Exception as e:
+        return jsonify({"erro": "Erro ao reativar produto."}), 500
+
+@produto_bp.route("/<int:produto_id>/desativar", methods=["PATCH"])
+@AuthService.token_required
+@AuthService.role_required("admin", "gerente") 
+def desativar_produto(produto_id):
+    """Endpoint para desativar um produto"""
+    try:
+        resultado = ProdutoService.desativar_produto(produto_id)
+        return jsonify(resultado), 200
+    except ValueError as e:
+        return jsonify({"erro": str(e)}), 400
+    except Exception as e:
+        return jsonify({"erro": "Erro ao desativar produto."}), 500

@@ -7,6 +7,15 @@ logger = get_logger("route_utilizador")
 
 utilizador_bp = Blueprint("utilizador", __name__)
 
+"""
+    ROTAS PRODUTOS:
+    - GET       /api/utilizador/ativos           -> Listar todos os utilizadores ativos
+    - GET       /api/utilizador/todos       -> Listar todos os utilizadores
+    - POST      /api/utilizador/novo -> Adicionar novo utilizador
+    - DELETE    /api/utilizador//<int:utilizador_id>/editar/desativar  -> desativar um utilizador
+    - PUT       /api/utilizador/<int:utilizador_id>/editar/editar   -> Editar um produto
+"""
+
 @utilizador_bp.route("/ativos", methods=["GET"])
 @AuthService.token_required
 @AuthService.role_required("admin", "gerente")
@@ -84,14 +93,14 @@ def atualizar_utilizador(utilizador_id):
         logger.error(f"Erro ao atualizar utilizador ID {utilizador_id}: {str(e)}", exc_info=True)
         return jsonify({"erro": "Erro interno no servidor"}), 500
 
-@utilizador_bp.route("/<int:utilizador_id>/remover", methods=["DELETE"])
+@utilizador_bp.route("/<int:utilizador_id>/desativar", methods=["PATCH"])
 @AuthService.token_required
 @AuthService.role_required("admin")
-def remover_utilizador(utilizador_id):
+def desaivar_utilizador(utilizador_id):
     """Remove um utilizador"""
     try:
         logger.info(f"Tentativa de remover utilizador ID: {utilizador_id}")
-        resposta, status = UtilizadorService.remover_utilizador(utilizador_id)
+        resposta, status = UtilizadorService.desativar_utilizador(utilizador_id)
         return jsonify(resposta), status
     except Exception as e:
         logger.error(f"Erro ao remover utilizador ID {utilizador_id}: {str(e)}", exc_info=True)
