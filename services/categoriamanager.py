@@ -1,11 +1,11 @@
 from models.categoria import Categoria
 from database import Database
-import logging
+from util.logger_util import get_logger
 
 class CategoriaService:
     """Gerencia as categorias no banco de dados"""
 
-    logger = logging.getLogger("CategoriaService")
+    logger = get_logger("CategoriaService")
 
     @classmethod
     def listar_categorias(cls):
