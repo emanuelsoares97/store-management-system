@@ -1,11 +1,11 @@
 from models.produto import Produto
 from database import Database
-import logging
+from util.logger_util import get_logger
 
 class ProdutoService:
     """Classe responsável pelo gerenciamento de produtos no banco de dados"""
     
-    logger = logging.getLogger("ProdutoService")
+    logger = get_logger("ProdutoService")
 
     @classmethod
     def listar_produtos(cls, apenas_ativos=True):
