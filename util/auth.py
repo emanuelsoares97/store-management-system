@@ -3,7 +3,7 @@ import uuid  #uuid para gerar identificadores únicos
 from flask import request, jsonify, g 
 from functools import wraps
 from config import Config
-from datetime import datetime, timedelta
+from datetime import datetime, timezone, timedelta
 from services.tokenrevogadomanager import TokenService
 
 class AuthService:
@@ -12,16 +12,16 @@ class AuthService:
     @staticmethod
     def gerar_tokens(utilizador):
         """Gera um access token (curto prazo) e um refresh token (longo prazo) com `jti`"""
-        jti_access = str(uuid.uuid4())  #identificador único para o access token
-        jti_refresh = str(uuid.uuid4())  #identificador único para o refresh token
+        jti_access = str(uuid.uuid4())  # Identificador único para o access token
+        jti_refresh = str(uuid.uuid4())  # Identificador único para o refresh token
 
         access_token = jwt.encode(
             {
-                "id": utilizador["id"],
-                "email": utilizador["email"],
-                "role": utilizador["role"],
-                "jti": jti_access,  # Adicionamos `jti` ao access token
-                "exp": datetime.utcnow() + timedelta(minutes=15)  # Expira em 15 min
+                "id": utilizador.id,  # ✅ Agora acessamos como objeto
+                "email": utilizador.email,
+                "role": utilizador.role,
+                "jti": jti_access,  # `jti` ao access token
+                "exp": datetime.now(timezone.utc) + timedelta(minutes=15)  # Expira em 15 min
             },
             Config.SECRET_KEY,
             algorithm="HS256"
@@ -29,15 +29,16 @@ class AuthService:
 
         refresh_token = jwt.encode(
             {
-                "id": utilizador["id"],
+                "id": utilizador.id,  # ✅ Agora acessamos como objeto
                 "jti": jti_refresh,  # Adicionamos `jti` ao refresh token
-                "exp": datetime.utcnow() + timedelta(days=7)  # Expira em 7 dias
+                "exp": datetime.now(timezone.utc) + timedelta(days=7)  # Expira em 7 dias
             },
             Config.SECRET_KEY,
             algorithm="HS256"
         )
 
         return access_token, refresh_token
+
 
 
 
