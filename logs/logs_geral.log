@@ -1189,3 +1189,220 @@
 2025-03-17 16:23:57,679 | INFO | BaseModel | Classe Abstrata iniciada
 2025-03-17 16:23:59,064 | INFO | Config | Modo de execução: DEBUG
 2025-03-17 16:23:59,900 | INFO | BaseModel | Classe Abstrata iniciada
+2025-03-17 18:34:05,961 | INFO | Config | Modo de execução: DEBUG
+2025-03-17 18:34:07,190 | INFO | BaseModel | Classe Abstrata iniciada
+2025-03-17 18:34:08,136 | INFO | Config | Modo de execução: DEBUG
+2025-03-17 18:34:09,204 | INFO | BaseModel | Classe Abstrata iniciada
+2025-03-17 18:36:18,878 | INFO | Config | Modo de execução: DEBUG
+2025-03-17 18:36:19,852 | INFO | BaseModel | Classe Abstrata iniciada
+2025-03-17 18:38:45,567 | INFO | Config | Modo de execução: DEBUG
+2025-03-17 18:38:46,526 | INFO | BaseModel | Classe Abstrata iniciada
+2025-03-17 18:38:47,305 | INFO | Config | Modo de execução: DEBUG
+2025-03-17 18:38:48,242 | INFO | BaseModel | Classe Abstrata iniciada
+2025-03-17 18:39:10,067 | ERROR | route_auth | Erro inesperado no login: type object 'UtilizadorService' has no attribute 'buscar_por_email'
+Traceback (most recent call last):
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 21, in login
+    utilizador = UtilizadorService.buscar_por_email(data.get("email"))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'UtilizadorService' has no attribute 'buscar_por_email'
+2025-03-17 18:40:33,875 | ERROR | route_auth | Erro inesperado no login: type object 'UtilizadorService' has no attribute 'buscar_por_email'
+Traceback (most recent call last):
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 21, in login
+    utilizador = UtilizadorService.buscar_por_email(data.get("email"))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'UtilizadorService' has no attribute 'buscar_por_email'
+2025-03-17 18:42:34,277 | ERROR | route_auth | Erro inesperado no login: type object 'UtilizadorService' has no attribute 'buscar_por_email'
+Traceback (most recent call last):
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 21, in login
+    utilizador = UtilizadorService.buscar_por_email(data.get("email"))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'UtilizadorService' has no attribute 'buscar_por_email'
+2025-03-17 18:42:39,446 | ERROR | route_auth | Erro inesperado no login: type object 'UtilizadorService' has no attribute 'buscar_por_email'
+Traceback (most recent call last):
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 21, in login
+    utilizador = UtilizadorService.buscar_por_email(data.get("email"))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'UtilizadorService' has no attribute 'buscar_por_email'
+2025-03-17 18:43:41,500 | INFO | Config | Modo de execução: DEBUG
+2025-03-17 18:43:42,558 | INFO | BaseModel | Classe Abstrata iniciada
+2025-03-17 18:43:43,069 | ERROR | route_auth | Erro inesperado no login: UtilizadorService.autenticar() missing 1 required positional argument: 'password'
+Traceback (most recent call last):
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 21, in login
+    utilizador = UtilizadorService.autenticar(data.get("email"))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: UtilizadorService.autenticar() missing 1 required positional argument: 'password'
+2025-03-17 18:43:46,051 | ERROR | route_auth | Erro inesperado no login: UtilizadorService.autenticar() missing 1 required positional argument: 'password'
+Traceback (most recent call last):
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 21, in login
+    utilizador = UtilizadorService.autenticar(data.get("email"))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: UtilizadorService.autenticar() missing 1 required positional argument: 'password'
+2025-03-17 18:44:13,956 | INFO | Config | Modo de execução: DEBUG
+2025-03-17 18:44:14,829 | INFO | BaseModel | Classe Abstrata iniciada
+2025-03-17 18:44:17,198 | INFO | Config | Modo de execução: DEBUG
+2025-03-17 18:44:18,064 | INFO | BaseModel | Classe Abstrata iniciada
+2025-03-17 18:44:18,829 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-17 18:44:18,830 | ERROR | route_auth | Erro inesperado no login: type object 'AuthService' has no attribute 'gerar_token'
+Traceback (most recent call last):
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 21, in login
+    utilizador = UtilizadorService.autenticar(data.get("email"),data.get("password"))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\services\utilizadoresmanager.py", line 23, in autenticar
+    return AuthService.gerar_token({"email": utilizador.email, "role": utilizador.role})
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'AuthService' has no attribute 'gerar_token'. Did you mean: 'gerar_tokens'?
+2025-03-17 18:44:20,741 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-17 18:44:20,742 | ERROR | route_auth | Erro inesperado no login: type object 'AuthService' has no attribute 'gerar_token'
+Traceback (most recent call last):
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 21, in login
+    utilizador = UtilizadorService.autenticar(data.get("email"),data.get("password"))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\services\utilizadoresmanager.py", line 23, in autenticar
+    return AuthService.gerar_token({"email": utilizador.email, "role": utilizador.role})
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'AuthService' has no attribute 'gerar_token'. Did you mean: 'gerar_tokens'?
+2025-03-17 18:45:03,333 | INFO | Config | Modo de execução: DEBUG
+2025-03-17 18:45:04,146 | INFO | BaseModel | Classe Abstrata iniciada
+2025-03-17 18:45:04,956 | INFO | Config | Modo de execução: DEBUG
+2025-03-17 18:45:05,840 | INFO | BaseModel | Classe Abstrata iniciada
+2025-03-17 18:45:06,533 | ERROR | route_auth | Erro inesperado no login: 'builtin_function_or_method' object is not subscriptable
+Traceback (most recent call last):
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 21, in login
+    utilizador = UtilizadorService.autenticar(data.get["email"],data.get["password"])
+                                              ~~~~~~~~^^^^^^^^^
+TypeError: 'builtin_function_or_method' object is not subscriptable
+2025-03-17 18:45:07,962 | ERROR | route_auth | Erro inesperado no login: 'builtin_function_or_method' object is not subscriptable
+Traceback (most recent call last):
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 21, in login
+    utilizador = UtilizadorService.autenticar(data.get["email"],data.get["password"])
+                                              ~~~~~~~~^^^^^^^^^
+TypeError: 'builtin_function_or_method' object is not subscriptable
+2025-03-17 18:47:16,106 | INFO | Config | Modo de execução: DEBUG
+2025-03-17 18:47:17,037 | INFO | BaseModel | Classe Abstrata iniciada
+2025-03-17 18:47:23,514 | INFO | Config | Modo de execução: DEBUG
+2025-03-17 18:47:24,289 | INFO | BaseModel | Classe Abstrata iniciada
+2025-03-17 18:47:50,168 | INFO | Config | Modo de execução: DEBUG
+2025-03-17 18:47:51,017 | INFO | BaseModel | Classe Abstrata iniciada
+2025-03-17 18:48:05,259 | INFO | Config | Modo de execução: DEBUG
+2025-03-17 18:48:06,125 | INFO | BaseModel | Classe Abstrata iniciada
+2025-03-17 18:48:07,718 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-17 18:48:07,718 | ERROR | route_auth | Erro inesperado no login: module 'jwt' has no attribute 'encode'
+Traceback (most recent call last):
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 27, in login
+    access_token, refresh_token = AuthService.gerar_tokens(utilizador)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\util\auth.py", line 18, in gerar_tokens
+    access_token = jwt.encode(
+                   ^^^^^^^^^^
+AttributeError: module 'jwt' has no attribute 'encode'
+2025-03-17 18:48:10,196 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-17 18:48:10,196 | ERROR | route_auth | Erro inesperado no login: module 'jwt' has no attribute 'encode'
+Traceback (most recent call last):
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 27, in login
+    access_token, refresh_token = AuthService.gerar_tokens(utilizador)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\util\auth.py", line 18, in gerar_tokens
+    access_token = jwt.encode(
+                   ^^^^^^^^^^
+AttributeError: module 'jwt' has no attribute 'encode'
+2025-03-17 18:49:34,341 | INFO | Config | Modo de execução: DEBUG
+2025-03-17 18:49:35,287 | INFO | BaseModel | Classe Abstrata iniciada
+2025-03-17 18:49:40,531 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-17 18:49:40,532 | ERROR | route_auth | Erro inesperado no login: module 'jwt' has no attribute 'encode'
+Traceback (most recent call last):
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 28, in login
+    access_token, refresh_token = AuthService.gerar_tokens(utilizador)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\util\auth.py", line 18, in gerar_tokens
+    access_token = jwt.encode(
+                   ^^^^^^^^^^
+AttributeError: module 'jwt' has no attribute 'encode'
+2025-03-17 18:49:48,447 | INFO | Config | Modo de execução: DEBUG
+2025-03-17 18:49:49,235 | INFO | BaseModel | Classe Abstrata iniciada
+2025-03-17 18:49:49,790 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-17 18:49:49,790 | ERROR | route_auth | Erro inesperado no login: module 'jwt' has no attribute 'encode'
+Traceback (most recent call last):
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 28, in login
+    access_token, refresh_token = AuthService.gerar_tokens(utilizador)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\util\auth.py", line 18, in gerar_tokens
+    access_token = jwt.encode(
+                   ^^^^^^^^^^
+AttributeError: module 'jwt' has no attribute 'encode'
+2025-03-17 18:51:51,948 | INFO | Config | Modo de execução: DEBUG
+2025-03-17 18:51:52,900 | INFO | BaseModel | Classe Abstrata iniciada
+2025-03-17 18:52:19,450 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-17 18:52:19,451 | ERROR | route_auth | Erro inesperado no login: module 'jwt' has no attribute 'encode'
+Traceback (most recent call last):
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 28, in login
+    access_token, refresh_token = AuthService.gerar_tokens(utilizador)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\util\auth.py", line 18, in gerar_tokens
+    access_token = jwt.encode(
+                   ^^^^^^^^^^
+AttributeError: module 'jwt' has no attribute 'encode'
+2025-03-17 18:52:24,995 | INFO | Config | Modo de execução: DEBUG
+2025-03-17 18:52:25,823 | INFO | BaseModel | Classe Abstrata iniciada
+2025-03-17 19:03:30,903 | INFO | Config | Modo de execução: DEBUG
+2025-03-17 19:03:31,923 | INFO | BaseModel | Classe Abstrata iniciada
+2025-03-17 19:03:32,704 | INFO | Config | Modo de execução: DEBUG
+2025-03-17 19:03:33,483 | INFO | BaseModel | Classe Abstrata iniciada
+2025-03-17 19:03:39,657 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-17 19:03:39,658 | ERROR | route_auth | Erro inesperado no login: 'Utilizador' object is not subscriptable
+Traceback (most recent call last):
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 27, in login
+    access_token, refresh_token = AuthService.gerar_tokens(utilizador)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\util\auth.py", line 20, in gerar_tokens
+    "id": utilizador["id"],
+          ~~~~~~~~~~^^^^^^
+TypeError: 'Utilizador' object is not subscriptable
+2025-03-17 19:09:31,207 | INFO | Config | Modo de execução: DEBUG
+2025-03-17 19:09:39,997 | INFO | Config | Modo de execução: DEBUG
+2025-03-17 19:09:40,854 | INFO | BaseModel | Classe Abstrata iniciada
+2025-03-17 19:09:41,689 | INFO | Config | Modo de execução: DEBUG
+2025-03-17 19:09:42,560 | INFO | BaseModel | Classe Abstrata iniciada
+2025-03-17 19:09:43,920 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-17 19:09:43,921 | INFO | route_auth | Utilizador autenticado: admin@email.com
+2025-03-17 19:10:54,271 | INFO | produto_routes | Listando produtos ativos.
+2025-03-17 19:11:06,317 | INFO | route_auth | Token validado com sucesso!
+2025-03-17 19:25:10,933 | INFO | Config | Modo de execução: DEBUG
+2025-03-17 19:25:11,552 | INFO | BaseModel | Classe Abstrata iniciada
+2025-03-17 19:25:12,254 | INFO | BaseModel | Tabelas criadas para testes.
+2025-03-17 19:25:12,416 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-17 19:25:12,416 | INFO | route_auth | Utilizador autenticado: admin@email.com
+2025-03-17 19:26:52,356 | INFO | Config | Modo de execução: DEBUG
+2025-03-17 19:26:52,774 | INFO | BaseModel | Classe Abstrata iniciada
+2025-03-17 19:26:53,349 | INFO | BaseModel | Tabelas criadas para testes.
+2025-03-17 19:26:53,494 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-17 19:26:53,494 | INFO | route_auth | Utilizador autenticado: admin@email.com
+2025-03-17 19:28:18,069 | INFO | Config | Modo de execução: DEBUG
+2025-03-17 19:28:18,589 | INFO | BaseModel | Classe Abstrata iniciada
+2025-03-17 19:28:19,175 | INFO | BaseModel | Tabelas criadas para testes.
+2025-03-17 19:28:19,317 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-17 19:28:19,318 | INFO | route_auth | Utilizador autenticado: admin@email.com
+2025-03-17 19:28:19,334 | INFO | BaseModel | Tabelas criadas para testes.
+2025-03-17 19:28:19,479 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-17 19:28:19,479 | INFO | route_auth | Utilizador autenticado: admin@email.com
+2025-03-17 19:28:19,484 | INFO | produto_routes | Listando produtos ativos.
+2025-03-17 19:30:45,969 | INFO | Config | Modo de execução: DEBUG
+2025-03-17 19:30:46,448 | INFO | BaseModel | Classe Abstrata iniciada
+2025-03-17 19:30:47,052 | INFO | BaseModel | Tabelas criadas para testes.
+2025-03-17 19:30:47,225 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-17 19:30:47,225 | INFO | route_auth | Utilizador autenticado: admin@email.com
+2025-03-17 19:30:47,239 | INFO | BaseModel | Tabelas criadas para testes.
+2025-03-17 19:30:47,376 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-17 19:30:47,376 | INFO | route_auth | Utilizador autenticado: admin@email.com
+2025-03-17 19:30:47,379 | INFO | produto_routes | Listando produtos ativos.
+2025-03-17 19:39:03,373 | INFO | Config | Modo de execução: DEBUG
+2025-03-17 19:39:03,852 | INFO | BaseModel | Classe Abstrata iniciada
+2025-03-17 19:39:04,494 | INFO | BaseModel | Tabelas criadas para testes.
+2025-03-17 19:39:04,658 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-17 19:39:04,658 | INFO | route_auth | Utilizador autenticado: admin@email.com
+2025-03-17 19:39:04,672 | INFO | BaseModel | Tabelas criadas para testes.
+2025-03-17 19:39:04,811 | INFO | ProdutoService | Token não gerado, dados não autenticados, email: admin@email.com
+2025-03-17 19:39:04,811 | WARNING | route_auth | Falha na autenticação para o email: admin@email.com
+2025-03-17 19:39:04,824 | INFO | BaseModel | Tabelas criadas para testes.
+2025-03-17 19:39:04,963 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-17 19:39:04,963 | INFO | route_auth | Utilizador autenticado: admin@email.com
+2025-03-17 19:39:04,966 | INFO | produto_routes | Listando produtos ativos.
