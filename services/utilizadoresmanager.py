@@ -105,7 +105,7 @@ class UtilizadorService:
 
 
     @classmethod
-    def remover_utilizador(cls, utilizador_id):
+    def desativar_utilizador(cls, utilizador_id):
         """Marca um utilizador como inativo em vez de remover"""
         session = Database.get_session()
         utilizador = session.query(Utilizador).filter_by(id=utilizador_id).first()
