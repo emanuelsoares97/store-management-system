@@ -2,6 +2,9 @@ from flask import Blueprint, request, jsonify
 from services.utilizadoresmanager import UtilizadorService
 from util.auth import AuthService
 from util.logger_util import get_logger
+from config import Config
+import jwt
+
 
 logger = get_logger("route_utilizador")
 
@@ -114,3 +117,23 @@ def reativar_utilizador(utilizador_id):
     """Reativa um utilizador desativado"""
     resposta, status = UtilizadorService.reativar_utilizador(utilizador_id)
     return jsonify(resposta), status
+
+@utilizador_bp.route("/refresh", methods=["POST"])
+def refresh_token():
+    """Renova o access token usando o refresh token"""
+    token = request.headers.get("Authorization")  # Pega o token enviado pelo cliente
+
+    if not token:
+        return jsonify({"erro": "Refresh token é obrigatório!"}), 401
+
+    token = token.replace("Bearer ", "")  # Remove "Bearer " se estiver presente
+
+    try:
+        payload = jwt.decode(token, Config.SECRET_KEY, algorithms=["HS256"])
+        novo_access_token, _ = AuthService.gerar_tokens({"id": payload["id"], "email": "", "role": ""})
+        return jsonify({"access_token": novo_access_token}), 200
+    except jwt.ExpiredSignatureError:
+        return jsonify({"erro": "Refresh token expirado. Faça login novamente!"}), 401
+    except jwt.InvalidTokenError:
+        return jsonify({"erro": "Refresh token inválido!"}), 401
+
