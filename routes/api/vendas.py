@@ -5,7 +5,7 @@ from util.logger_util import get_logger
 venda_bp = Blueprint("venda", __name__)
 routelog = get_logger("venda_routes")
 
-@venda_bp.route("/", methods=["GET"])
+@venda_bp.route("/lista", methods=["GET"])
 def listar_vendas():
     """Endpoint para listar todas as vendas"""
     try:
