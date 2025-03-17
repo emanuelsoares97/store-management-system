@@ -92,7 +92,7 @@ A API estará disponível em **http://127.0.0.1:5000/**.
 - [x] Criar **CRUD de produtos**  
 - [ ] Criar **CRUD de vendas** (com relacionamento entre produto e utilizador)  
 - [ ] Melhorar sistema de **logs e tratamento de erros**  
-- [ ] Criar **testes automatizados** 🧪  
+- [ ] Criar **testes automatizados**  
 
 ---
 
