@@ -500,3 +500,19 @@
 2025-03-16 14:47:58,782 | DEBUG | BaseModel | Database chamado.
 2025-03-16 14:47:58,798 | DEBUG | BaseModel | Database chamado.
 2025-03-16 14:47:58,805 | DEBUG | BaseModel | Database chamado.
+2025-03-17 16:23:56,388 | INFO | Config | Modo de execução: DEBUG
+2025-03-17 16:23:57,679 | INFO | BaseModel | Classe Abstrata iniciada
+2025-03-17 16:23:57,680 | DEBUG | BaseModel | Database chamado.
+2025-03-17 16:23:57,687 | DEBUG | BaseModel | Database chamado.
+2025-03-17 16:23:57,702 | DEBUG | BaseModel | Database chamado.
+2025-03-17 16:23:57,728 | DEBUG | BaseModel | Database chamado.
+2025-03-17 16:23:57,741 | DEBUG | BaseModel | Database chamado.
+2025-03-17 16:23:57,753 | DEBUG | BaseModel | Database chamado.
+2025-03-17 16:23:59,064 | INFO | Config | Modo de execução: DEBUG
+2025-03-17 16:23:59,900 | INFO | BaseModel | Classe Abstrata iniciada
+2025-03-17 16:23:59,900 | DEBUG | BaseModel | Database chamado.
+2025-03-17 16:23:59,905 | DEBUG | BaseModel | Database chamado.
+2025-03-17 16:23:59,914 | DEBUG | BaseModel | Database chamado.
+2025-03-17 16:23:59,924 | DEBUG | BaseModel | Database chamado.
+2025-03-17 16:23:59,930 | DEBUG | BaseModel | Database chamado.
+2025-03-17 16:23:59,938 | DEBUG | BaseModel | Database chamado.
