@@ -14,16 +14,17 @@ class UtilizadorService:
 
     @classmethod
     def autenticar(cls, email, password):
-        """Verifica credenciais e gera um token JWT"""
+        """Verifica credenciais e retorna o utilizador autenticado"""
         session = Database.get_session()
         utilizador = session.query(Utilizador).filter_by(email=email).first()
 
         if utilizador and check_password_hash(utilizador.password, password):
             cls.logger.info(f"Utilizador {utilizador.email} autenticado.")
-            return AuthService.gerar_token({"email": utilizador.email, "role": utilizador.role})
+            return utilizador
         
         cls.logger.info(f"Token não gerado, dados não autenticados, email: {email}")
         return None
+
 
     @classmethod
     def criar_utilizador(cls, nome, email, password, role="user"):
