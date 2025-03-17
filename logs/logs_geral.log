@@ -1177,3 +1177,11 @@
 2025-03-15 15:15:20,265 | INFO | Config | Modo de execução: DEBUG
 2025-03-15 15:16:03,229 | INFO | Config | Modo de execução: DEBUG
 2025-03-15 15:16:04,756 | INFO | Config | Modo de execução: DEBUG
+2025-03-16 14:47:10,621 | INFO | Config | Modo de execução: DEBUG
+2025-03-16 14:47:11,803 | INFO | BaseModel | Classe Abstrata iniciada
+2025-03-16 14:47:39,613 | INFO | Config | Modo de execução: DEBUG
+2025-03-16 14:47:40,341 | INFO | BaseModel | Classe Abstrata iniciada
+2025-03-16 14:47:55,759 | INFO | Config | Modo de execução: DEBUG
+2025-03-16 14:47:56,485 | INFO | BaseModel | Classe Abstrata iniciada
+2025-03-16 14:47:57,959 | INFO | Config | Modo de execução: DEBUG
+2025-03-16 14:47:58,691 | INFO | BaseModel | Classe Abstrata iniciada
