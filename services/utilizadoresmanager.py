@@ -94,16 +94,18 @@ class UtilizadorService:
             utilizador.password = generate_password_hash(password)
 
         # Somente admins podem alterar a role de outro utilizador para admin
-        if role:
-            if role == "admin" and g.current_user["role"] != "admin":  
-                cls.logger.error("Tentativa de alterar role para admin sem autorização.")  
-                return {"erro": "Apenas administradores podem alterar contas para admin."}, 403
+        if role == "admin" and g.current_user["role"] != "admin":  
+            cls.logger.error("Tentativa de promover um utilizador para admin sem autorização.")  
+            return {"erro": "Apenas administradores podem promover contas para admin."}, 403
 
-            
-            
-            if role not in ["admin", "gerente", "estoque", "user"]:
-                return {"erro": "Tipo de role inválido!"}, 400
-            utilizador.role = role
+        # Somente admins podem modificar um utilizador que já seja admin
+        if utilizador.role == "admin" and g.current_user["role"] != "admin":  
+            cls.logger.error("Tentativa de modificar um administrador sem autorização.")  
+            return {"erro": "Apenas administradores podem alterar contas de outros administradores."}, 403
+
+        if role not in ["admin", "gerente", "estoque", "user"]:
+            return {"erro": "Tipo de role inválido!"}, 400
+        utilizador.role = role
 
         session.commit()
         return {
