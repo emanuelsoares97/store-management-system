@@ -4,9 +4,13 @@ from models.utilizador import Utilizador
 from sqlalchemy.exc import IntegrityError
 import re
 from werkzeug.security import generate_password_hash, check_password_hash
+from util.logger_util import get_logger
+from flask import g
 
 class UtilizadorService:
     """Gerencia autenticação e operações com utilizadores"""
+
+    logger = get_logger("ProdutoService")
 
     @classmethod
     def autenticar(cls, email, password):
@@ -15,27 +19,32 @@ class UtilizadorService:
         utilizador = session.query(Utilizador).filter_by(email=email).first()
 
         if utilizador and check_password_hash(utilizador.password, password):
-            return AuthService.gerar_token({"email": utilizador.email, "role": utilizador.role})  #Aqui podes definir a role dinamicamente
+            cls.logger.info(f"Utilizador {utilizador.email} autenticado.")
+            return AuthService.gerar_token({"email": utilizador.email, "role": utilizador.role})
+        
+        cls.logger.info(f"Token não gerado, dados não autenticados, email: {email}")
         return None
 
     @classmethod
-    def criar_utilizador(cls, nome, email, password, role="user", user_role=None):  # Agora role pode ser definido (default="user")
+    def criar_utilizador(cls, nome, email, password, role="user"):
         """Cria um novo utilizador se não existir"""
         session = Database.get_session()
 
         if not nome or not email or not password:
+            cls.logger.error(f"Tentativa de criar utilizador com dados em falta.")
             return {"erro": "Nome, email e senha são obrigatórios!"}, 400
 
         if not re.match(r"[^@]+@[^@]+\.[^@]+", email):
+            cls.logger.error(f"Tentativa de email invalido {email}.")
             return {"erro": "Email inválido!"}, 400
 
         if session.query(Utilizador).filter_by(email=email).first():
+            cls.logger.info(f"Tentativa de criar utilizador com email já registado, {email}.")
             return {"erro": "Já existe um utilizador com este email!"}, 400
         
-        if role == "admin" and user_role != "admin":
+        if role == "admin" and not g.current_user["role"] != "admin":  
+            cls.logger.error("Tentativa de criar utilizador admin sem permissão.")  
             return {"erro": "Apenas administradores podem criar contas com permissão de admin."}, 403
-
-
         
         hashed_password = generate_password_hash(password)
 
@@ -67,7 +76,7 @@ class UtilizadorService:
 
 
     @classmethod
-    def atualizar_utilizador(cls, utilizador_id, nome=None, email=None, password=None, role=None, user_role=None):
+    def atualizar_utilizador(cls, utilizador_id, nome=None, email=None, password=None, role=None):
         """Atualiza um utilizador"""
         session = Database.get_session()
         utilizador = session.query(Utilizador).filter_by(id=utilizador_id).first()
@@ -84,10 +93,14 @@ class UtilizadorService:
         if password:
             utilizador.password = generate_password_hash(password)
 
-        # Somente admins podem alterar a role de outro utilizador
+        # Somente admins podem alterar a role de outro utilizador para admin
         if role:
-            if user_role != "admin":  # O user autenticado precisa ser admin para mudar role!
-                return {"erro": "Apenas administradores podem alterar permissões de utilizadores."}, 403
+            if role == "admin" and g.current_user["role"] != "admin":  
+                cls.logger.error("Tentativa de alterar role para admin sem autorização.")  
+                return {"erro": "Apenas administradores podem alterar contas para admin."}, 403
+
+            
+            
             if role not in ["admin", "gerente", "estoque", "user"]:
                 return {"erro": "Tipo de role inválido!"}, 400
             utilizador.role = role
