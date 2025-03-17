@@ -2,10 +2,10 @@
 from util.logger_util import get_logger
 
 class Config:
-    """Classe para armazenar as configurações da aplicação"""
+    """Classe para guardar as configurações da aplicação"""
     
     DEBUG = True  # Pode ser alterado para False em produção
-    SECRET_KEY = "chave_super_secreta_que_deves_alterar"  # 🔥 Define uma chave fixa
+    SECRET_KEY = "chamafilho"
 
 
     @classmethod
