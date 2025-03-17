@@ -15,7 +15,7 @@ routelog = get_logger("produto_routes")
     - PATCH  /api/produto/<id>/reativar -> Reativar um produto
 """
 
-@produto_bp.route("/", methods=["GET"])
+@produto_bp.route("/ativos", methods=["GET"])
 @AuthService.token_required
 @AuthService.role_required("admin", "gerente", "estoque", "user") 
 def listar_produtos():
