@@ -1,18 +1,24 @@
 from flask import Flask
 from config import Config
-from database import Database 
+from database import Database
 from routes.api import init_routes
 
-app = Flask(__name__)
+def create_app():
+    """Cria e configura a aplicação Flask"""
+    app = Flask(__name__)
 
-# Aplicar configurações do Flask
-app.config.from_object(Config)
+    # Aplicar configurações do Flask
+    app.config.from_object(Config)
 
-# Registrar modelos e garantir que o banco de dados está configurado corretamente
-Database.registrar_modelos()
+    # Registrar modelos do banco de dados
+    Database.registrar_modelos()
 
-# Inicializar rotas da API
-init_routes(app)
+    # Inicializar rotas da API
+    init_routes(app)
 
+    return app
+
+# Se o arquivo for executado diretamente, inicia o servidor
 if __name__ == "__main__":
+    app = create_app()
     app.run(debug=Config.DEBUG)
