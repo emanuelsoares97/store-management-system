@@ -1,11 +1,11 @@
 from models.cliente import Cliente
 from database import Database
-import logging
+from util.logger_util import get_logger
 
 class ClienteService:
     """Gerencia os clientes no banco de dados"""
     
-    logger = logging.getLogger("ClienteService")
+    logger = get_logger("ClienteService")
 
     @classmethod
     def listar_clientes(cls, apenas_ativos=True):
