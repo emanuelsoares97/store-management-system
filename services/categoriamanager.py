@@ -5,7 +5,7 @@ from util.logger_util import get_logger
 class CategoriaService:
     """Gerencia as categorias no banco de dados"""
 
-    logger = get_logger("CategoriaService")
+    logger = get_logger(__name__)
 
     @classmethod
     def listar_categorias(cls):

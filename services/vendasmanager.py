@@ -6,7 +6,7 @@ from util.logger_util import get_logger
 class VendaService:
     """Gerencia as vendas no sistema"""
     
-    logger = get_logger("VendaService")
+    logger = get_logger(__name__)
 
     @classmethod
     def listar_vendas(cls):

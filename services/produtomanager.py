@@ -5,7 +5,7 @@ from util.logger_util import get_logger
 class ProdutoService:
     """Classe responsável pelo gerenciamento de produtos no banco de dados"""
     
-    logger = get_logger("ProdutoService")
+    logger = get_logger(__name__)
 
     @classmethod
     def listar_produtos(cls, apenas_ativos=True):
@@ -21,14 +21,17 @@ class ProdutoService:
             session.close()
 
     @classmethod
-    def criar_produto(cls, nome, preco, estoque, categoria_id):
+    def criar_produto(cls, nome, preco, quantidade_estoque, categoria_id):
         """Cria e adiciona um novo produto no banco de dados"""
         session = Database.get_session()
+        cls.logger.info(f"Parâmetros recebidos: nome={nome}, preco={preco}, quantidade_estoque={quantidade_estoque}, categoria_id={categoria_id}")
+
         try:
-            if not nome or preco is None or estoque is None or not categoria_id:
+
+            if not nome or preco is None or quantidade_estoque is None or not categoria_id:
                 raise ValueError("Nome, preço, estoque e categoria são obrigatórios!")
 
-            if preco < 0 or estoque < 0:
+            if preco < 0 or quantidade_estoque < 0:
                 raise ValueError("Preço e estoque devem ser valores positivos!")
 
             produto_existente = session.query(Produto).filter_by(nome=nome).first()
@@ -36,13 +39,13 @@ class ProdutoService:
                 raise ValueError("Já existe um produto com esse nome!")
 
             novo_produto = Produto(
-                nome=nome, preco=preco, quantidade_estoque=estoque, categoria_id=categoria_id, ativo=True
+                nome=nome, preco=preco, quantidade_estoque=quantidade_estoque, categoria_id=categoria_id, ativo=True
             )
             session.add(novo_produto)
             session.commit()
             session.refresh(novo_produto)
 
-            cls.logger.info(f"Produto criado: {novo_produto.nome}, Preço: {novo_produto.preco}, Estoque: {estoque}")
+            cls.logger.info(f"Produto criado: {novo_produto.nome}, Preço: {novo_produto.preco}, Estoque: {quantidade_estoque}")
             return novo_produto.to_dict()
 
         except Exception as e:
@@ -53,7 +56,7 @@ class ProdutoService:
             session.close()
 
     @classmethod
-    def atualizar_dados(cls, produto_id, nome=None, preco=None, estoque=None, ativo=None, categoria_id=None):
+    def atualizar_dados(cls, produto_id, nome=None, preco=None, quantidade_estoque=None, ativo=None, categoria_id=None):
         """Atualiza um produto pelo ID"""
         session = Database.get_session()
         try:
@@ -67,10 +70,10 @@ class ProdutoService:
                 if preco < 0:
                     raise ValueError("O preço não pode ser negativo!")
                 produto.preco = preco
-            if estoque is not None:
-                if estoque < 0:
+            if quantidade_estoque is not None:
+                if quantidade_estoque < 0:
                     raise ValueError("O estoque não pode ser negativo!")
-                produto.quantidade_estoque = estoque
+                produto.quantidade_estoque = quantidade_estoque
             if ativo is not None:
                 produto.ativo = ativo
             if categoria_id:

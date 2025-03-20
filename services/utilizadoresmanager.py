@@ -1,4 +1,4 @@
-from util.auth import AuthService
+from services.authmanager import AuthService
 from database import Database
 from models.utilizador import Utilizador
 from sqlalchemy.exc import IntegrityError
@@ -6,11 +6,15 @@ import re
 from werkzeug.security import generate_password_hash, check_password_hash
 from util.logger_util import get_logger
 from flask import g
+from util.validacao import validar_email
+from util.logger_util import get_logger
+
+logger=get_logger(__name__)
 
 class UtilizadorService:
     """Gerencia autenticação e operações com utilizadores"""
 
-    logger = get_logger("ProdutoService")
+    logger = get_logger(__name__)
 
     @classmethod
     def autenticar(cls, email, password):
@@ -35,9 +39,10 @@ class UtilizadorService:
             cls.logger.error(f"Tentativa de criar utilizador com dados em falta.")
             return {"erro": "Nome, email e senha são obrigatórios!"}, 400
 
-        if not re.match(r"[^@]+@[^@]+\.[^@]+", email):
-            cls.logger.error(f"Tentativa de email invalido {email}.")
+        if not validar_email(email):
+            cls.logger.error(f"Tentativa de email inválido: {email}.")
             return {"erro": "Email inválido!"}, 400
+        email = email
 
         if session.query(Utilizador).filter_by(email=email).first():
             cls.logger.info(f"Tentativa de criar utilizador com email já registado, {email}.")
@@ -77,7 +82,7 @@ class UtilizadorService:
 
 
     @classmethod
-    def atualizar_utilizador(cls, utilizador_id, nome=None, email=None, password=None, role=None):
+    def atualizar_utilizador(cls, utilizador_id, nome=None, email=None, password=None, role=None, ativo=None):
         """Atualiza um utilizador"""
         session = Database.get_session()
         utilizador = session.query(Utilizador).filter_by(id=utilizador_id).first()
@@ -87,26 +92,36 @@ class UtilizadorService:
 
         if nome:
             utilizador.nome = nome
+
         if email:
-            if not re.match(r"[^@]+@[^@]+\.[^@]+", email):
-                return {"erro": "Email inválido!"}, 400
-            utilizador.email = email
+                if not validar_email(email):
+                    cls.logger.error(f"Tentativa de email inválido: {email}.")
+                    return {"erro": "Email inválido!"}, 400
+                utilizador.email = email
+        
         if password:
             utilizador.password = generate_password_hash(password)
 
-        # Somente admins podem alterar a role de outro utilizador para admin
-        if role == "admin" and g.current_user["role"] != "admin":  
-            cls.logger.error("Tentativa de promover um utilizador para admin sem autorização.")  
-            return {"erro": "Apenas administradores podem promover contas para admin."}, 403
+        # Só valida e atualiza o role se ele foi enviado (não for None)
+        if role is not None:
+            # Somente admins podem alterar a role de outro utilizador para admin
+            if role == "admin" and g.current_user["role"] != "admin":
+                cls.logger.error("Tentativa de promover um utilizador para admin sem autorização.")
+                return {"erro": "Apenas administradores podem promover contas para admin."}, 403
 
-        # Somente admins podem modificar um utilizador que já seja admin
-        if utilizador.role == "admin" and g.current_user["role"] != "admin":  
-            cls.logger.error("Tentativa de modificar um administrador sem autorização.")  
-            return {"erro": "Apenas administradores podem alterar contas de outros administradores."}, 403
+            # Somente admins podem modificar um utilizador que já seja admin
+            if utilizador.role == "admin" and g.current_user["role"] != "admin":
+                cls.logger.error("Tentativa de modificar um administrador sem autorização.")
+                return {"erro": "Apenas administradores podem alterar contas de outros administradores."}, 403
 
-        if role not in ["admin", "gerente", "estoque", "user"]:
-            return {"erro": "Tipo de role inválido!"}, 400
-        utilizador.role = role
+            if role not in ["admin", "gerente", "estoque", "user"]:
+                return {"erro": "Tipo de role inválido!"}, 400
+
+            utilizador.role = role
+
+        # Atualiza o campo ativo, se fornecido
+        if ativo is not None:
+            utilizador.ativo = ativo
 
         session.commit()
         return {
@@ -115,9 +130,11 @@ class UtilizadorService:
                 "id": utilizador.id,
                 "nome": utilizador.nome,
                 "email": utilizador.email,
-                "role": utilizador.role, 
+                "role": utilizador.role,
+                "ativo": utilizador.ativo
             }
         }
+
 
 
     @classmethod
