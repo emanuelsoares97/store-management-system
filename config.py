@@ -1,18 +1,15 @@
-
-from util.logger_util import get_logger
+import os
 
 class Config:
-    """Classe para guardar as configurações da aplicação"""
-    
-    DEBUG = True  # Pode ser alterado para False em produção
+    """Configuração padrão para a aplicação"""
+    DEBUG = True
     SECRET_KEY = "chamafilho"
 
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    SQLALCHEMY_DATABASE_URI = f"sqlite:///{os.path.join(BASE_DIR, 'db', 'database.db')}"
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
 
-    @classmethod
-    def init_app(cls):
-        """Inicializa a configuração e exibe logs relevantes"""
-        config_log = get_logger("Config")
-        config_log.info(f"Modo de execução: {'DEBUG' if cls.DEBUG else 'PRODUÇÃO'}")
 
-# Inicializa as configurações no momento da importação
-Config.init_app()
+class TestConfig(Config):
+    TESTING = True
+    SQLALCHEMY_DATABASE_URI = "sqlite:///:memory:"
