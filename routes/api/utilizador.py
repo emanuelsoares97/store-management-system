@@ -1,12 +1,13 @@
 from flask import Blueprint, request, jsonify
 from services.utilizadoresmanager import UtilizadorService
-from util.auth import AuthService
+from services.authmanager import AuthService
 from util.logger_util import get_logger
 from config import Config
 import jwt
+from flask import g
 
 
-logger = get_logger("route_utilizador")
+logger = get_logger(__name__)
 
 utilizador_bp = Blueprint("utilizador", __name__)
 
@@ -69,7 +70,7 @@ def criar_utilizador():
 
 @utilizador_bp.route("/<int:utilizador_id>/editar", methods=["PUT"])
 @AuthService.token_required
-@AuthService.role_required("admin")  # Só os admin podem modificar
+@AuthService.role_required("admin", "gerente")
 def atualizar_utilizador(utilizador_id):
     """Endpoint para atualizar um utilizador"""
     try:
@@ -78,7 +79,6 @@ def atualizar_utilizador(utilizador_id):
         if not data:
             return jsonify({"erro": "Nenhum dado enviado!"}), 400
 
-        user_role = request.user_role  # Garantir que é um admin a modificar os dados
         logger.info(f"Tentativa de atualizar utilizador ID: {utilizador_id}")
 
         resultado = UtilizadorService.atualizar_utilizador(
@@ -87,7 +87,9 @@ def atualizar_utilizador(utilizador_id):
             email=data.get("email"),
             password=data.get("password"),
             role=data.get("role"),
-            user_role=user_role
+            ativo=data.get("ativo"),
+            
+            
         )
 
         return jsonify(resultado)
@@ -102,7 +104,7 @@ def atualizar_utilizador(utilizador_id):
 def desaivar_utilizador(utilizador_id):
     """Remove um utilizador"""
     try:
-        logger.info(f"Tentativa de remover utilizador ID: {utilizador_id}")
+        logger.info(f"Removido o utilizador ID: {utilizador_id}")
         resposta, status = UtilizadorService.desativar_utilizador(utilizador_id)
         return jsonify(resposta), status
     except Exception as e:
@@ -110,7 +112,7 @@ def desaivar_utilizador(utilizador_id):
         return jsonify({"erro": "Erro interno no servidor"}), 500
 
 
-@utilizador_bp.route("/<int:utilizador_id>/reativar", methods=["PUT"])
+@utilizador_bp.route("/<int:utilizador_id>/reativar", methods=["PATCH"])
 @AuthService.token_required
 @AuthService.role_required("admin")  # apenas admins podem reativar utilizadores!
 def reativar_utilizador(utilizador_id):
@@ -118,22 +120,5 @@ def reativar_utilizador(utilizador_id):
     resposta, status = UtilizadorService.reativar_utilizador(utilizador_id)
     return jsonify(resposta), status
 
-@utilizador_bp.route("/refresh", methods=["POST"])
-def refresh_token():
-    """Renova o access token usando o refresh token"""
-    token = request.headers.get("Authorization")  # Pega o token enviado pelo cliente
 
-    if not token:
-        return jsonify({"erro": "Refresh token é obrigatório!"}), 401
-
-    token = token.replace("Bearer ", "")  # Remove "Bearer " se estiver presente
-
-    try:
-        payload = jwt.decode(token, Config.SECRET_KEY, algorithms=["HS256"])
-        novo_access_token, _ = AuthService.gerar_tokens({"id": payload["id"], "email": "", "role": ""})
-        return jsonify({"access_token": novo_access_token}), 200
-    except jwt.ExpiredSignatureError:
-        return jsonify({"erro": "Refresh token expirado. Faça login novamente!"}), 401
-    except jwt.InvalidTokenError:
-        return jsonify({"erro": "Refresh token inválido!"}), 401
 
