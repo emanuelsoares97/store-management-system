@@ -1,10 +1,10 @@
 from flask import Blueprint, jsonify, request
 from services.clientemanager import ClienteService
 from util.logger_util import get_logger
-from util.auth import AuthService
+from services.authmanager import AuthService
 
 cliente_bp = Blueprint("cliente", __name__)
-routelog = get_logger("cliente_routes")
+logger = get_logger(__name__)
 
 @cliente_bp.route("/", methods=["GET"])
 @AuthService.token_required
@@ -15,7 +15,7 @@ def listar_clientes():
         clientes = ClienteService.listar_clientes()
         return jsonify({"clientes": clientes}), 200
     except Exception as e:
-        routelog.error(f"Erro ao listar clientes: {str(e)}")
+        logger.error(f"Erro ao listar clientes: {str(e)}")
         return jsonify({"erro": "Erro ao carregar clientes."}), 500
 
 @cliente_bp.route("/novo", methods=["POST"])
@@ -26,12 +26,14 @@ def criar_cliente():
     try:
         data = request.get_json()
         if not data:
+            logger.warning("Tentativa de criar cliente sem dados.")
             return jsonify({"erro": "Nenhum dado enviado!"}), 400
 
         nome = data.get("nome")
         email = data.get("email")
 
         novo_cliente = ClienteService.criar_cliente(nome, email)
+        
         return jsonify({"mensagem": "Cliente criado com sucesso!", "cliente": novo_cliente}), 201
 
     except ValueError as e:
