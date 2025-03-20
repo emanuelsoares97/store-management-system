@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, String, Boolean
 from models.abstrata import BaseModel
 
-class Utilizador(BaseModel.get_base()):  
+class Utilizador(BaseModel):  
     __tablename__ = "utilizadores"
 
     id = Column(Integer, primary_key=True, autoincrement=True)  #Garantir que `id` fica primeiro!
