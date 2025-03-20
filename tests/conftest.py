@@ -1,34 +1,55 @@
 import pytest
 from app import create_app
-from models.abstrata import BaseModel
-from models.utilizador import Utilizador
 from database import Database
+from models.abstrata import BaseModel
+from config import TestConfig
+from models.utilizador import Utilizador
 from werkzeug.security import generate_password_hash
 
-@pytest.fixture
+@pytest.fixture(scope="session")
 def app():
-    """Cria e configura uma instância do Flask para testes"""
-    app = create_app()
+    # Reseta a instância do Database para garantir que usamos o TestConfig
+    Database.reset_instance()
+    
+    app = create_app(config_class=TestConfig)
     with app.app_context():
-        BaseModel.criar_tabelas()  # ✅ Cria tabelas para os testes
-        criar_utilizador_admin()  # ✅ Garante que o admin existe nos testes
+        BaseModel.criar_tabelas()  # Cria as tabelas usando a instância atual
         yield app
-        Database.get_session().rollback()  # ✅ Evita que dados fiquem salvos entre testes
-
-def criar_utilizador_admin():
-    """Cria um utilizador admin para os testes"""
-    session = Database.get_session()
-    if not session.query(Utilizador).filter_by(email="admin@email.com").first():
-        admin = Utilizador(
-            nome="Admin Teste",
-            email="admin@email.com",
-            password=generate_password_hash("123456"),  # ✅ Senha para testes
-            role="admin"
-        )
-        session.add(admin)
-        session.commit()
 
 @pytest.fixture
 def client(app):
-    """Retorna um cliente de teste do Flask"""
     return app.test_client()
+
+@pytest.fixture(scope="function", autouse=True)
+def criar_utilizador_admin_gerente_user():
+    """Cria utilizadores de teste"""
+    session = Database.get_session()
+
+    admin = Utilizador(
+        nome="Admin Teste",
+        email="admin@email.com",
+        password=generate_password_hash("123456"),
+        role="admin"
+    )
+
+    gerente = Utilizador(
+        nome="Gerente Teste",
+        email="gerente@email.com",
+        password=generate_password_hash("123456"),
+        role="gerente"
+    )
+
+    user = Utilizador(
+        nome="User Teste",
+        email="user@email.com",
+        password=generate_password_hash("123456"),
+        role="user"
+    )
+
+    session.add_all([admin, gerente, user])
+    session.commit()
+
+    yield  # Permite que os testes usem os usuários criados
+
+    session.rollback()
+    session.close()
