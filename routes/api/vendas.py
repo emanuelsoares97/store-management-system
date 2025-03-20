@@ -3,7 +3,7 @@ from services.vendasmanager import VendaService
 from util.logger_util import get_logger
 
 venda_bp = Blueprint("venda", __name__)
-routelog = get_logger("venda_routes")
+logger = get_logger(__name__)
 
 @venda_bp.route("/lista", methods=["GET"])
 def listar_vendas():
@@ -12,7 +12,7 @@ def listar_vendas():
         vendas = VendaService.listar_vendas()
         return jsonify({"vendas": vendas}), 200
     except Exception as e:
-        routelog.error(f"Erro ao listar vendas: {str(e)}")
+        logger.error(f"Erro ao listar vendas: {str(e)}")
         return jsonify({"erro": "Erro ao carregar vendas."}), 500
 
 @venda_bp.route("/registrar", methods=["POST"])
@@ -21,6 +21,7 @@ def registrar_venda():
     try:
         data = request.get_json()
         if not data:
+            logger.erro("Tentativa de registar venda sem dados")
             return jsonify({"erro": "Nenhum dado enviado!"}), 400
 
         cliente_id = data.get("cliente_id")
@@ -33,9 +34,12 @@ def registrar_venda():
 
         nova_venda = VendaService.registrar_venda(cliente_id, utilizador_id, produto_id, quantidade)
 
+        logger.info(f"Venda registada com sucesso {nova_venda}")
         return jsonify({"mensagem": "Venda registrada com sucesso!", "venda": nova_venda}), 201
 
     except ValueError as e:
+        logger.warning(f"Erro ao registar venda: {str(e)}")
         return jsonify({"erro": str(e)}), 400
     except Exception as e:
+        logger.error(f"Erro ao registar venda: {str(e)}")
         return jsonify({"erro": "Erro ao registrar venda."}), 500
