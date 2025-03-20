@@ -1,0 +1,3 @@
+nome,email,password,role,ativo
+João Silva,joao.silva@email.com,joao123,user,True
+Maria Oliveira,maria.oliveira@email.com,maria123,user,True
