@@ -1,131 +1,347 @@
-2025-03-14 18:02:59,084 | ERROR | produto_routes | Erro ao adicionar produto: Erro ao tentar adicionar produto
-2025-03-14 18:07:12,615 | ERROR | produto_routes | Erro ao adicionar produto: Erro ao tentar adicionar produto
-2025-03-14 18:10:04,280 | ERROR | produto_routes | Erro ao adicionar produto: Erro ao tentar adicionar produto
-2025-03-14 18:15:02,547 | ERROR | produto_routes | Erro ao adicionar produto: Erro ao tentar adicionar produto
-2025-03-14 18:15:06,298 | ERROR | produto_routes | Erro ao adicionar produto: Erro ao tentar adicionar produto
-2025-03-14 18:15:07,863 | ERROR | produto_routes | Erro ao adicionar produto: Erro ao tentar adicionar produto
-2025-03-14 18:21:52,297 | ERROR | produto_routes | Erro ao adicionar produto: Erro ao tentar adicionar produto
-2025-03-14 18:23:29,764 | ERROR | produto_routes | Erro ao adicionar produto: Erro ao tentar adicionar produto
-2025-03-14 18:29:23,804 | ERROR | produto_routes | Erro ao adicionar produto: Erro ao tentar adicionar produto
-2025-03-14 18:37:20,607 | ERROR | produto_routes | Erro ao adicionar produto: Erro ao tentar adicionar produto
-2025-03-15 10:50:00,266 | ERROR | produto_routes | Erro inesperado ao adicionar produto: Erro ao tentar adicionar produto
-2025-03-17 18:39:10,067 | ERROR | route_auth | Erro inesperado no login: type object 'UtilizadorService' has no attribute 'buscar_por_email'
+2025-03-19 21:35:12,598 | ERROR | routes.api.auth | Erro ao validar token: (builtins.TypeError) SQLite DateTime type only accepts Python datetime and date objects as input.
+[SQL: INSERT INTO tokens_revogados (token_jti, criado_em) VALUES (?, ?)]
+[parameters: [{'token_jti': '83c7d122-dc99-4f4c-a3ee-a8fa831a0d6e'}]]
 Traceback (most recent call last):
-  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 21, in login
-    utilizador = UtilizadorService.buscar_por_email(data.get("email"))
-                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AttributeError: type object 'UtilizadorService' has no attribute 'buscar_por_email'
-2025-03-17 18:40:33,875 | ERROR | route_auth | Erro inesperado no login: type object 'UtilizadorService' has no attribute 'buscar_por_email'
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1812, in _execute_context
+    context = constructor(
+              ^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1477, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\dialects\sqlite\base.py", line 1116, in process
+    raise TypeError(
+TypeError: SQLite DateTime type only accepts Python datetime and date objects as input.
+
+The above exception was the direct cause of the following exception:
+
 Traceback (most recent call last):
-  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 21, in login
-    utilizador = UtilizadorService.buscar_por_email(data.get("email"))
-                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AttributeError: type object 'UtilizadorService' has no attribute 'buscar_por_email'
-2025-03-17 18:42:34,277 | ERROR | route_auth | Erro inesperado no login: type object 'UtilizadorService' has no attribute 'buscar_por_email'
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 88, in logout
+    TokenService.adicionar_token_na_blacklist(g.current_user["jti"])
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\services\tokenrevogadomanager.py", line 13, in adicionar_token_na_blacklist
+    session.commit()
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2032, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1313, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1288, in _prepare_impl
+    self.session.flush()
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4353, in flush
+    self._flush(objects)
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4488, in _flush
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4449, in _flush
+    flush_context.execute()
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 1233, in _emit_insert_statements
+    result = connection.execute(
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1818, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1812, in _execute_context
+    context = constructor(
+              ^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1477, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\dialects\sqlite\base.py", line 1116, in process
+    raise TypeError(
+sqlalchemy.exc.StatementError: (builtins.TypeError) SQLite DateTime type only accepts Python datetime and date objects as input.
+[SQL: INSERT INTO tokens_revogados (token_jti, criado_em) VALUES (?, ?)]
+[parameters: [{'token_jti': '83c7d122-dc99-4f4c-a3ee-a8fa831a0d6e'}]]
+2025-03-19 21:35:16,916 | ERROR | routes.api.auth | Erro ao validar token: (builtins.TypeError) SQLite DateTime type only accepts Python datetime and date objects as input.
+[SQL: INSERT INTO tokens_revogados (token_jti, criado_em) VALUES (?, ?)]
+[parameters: [{'token_jti': 'fbb37333-156a-4be0-82a3-83f601ee6037'}]]
 Traceback (most recent call last):
-  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 21, in login
-    utilizador = UtilizadorService.buscar_por_email(data.get("email"))
-                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AttributeError: type object 'UtilizadorService' has no attribute 'buscar_por_email'
-2025-03-17 18:42:39,446 | ERROR | route_auth | Erro inesperado no login: type object 'UtilizadorService' has no attribute 'buscar_por_email'
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1812, in _execute_context
+    context = constructor(
+              ^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1477, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\dialects\sqlite\base.py", line 1116, in process
+    raise TypeError(
+TypeError: SQLite DateTime type only accepts Python datetime and date objects as input.
+
+The above exception was the direct cause of the following exception:
+
 Traceback (most recent call last):
-  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 21, in login
-    utilizador = UtilizadorService.buscar_por_email(data.get("email"))
-                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AttributeError: type object 'UtilizadorService' has no attribute 'buscar_por_email'
-2025-03-17 18:43:43,069 | ERROR | route_auth | Erro inesperado no login: UtilizadorService.autenticar() missing 1 required positional argument: 'password'
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 88, in logout
+    TokenService.adicionar_token_na_blacklist(g.current_user["jti"])
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\services\tokenrevogadomanager.py", line 13, in adicionar_token_na_blacklist
+    session.commit()
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2032, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1313, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1288, in _prepare_impl
+    self.session.flush()
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4353, in flush
+    self._flush(objects)
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4488, in _flush
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4449, in _flush
+    flush_context.execute()
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 1233, in _emit_insert_statements
+    result = connection.execute(
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1818, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1812, in _execute_context
+    context = constructor(
+              ^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1477, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\dialects\sqlite\base.py", line 1116, in process
+    raise TypeError(
+sqlalchemy.exc.StatementError: (builtins.TypeError) SQLite DateTime type only accepts Python datetime and date objects as input.
+[SQL: INSERT INTO tokens_revogados (token_jti, criado_em) VALUES (?, ?)]
+[parameters: [{'token_jti': 'fbb37333-156a-4be0-82a3-83f601ee6037'}]]
+2025-03-19 21:35:17,974 | ERROR | ProdutoService | Erro ao criar produto: (builtins.TypeError) SQLite DateTime type only accepts Python datetime and date objects as input.
+[SQL: INSERT INTO produtos (nome, descricao, preco, quantidade_estoque, ativo, categoria_id, criado_em, atualizado_em) VALUES (?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: [{'nome': 'banana', 'preco': 3.0, 'categoria_id': 2, 'quantidade_estoque': 10, 'ativo': True, 'descricao': None}]]
+2025-03-19 21:35:17,976 | ERROR | produto_routes | Erro inesperado ao criar produto: Erro ao criar produto
+2025-03-19 21:37:22,073 | ERROR | routes.api.auth | Erro ao validar token: (builtins.TypeError) SQLite DateTime type only accepts Python datetime and date objects as input.
+[SQL: INSERT INTO tokens_revogados (token_jti, criado_em) VALUES (?, ?)]
+[parameters: [{'token_jti': '2507391e-86cb-4551-b7d3-67a4bfd7db41'}]]
 Traceback (most recent call last):
-  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 21, in login
-    utilizador = UtilizadorService.autenticar(data.get("email"))
-                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-TypeError: UtilizadorService.autenticar() missing 1 required positional argument: 'password'
-2025-03-17 18:43:46,051 | ERROR | route_auth | Erro inesperado no login: UtilizadorService.autenticar() missing 1 required positional argument: 'password'
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1812, in _execute_context
+    context = constructor(
+              ^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1477, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\dialects\sqlite\base.py", line 1116, in process
+    raise TypeError(
+TypeError: SQLite DateTime type only accepts Python datetime and date objects as input.
+
+The above exception was the direct cause of the following exception:
+
 Traceback (most recent call last):
-  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 21, in login
-    utilizador = UtilizadorService.autenticar(data.get("email"))
-                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-TypeError: UtilizadorService.autenticar() missing 1 required positional argument: 'password'
-2025-03-17 18:44:18,830 | ERROR | route_auth | Erro inesperado no login: type object 'AuthService' has no attribute 'gerar_token'
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 88, in logout
+    TokenService.adicionar_token_na_blacklist(g.current_user["jti"])
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\services\tokenrevogadomanager.py", line 13, in adicionar_token_na_blacklist
+    session.commit()
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2032, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1313, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1288, in _prepare_impl
+    self.session.flush()
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4353, in flush
+    self._flush(objects)
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4488, in _flush
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4449, in _flush
+    flush_context.execute()
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 1233, in _emit_insert_statements
+    result = connection.execute(
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1818, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1812, in _execute_context
+    context = constructor(
+              ^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1477, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\dialects\sqlite\base.py", line 1116, in process
+    raise TypeError(
+sqlalchemy.exc.StatementError: (builtins.TypeError) SQLite DateTime type only accepts Python datetime and date objects as input.
+[SQL: INSERT INTO tokens_revogados (token_jti, criado_em) VALUES (?, ?)]
+[parameters: [{'token_jti': '2507391e-86cb-4551-b7d3-67a4bfd7db41'}]]
+2025-03-19 21:39:31,772 | ERROR | routes.api.auth | Erro ao validar token: (builtins.TypeError) SQLite DateTime type only accepts Python datetime and date objects as input.
+[SQL: INSERT INTO tokens_revogados (token_jti, criado_em) VALUES (?, ?)]
+[parameters: [{'token_jti': 'b7aa89bd-28ed-4c27-ad77-e825d2fe0282'}]]
 Traceback (most recent call last):
-  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 21, in login
-    utilizador = UtilizadorService.autenticar(data.get("email"),data.get("password"))
-                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\services\utilizadoresmanager.py", line 23, in autenticar
-    return AuthService.gerar_token({"email": utilizador.email, "role": utilizador.role})
-           ^^^^^^^^^^^^^^^^^^^^^^^
-AttributeError: type object 'AuthService' has no attribute 'gerar_token'. Did you mean: 'gerar_tokens'?
-2025-03-17 18:44:20,742 | ERROR | route_auth | Erro inesperado no login: type object 'AuthService' has no attribute 'gerar_token'
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1812, in _execute_context
+    context = constructor(
+              ^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1477, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\dialects\sqlite\base.py", line 1116, in process
+    raise TypeError(
+TypeError: SQLite DateTime type only accepts Python datetime and date objects as input.
+
+The above exception was the direct cause of the following exception:
+
 Traceback (most recent call last):
-  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 21, in login
-    utilizador = UtilizadorService.autenticar(data.get("email"),data.get("password"))
-                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\services\utilizadoresmanager.py", line 23, in autenticar
-    return AuthService.gerar_token({"email": utilizador.email, "role": utilizador.role})
-           ^^^^^^^^^^^^^^^^^^^^^^^
-AttributeError: type object 'AuthService' has no attribute 'gerar_token'. Did you mean: 'gerar_tokens'?
-2025-03-17 18:45:06,533 | ERROR | route_auth | Erro inesperado no login: 'builtin_function_or_method' object is not subscriptable
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 88, in logout
+    TokenService.adicionar_token_na_blacklist(g.current_user["jti"])
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\services\tokenrevogadomanager.py", line 13, in adicionar_token_na_blacklist
+    session.commit()
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2032, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1313, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1288, in _prepare_impl
+    self.session.flush()
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4353, in flush
+    self._flush(objects)
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4488, in _flush
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4449, in _flush
+    flush_context.execute()
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 1233, in _emit_insert_statements
+    result = connection.execute(
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1818, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1812, in _execute_context
+    context = constructor(
+              ^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1477, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\dialects\sqlite\base.py", line 1116, in process
+    raise TypeError(
+sqlalchemy.exc.StatementError: (builtins.TypeError) SQLite DateTime type only accepts Python datetime and date objects as input.
+[SQL: INSERT INTO tokens_revogados (token_jti, criado_em) VALUES (?, ?)]
+[parameters: [{'token_jti': 'b7aa89bd-28ed-4c27-ad77-e825d2fe0282'}]]
+2025-03-19 21:41:24,581 | ERROR | ProdutoService | Erro ao criar produto: (builtins.TypeError) SQLite DateTime type only accepts Python datetime and date objects as input.
+[SQL: INSERT INTO produtos (nome, descricao, preco, quantidade_estoque, ativo, categoria_id, criado_em, atualizado_em) VALUES (?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: [{'quantidade_estoque': 10, 'preco': 3.0, 'ativo': True, 'nome': 'banana', 'categoria_id': 2, 'descricao': None}]]
+2025-03-19 21:41:24,581 | ERROR | produto_routes | Erro inesperado ao criar produto: Erro ao criar produto
+2025-03-20 11:16:26,124 | ERROR | ProdutoService | Erro ao criar produto: (builtins.TypeError) SQLite DateTime type only accepts Python datetime and date objects as input.
+[SQL: INSERT INTO produtos (nome, descricao, preco, quantidade_estoque, ativo, categoria_id, criado_em, atualizado_em) VALUES (?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: [{'nome': 'banana', 'categoria_id': 2, 'quantidade_estoque': 10, 'ativo': True, 'preco': 3.0, 'descricao': None}]]
+2025-03-20 11:16:26,125 | ERROR | produto_routes | Erro inesperado ao criar produto: Erro ao criar produto
+2025-03-20 11:17:41,457 | ERROR | ProdutoService | Erro ao criar produto: (builtins.TypeError) SQLite DateTime type only accepts Python datetime and date objects as input.
+[SQL: INSERT INTO produtos (nome, descricao, preco, quantidade_estoque, ativo, categoria_id, criado_em, atualizado_em) VALUES (?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: [{'categoria_id': 1, 'quantidade_estoque': 10, 'ativo': True, 'nome': 'banana', 'preco': 3.0, 'descricao': None}]]
+2025-03-20 11:17:41,458 | ERROR | produto_routes | Erro inesperado ao criar produto: Erro ao criar produto
+2025-03-20 11:17:48,840 | ERROR | ProdutoService | Erro ao criar produto: (builtins.TypeError) SQLite DateTime type only accepts Python datetime and date objects as input.
+[SQL: INSERT INTO produtos (nome, descricao, preco, quantidade_estoque, ativo, categoria_id, criado_em, atualizado_em) VALUES (?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: [{'preco': 3.0, 'nome': 'banana', 'quantidade_estoque': 10, 'categoria_id': 1, 'ativo': True, 'descricao': None}]]
+2025-03-20 11:17:48,841 | ERROR | produto_routes | Erro inesperado ao criar produto: Erro ao criar produto
+2025-03-20 11:57:56,612 | ERROR | routes.api.auth | Erro inesperado no login: 'Utilizador' object is not subscriptable
 Traceback (most recent call last):
-  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 21, in login
-    utilizador = UtilizadorService.autenticar(data.get["email"],data.get["password"])
-                                              ~~~~~~~~^^^^^^^^^
-TypeError: 'builtin_function_or_method' object is not subscriptable
-2025-03-17 18:45:07,962 | ERROR | route_auth | Erro inesperado no login: 'builtin_function_or_method' object is not subscriptable
-Traceback (most recent call last):
-  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 21, in login
-    utilizador = UtilizadorService.autenticar(data.get["email"],data.get["password"])
-                                              ~~~~~~~~^^^^^^^^^
-TypeError: 'builtin_function_or_method' object is not subscriptable
-2025-03-17 18:48:07,718 | ERROR | route_auth | Erro inesperado no login: module 'jwt' has no attribute 'encode'
-Traceback (most recent call last):
-  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 27, in login
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 51, in login
     access_token, refresh_token = AuthService.gerar_tokens(utilizador)
                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\util\auth.py", line 18, in gerar_tokens
-    access_token = jwt.encode(
-                   ^^^^^^^^^^
-AttributeError: module 'jwt' has no attribute 'encode'
-2025-03-17 18:48:10,196 | ERROR | route_auth | Erro inesperado no login: module 'jwt' has no attribute 'encode'
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\services\authmanager.py", line 20, in gerar_tokens
+    "id": utilizador["id"],
+         ~~~~~~~~~~^^^^^^
+TypeError: 'Utilizador' object is not subscriptable
+2025-03-20 12:03:04,495 | ERROR | routes.api.auth | Erro inesperado no login: 'Utilizador' object is not subscriptable
 Traceback (most recent call last):
-  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 27, in login
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 51, in login
     access_token, refresh_token = AuthService.gerar_tokens(utilizador)
                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\util\auth.py", line 18, in gerar_tokens
-    access_token = jwt.encode(
-                   ^^^^^^^^^^
-AttributeError: module 'jwt' has no attribute 'encode'
-2025-03-17 18:49:40,532 | ERROR | route_auth | Erro inesperado no login: module 'jwt' has no attribute 'encode'
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\services\authmanager.py", line 20, in gerar_tokens
+    "id": utilizador["id"],
+         ~~~~~~~~~~^^^^^^
+TypeError: 'Utilizador' object is not subscriptable
+2025-03-20 12:09:21,190 | ERROR | routes.api.auth | Erro inesperado no login: 'Utilizador' object is not subscriptable
 Traceback (most recent call last):
-  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 28, in login
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 51, in login
     access_token, refresh_token = AuthService.gerar_tokens(utilizador)
                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\util\auth.py", line 18, in gerar_tokens
-    access_token = jwt.encode(
-                   ^^^^^^^^^^
-AttributeError: module 'jwt' has no attribute 'encode'
-2025-03-17 18:49:49,790 | ERROR | route_auth | Erro inesperado no login: module 'jwt' has no attribute 'encode'
-Traceback (most recent call last):
-  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 28, in login
-    access_token, refresh_token = AuthService.gerar_tokens(utilizador)
-                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\util\auth.py", line 18, in gerar_tokens
-    access_token = jwt.encode(
-                   ^^^^^^^^^^
-AttributeError: module 'jwt' has no attribute 'encode'
-2025-03-17 18:52:19,451 | ERROR | route_auth | Erro inesperado no login: module 'jwt' has no attribute 'encode'
-Traceback (most recent call last):
-  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 28, in login
-    access_token, refresh_token = AuthService.gerar_tokens(utilizador)
-                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\util\auth.py", line 18, in gerar_tokens
-    access_token = jwt.encode(
-                   ^^^^^^^^^^
-AttributeError: module 'jwt' has no attribute 'encode'
-2025-03-17 19:03:39,658 | ERROR | route_auth | Erro inesperado no login: 'Utilizador' object is not subscriptable
-Traceback (most recent call last):
-  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 27, in login
-    access_token, refresh_token = AuthService.gerar_tokens(utilizador)
-                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\util\auth.py", line 20, in gerar_tokens
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\services\authmanager.py", line 20, in gerar_tokens
     "id": utilizador["id"],
           ~~~~~~~~~~^^^^^^
 TypeError: 'Utilizador' object is not subscriptable
