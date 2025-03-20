@@ -1,906 +1,1082 @@
-2025-03-12 17:52:48,975 | INFO | Config | Modo de execução: DEBUG
-2025-03-12 17:52:48,976 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-12 17:52:48,977 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-12 17:52:49,354 | INFO | Config | Modo de execução: DEBUG
-2025-03-12 17:52:49,354 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-12 17:52:49,358 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-12 17:52:53,782 | INFO | route log | Página principal acessada.
-2025-03-12 17:52:58,825 | INFO | route log | Requisição GET para listar produtos.
-2025-03-13 10:12:40,594 | INFO | Config | Modo de execução: DEBUG
-2025-03-13 10:12:40,595 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 10:12:40,596 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 10:12:40,997 | INFO | Config | Modo de execução: DEBUG
-2025-03-13 10:12:40,998 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 10:12:40,998 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 10:13:05,838 | INFO | Config | Modo de execução: DEBUG
-2025-03-13 10:13:15,755 | INFO | Config | Modo de execução: DEBUG
-2025-03-13 10:13:15,756 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 10:13:15,757 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 10:13:16,110 | INFO | Config | Modo de execução: DEBUG
-2025-03-13 10:13:16,111 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 10:13:16,111 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 10:13:25,813 | INFO | route log | Página principal acessada.
-2025-03-13 10:19:23,713 | INFO | Config | Modo de execução: DEBUG
-2025-03-13 10:19:23,714 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 10:19:23,714 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 10:19:24,058 | INFO | Config | Modo de execução: DEBUG
-2025-03-13 10:19:24,059 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 10:19:24,059 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 10:19:49,328 | INFO | Config | Modo de execução: DEBUG
-2025-03-13 10:19:49,329 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 10:19:49,331 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 10:19:49,701 | INFO | Config | Modo de execução: DEBUG
-2025-03-13 10:19:49,702 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 10:19:49,703 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 10:22:56,743 | INFO | Config | Modo de execução: DEBUG
-2025-03-13 10:22:56,744 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 10:22:56,746 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 10:22:56,746 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 10:22:56,747 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 10:22:57,102 | INFO | Config | Modo de execução: DEBUG
-2025-03-13 10:22:57,103 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 10:22:57,105 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 10:22:57,105 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 10:22:57,106 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 10:56:21,855 | INFO | Config | Modo de execução: DEBUG
-2025-03-13 10:56:21,856 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 10:56:21,857 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 10:56:21,857 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 10:56:21,859 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 10:56:22,203 | INFO | Config | Modo de execução: DEBUG
-2025-03-13 10:56:22,203 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 10:56:22,204 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 10:56:22,204 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 10:56:22,206 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 10:56:23,786 | INFO | route log | Página principal acessada.
-2025-03-13 10:58:06,909 | INFO | Config | Modo de execução: DEBUG
-2025-03-13 10:58:06,910 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 10:58:06,911 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 10:58:06,911 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 10:58:06,912 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 10:58:07,284 | INFO | Config | Modo de execução: DEBUG
-2025-03-13 10:58:07,284 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 10:58:07,285 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 10:58:07,285 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 10:58:07,286 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 10:58:08,562 | INFO | route log | Página principal acessada.
-2025-03-13 10:58:24,980 | INFO | Config | Modo de execução: DEBUG
-2025-03-13 10:58:24,980 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 10:58:24,981 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 10:58:24,983 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 10:58:24,984 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 10:58:26,434 | INFO | Config | Modo de execução: DEBUG
-2025-03-13 10:58:26,434 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 10:58:26,436 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 10:58:26,436 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 10:58:26,437 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 16:09:15,978 | INFO | Config | Modo de execução: DEBUG
-2025-03-13 16:09:15,980 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 16:09:15,983 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 16:09:15,984 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 16:09:15,985 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 16:09:16,359 | INFO | Config | Modo de execução: DEBUG
-2025-03-13 16:09:16,360 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 16:09:16,361 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 16:09:16,362 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 16:09:16,363 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 16:10:50,649 | INFO | Config | Modo de execução: DEBUG
-2025-03-13 16:10:50,650 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 16:10:50,651 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 16:10:50,651 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 16:10:50,653 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 16:10:58,233 | INFO | Config | Modo de execução: DEBUG
-2025-03-13 16:10:58,233 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 16:10:58,236 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 16:10:58,236 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 16:10:58,238 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 16:12:12,021 | INFO | Config | Modo de execução: DEBUG
-2025-03-13 16:12:12,022 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 16:12:12,023 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 16:12:12,023 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 16:12:12,024 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 16:12:19,592 | INFO | Config | Modo de execução: DEBUG
-2025-03-13 16:14:08,276 | INFO | Config | Modo de execução: DEBUG
-2025-03-13 16:14:08,277 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 16:14:08,278 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 16:14:08,278 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 16:14:08,279 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 16:14:08,637 | INFO | Config | Modo de execução: DEBUG
-2025-03-13 16:14:08,638 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 16:14:08,640 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 16:14:08,640 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 16:14:08,641 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 16:18:42,076 | INFO | Config | Modo de execução: DEBUG
-2025-03-13 16:18:42,079 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 16:18:42,080 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 16:18:42,080 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 16:18:42,081 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 16:24:10,643 | INFO | Config | Modo de execução: DEBUG
-2025-03-13 16:24:10,646 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 16:24:10,647 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 16:24:10,648 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 16:24:10,649 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 16:25:30,589 | INFO | Config | Modo de execução: DEBUG
-2025-03-13 16:25:30,592 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 16:25:30,594 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 16:25:30,594 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 16:25:30,595 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 16:33:26,802 | INFO | Config | Modo de execução: DEBUG
-2025-03-13 16:33:26,803 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 16:33:26,805 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 16:33:26,805 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 16:33:26,806 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 16:36:33,854 | INFO | Config | Modo de execução: DEBUG
-2025-03-13 16:36:33,856 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 16:36:33,857 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 16:36:33,857 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 16:36:33,859 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 16:36:34,234 | INFO | Config | Modo de execução: DEBUG
-2025-03-13 16:36:34,234 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 16:36:34,236 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 16:36:34,236 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 16:36:34,237 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 16:38:20,686 | INFO | Config | Modo de execução: DEBUG
-2025-03-13 16:38:20,687 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 16:38:20,689 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 16:38:20,689 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 16:38:20,691 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 17:22:35,316 | INFO | Config | Modo de execução: DEBUG
-2025-03-13 17:22:35,317 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 17:22:35,320 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 17:22:35,320 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 17:22:35,322 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 17:22:36,299 | INFO | Config | Modo de execução: DEBUG
-2025-03-13 17:22:36,300 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 17:22:36,302 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 17:22:36,302 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 17:22:36,305 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 17:22:44,127 | INFO | Config | Modo de execução: DEBUG
-2025-03-13 17:22:44,128 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 17:22:44,132 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 17:22:44,132 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 17:22:44,134 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 17:22:45,088 | INFO | Config | Modo de execução: DEBUG
-2025-03-13 17:22:45,089 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 17:22:45,091 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 17:22:45,091 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 17:22:45,094 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 17:22:54,961 | INFO | Config | Modo de execução: DEBUG
-2025-03-13 17:22:54,962 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 17:22:54,967 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 17:22:54,967 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 17:22:54,969 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 17:22:55,932 | INFO | Config | Modo de execução: DEBUG
-2025-03-13 17:22:55,934 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 17:22:55,937 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 17:22:55,937 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 17:22:55,939 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 17:24:11,703 | INFO | Config | Modo de execução: DEBUG
-2025-03-13 17:24:11,703 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 17:24:11,707 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 17:24:11,707 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 17:24:11,709 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 17:24:12,703 | INFO | Config | Modo de execução: DEBUG
-2025-03-13 17:24:12,704 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 17:24:12,707 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 17:24:12,707 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 17:24:12,708 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 17:26:56,696 | INFO | Config | Modo de execução: DEBUG
-2025-03-13 17:26:56,699 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 17:26:56,703 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 17:26:56,703 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 17:26:56,705 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 17:27:26,597 | INFO | Config | Modo de execução: DEBUG
-2025-03-13 17:27:26,599 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 17:27:26,603 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-13 17:27:26,603 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-13 17:27:26,604 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-14 13:50:49,323 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 13:50:49,388 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-14 13:50:49,394 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-14 13:50:49,394 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-14 13:50:49,396 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-14 13:51:14,759 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 13:51:14,761 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-14 13:51:14,765 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-14 13:51:14,765 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-14 13:51:14,767 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-14 13:51:15,690 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 13:51:15,693 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-14 13:51:15,693 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-14 13:51:15,693 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-14 13:51:15,698 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-14 13:54:22,773 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 13:54:22,775 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-14 13:54:22,777 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-14 13:54:22,777 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-14 13:54:22,780 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-14 13:54:47,924 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 13:54:47,925 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-14 13:54:47,928 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-14 13:54:47,928 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-14 13:54:47,931 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-14 14:00:00,494 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 14:00:00,495 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-14 14:00:00,499 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-14 14:00:00,499 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-14 14:00:00,501 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-14 14:00:09,972 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 14:00:09,974 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-14 14:00:09,979 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-14 14:00:09,979 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-14 14:00:09,983 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-14 14:00:15,293 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 14:00:15,302 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-14 14:00:15,302 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-14 14:00:15,302 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-14 14:00:15,309 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-14 14:00:20,483 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 14:00:20,483 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-14 14:00:20,486 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-14 14:02:48,387 | INFO | produto_routes | Requisição GET para listar produtos.
-2025-03-14 14:02:48,387 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-14 14:02:48,392 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-14 15:13:11,027 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 15:13:11,087 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-14 15:13:11,090 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-14 15:13:11,091 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-14 15:13:11,093 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-14 15:13:49,779 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 15:13:49,781 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-14 15:13:49,785 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-14 15:13:49,785 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-14 15:13:49,788 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-14 15:13:50,657 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 15:13:50,658 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-14 15:13:50,703 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-14 15:13:50,703 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-14 15:13:50,706 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-14 15:14:56,666 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 15:14:56,667 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-14 15:14:56,672 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-14 15:14:56,673 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-14 15:14:56,675 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-14 15:17:11,857 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 15:17:11,858 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-14 15:17:11,861 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-14 15:17:12,743 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 15:17:12,744 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-14 15:17:12,746 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-14 15:17:22,753 | INFO | produto_routes | Requisição GET para listar produtos.
-2025-03-14 15:17:22,754 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-14 15:17:22,758 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-14 15:18:27,460 | DEBUG | produto_routes | Recebendo dados para novo produto: {'nome': 'Gigante Cabo', 'preco': 3.0}
-2025-03-14 15:18:27,460 | INFO | Produto | Produto convertido para dicionario, Gigante Cabo | 3.0
-2025-03-14 15:18:27,466 | INFO | Guardar Lista | Backup do JSON criado: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-14 15:18:27,468 | INFO | Guardar Lista | Lista guardada com sucesso! Total de produtos: 6
-2025-03-14 15:18:27,468 | INFO | ProdutoManager | Produto adicionado com sucesso: Gigante Cabo
-2025-03-14 15:18:27,468 | INFO | produto_routes | Produto adicionado com sucesso: Gigante Cabo
-2025-03-14 15:21:09,857 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 15:21:09,858 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-14 15:21:09,862 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-14 15:27:42,394 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 15:27:42,394 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-14 15:27:42,396 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-14 15:27:42,400 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-14 15:27:42,402 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-14 15:27:42,402 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-14 15:27:42,403 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-14 15:27:42,773 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 15:27:42,773 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-14 15:27:42,774 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-14 15:27:42,775 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-14 15:27:42,778 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-14 15:27:42,778 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-14 15:27:42,779 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-14 15:29:22,049 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 15:29:22,050 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-14 15:29:22,052 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-14 15:29:22,055 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-14 15:29:22,057 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-14 15:29:22,057 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-14 15:29:22,058 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-14 15:29:27,630 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 15:29:27,630 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-14 15:29:27,633 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-14 15:29:27,638 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-14 15:29:27,639 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-14 15:29:27,639 | DEBUG | Carregar Lista | Tentando carregar dados do arquivo: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos.json
-2025-03-14 15:29:27,640 | INFO | Carregar Lista | Backup criado com sucesso: C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\listaprodutos\listaprodutos_backup.json
-2025-03-14 18:01:28,840 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 18:02:35,689 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 18:02:51,880 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 18:02:53,495 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 18:02:59,078 | DEBUG | produto_routes | Recebendo novo produto: Monitor Fogo, Preço: 3
-2025-03-14 18:02:59,084 | ERROR | produto_routes | Erro ao adicionar produto: Erro ao tentar adicionar produto
-2025-03-14 18:04:37,237 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 18:07:07,462 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 18:07:07,464 | INFO | Config | Pasta 'C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\database' criada para armazenar a base de dados.
-2025-03-14 18:07:08,960 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 18:07:12,598 | DEBUG | produto_routes | Recebendo novo produto: Monitor Fogo, Preço: 3
-2025-03-14 18:07:12,615 | ERROR | produto_routes | Erro ao adicionar produto: Erro ao tentar adicionar produto
-2025-03-14 18:09:39,973 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 18:09:49,691 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 18:10:04,269 | DEBUG | produto_routes | Recebendo novo produto: Monitor Fogo, Preço: 3
-2025-03-14 18:10:04,280 | ERROR | produto_routes | Erro ao adicionar produto: Erro ao tentar adicionar produto
-2025-03-14 18:14:39,150 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 18:14:40,695 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 18:15:02,532 | DEBUG | produto_routes | Recebendo novo produto: Monitor Fogo, Preço: 3
-2025-03-14 18:15:02,547 | ERROR | produto_routes | Erro ao adicionar produto: Erro ao tentar adicionar produto
-2025-03-14 18:15:06,293 | DEBUG | produto_routes | Recebendo novo produto: Monitor Fogo, Preço: 3
-2025-03-14 18:15:06,298 | ERROR | produto_routes | Erro ao adicionar produto: Erro ao tentar adicionar produto
-2025-03-14 18:15:07,859 | DEBUG | produto_routes | Recebendo novo produto: Monitor Fogo, Preço: 3
-2025-03-14 18:15:07,863 | ERROR | produto_routes | Erro ao adicionar produto: Erro ao tentar adicionar produto
-2025-03-14 18:21:48,023 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 18:21:49,696 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 18:21:52,284 | DEBUG | produto_routes | Recebendo novo produto: Monitor Fogo, Preço: 3
-2025-03-14 18:21:52,297 | ERROR | produto_routes | Erro ao adicionar produto: Erro ao tentar adicionar produto
-2025-03-14 18:23:27,565 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 18:23:29,272 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 18:23:29,753 | DEBUG | produto_routes | Recebendo novo produto: Monitor Fogo, Preço: 3
-2025-03-14 18:23:29,764 | ERROR | produto_routes | Erro ao adicionar produto: Erro ao tentar adicionar produto
-2025-03-14 18:29:20,268 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 18:29:21,967 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 18:29:23,792 | DEBUG | produto_routes | Recebendo novo produto: Monitor Fogo, Preço: 3
-2025-03-14 18:29:23,804 | ERROR | produto_routes | Erro ao adicionar produto: Erro ao tentar adicionar produto
-2025-03-14 18:37:16,895 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 18:37:18,512 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 18:37:20,592 | DEBUG | produto_routes | Recebendo novo produto: Monitor Fogo, Preço: 3
-2025-03-14 18:37:20,607 | ERROR | produto_routes | Erro ao adicionar produto: Erro ao tentar adicionar produto
-2025-03-14 18:38:17,920 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 18:38:19,554 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 18:46:45,562 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 18:46:45,564 | INFO | Config | Pasta 'C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\database' criada para armazenar a base de dados.
-2025-03-14 18:46:47,159 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 18:53:58,013 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 18:53:58,016 | INFO | Config | Pasta 'C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\database' criada para armazenar a base de dados.
-2025-03-14 18:53:58,054 | INFO | Config | Tabelas criadas com sucesso!
-2025-03-14 18:53:59,624 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 18:53:59,660 | INFO | Config | Tabelas criadas com sucesso!
-2025-03-14 18:56:14,388 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 18:56:14,389 | INFO | Config | Pasta 'C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\database' criada para armazenar a base de dados.
-2025-03-14 18:56:14,435 | INFO | Config | Tabelas criadas com sucesso!
-2025-03-14 19:01:20,157 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 19:01:20,158 | INFO | Config | Pasta 'C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\database' criada para armazenar a base de dados.
-2025-03-14 19:01:20,192 | INFO | Config | Tabelas criadas com sucesso!
-2025-03-14 21:23:05,551 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 21:23:05,553 | INFO | Config | Pasta 'C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\database' criada para armazenar a base de dados.
-2025-03-14 21:24:14,764 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 21:24:48,289 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 21:24:48,310 | INFO | Config | Tabelas criadas com sucesso!
-2025-03-14 21:24:49,121 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 21:24:49,137 | INFO | Config | Tabelas criadas com sucesso!
-2025-03-14 21:29:02,562 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 21:29:02,563 | INFO | Config | Pasta 'C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\database' criada para armazenar a base de dados.
-2025-03-14 21:29:02,582 | INFO | Config | Tabelas criadas com sucesso!
-2025-03-14 21:29:44,662 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 21:29:44,681 | INFO | Config | Tabelas criadas com sucesso!
-2025-03-14 21:37:40,405 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 21:37:40,406 | INFO | Config | Pasta 'C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\database' criada para armazenar a base de dados.
-2025-03-14 21:38:05,985 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 21:38:06,001 | INFO | Config | Tabelas criadas com sucesso!
-2025-03-14 21:38:06,687 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 21:38:06,702 | INFO | Config | Tabelas criadas com sucesso!
-2025-03-14 21:41:42,396 | INFO | Config | Tabelas criadas com sucesso!
-2025-03-14 22:05:35,624 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 22:05:35,626 | INFO | Config | Pasta 'C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\database' criada para armazenar a base de dados.
-2025-03-14 22:05:35,658 | INFO | Config | Tabelas criadas com sucesso!
-2025-03-14 22:05:37,191 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 22:05:37,222 | INFO | Config | Tabelas criadas com sucesso!
-2025-03-14 22:07:36,021 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 22:07:36,022 | INFO | Config | Pasta 'C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\database' criada para armazenar a base de dados.
-2025-03-14 22:07:36,056 | INFO | Config | Tabelas criadas com sucesso!
-2025-03-14 22:07:37,577 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 22:07:37,610 | INFO | Config | Tabelas criadas com sucesso!
-2025-03-14 22:15:55,169 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 22:15:55,171 | INFO | Config | Pasta 'C:\Users\tutas\Documents\Projetos GitHUB\estudo-flask\database' criada para armazenar a base de dados.
-2025-03-14 22:15:55,201 | INFO | Config | Tabelas criadas com sucesso!
-2025-03-14 22:15:56,762 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 22:15:56,788 | INFO | Config | Tabelas criadas com sucesso!
-2025-03-14 22:22:30,026 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 22:23:35,642 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 22:23:37,262 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 22:47:40,284 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 22:48:12,426 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 22:48:31,669 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 22:48:33,185 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 22:50:37,411 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 22:50:39,051 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 22:51:20,934 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 22:51:45,079 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 22:51:46,632 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 22:58:05,952 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 22:58:07,486 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 23:24:19,103 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 23:24:20,714 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 23:26:58,437 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 23:29:43,653 | INFO | Config | Modo de execução: DEBUG
-2025-03-14 23:29:45,215 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 10:38:48,154 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 10:38:49,933 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 10:38:55,154 | DEBUG | produto_routes | Adicionando novo produto: Teclado Mecânico, Preço: 199.99
-2025-03-15 10:39:46,496 | INFO | produto_routes | Requisição GET para listar produtos.
-2025-03-15 10:40:14,728 | INFO | produto_routes | Tentando remover produto ID: 1
-2025-03-15 10:48:36,232 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 10:49:33,888 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 10:49:35,475 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 10:49:37,167 | DEBUG | produto_routes | Adicionando novo produto: Teclado Mecânico, Preço: 199.99
-2025-03-15 10:50:00,259 | DEBUG | produto_routes | Adicionando novo produto: Teclado Mecânico, Preço: 199.99
-2025-03-15 10:50:00,266 | ERROR | produto_routes | Erro inesperado ao adicionar produto: Erro ao tentar adicionar produto
-2025-03-15 10:50:47,427 | INFO | produto_routes | Tentando remover produto ID: 1
-2025-03-15 10:53:16,654 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 10:53:18,330 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 10:56:47,197 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 11:00:19,304 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 11:01:00,617 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 11:01:12,331 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 11:01:13,837 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 12:57:07,201 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 12:59:01,136 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 13:03:00,052 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 13:03:36,529 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 13:05:03,591 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 13:05:04,379 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 13:09:11,762 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 13:09:12,563 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 13:17:13,038 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 13:18:19,834 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 13:18:21,802 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 13:18:38,097 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 13:18:49,271 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 13:18:51,244 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 13:19:59,111 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 13:20:01,118 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 13:23:17,609 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 13:25:38,565 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 13:25:41,569 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 13:25:45,965 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 13:25:46,647 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 13:37:08,817 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 14:31:17,446 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 14:31:19,384 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 14:34:56,614 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 14:40:18,549 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 14:40:20,695 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 14:53:33,392 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 14:53:35,557 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 14:59:43,550 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 14:59:47,820 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 15:00:10,275 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 15:00:13,352 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 15:00:18,448 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 15:00:32,376 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 15:05:02,147 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 15:05:03,842 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 15:06:47,448 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 15:15:20,265 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 15:16:03,229 | INFO | Config | Modo de execução: DEBUG
-2025-03-15 15:16:04,756 | INFO | Config | Modo de execução: DEBUG
-2025-03-16 14:47:10,621 | INFO | Config | Modo de execução: DEBUG
-2025-03-16 14:47:11,803 | INFO | BaseModel | Classe Abstrata iniciada
-2025-03-16 14:47:11,805 | DEBUG | BaseModel | Database chamado.
-2025-03-16 14:47:12,040 | DEBUG | BaseModel | Database chamado.
-2025-03-16 14:47:12,081 | DEBUG | BaseModel | Database chamado.
-2025-03-16 14:47:39,613 | INFO | Config | Modo de execução: DEBUG
-2025-03-16 14:47:40,341 | INFO | BaseModel | Classe Abstrata iniciada
-2025-03-16 14:47:40,342 | DEBUG | BaseModel | Database chamado.
-2025-03-16 14:47:40,426 | DEBUG | BaseModel | Database chamado.
-2025-03-16 14:47:40,437 | DEBUG | BaseModel | Database chamado.
-2025-03-16 14:47:55,759 | INFO | Config | Modo de execução: DEBUG
-2025-03-16 14:47:56,485 | INFO | BaseModel | Classe Abstrata iniciada
-2025-03-16 14:47:56,485 | DEBUG | BaseModel | Database chamado.
-2025-03-16 14:47:56,577 | DEBUG | BaseModel | Database chamado.
-2025-03-16 14:47:56,585 | DEBUG | BaseModel | Database chamado.
-2025-03-16 14:47:56,604 | DEBUG | BaseModel | Database chamado.
-2025-03-16 14:47:56,688 | DEBUG | BaseModel | Database chamado.
-2025-03-16 14:47:57,959 | INFO | Config | Modo de execução: DEBUG
-2025-03-16 14:47:58,691 | INFO | BaseModel | Classe Abstrata iniciada
-2025-03-16 14:47:58,691 | DEBUG | BaseModel | Database chamado.
-2025-03-16 14:47:58,774 | DEBUG | BaseModel | Database chamado.
-2025-03-16 14:47:58,782 | DEBUG | BaseModel | Database chamado.
-2025-03-16 14:47:58,798 | DEBUG | BaseModel | Database chamado.
-2025-03-16 14:47:58,805 | DEBUG | BaseModel | Database chamado.
-2025-03-17 16:23:56,388 | INFO | Config | Modo de execução: DEBUG
-2025-03-17 16:23:57,679 | INFO | BaseModel | Classe Abstrata iniciada
-2025-03-17 16:23:57,680 | DEBUG | BaseModel | Database chamado.
-2025-03-17 16:23:57,687 | DEBUG | BaseModel | Database chamado.
-2025-03-17 16:23:57,702 | DEBUG | BaseModel | Database chamado.
-2025-03-17 16:23:57,728 | DEBUG | BaseModel | Database chamado.
-2025-03-17 16:23:57,741 | DEBUG | BaseModel | Database chamado.
-2025-03-17 16:23:57,753 | DEBUG | BaseModel | Database chamado.
-2025-03-17 16:23:59,064 | INFO | Config | Modo de execução: DEBUG
-2025-03-17 16:23:59,900 | INFO | BaseModel | Classe Abstrata iniciada
-2025-03-17 16:23:59,900 | DEBUG | BaseModel | Database chamado.
-2025-03-17 16:23:59,905 | DEBUG | BaseModel | Database chamado.
-2025-03-17 16:23:59,914 | DEBUG | BaseModel | Database chamado.
-2025-03-17 16:23:59,924 | DEBUG | BaseModel | Database chamado.
-2025-03-17 16:23:59,930 | DEBUG | BaseModel | Database chamado.
-2025-03-17 16:23:59,938 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:34:05,961 | INFO | Config | Modo de execução: DEBUG
-2025-03-17 18:34:07,190 | INFO | BaseModel | Classe Abstrata iniciada
-2025-03-17 18:34:07,190 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:34:07,201 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:34:07,219 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:34:07,235 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:34:07,250 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:34:07,261 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:34:08,136 | INFO | Config | Modo de execução: DEBUG
-2025-03-17 18:34:09,204 | INFO | BaseModel | Classe Abstrata iniciada
-2025-03-17 18:34:09,204 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:34:09,225 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:34:09,244 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:34:09,260 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:34:09,271 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:34:09,290 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:36:18,878 | INFO | Config | Modo de execução: DEBUG
-2025-03-17 18:36:19,852 | INFO | BaseModel | Classe Abstrata iniciada
-2025-03-17 18:36:19,853 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:36:19,861 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:36:19,869 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:36:19,884 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:36:19,894 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:36:19,904 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:38:45,567 | INFO | Config | Modo de execução: DEBUG
-2025-03-17 18:38:46,526 | INFO | BaseModel | Classe Abstrata iniciada
-2025-03-17 18:38:46,526 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:38:46,534 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:38:46,541 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:38:46,551 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:38:46,558 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:38:46,564 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:38:47,305 | INFO | Config | Modo de execução: DEBUG
-2025-03-17 18:38:48,242 | INFO | BaseModel | Classe Abstrata iniciada
-2025-03-17 18:38:48,242 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:38:48,250 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:38:48,257 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:38:48,271 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:38:48,279 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:38:48,287 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:39:10,067 | ERROR | route_auth | Erro inesperado no login: type object 'UtilizadorService' has no attribute 'buscar_por_email'
+2025-03-19 21:35:10,024 | INFO | models.abstrata | Classe Abstrata iniciada
+2025-03-19 21:35:10,157 | DEBUG | app | API carregando banco: sqlite:///:memory:
+2025-03-19 21:35:10,227 | INFO | models.abstrata | Tabelas criadas para testes.
+2025-03-19 21:35:10,695 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-19 21:35:10,695 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-19 21:35:10,839 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-19 21:35:10,839 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-19 21:35:11,301 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-19 21:35:11,301 | INFO | routes.api.auth | Dados recebidos: {'email': 'user@email.com', 'password': '123456'}
+2025-03-19 21:35:11,458 | INFO | ProdutoService | Utilizador user@email.com autenticado.
+2025-03-19 21:35:11,460 | INFO | routes.api.auth | Utilizador autenticado: user@email.com
+2025-03-19 21:35:11,903 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-19 21:35:11,903 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': 'teste errado'}
+2025-03-19 21:35:12,033 | INFO | ProdutoService | Token não gerado, dados não autenticados, email: admin@email.com
+2025-03-19 21:35:12,033 | WARNING | routes.api.auth | Falha na autenticação para o email: admin@email.com
+2025-03-19 21:35:12,464 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-19 21:35:12,465 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-19 21:35:12,595 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-19 21:35:12,595 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-19 21:35:12,598 | ERROR | routes.api.auth | Erro ao validar token: (builtins.TypeError) SQLite DateTime type only accepts Python datetime and date objects as input.
+[SQL: INSERT INTO tokens_revogados (token_jti, criado_em) VALUES (?, ?)]
+[parameters: [{'token_jti': '83c7d122-dc99-4f4c-a3ee-a8fa831a0d6e'}]]
 Traceback (most recent call last):
-  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 21, in login
-    utilizador = UtilizadorService.buscar_por_email(data.get("email"))
-                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AttributeError: type object 'UtilizadorService' has no attribute 'buscar_por_email'
-2025-03-17 18:40:33,875 | ERROR | route_auth | Erro inesperado no login: type object 'UtilizadorService' has no attribute 'buscar_por_email'
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1812, in _execute_context
+    context = constructor(
+              ^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1477, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\dialects\sqlite\base.py", line 1116, in process
+    raise TypeError(
+TypeError: SQLite DateTime type only accepts Python datetime and date objects as input.
+
+The above exception was the direct cause of the following exception:
+
 Traceback (most recent call last):
-  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 21, in login
-    utilizador = UtilizadorService.buscar_por_email(data.get("email"))
-                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AttributeError: type object 'UtilizadorService' has no attribute 'buscar_por_email'
-2025-03-17 18:42:34,277 | ERROR | route_auth | Erro inesperado no login: type object 'UtilizadorService' has no attribute 'buscar_por_email'
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 88, in logout
+    TokenService.adicionar_token_na_blacklist(g.current_user["jti"])
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\services\tokenrevogadomanager.py", line 13, in adicionar_token_na_blacklist
+    session.commit()
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2032, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1313, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1288, in _prepare_impl
+    self.session.flush()
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4353, in flush
+    self._flush(objects)
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4488, in _flush
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4449, in _flush
+    flush_context.execute()
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 1233, in _emit_insert_statements
+    result = connection.execute(
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1818, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1812, in _execute_context
+    context = constructor(
+              ^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1477, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\dialects\sqlite\base.py", line 1116, in process
+    raise TypeError(
+sqlalchemy.exc.StatementError: (builtins.TypeError) SQLite DateTime type only accepts Python datetime and date objects as input.
+[SQL: INSERT INTO tokens_revogados (token_jti, criado_em) VALUES (?, ?)]
+[parameters: [{'token_jti': '83c7d122-dc99-4f4c-a3ee-a8fa831a0d6e'}]]
+2025-03-19 21:35:13,131 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-19 21:35:13,133 | INFO | routes.api.auth | Dados recebidos: {}
+2025-03-19 21:35:13,133 | WARNING | routes.api.auth | Tentativa de login sem credenciais fornecidas.
+2025-03-19 21:35:13,524 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-19 21:35:13,524 | INFO | routes.api.auth | Dados recebidos: {'email': 'naoexiste@email.com', 'password': '123456'}
+2025-03-19 21:35:13,525 | INFO | ProdutoService | Token não gerado, dados não autenticados, email: naoexiste@email.com
+2025-03-19 21:35:13,525 | WARNING | routes.api.auth | Falha na autenticação para o email: naoexiste@email.com
+2025-03-19 21:35:13,914 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-19 21:35:13,914 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': 'senhaerrada'}
+2025-03-19 21:35:14,044 | INFO | ProdutoService | Token não gerado, dados não autenticados, email: admin@email.com
+2025-03-19 21:35:14,044 | WARNING | routes.api.auth | Falha na autenticação para o email: admin@email.com
+2025-03-19 21:35:14,435 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-19 21:35:14,435 | INFO | routes.api.auth | Dados recebidos: {'email': 'email-invalido', 'password': '123456'}
+2025-03-19 21:35:14,435 | WARNING | routes.api.auth | Tenativa de login de email envalido.
+2025-03-19 21:35:15,220 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-19 21:35:15,220 | INFO | routes.api.auth | Formato de envio incorreto, não foi JSON
+2025-03-19 21:35:16,786 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-19 21:35:16,786 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-19 21:35:16,913 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-19 21:35:16,914 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-19 21:35:16,916 | ERROR | routes.api.auth | Erro ao validar token: (builtins.TypeError) SQLite DateTime type only accepts Python datetime and date objects as input.
+[SQL: INSERT INTO tokens_revogados (token_jti, criado_em) VALUES (?, ?)]
+[parameters: [{'token_jti': 'fbb37333-156a-4be0-82a3-83f601ee6037'}]]
 Traceback (most recent call last):
-  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 21, in login
-    utilizador = UtilizadorService.buscar_por_email(data.get("email"))
-                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AttributeError: type object 'UtilizadorService' has no attribute 'buscar_por_email'
-2025-03-17 18:42:39,446 | ERROR | route_auth | Erro inesperado no login: type object 'UtilizadorService' has no attribute 'buscar_por_email'
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1812, in _execute_context
+    context = constructor(
+              ^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1477, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\dialects\sqlite\base.py", line 1116, in process
+    raise TypeError(
+TypeError: SQLite DateTime type only accepts Python datetime and date objects as input.
+
+The above exception was the direct cause of the following exception:
+
 Traceback (most recent call last):
-  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 21, in login
-    utilizador = UtilizadorService.buscar_por_email(data.get("email"))
-                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AttributeError: type object 'UtilizadorService' has no attribute 'buscar_por_email'
-2025-03-17 18:43:41,500 | INFO | Config | Modo de execução: DEBUG
-2025-03-17 18:43:42,558 | INFO | BaseModel | Classe Abstrata iniciada
-2025-03-17 18:43:42,558 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:43:42,565 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:43:42,574 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:43:42,584 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:43:42,591 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:43:42,597 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:43:43,069 | ERROR | route_auth | Erro inesperado no login: UtilizadorService.autenticar() missing 1 required positional argument: 'password'
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 88, in logout
+    TokenService.adicionar_token_na_blacklist(g.current_user["jti"])
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\services\tokenrevogadomanager.py", line 13, in adicionar_token_na_blacklist
+    session.commit()
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2032, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1313, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1288, in _prepare_impl
+    self.session.flush()
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4353, in flush
+    self._flush(objects)
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4488, in _flush
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4449, in _flush
+    flush_context.execute()
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 1233, in _emit_insert_statements
+    result = connection.execute(
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1818, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1812, in _execute_context
+    context = constructor(
+              ^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1477, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\dialects\sqlite\base.py", line 1116, in process
+    raise TypeError(
+sqlalchemy.exc.StatementError: (builtins.TypeError) SQLite DateTime type only accepts Python datetime and date objects as input.
+[SQL: INSERT INTO tokens_revogados (token_jti, criado_em) VALUES (?, ?)]
+[parameters: [{'token_jti': 'fbb37333-156a-4be0-82a3-83f601ee6037'}]]
+2025-03-19 21:35:17,313 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-19 21:35:17,313 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-19 21:35:17,442 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-19 21:35:17,444 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-19 21:35:17,448 | INFO | CategoriaService | Categoria criada: Fruta
+2025-03-19 21:35:17,448 | INFO | models.abstrata | Objeto convertido para JSON.
+2025-03-19 21:35:17,448 | INFO | routes.api.categorias | Nova categoria criada Fruta
+2025-03-19 21:35:17,840 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-19 21:35:17,840 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-19 21:35:17,968 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-19 21:35:17,969 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-19 21:35:17,971 | INFO | CategoriaService | Categoria criada: Categoria Teste
+2025-03-19 21:35:17,971 | INFO | models.abstrata | Objeto convertido para JSON.
+2025-03-19 21:35:17,971 | INFO | routes.api.categorias | Nova categoria criada Categoria Teste
+2025-03-19 21:35:17,972 | INFO | ProdutoService | Parâmetros recebidos: nome=banana, preco=3.0, quantidade_estoque=10, categoria_id=2
+2025-03-19 21:35:17,974 | ERROR | ProdutoService | Erro ao criar produto: (builtins.TypeError) SQLite DateTime type only accepts Python datetime and date objects as input.
+[SQL: INSERT INTO produtos (nome, descricao, preco, quantidade_estoque, ativo, categoria_id, criado_em, atualizado_em) VALUES (?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: [{'nome': 'banana', 'preco': 3.0, 'categoria_id': 2, 'quantidade_estoque': 10, 'ativo': True, 'descricao': None}]]
+2025-03-19 21:35:17,976 | ERROR | produto_routes | Erro inesperado ao criar produto: Erro ao criar produto
+2025-03-19 21:35:18,372 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-19 21:35:18,373 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-19 21:35:18,502 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-19 21:35:18,502 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-19 21:35:18,504 | INFO | produto_routes | Listando produtos ativos.
+2025-03-19 21:36:22,468 | INFO | models.abstrata | Classe Abstrata iniciada
+2025-03-19 21:37:21,452 | INFO | models.abstrata | Classe Abstrata iniciada
+2025-03-19 21:37:21,504 | DEBUG | app | API carregando banco: sqlite:///:memory:
+2025-03-19 21:37:21,533 | INFO | models.abstrata | Tabelas criadas para testes.
+2025-03-19 21:37:21,937 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-19 21:37:21,938 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-19 21:37:22,070 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-19 21:37:22,070 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-19 21:37:22,073 | ERROR | routes.api.auth | Erro ao validar token: (builtins.TypeError) SQLite DateTime type only accepts Python datetime and date objects as input.
+[SQL: INSERT INTO tokens_revogados (token_jti, criado_em) VALUES (?, ?)]
+[parameters: [{'token_jti': '2507391e-86cb-4551-b7d3-67a4bfd7db41'}]]
 Traceback (most recent call last):
-  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 21, in login
-    utilizador = UtilizadorService.autenticar(data.get("email"))
-                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-TypeError: UtilizadorService.autenticar() missing 1 required positional argument: 'password'
-2025-03-17 18:43:46,051 | ERROR | route_auth | Erro inesperado no login: UtilizadorService.autenticar() missing 1 required positional argument: 'password'
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1812, in _execute_context
+    context = constructor(
+              ^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1477, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\dialects\sqlite\base.py", line 1116, in process
+    raise TypeError(
+TypeError: SQLite DateTime type only accepts Python datetime and date objects as input.
+
+The above exception was the direct cause of the following exception:
+
 Traceback (most recent call last):
-  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 21, in login
-    utilizador = UtilizadorService.autenticar(data.get("email"))
-                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-TypeError: UtilizadorService.autenticar() missing 1 required positional argument: 'password'
-2025-03-17 18:44:13,956 | INFO | Config | Modo de execução: DEBUG
-2025-03-17 18:44:14,829 | INFO | BaseModel | Classe Abstrata iniciada
-2025-03-17 18:44:14,829 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:44:14,839 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:44:14,855 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:44:14,871 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:44:14,880 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:44:14,888 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:44:17,198 | INFO | Config | Modo de execução: DEBUG
-2025-03-17 18:44:18,064 | INFO | BaseModel | Classe Abstrata iniciada
-2025-03-17 18:44:18,064 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:44:18,073 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:44:18,079 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:44:18,090 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:44:18,096 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:44:18,104 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:44:18,829 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
-2025-03-17 18:44:18,830 | ERROR | route_auth | Erro inesperado no login: type object 'AuthService' has no attribute 'gerar_token'
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 88, in logout
+    TokenService.adicionar_token_na_blacklist(g.current_user["jti"])
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\services\tokenrevogadomanager.py", line 13, in adicionar_token_na_blacklist
+    session.commit()
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2032, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1313, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1288, in _prepare_impl
+    self.session.flush()
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4353, in flush
+    self._flush(objects)
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4488, in _flush
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4449, in _flush
+    flush_context.execute()
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 1233, in _emit_insert_statements
+    result = connection.execute(
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1818, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1812, in _execute_context
+    context = constructor(
+              ^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1477, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\dialects\sqlite\base.py", line 1116, in process
+    raise TypeError(
+sqlalchemy.exc.StatementError: (builtins.TypeError) SQLite DateTime type only accepts Python datetime and date objects as input.
+[SQL: INSERT INTO tokens_revogados (token_jti, criado_em) VALUES (?, ?)]
+[parameters: [{'token_jti': '2507391e-86cb-4551-b7d3-67a4bfd7db41'}]]
+2025-03-19 21:39:31,125 | INFO | models.abstrata | Classe Abstrata iniciada
+2025-03-19 21:39:31,178 | DEBUG | app | API carregando banco: sqlite:///:memory:
+2025-03-19 21:39:31,209 | INFO | models.abstrata | Tabelas criadas para testes.
+2025-03-19 21:39:31,633 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-19 21:39:31,634 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-19 21:39:31,769 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-19 21:39:31,769 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-19 21:39:31,772 | ERROR | routes.api.auth | Erro ao validar token: (builtins.TypeError) SQLite DateTime type only accepts Python datetime and date objects as input.
+[SQL: INSERT INTO tokens_revogados (token_jti, criado_em) VALUES (?, ?)]
+[parameters: [{'token_jti': 'b7aa89bd-28ed-4c27-ad77-e825d2fe0282'}]]
 Traceback (most recent call last):
-  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 21, in login
-    utilizador = UtilizadorService.autenticar(data.get("email"),data.get("password"))
-                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\services\utilizadoresmanager.py", line 23, in autenticar
-    return AuthService.gerar_token({"email": utilizador.email, "role": utilizador.role})
-           ^^^^^^^^^^^^^^^^^^^^^^^
-AttributeError: type object 'AuthService' has no attribute 'gerar_token'. Did you mean: 'gerar_tokens'?
-2025-03-17 18:44:20,741 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
-2025-03-17 18:44:20,742 | ERROR | route_auth | Erro inesperado no login: type object 'AuthService' has no attribute 'gerar_token'
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1812, in _execute_context
+    context = constructor(
+              ^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1477, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\dialects\sqlite\base.py", line 1116, in process
+    raise TypeError(
+TypeError: SQLite DateTime type only accepts Python datetime and date objects as input.
+
+The above exception was the direct cause of the following exception:
+
 Traceback (most recent call last):
-  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 21, in login
-    utilizador = UtilizadorService.autenticar(data.get("email"),data.get("password"))
-                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\services\utilizadoresmanager.py", line 23, in autenticar
-    return AuthService.gerar_token({"email": utilizador.email, "role": utilizador.role})
-           ^^^^^^^^^^^^^^^^^^^^^^^
-AttributeError: type object 'AuthService' has no attribute 'gerar_token'. Did you mean: 'gerar_tokens'?
-2025-03-17 18:45:03,333 | INFO | Config | Modo de execução: DEBUG
-2025-03-17 18:45:04,146 | INFO | BaseModel | Classe Abstrata iniciada
-2025-03-17 18:45:04,146 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:45:04,154 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:45:04,161 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:45:04,171 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:45:04,176 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:45:04,184 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:45:04,956 | INFO | Config | Modo de execução: DEBUG
-2025-03-17 18:45:05,840 | INFO | BaseModel | Classe Abstrata iniciada
-2025-03-17 18:45:05,841 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:45:05,852 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:45:05,861 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:45:05,871 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:45:05,878 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:45:05,885 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:45:06,533 | ERROR | route_auth | Erro inesperado no login: 'builtin_function_or_method' object is not subscriptable
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 88, in logout
+    TokenService.adicionar_token_na_blacklist(g.current_user["jti"])
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\services\tokenrevogadomanager.py", line 13, in adicionar_token_na_blacklist
+    session.commit()
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2032, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1313, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1288, in _prepare_impl
+    self.session.flush()
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4353, in flush
+    self._flush(objects)
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4488, in _flush
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4449, in _flush
+    flush_context.execute()
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 1233, in _emit_insert_statements
+    result = connection.execute(
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 523, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1818, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1812, in _execute_context
+    context = constructor(
+              ^^^^^^^^^^^^
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1477, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\venv\Lib\site-packages\sqlalchemy\dialects\sqlite\base.py", line 1116, in process
+    raise TypeError(
+sqlalchemy.exc.StatementError: (builtins.TypeError) SQLite DateTime type only accepts Python datetime and date objects as input.
+[SQL: INSERT INTO tokens_revogados (token_jti, criado_em) VALUES (?, ?)]
+[parameters: [{'token_jti': 'b7aa89bd-28ed-4c27-ad77-e825d2fe0282'}]]
+2025-03-19 21:41:03,663 | INFO | models.abstrata | Classe Abstrata iniciada
+2025-03-19 21:41:03,714 | DEBUG | app | API carregando banco: sqlite:///:memory:
+2025-03-19 21:41:03,744 | INFO | models.abstrata | Tabelas criadas para testes.
+2025-03-19 21:41:04,144 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-19 21:41:04,144 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-19 21:41:04,276 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-19 21:41:04,278 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-19 21:41:04,281 | INFO | routes.api.auth | Logout com sucesso
+2025-03-19 21:41:15,972 | INFO | models.abstrata | Classe Abstrata iniciada
+2025-03-19 21:41:16,045 | DEBUG | app | API carregando banco: sqlite:///:memory:
+2025-03-19 21:41:16,075 | INFO | models.abstrata | Tabelas criadas para testes.
+2025-03-19 21:41:16,495 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-19 21:41:16,495 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-19 21:41:16,643 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-19 21:41:16,644 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-19 21:41:17,069 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-19 21:41:17,069 | INFO | routes.api.auth | Dados recebidos: {'email': 'user@email.com', 'password': '123456'}
+2025-03-19 21:41:17,214 | INFO | ProdutoService | Utilizador user@email.com autenticado.
+2025-03-19 21:41:17,214 | INFO | routes.api.auth | Utilizador autenticado: user@email.com
+2025-03-19 21:41:17,683 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-19 21:41:17,683 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': 'teste errado'}
+2025-03-19 21:41:17,904 | INFO | ProdutoService | Token não gerado, dados não autenticados, email: admin@email.com
+2025-03-19 21:41:17,905 | WARNING | routes.api.auth | Falha na autenticação para o email: admin@email.com
+2025-03-19 21:41:18,424 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-19 21:41:18,424 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-19 21:41:18,579 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-19 21:41:18,579 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-19 21:41:18,586 | INFO | routes.api.auth | Logout com sucesso
+2025-03-19 21:41:19,088 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-19 21:41:19,089 | INFO | routes.api.auth | Dados recebidos: {}
+2025-03-19 21:41:19,089 | WARNING | routes.api.auth | Tentativa de login sem credenciais fornecidas.
+2025-03-19 21:41:19,531 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-19 21:41:19,532 | INFO | routes.api.auth | Dados recebidos: {'email': 'naoexiste@email.com', 'password': '123456'}
+2025-03-19 21:41:19,532 | INFO | ProdutoService | Token não gerado, dados não autenticados, email: naoexiste@email.com
+2025-03-19 21:41:19,533 | WARNING | routes.api.auth | Falha na autenticação para o email: naoexiste@email.com
+2025-03-19 21:41:19,982 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-19 21:41:19,982 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': 'senhaerrada'}
+2025-03-19 21:41:20,134 | INFO | ProdutoService | Token não gerado, dados não autenticados, email: admin@email.com
+2025-03-19 21:41:20,134 | WARNING | routes.api.auth | Falha na autenticação para o email: admin@email.com
+2025-03-19 21:41:20,587 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-19 21:41:20,587 | INFO | routes.api.auth | Dados recebidos: {'email': 'email-invalido', 'password': '123456'}
+2025-03-19 21:41:20,587 | WARNING | routes.api.auth | Tenativa de login de email envalido.
+2025-03-19 21:41:21,478 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-19 21:41:21,478 | INFO | routes.api.auth | Formato de envio incorreto, não foi JSON
+2025-03-19 21:41:23,230 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-19 21:41:23,231 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-19 21:41:23,380 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-19 21:41:23,380 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-19 21:41:23,382 | INFO | routes.api.auth | Logout com sucesso
+2025-03-19 21:41:23,823 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-19 21:41:23,824 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-19 21:41:23,976 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-19 21:41:23,977 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-19 21:41:23,983 | INFO | CategoriaService | Categoria criada: Fruta
+2025-03-19 21:41:23,983 | INFO | models.abstrata | Objeto convertido para JSON.
+2025-03-19 21:41:23,983 | INFO | routes.api.categorias | Nova categoria criada Fruta
+2025-03-19 21:41:24,424 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-19 21:41:24,424 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-19 21:41:24,574 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-19 21:41:24,575 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-19 21:41:24,577 | INFO | CategoriaService | Categoria criada: Categoria Teste
+2025-03-19 21:41:24,577 | INFO | models.abstrata | Objeto convertido para JSON.
+2025-03-19 21:41:24,577 | INFO | routes.api.categorias | Nova categoria criada Categoria Teste
+2025-03-19 21:41:24,579 | INFO | ProdutoService | Parâmetros recebidos: nome=banana, preco=3.0, quantidade_estoque=10, categoria_id=2
+2025-03-19 21:41:24,581 | ERROR | ProdutoService | Erro ao criar produto: (builtins.TypeError) SQLite DateTime type only accepts Python datetime and date objects as input.
+[SQL: INSERT INTO produtos (nome, descricao, preco, quantidade_estoque, ativo, categoria_id, criado_em, atualizado_em) VALUES (?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: [{'quantidade_estoque': 10, 'preco': 3.0, 'ativo': True, 'nome': 'banana', 'categoria_id': 2, 'descricao': None}]]
+2025-03-19 21:41:24,581 | ERROR | produto_routes | Erro inesperado ao criar produto: Erro ao criar produto
+2025-03-19 21:41:25,172 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-19 21:41:25,172 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-19 21:41:25,318 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-19 21:41:25,320 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-19 21:41:25,322 | INFO | produto_routes | Listando produtos ativos.
+2025-03-20 11:16:05,704 | INFO | models.abstrata | Classe Abstrata iniciada
+2025-03-20 11:16:06,020 | DEBUG | app | API carregando banco: sqlite:///:memory:
+2025-03-20 11:16:06,115 | INFO | models.abstrata | Tabelas criadas para testes.
+2025-03-20 11:16:07,245 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:16:07,245 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 11:16:07,582 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 11:16:07,583 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 11:16:08,603 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:16:08,604 | INFO | routes.api.auth | Dados recebidos: {'email': 'user@email.com', 'password': '123456'}
+2025-03-20 11:16:08,989 | INFO | ProdutoService | Utilizador user@email.com autenticado.
+2025-03-20 11:16:08,990 | INFO | routes.api.auth | Utilizador autenticado: user@email.com
+2025-03-20 11:16:10,008 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:16:10,008 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': 'teste errado'}
+2025-03-20 11:16:10,363 | INFO | ProdutoService | Token não gerado, dados não autenticados, email: admin@email.com
+2025-03-20 11:16:10,364 | WARNING | routes.api.auth | Falha na autenticação para o email: admin@email.com
+2025-03-20 11:16:11,306 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:16:11,306 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 11:16:11,617 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 11:16:11,619 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 11:16:11,625 | INFO | routes.api.auth | Logout com sucesso
+2025-03-20 11:16:12,679 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:16:12,679 | INFO | routes.api.auth | Dados recebidos: {}
+2025-03-20 11:16:12,679 | WARNING | routes.api.auth | Tentativa de login sem credenciais fornecidas.
+2025-03-20 11:16:13,692 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:16:13,692 | INFO | routes.api.auth | Dados recebidos: {'email': 'naoexiste@email.com', 'password': '123456'}
+2025-03-20 11:16:13,694 | INFO | ProdutoService | Token não gerado, dados não autenticados, email: naoexiste@email.com
+2025-03-20 11:16:13,694 | WARNING | routes.api.auth | Falha na autenticação para o email: naoexiste@email.com
+2025-03-20 11:16:14,747 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:16:14,747 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': 'senhaerrada'}
+2025-03-20 11:16:15,051 | INFO | ProdutoService | Token não gerado, dados não autenticados, email: admin@email.com
+2025-03-20 11:16:15,052 | WARNING | routes.api.auth | Falha na autenticação para o email: admin@email.com
+2025-03-20 11:16:16,055 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:16:16,056 | INFO | routes.api.auth | Dados recebidos: {'email': 'email-invalido', 'password': '123456'}
+2025-03-20 11:16:16,056 | WARNING | routes.api.auth | Tenativa de login de email envalido.
+2025-03-20 11:16:18,048 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:16:18,048 | INFO | routes.api.auth | Formato de envio incorreto, não foi JSON
+2025-03-20 11:16:22,450 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:16:22,450 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 11:16:22,838 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 11:16:22,840 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 11:16:22,845 | INFO | routes.api.auth | Logout com sucesso
+2025-03-20 11:16:24,080 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:16:24,080 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 11:16:24,495 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 11:16:24,496 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 11:16:24,509 | INFO | CategoriaService | Categoria criada: Fruta
+2025-03-20 11:16:24,509 | INFO | models.abstrata | Objeto convertido para JSON.
+2025-03-20 11:16:24,512 | INFO | routes.api.categorias | Nova categoria criada Fruta
+2025-03-20 11:16:25,699 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:16:25,700 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 11:16:26,108 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 11:16:26,109 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 11:16:26,115 | INFO | CategoriaService | Categoria criada: Categoria Teste
+2025-03-20 11:16:26,115 | INFO | models.abstrata | Objeto convertido para JSON.
+2025-03-20 11:16:26,115 | INFO | routes.api.categorias | Nova categoria criada Categoria Teste
+2025-03-20 11:16:26,118 | INFO | ProdutoService | Parâmetros recebidos: nome=banana, preco=3.0, quantidade_estoque=10, categoria_id=2
+2025-03-20 11:16:26,124 | ERROR | ProdutoService | Erro ao criar produto: (builtins.TypeError) SQLite DateTime type only accepts Python datetime and date objects as input.
+[SQL: INSERT INTO produtos (nome, descricao, preco, quantidade_estoque, ativo, categoria_id, criado_em, atualizado_em) VALUES (?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: [{'nome': 'banana', 'categoria_id': 2, 'quantidade_estoque': 10, 'ativo': True, 'preco': 3.0, 'descricao': None}]]
+2025-03-20 11:16:26,125 | ERROR | produto_routes | Erro inesperado ao criar produto: Erro ao criar produto
+2025-03-20 11:16:27,914 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:16:27,917 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 11:16:28,310 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 11:16:28,312 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 11:16:28,317 | INFO | produto_routes | Listando produtos ativos.
+2025-03-20 11:17:39,882 | INFO | models.abstrata | Classe Abstrata iniciada
+2025-03-20 11:17:40,015 | DEBUG | app | API carregando banco: sqlite:///:memory:
+2025-03-20 11:17:40,087 | INFO | models.abstrata | Tabelas criadas para testes.
+2025-03-20 11:17:41,106 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:17:41,107 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 11:17:41,435 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 11:17:41,435 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 11:17:41,448 | INFO | CategoriaService | Categoria criada: Categoria Teste
+2025-03-20 11:17:41,448 | INFO | models.abstrata | Objeto convertido para JSON.
+2025-03-20 11:17:41,448 | INFO | routes.api.categorias | Nova categoria criada Categoria Teste
+2025-03-20 11:17:41,451 | INFO | ProdutoService | Parâmetros recebidos: nome=banana, preco=3.0, quantidade_estoque=10, categoria_id=1
+2025-03-20 11:17:41,457 | ERROR | ProdutoService | Erro ao criar produto: (builtins.TypeError) SQLite DateTime type only accepts Python datetime and date objects as input.
+[SQL: INSERT INTO produtos (nome, descricao, preco, quantidade_estoque, ativo, categoria_id, criado_em, atualizado_em) VALUES (?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: [{'categoria_id': 1, 'quantidade_estoque': 10, 'ativo': True, 'nome': 'banana', 'preco': 3.0, 'descricao': None}]]
+2025-03-20 11:17:41,458 | ERROR | produto_routes | Erro inesperado ao criar produto: Erro ao criar produto
+2025-03-20 11:17:47,326 | INFO | models.abstrata | Classe Abstrata iniciada
+2025-03-20 11:17:47,463 | DEBUG | app | API carregando banco: sqlite:///:memory:
+2025-03-20 11:17:47,528 | INFO | models.abstrata | Tabelas criadas para testes.
+2025-03-20 11:17:48,506 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:17:48,506 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 11:17:48,818 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 11:17:48,819 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 11:17:48,831 | INFO | CategoriaService | Categoria criada: Categoria Teste
+2025-03-20 11:17:48,831 | INFO | models.abstrata | Objeto convertido para JSON.
+2025-03-20 11:17:48,832 | INFO | routes.api.categorias | Nova categoria criada Categoria Teste
+2025-03-20 11:17:48,834 | INFO | ProdutoService | Parâmetros recebidos: nome=banana, preco=3.0, quantidade_estoque=10, categoria_id=1
+2025-03-20 11:17:48,840 | ERROR | ProdutoService | Erro ao criar produto: (builtins.TypeError) SQLite DateTime type only accepts Python datetime and date objects as input.
+[SQL: INSERT INTO produtos (nome, descricao, preco, quantidade_estoque, ativo, categoria_id, criado_em, atualizado_em) VALUES (?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: [{'preco': 3.0, 'nome': 'banana', 'quantidade_estoque': 10, 'categoria_id': 1, 'ativo': True, 'descricao': None}]]
+2025-03-20 11:17:48,841 | ERROR | produto_routes | Erro inesperado ao criar produto: Erro ao criar produto
+2025-03-20 11:22:58,902 | INFO | models.abstrata | Classe Abstrata iniciada
+2025-03-20 11:22:59,058 | DEBUG | app | API carregando banco: sqlite:///:memory:
+2025-03-20 11:22:59,124 | INFO | models.abstrata | Tabelas criadas para testes.
+2025-03-20 11:23:00,101 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:23:00,102 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 11:23:00,448 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 11:23:00,450 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 11:23:00,469 | INFO | CategoriaService | Categoria criada: Categoria Teste
+2025-03-20 11:23:00,469 | INFO | models.abstrata | Objeto convertido para JSON.
+2025-03-20 11:23:00,469 | INFO | routes.api.categorias | Nova categoria criada Categoria Teste
+2025-03-20 11:23:00,473 | INFO | ProdutoService | Parâmetros recebidos: nome=banana, preco=3.0, quantidade_estoque=10, categoria_id=1
+2025-03-20 11:23:00,482 | INFO | ProdutoService | Produto criado: banana, Preço: 3.0, Estoque: 10
+2025-03-20 11:23:00,482 | INFO | models.abstrata | Objeto convertido para JSON.
+2025-03-20 11:23:06,444 | INFO | models.abstrata | Classe Abstrata iniciada
+2025-03-20 11:23:06,596 | DEBUG | app | API carregando banco: sqlite:///:memory:
+2025-03-20 11:23:06,667 | INFO | models.abstrata | Tabelas criadas para testes.
+2025-03-20 11:23:07,779 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:23:07,780 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 11:23:08,111 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 11:23:08,111 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 11:23:09,203 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:23:09,203 | INFO | routes.api.auth | Dados recebidos: {'email': 'user@email.com', 'password': '123456'}
+2025-03-20 11:23:09,526 | INFO | ProdutoService | Utilizador user@email.com autenticado.
+2025-03-20 11:23:09,526 | INFO | routes.api.auth | Utilizador autenticado: user@email.com
+2025-03-20 11:23:10,641 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:23:10,641 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': 'teste errado'}
+2025-03-20 11:23:11,011 | INFO | ProdutoService | Token não gerado, dados não autenticados, email: admin@email.com
+2025-03-20 11:23:11,011 | WARNING | routes.api.auth | Falha na autenticação para o email: admin@email.com
+2025-03-20 11:23:12,187 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:23:12,187 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 11:23:12,532 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 11:23:12,532 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 11:23:12,538 | INFO | routes.api.auth | Logout com sucesso
+2025-03-20 11:23:13,619 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:23:13,619 | INFO | routes.api.auth | Dados recebidos: {}
+2025-03-20 11:23:13,620 | WARNING | routes.api.auth | Tentativa de login sem credenciais fornecidas.
+2025-03-20 11:23:14,611 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:23:14,611 | INFO | routes.api.auth | Dados recebidos: {'email': 'naoexiste@email.com', 'password': '123456'}
+2025-03-20 11:23:14,613 | INFO | ProdutoService | Token não gerado, dados não autenticados, email: naoexiste@email.com
+2025-03-20 11:23:14,613 | WARNING | routes.api.auth | Falha na autenticação para o email: naoexiste@email.com
+2025-03-20 11:23:15,603 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:23:15,604 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': 'senhaerrada'}
+2025-03-20 11:23:15,929 | INFO | ProdutoService | Token não gerado, dados não autenticados, email: admin@email.com
+2025-03-20 11:23:15,930 | WARNING | routes.api.auth | Falha na autenticação para o email: admin@email.com
+2025-03-20 11:23:16,913 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:23:16,913 | INFO | routes.api.auth | Dados recebidos: {'email': 'email-invalido', 'password': '123456'}
+2025-03-20 11:23:16,913 | WARNING | routes.api.auth | Tenativa de login de email envalido.
+2025-03-20 11:23:18,810 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:23:18,811 | INFO | routes.api.auth | Formato de envio incorreto, não foi JSON
+2025-03-20 11:23:22,902 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:23:22,902 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 11:23:23,223 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 11:23:23,223 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 11:23:23,226 | INFO | routes.api.auth | Logout com sucesso
+2025-03-20 11:23:24,190 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:23:24,190 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 11:23:24,513 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 11:23:24,513 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 11:23:24,523 | INFO | CategoriaService | Categoria criada: Fruta
+2025-03-20 11:23:24,523 | INFO | models.abstrata | Objeto convertido para JSON.
+2025-03-20 11:23:24,523 | INFO | routes.api.categorias | Nova categoria criada Fruta
+2025-03-20 11:23:25,489 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:23:25,489 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 11:23:25,807 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 11:23:25,807 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 11:23:25,813 | INFO | CategoriaService | Categoria criada: Categoria Teste
+2025-03-20 11:23:25,813 | INFO | models.abstrata | Objeto convertido para JSON.
+2025-03-20 11:23:25,813 | INFO | routes.api.categorias | Nova categoria criada Categoria Teste
+2025-03-20 11:23:25,818 | INFO | ProdutoService | Parâmetros recebidos: nome=banana, preco=3.0, quantidade_estoque=10, categoria_id=2
+2025-03-20 11:23:25,826 | INFO | ProdutoService | Produto criado: banana, Preço: 3.0, Estoque: 10
+2025-03-20 11:23:25,827 | INFO | models.abstrata | Objeto convertido para JSON.
+2025-03-20 11:23:26,918 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:23:26,919 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 11:23:27,285 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 11:23:27,285 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 11:23:27,288 | INFO | produto_routes | Listando produtos ativos.
+2025-03-20 11:23:27,293 | INFO | models.abstrata | Objeto convertido para JSON.
+2025-03-20 11:25:53,980 | INFO | models.abstrata | Classe Abstrata iniciada
+2025-03-20 11:25:54,285 | DEBUG | app | API carregando banco: sqlite:///:memory:
+2025-03-20 11:25:54,359 | INFO | models.abstrata | Tabelas criadas para testes.
+2025-03-20 11:25:55,473 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:25:55,473 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 11:25:55,800 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 11:25:55,802 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 11:25:56,874 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:25:56,875 | INFO | routes.api.auth | Dados recebidos: {'email': 'user@email.com', 'password': '123456'}
+2025-03-20 11:25:57,201 | INFO | ProdutoService | Utilizador user@email.com autenticado.
+2025-03-20 11:25:57,201 | INFO | routes.api.auth | Utilizador autenticado: user@email.com
+2025-03-20 11:25:58,374 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:25:58,374 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': 'teste errado'}
+2025-03-20 11:25:58,685 | INFO | ProdutoService | Token não gerado, dados não autenticados, email: admin@email.com
+2025-03-20 11:25:58,685 | WARNING | routes.api.auth | Falha na autenticação para o email: admin@email.com
+2025-03-20 11:25:59,681 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:25:59,682 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 11:26:00,021 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 11:26:00,022 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 11:26:00,030 | INFO | routes.api.auth | Logout com sucesso
+2025-03-20 11:26:01,033 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:26:01,035 | INFO | routes.api.auth | Dados recebidos: {}
+2025-03-20 11:26:01,035 | WARNING | routes.api.auth | Tentativa de login sem credenciais fornecidas.
+2025-03-20 11:26:01,990 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:26:01,990 | INFO | routes.api.auth | Dados recebidos: {'email': 'naoexiste@email.com', 'password': '123456'}
+2025-03-20 11:26:01,992 | INFO | ProdutoService | Token não gerado, dados não autenticados, email: naoexiste@email.com
+2025-03-20 11:26:01,992 | WARNING | routes.api.auth | Falha na autenticação para o email: naoexiste@email.com
+2025-03-20 11:26:02,930 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:26:02,931 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': 'senhaerrada'}
+2025-03-20 11:26:03,263 | INFO | ProdutoService | Token não gerado, dados não autenticados, email: admin@email.com
+2025-03-20 11:26:03,263 | WARNING | routes.api.auth | Falha na autenticação para o email: admin@email.com
+2025-03-20 11:26:04,212 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:26:04,213 | INFO | routes.api.auth | Dados recebidos: {'email': 'email-invalido', 'password': '123456'}
+2025-03-20 11:26:04,213 | WARNING | routes.api.auth | Tenativa de login de email envalido.
+2025-03-20 11:26:06,123 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:26:06,123 | INFO | routes.api.auth | Formato de envio incorreto, não foi JSON
+2025-03-20 11:26:10,190 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:26:10,191 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 11:26:10,488 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 11:26:10,489 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 11:26:10,492 | INFO | routes.api.auth | Logout com sucesso
+2025-03-20 11:26:11,464 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:26:11,464 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 11:26:11,770 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 11:26:11,770 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 11:26:11,783 | INFO | CategoriaService | Categoria criada: Fruta
+2025-03-20 11:26:11,784 | INFO | models.abstrata | Objeto convertido para JSON.
+2025-03-20 11:26:11,784 | INFO | routes.api.categorias | Nova categoria criada Fruta
+2025-03-20 11:26:12,752 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:26:12,752 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 11:26:13,058 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 11:26:13,058 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 11:26:13,068 | INFO | CategoriaService | Categoria criada: Categoria Teste
+2025-03-20 11:26:13,068 | INFO | models.abstrata | Objeto convertido para JSON.
+2025-03-20 11:26:13,068 | INFO | routes.api.categorias | Nova categoria criada Categoria Teste
+2025-03-20 11:26:13,072 | INFO | ProdutoService | Parâmetros recebidos: nome=banana, preco=3.0, quantidade_estoque=10, categoria_id=2
+2025-03-20 11:26:13,080 | INFO | ProdutoService | Produto criado: banana, Preço: 3.0, Estoque: 10
+2025-03-20 11:26:13,080 | INFO | models.abstrata | Objeto convertido para JSON.
+2025-03-20 11:26:14,079 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:26:14,079 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 11:26:14,383 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 11:26:14,383 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 11:26:14,387 | INFO | produto_routes | Listando produtos ativos.
+2025-03-20 11:26:14,389 | INFO | models.abstrata | Objeto convertido para JSON.
+2025-03-20 11:28:56,735 | INFO | models.abstrata | Classe Abstrata iniciada
+2025-03-20 11:28:56,908 | DEBUG | app | API carregando banco: sqlite:///:memory:
+2025-03-20 11:28:56,976 | INFO | models.abstrata | Tabelas criadas para testes.
+2025-03-20 11:28:58,063 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:28:58,063 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 11:28:58,385 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 11:28:58,387 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 11:28:59,403 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:28:59,404 | INFO | routes.api.auth | Dados recebidos: {'email': 'user@email.com', 'password': '123456'}
+2025-03-20 11:28:59,743 | INFO | ProdutoService | Utilizador user@email.com autenticado.
+2025-03-20 11:28:59,744 | INFO | routes.api.auth | Utilizador autenticado: user@email.com
+2025-03-20 11:29:00,749 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:29:00,750 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': 'teste errado'}
+2025-03-20 11:29:01,115 | INFO | ProdutoService | Token não gerado, dados não autenticados, email: admin@email.com
+2025-03-20 11:29:01,116 | WARNING | routes.api.auth | Falha na autenticação para o email: admin@email.com
+2025-03-20 11:29:02,328 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:29:02,328 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 11:29:02,706 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 11:29:02,708 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 11:29:02,716 | INFO | routes.api.auth | Logout com sucesso
+2025-03-20 11:29:03,682 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:29:03,682 | INFO | routes.api.auth | Dados recebidos: {}
+2025-03-20 11:29:03,685 | WARNING | routes.api.auth | Tentativa de login sem credenciais fornecidas.
+2025-03-20 11:29:04,644 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:29:04,644 | INFO | routes.api.auth | Dados recebidos: {'email': 'naoexiste@email.com', 'password': '123456'}
+2025-03-20 11:29:04,646 | INFO | ProdutoService | Token não gerado, dados não autenticados, email: naoexiste@email.com
+2025-03-20 11:29:04,646 | WARNING | routes.api.auth | Falha na autenticação para o email: naoexiste@email.com
+2025-03-20 11:29:05,643 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:29:05,645 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': 'senhaerrada'}
+2025-03-20 11:29:06,002 | INFO | ProdutoService | Token não gerado, dados não autenticados, email: admin@email.com
+2025-03-20 11:29:06,002 | WARNING | routes.api.auth | Falha na autenticação para o email: admin@email.com
+2025-03-20 11:29:07,063 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:29:07,063 | INFO | routes.api.auth | Dados recebidos: {'email': 'email-invalido', 'password': '123456'}
+2025-03-20 11:29:07,063 | WARNING | routes.api.auth | Tenativa de login de email envalido.
+2025-03-20 11:29:09,042 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:29:09,042 | INFO | routes.api.auth | Formato de envio incorreto, não foi JSON
+2025-03-20 11:29:13,172 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:29:13,172 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 11:29:13,498 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 11:29:13,498 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 11:29:13,503 | INFO | routes.api.auth | Logout com sucesso
+2025-03-20 11:29:14,488 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:29:14,488 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 11:29:14,825 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 11:29:14,826 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 11:29:14,836 | INFO | CategoriaService | Categoria criada: Fruta
+2025-03-20 11:29:14,836 | INFO | models.abstrata | Objeto convertido para JSON.
+2025-03-20 11:29:14,838 | INFO | routes.api.categorias | Nova categoria criada Fruta
+2025-03-20 11:29:15,836 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:29:15,836 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 11:29:16,164 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 11:29:16,164 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 11:29:16,171 | INFO | CategoriaService | Categoria criada: Categoria Teste
+2025-03-20 11:29:16,171 | INFO | models.abstrata | Objeto convertido para JSON.
+2025-03-20 11:29:16,171 | INFO | routes.api.categorias | Nova categoria criada Categoria Teste
+2025-03-20 11:29:16,174 | INFO | ProdutoService | Parâmetros recebidos: nome=banana, preco=3.0, quantidade_estoque=10, categoria_id=2
+2025-03-20 11:29:16,181 | INFO | ProdutoService | Produto criado: banana, Preço: 3.0, Estoque: 10
+2025-03-20 11:29:16,181 | INFO | models.abstrata | Objeto convertido para JSON.
+2025-03-20 11:29:17,206 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:29:17,206 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 11:29:17,548 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 11:29:17,548 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 11:29:17,552 | INFO | produto_routes | Listando produtos ativos.
+2025-03-20 11:29:17,558 | INFO | models.abstrata | Objeto convertido para JSON.
+2025-03-20 11:31:30,935 | INFO | models.abstrata | Classe Abstrata iniciada
+2025-03-20 11:31:31,100 | DEBUG | app | API carregando banco: sqlite:///:memory:
+2025-03-20 11:31:31,173 | INFO | models.abstrata | Tabelas criadas para testes.
+2025-03-20 11:31:32,162 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:31:32,162 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 11:31:32,462 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 11:31:32,463 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 11:31:33,448 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:31:33,448 | INFO | routes.api.auth | Dados recebidos: {'email': 'user@email.com', 'password': '123456'}
+2025-03-20 11:31:33,766 | INFO | ProdutoService | Utilizador user@email.com autenticado.
+2025-03-20 11:31:33,766 | INFO | routes.api.auth | Utilizador autenticado: user@email.com
+2025-03-20 11:31:34,734 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:31:34,734 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': 'teste errado'}
+2025-03-20 11:31:35,066 | INFO | ProdutoService | Token não gerado, dados não autenticados, email: admin@email.com
+2025-03-20 11:31:35,066 | WARNING | routes.api.auth | Falha na autenticação para o email: admin@email.com
+2025-03-20 11:31:36,130 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:31:36,130 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 11:31:36,441 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 11:31:36,442 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 11:31:36,449 | INFO | routes.api.auth | Logout com sucesso
+2025-03-20 11:31:37,419 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:31:37,419 | INFO | routes.api.auth | Dados recebidos: {}
+2025-03-20 11:31:37,419 | WARNING | routes.api.auth | Tentativa de login sem credenciais fornecidas.
+2025-03-20 11:31:38,351 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:31:38,369 | INFO | routes.api.auth | Dados recebidos: {'email': 'naoexiste@email.com', 'password': '123456'}
+2025-03-20 11:31:38,370 | INFO | ProdutoService | Token não gerado, dados não autenticados, email: naoexiste@email.com
+2025-03-20 11:31:38,370 | WARNING | routes.api.auth | Falha na autenticação para o email: naoexiste@email.com
+2025-03-20 11:31:39,343 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:31:39,343 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': 'senhaerrada'}
+2025-03-20 11:31:39,647 | INFO | ProdutoService | Token não gerado, dados não autenticados, email: admin@email.com
+2025-03-20 11:31:39,649 | WARNING | routes.api.auth | Falha na autenticação para o email: admin@email.com
+2025-03-20 11:31:40,595 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:31:40,595 | INFO | routes.api.auth | Dados recebidos: {'email': 'email-invalido', 'password': '123456'}
+2025-03-20 11:31:40,595 | WARNING | routes.api.auth | Tenativa de login de email envalido.
+2025-03-20 11:31:42,485 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:31:42,485 | INFO | routes.api.auth | Formato de envio incorreto, não foi JSON
+2025-03-20 11:31:46,386 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:31:46,387 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 11:31:46,689 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 11:31:46,690 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 11:31:46,693 | INFO | routes.api.auth | Logout com sucesso
+2025-03-20 11:31:47,640 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:31:47,640 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 11:31:47,956 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 11:31:47,956 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 11:31:47,965 | INFO | CategoriaService | Categoria criada: Fruta
+2025-03-20 11:31:47,965 | INFO | models.abstrata | Objeto convertido para JSON.
+2025-03-20 11:31:47,965 | INFO | routes.api.categorias | Nova categoria criada Fruta
+2025-03-20 11:31:48,899 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:31:48,899 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 11:31:49,199 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 11:31:49,200 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 11:31:49,206 | INFO | CategoriaService | Categoria criada: Categoria Teste
+2025-03-20 11:31:49,269 | INFO | models.abstrata | Objeto convertido para JSON.
+2025-03-20 11:31:49,269 | INFO | routes.api.categorias | Nova categoria criada Categoria Teste
+2025-03-20 11:31:49,271 | INFO | ProdutoService | Parâmetros recebidos: nome=banana, preco=3.0, quantidade_estoque=10, categoria_id=2
+2025-03-20 11:31:49,279 | INFO | ProdutoService | Produto criado: banana, Preço: 3.0, Estoque: 10
+2025-03-20 11:31:49,280 | INFO | models.abstrata | Objeto convertido para JSON.
+2025-03-20 11:31:50,224 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:31:50,224 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 11:31:50,567 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 11:31:50,568 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 11:31:50,570 | INFO | produto_routes | Listando produtos ativos.
+2025-03-20 11:31:50,575 | INFO | models.abstrata | Objeto convertido para JSON.
+2025-03-20 11:51:37,183 | INFO | models.abstrata | Classe Abstrata iniciada
+2025-03-20 11:51:37,388 | DEBUG | app | API carregando banco: sqlite:///:memory:
+2025-03-20 11:51:37,460 | INFO | models.abstrata | Tabelas criadas para testes.
+2025-03-20 11:51:38,453 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:51:38,454 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 11:51:38,779 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 11:51:38,781 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 11:51:39,930 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:51:39,931 | INFO | routes.api.auth | Dados recebidos: {'email': 'user@email.com', 'password': '123456'}
+2025-03-20 11:51:40,262 | INFO | ProdutoService | Utilizador user@email.com autenticado.
+2025-03-20 11:51:40,263 | INFO | routes.api.auth | Utilizador autenticado: user@email.com
+2025-03-20 11:51:41,364 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:51:41,364 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': 'teste errado'}
+2025-03-20 11:51:41,757 | INFO | ProdutoService | Token não gerado, dados não autenticados, email: admin@email.com
+2025-03-20 11:51:41,758 | WARNING | routes.api.auth | Falha na autenticação para o email: admin@email.com
+2025-03-20 11:51:42,772 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:51:42,773 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 11:51:43,100 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 11:51:43,101 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 11:51:43,107 | INFO | routes.api.auth | Logout com sucesso
+2025-03-20 11:51:44,118 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:51:44,119 | INFO | routes.api.auth | Dados recebidos: {}
+2025-03-20 11:51:44,119 | WARNING | routes.api.auth | Tentativa de login sem credenciais fornecidas.
+2025-03-20 11:51:45,147 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:51:45,147 | INFO | routes.api.auth | Dados recebidos: {'email': 'naoexiste@email.com', 'password': '123456'}
+2025-03-20 11:51:45,147 | INFO | ProdutoService | Token não gerado, dados não autenticados, email: naoexiste@email.com
+2025-03-20 11:51:45,150 | WARNING | routes.api.auth | Falha na autenticação para o email: naoexiste@email.com
+2025-03-20 11:51:46,163 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:51:46,163 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': 'senhaerrada'}
+2025-03-20 11:51:46,489 | INFO | ProdutoService | Token não gerado, dados não autenticados, email: admin@email.com
+2025-03-20 11:51:46,489 | WARNING | routes.api.auth | Falha na autenticação para o email: admin@email.com
+2025-03-20 11:51:47,544 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:51:47,544 | INFO | routes.api.auth | Dados recebidos: {'email': 'email-invalido', 'password': '123456'}
+2025-03-20 11:51:47,544 | WARNING | routes.api.auth | Tenativa de login de email envalido.
+2025-03-20 11:51:49,603 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:51:49,603 | INFO | routes.api.auth | Formato de envio incorreto, não foi JSON
+2025-03-20 11:51:53,723 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:51:53,723 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 11:51:54,123 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 11:51:54,124 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 11:51:54,130 | INFO | routes.api.auth | Logout com sucesso
+2025-03-20 11:51:55,114 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:51:55,115 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 11:51:55,447 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 11:51:55,449 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 11:51:55,461 | INFO | CategoriaService | Categoria criada: Fruta
+2025-03-20 11:51:55,461 | INFO | models.abstrata | Objeto convertido para JSON.
+2025-03-20 11:51:55,462 | INFO | routes.api.categorias | Nova categoria criada Fruta
+2025-03-20 11:51:56,456 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:51:56,457 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 11:51:56,792 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 11:51:56,794 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 11:51:56,802 | INFO | CategoriaService | Categoria criada: Categoria Teste
+2025-03-20 11:51:56,802 | INFO | models.abstrata | Objeto convertido para JSON.
+2025-03-20 11:51:56,803 | INFO | routes.api.categorias | Nova categoria criada Categoria Teste
+2025-03-20 11:51:56,805 | INFO | ProdutoService | Parâmetros recebidos: nome=banana, preco=3.0, quantidade_estoque=10, categoria_id=2
+2025-03-20 11:51:56,815 | INFO | ProdutoService | Produto criado: banana, Preço: 3.0, Estoque: 10
+2025-03-20 11:51:56,817 | INFO | models.abstrata | Objeto convertido para JSON.
+2025-03-20 11:51:56,817 | INFO | routes.api.produtos | Produto criado com sucesso: {'id': 1, 'nome': 'banana', 'descricao': None, 'preco': 3.0, 'quantidade_estoque': 10, 'ativo': True, 'categoria_id': 2, 'criado_em': datetime.datetime(2025, 3, 20, 11, 51, 56, 811956), 'atualizado_em': datetime.datetime(2025, 3, 20, 11, 51, 56, 811956)}
+2025-03-20 11:51:57,841 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:51:57,841 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 11:51:58,185 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 11:51:58,185 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 11:51:58,188 | INFO | routes.api.produtos | Listando produtos ativos.
+2025-03-20 11:51:58,195 | INFO | models.abstrata | Objeto convertido para JSON.
+2025-03-20 11:56:10,624 | INFO | models.abstrata | Classe Abstrata iniciada
+2025-03-20 11:56:10,902 | DEBUG | app | API carregando banco: sqlite:///:memory:
+2025-03-20 11:56:10,964 | INFO | models.abstrata | Tabelas criadas para testes.
+2025-03-20 11:56:11,920 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:56:11,976 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 11:56:12,342 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 11:56:12,343 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 11:56:12,353 | INFO | routes.api.auth | Logout com sucesso
+2025-03-20 11:56:19,699 | INFO | models.abstrata | Classe Abstrata iniciada
+2025-03-20 11:56:19,888 | DEBUG | app | API carregando banco: sqlite:///:memory:
+2025-03-20 11:56:19,954 | INFO | models.abstrata | Tabelas criadas para testes.
+2025-03-20 11:56:20,993 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:56:20,995 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 11:56:21,342 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 11:56:21,344 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 11:56:22,289 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:56:22,289 | INFO | routes.api.auth | Dados recebidos: {'email': 'user@email.com', 'password': '123456'}
+2025-03-20 11:56:22,678 | INFO | ProdutoService | Utilizador user@email.com autenticado.
+2025-03-20 11:56:22,679 | INFO | routes.api.auth | Utilizador autenticado: user@email.com
+2025-03-20 11:56:23,620 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:56:23,621 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': 'teste errado'}
+2025-03-20 11:56:23,972 | INFO | ProdutoService | Token não gerado, dados não autenticados, email: admin@email.com
+2025-03-20 11:56:23,972 | WARNING | routes.api.auth | Falha na autenticação para o email: admin@email.com
+2025-03-20 11:56:24,946 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:56:24,947 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 11:56:25,267 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 11:56:25,269 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 11:56:25,275 | INFO | routes.api.auth | Logout com sucesso
+2025-03-20 11:56:26,229 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:56:26,230 | INFO | routes.api.auth | Dados recebidos: {}
+2025-03-20 11:56:26,230 | WARNING | routes.api.auth | Tentativa de login sem credenciais fornecidas.
+2025-03-20 11:56:27,264 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:56:27,265 | INFO | routes.api.auth | Dados recebidos: {'email': 'naoexiste@email.com', 'password': '123456'}
+2025-03-20 11:56:27,266 | INFO | ProdutoService | Token não gerado, dados não autenticados, email: naoexiste@email.com
+2025-03-20 11:56:27,266 | WARNING | routes.api.auth | Falha na autenticação para o email: naoexiste@email.com
+2025-03-20 11:56:28,349 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:56:28,349 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': 'senhaerrada'}
+2025-03-20 11:56:28,822 | INFO | ProdutoService | Token não gerado, dados não autenticados, email: admin@email.com
+2025-03-20 11:56:28,822 | WARNING | routes.api.auth | Falha na autenticação para o email: admin@email.com
+2025-03-20 11:56:29,790 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:56:29,791 | INFO | routes.api.auth | Dados recebidos: {'email': 'email-invalido', 'password': '123456'}
+2025-03-20 11:56:29,791 | WARNING | routes.api.auth | Tenativa de login de email envalido.
+2025-03-20 11:56:31,723 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:56:31,723 | INFO | routes.api.auth | Formato de envio incorreto, não foi JSON
+2025-03-20 11:56:35,925 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:56:35,925 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 11:56:36,251 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 11:56:36,252 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 11:56:36,255 | INFO | routes.api.auth | Logout com sucesso
+2025-03-20 11:56:37,232 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:56:37,232 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 11:56:37,554 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 11:56:37,555 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 11:57:55,020 | INFO | models.abstrata | Classe Abstrata iniciada
+2025-03-20 11:57:55,164 | DEBUG | app | API carregando banco: sqlite:///:memory:
+2025-03-20 11:57:55,242 | INFO | models.abstrata | Tabelas criadas para testes.
+2025-03-20 11:57:56,280 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:57:56,281 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 11:57:56,611 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 11:57:56,612 | ERROR | routes.api.auth | Erro inesperado no login: 'Utilizador' object is not subscriptable
 Traceback (most recent call last):
-  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 21, in login
-    utilizador = UtilizadorService.autenticar(data.get["email"],data.get["password"])
-                                              ~~~~~~~~^^^^^^^^^
-TypeError: 'builtin_function_or_method' object is not subscriptable
-2025-03-17 18:45:07,962 | ERROR | route_auth | Erro inesperado no login: 'builtin_function_or_method' object is not subscriptable
-Traceback (most recent call last):
-  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 21, in login
-    utilizador = UtilizadorService.autenticar(data.get["email"],data.get["password"])
-                                              ~~~~~~~~^^^^^^^^^
-TypeError: 'builtin_function_or_method' object is not subscriptable
-2025-03-17 18:47:16,106 | INFO | Config | Modo de execução: DEBUG
-2025-03-17 18:47:17,037 | INFO | BaseModel | Classe Abstrata iniciada
-2025-03-17 18:47:17,037 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:47:17,044 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:47:17,051 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:47:17,060 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:47:17,067 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:47:17,073 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:47:23,514 | INFO | Config | Modo de execução: DEBUG
-2025-03-17 18:47:24,289 | INFO | BaseModel | Classe Abstrata iniciada
-2025-03-17 18:47:24,289 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:47:24,297 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:47:24,305 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:47:24,313 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:47:24,320 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:47:24,326 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:47:50,168 | INFO | Config | Modo de execução: DEBUG
-2025-03-17 18:47:51,017 | INFO | BaseModel | Classe Abstrata iniciada
-2025-03-17 18:47:51,017 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:47:51,026 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:47:51,032 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:47:51,041 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:47:51,047 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:47:51,055 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:48:05,259 | INFO | Config | Modo de execução: DEBUG
-2025-03-17 18:48:06,125 | INFO | BaseModel | Classe Abstrata iniciada
-2025-03-17 18:48:06,125 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:48:06,133 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:48:06,140 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:48:06,149 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:48:06,159 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:48:06,166 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:48:07,718 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
-2025-03-17 18:48:07,718 | ERROR | route_auth | Erro inesperado no login: module 'jwt' has no attribute 'encode'
-Traceback (most recent call last):
-  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 27, in login
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 51, in login
     access_token, refresh_token = AuthService.gerar_tokens(utilizador)
                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\util\auth.py", line 18, in gerar_tokens
-    access_token = jwt.encode(
-                   ^^^^^^^^^^
-AttributeError: module 'jwt' has no attribute 'encode'
-2025-03-17 18:48:10,196 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
-2025-03-17 18:48:10,196 | ERROR | route_auth | Erro inesperado no login: module 'jwt' has no attribute 'encode'
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\services\authmanager.py", line 20, in gerar_tokens
+    "id": utilizador["id"],
+         ~~~~~~~~~~^^^^^^
+TypeError: 'Utilizador' object is not subscriptable
+2025-03-20 11:58:18,301 | INFO | models.abstrata | Classe Abstrata iniciada
+2025-03-20 11:58:18,428 | DEBUG | app | API carregando banco: sqlite:///:memory:
+2025-03-20 11:58:18,504 | INFO | models.abstrata | Tabelas criadas para testes.
+2025-03-20 11:58:19,488 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:58:19,488 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 11:58:19,926 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 11:58:19,926 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 11:59:12,986 | INFO | models.abstrata | Classe Abstrata iniciada
+2025-03-20 11:59:13,104 | DEBUG | app | API carregando banco: sqlite:///:memory:
+2025-03-20 11:59:13,179 | INFO | models.abstrata | Tabelas criadas para testes.
+2025-03-20 11:59:14,226 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 11:59:14,227 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 11:59:14,568 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 11:59:14,569 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 12:03:03,033 | INFO | models.abstrata | Classe Abstrata iniciada
+2025-03-20 12:03:03,167 | DEBUG | app | API carregando banco: sqlite:///:memory:
+2025-03-20 12:03:03,232 | INFO | models.abstrata | Tabelas criadas para testes.
+2025-03-20 12:03:04,181 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 12:03:04,181 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 12:03:04,495 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 12:03:04,495 | ERROR | routes.api.auth | Erro inesperado no login: 'Utilizador' object is not subscriptable
 Traceback (most recent call last):
-  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 27, in login
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 51, in login
     access_token, refresh_token = AuthService.gerar_tokens(utilizador)
                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\util\auth.py", line 18, in gerar_tokens
-    access_token = jwt.encode(
-                   ^^^^^^^^^^
-AttributeError: module 'jwt' has no attribute 'encode'
-2025-03-17 18:49:34,341 | INFO | Config | Modo de execução: DEBUG
-2025-03-17 18:49:35,287 | INFO | BaseModel | Classe Abstrata iniciada
-2025-03-17 18:49:35,287 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:49:35,295 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:49:35,301 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:49:35,312 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:49:35,318 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:49:35,326 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:49:40,531 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
-2025-03-17 18:49:40,532 | ERROR | route_auth | Erro inesperado no login: module 'jwt' has no attribute 'encode'
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\services\authmanager.py", line 20, in gerar_tokens
+    "id": utilizador["id"],
+         ~~~~~~~~~~^^^^^^
+TypeError: 'Utilizador' object is not subscriptable
+2025-03-20 12:04:11,099 | INFO | models.abstrata | Classe Abstrata iniciada
+2025-03-20 12:04:11,225 | DEBUG | app | API carregando banco: sqlite:///:memory:
+2025-03-20 12:04:11,305 | INFO | models.abstrata | Tabelas criadas para testes.
+2025-03-20 12:04:12,316 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 12:04:12,316 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 12:04:12,643 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 12:04:12,644 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 12:09:19,638 | INFO | models.abstrata | Classe Abstrata iniciada
+2025-03-20 12:09:19,838 | DEBUG | app | API carregando banco: sqlite:///:memory:
+2025-03-20 12:09:19,907 | INFO | models.abstrata | Tabelas criadas para testes.
+2025-03-20 12:09:20,871 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 12:09:20,871 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 12:09:21,190 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 12:09:21,190 | ERROR | routes.api.auth | Erro inesperado no login: 'Utilizador' object is not subscriptable
 Traceback (most recent call last):
-  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 28, in login
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 51, in login
     access_token, refresh_token = AuthService.gerar_tokens(utilizador)
                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\util\auth.py", line 18, in gerar_tokens
-    access_token = jwt.encode(
-                   ^^^^^^^^^^
-AttributeError: module 'jwt' has no attribute 'encode'
-2025-03-17 18:49:48,447 | INFO | Config | Modo de execução: DEBUG
-2025-03-17 18:49:49,235 | INFO | BaseModel | Classe Abstrata iniciada
-2025-03-17 18:49:49,235 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:49:49,243 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:49:49,249 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:49:49,262 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:49:49,268 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:49:49,277 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:49:49,790 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
-2025-03-17 18:49:49,790 | ERROR | route_auth | Erro inesperado no login: module 'jwt' has no attribute 'encode'
-Traceback (most recent call last):
-  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 28, in login
-    access_token, refresh_token = AuthService.gerar_tokens(utilizador)
-                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\util\auth.py", line 18, in gerar_tokens
-    access_token = jwt.encode(
-                   ^^^^^^^^^^
-AttributeError: module 'jwt' has no attribute 'encode'
-2025-03-17 18:51:51,948 | INFO | Config | Modo de execução: DEBUG
-2025-03-17 18:51:52,900 | INFO | BaseModel | Classe Abstrata iniciada
-2025-03-17 18:51:52,900 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:51:52,908 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:51:52,914 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:51:52,924 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:51:52,930 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:51:52,936 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:52:19,450 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
-2025-03-17 18:52:19,451 | ERROR | route_auth | Erro inesperado no login: module 'jwt' has no attribute 'encode'
-Traceback (most recent call last):
-  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 28, in login
-    access_token, refresh_token = AuthService.gerar_tokens(utilizador)
-                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\util\auth.py", line 18, in gerar_tokens
-    access_token = jwt.encode(
-                   ^^^^^^^^^^
-AttributeError: module 'jwt' has no attribute 'encode'
-2025-03-17 18:52:24,995 | INFO | Config | Modo de execução: DEBUG
-2025-03-17 18:52:25,823 | INFO | BaseModel | Classe Abstrata iniciada
-2025-03-17 18:52:25,823 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:52:25,833 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:52:25,841 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:52:25,850 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:52:25,856 | DEBUG | BaseModel | Database chamado.
-2025-03-17 18:52:25,862 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:03:30,903 | INFO | Config | Modo de execução: DEBUG
-2025-03-17 19:03:31,923 | INFO | BaseModel | Classe Abstrata iniciada
-2025-03-17 19:03:31,924 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:03:31,929 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:03:31,937 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:03:31,946 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:03:31,953 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:03:31,959 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:03:32,704 | INFO | Config | Modo de execução: DEBUG
-2025-03-17 19:03:33,483 | INFO | BaseModel | Classe Abstrata iniciada
-2025-03-17 19:03:33,484 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:03:33,489 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:03:33,496 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:03:33,504 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:03:33,510 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:03:33,516 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:03:39,657 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
-2025-03-17 19:03:39,658 | ERROR | route_auth | Erro inesperado no login: 'Utilizador' object is not subscriptable
-Traceback (most recent call last):
-  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\routes\api\auth.py", line 27, in login
-    access_token, refresh_token = AuthService.gerar_tokens(utilizador)
-                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\util\auth.py", line 20, in gerar_tokens
+  File "C:\Users\tutas\Documents\Projetos GitHUB\store-management-system\services\authmanager.py", line 20, in gerar_tokens
     "id": utilizador["id"],
           ~~~~~~~~~~^^^^^^
 TypeError: 'Utilizador' object is not subscriptable
-2025-03-17 19:09:31,207 | INFO | Config | Modo de execução: DEBUG
-2025-03-17 19:09:39,997 | INFO | Config | Modo de execução: DEBUG
-2025-03-17 19:09:40,854 | INFO | BaseModel | Classe Abstrata iniciada
-2025-03-17 19:09:40,854 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:09:40,864 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:09:40,870 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:09:40,881 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:09:40,888 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:09:40,895 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:09:41,689 | INFO | Config | Modo de execução: DEBUG
-2025-03-17 19:09:42,560 | INFO | BaseModel | Classe Abstrata iniciada
-2025-03-17 19:09:42,562 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:09:42,568 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:09:42,574 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:09:42,585 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:09:42,590 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:09:42,597 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:09:43,920 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
-2025-03-17 19:09:43,921 | INFO | route_auth | Utilizador autenticado: admin@email.com
-2025-03-17 19:10:54,271 | INFO | produto_routes | Listando produtos ativos.
-2025-03-17 19:11:06,317 | INFO | route_auth | Token validado com sucesso!
-2025-03-17 19:25:10,933 | INFO | Config | Modo de execução: DEBUG
-2025-03-17 19:25:11,552 | INFO | BaseModel | Classe Abstrata iniciada
-2025-03-17 19:25:11,552 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:25:11,556 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:25:11,559 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:25:11,565 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:25:11,568 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:25:11,573 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:25:12,251 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:25:12,254 | INFO | BaseModel | Tabelas criadas para testes.
-2025-03-17 19:25:12,416 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
-2025-03-17 19:25:12,416 | INFO | route_auth | Utilizador autenticado: admin@email.com
-2025-03-17 19:26:52,356 | INFO | Config | Modo de execução: DEBUG
-2025-03-17 19:26:52,774 | INFO | BaseModel | Classe Abstrata iniciada
-2025-03-17 19:26:52,775 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:26:52,778 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:26:52,781 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:26:52,787 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:26:52,790 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:26:52,793 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:26:53,348 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:26:53,349 | INFO | BaseModel | Tabelas criadas para testes.
-2025-03-17 19:26:53,494 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
-2025-03-17 19:26:53,494 | INFO | route_auth | Utilizador autenticado: admin@email.com
-2025-03-17 19:28:18,069 | INFO | Config | Modo de execução: DEBUG
-2025-03-17 19:28:18,589 | INFO | BaseModel | Classe Abstrata iniciada
-2025-03-17 19:28:18,589 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:28:18,592 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:28:18,595 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:28:18,599 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:28:18,602 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:28:18,606 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:28:19,174 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:28:19,175 | INFO | BaseModel | Tabelas criadas para testes.
-2025-03-17 19:28:19,317 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
-2025-03-17 19:28:19,318 | INFO | route_auth | Utilizador autenticado: admin@email.com
-2025-03-17 19:28:19,332 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:28:19,334 | INFO | BaseModel | Tabelas criadas para testes.
-2025-03-17 19:28:19,479 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
-2025-03-17 19:28:19,479 | INFO | route_auth | Utilizador autenticado: admin@email.com
-2025-03-17 19:28:19,484 | INFO | produto_routes | Listando produtos ativos.
-2025-03-17 19:30:45,969 | INFO | Config | Modo de execução: DEBUG
-2025-03-17 19:30:46,448 | INFO | BaseModel | Classe Abstrata iniciada
-2025-03-17 19:30:46,449 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:30:46,451 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:30:46,455 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:30:46,459 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:30:46,462 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:30:46,466 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:30:47,051 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:30:47,052 | INFO | BaseModel | Tabelas criadas para testes.
-2025-03-17 19:30:47,225 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
-2025-03-17 19:30:47,225 | INFO | route_auth | Utilizador autenticado: admin@email.com
-2025-03-17 19:30:47,238 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:30:47,239 | INFO | BaseModel | Tabelas criadas para testes.
-2025-03-17 19:30:47,376 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
-2025-03-17 19:30:47,376 | INFO | route_auth | Utilizador autenticado: admin@email.com
-2025-03-17 19:30:47,379 | INFO | produto_routes | Listando produtos ativos.
-2025-03-17 19:39:03,373 | INFO | Config | Modo de execução: DEBUG
-2025-03-17 19:39:03,852 | INFO | BaseModel | Classe Abstrata iniciada
-2025-03-17 19:39:03,852 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:39:03,856 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:39:03,859 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:39:03,864 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:39:03,867 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:39:03,871 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:39:04,492 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:39:04,494 | INFO | BaseModel | Tabelas criadas para testes.
-2025-03-17 19:39:04,658 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
-2025-03-17 19:39:04,658 | INFO | route_auth | Utilizador autenticado: admin@email.com
-2025-03-17 19:39:04,671 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:39:04,672 | INFO | BaseModel | Tabelas criadas para testes.
-2025-03-17 19:39:04,811 | INFO | ProdutoService | Token não gerado, dados não autenticados, email: admin@email.com
-2025-03-17 19:39:04,811 | WARNING | route_auth | Falha na autenticação para o email: admin@email.com
-2025-03-17 19:39:04,823 | DEBUG | BaseModel | Database chamado.
-2025-03-17 19:39:04,824 | INFO | BaseModel | Tabelas criadas para testes.
-2025-03-17 19:39:04,963 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
-2025-03-17 19:39:04,963 | INFO | route_auth | Utilizador autenticado: admin@email.com
-2025-03-17 19:39:04,966 | INFO | produto_routes | Listando produtos ativos.
+2025-03-20 12:10:52,278 | INFO | models.abstrata | Classe Abstrata iniciada
+2025-03-20 12:10:52,450 | DEBUG | app | API carregando banco: sqlite:///:memory:
+2025-03-20 12:10:52,523 | INFO | models.abstrata | Tabelas criadas para testes.
+2025-03-20 12:10:53,525 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 12:10:53,525 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 12:10:53,849 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 12:10:53,855 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 12:14:26,379 | INFO | models.abstrata | Classe Abstrata iniciada
+2025-03-20 12:14:26,506 | DEBUG | app | API carregando banco: sqlite:///:memory:
+2025-03-20 12:14:26,572 | INFO | models.abstrata | Tabelas criadas para testes.
+2025-03-20 12:14:27,569 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 12:14:27,569 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 12:14:27,887 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 12:14:27,888 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 12:16:25,921 | INFO | models.abstrata | Classe Abstrata iniciada
+2025-03-20 12:16:26,081 | DEBUG | app | API carregando banco: sqlite:///:memory:
+2025-03-20 12:16:26,151 | INFO | models.abstrata | Tabelas criadas para testes.
+2025-03-20 12:16:27,214 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 12:16:27,214 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 12:16:27,545 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 12:16:27,546 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 12:16:28,598 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 12:16:28,599 | INFO | routes.api.auth | Dados recebidos: {'email': 'user@email.com', 'password': '123456'}
+2025-03-20 12:16:28,931 | INFO | ProdutoService | Utilizador user@email.com autenticado.
+2025-03-20 12:16:28,933 | INFO | routes.api.auth | Utilizador autenticado: user@email.com
+2025-03-20 12:16:29,890 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 12:16:29,891 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': 'teste errado'}
+2025-03-20 12:16:30,219 | INFO | ProdutoService | Token não gerado, dados não autenticados, email: admin@email.com
+2025-03-20 12:16:30,220 | WARNING | routes.api.auth | Falha na autenticação para o email: admin@email.com
+2025-03-20 12:16:31,201 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 12:16:31,201 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 12:16:31,531 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 12:16:31,531 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 12:16:31,540 | INFO | routes.api.auth | Logout com sucesso
+2025-03-20 12:16:32,565 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 12:16:32,565 | INFO | routes.api.auth | Dados recebidos: {}
+2025-03-20 12:16:32,565 | WARNING | routes.api.auth | Tentativa de login sem credenciais fornecidas.
+2025-03-20 12:16:33,609 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 12:16:33,610 | INFO | routes.api.auth | Dados recebidos: {'email': 'naoexiste@email.com', 'password': '123456'}
+2025-03-20 12:16:33,612 | INFO | ProdutoService | Token não gerado, dados não autenticados, email: naoexiste@email.com
+2025-03-20 12:16:33,612 | WARNING | routes.api.auth | Falha na autenticação para o email: naoexiste@email.com
+2025-03-20 12:16:34,614 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 12:16:34,614 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': 'senhaerrada'}
+2025-03-20 12:16:34,938 | INFO | ProdutoService | Token não gerado, dados não autenticados, email: admin@email.com
+2025-03-20 12:16:34,938 | WARNING | routes.api.auth | Falha na autenticação para o email: admin@email.com
+2025-03-20 12:16:35,981 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 12:16:35,982 | INFO | routes.api.auth | Dados recebidos: {'email': 'email-invalido', 'password': '123456'}
+2025-03-20 12:16:35,982 | WARNING | routes.api.auth | Tenativa de login de email envalido.
+2025-03-20 12:16:38,011 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 12:16:38,011 | INFO | routes.api.auth | Formato de envio incorreto, não foi JSON
+2025-03-20 12:16:42,278 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 12:16:42,278 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 12:16:42,615 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 12:16:42,616 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 12:16:42,619 | INFO | routes.api.auth | Logout com sucesso
+2025-03-20 12:16:43,652 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 12:16:43,652 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 12:16:44,002 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 12:16:44,003 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 12:16:48,178 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 12:16:48,178 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 12:16:48,532 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 12:16:48,533 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 12:16:48,545 | INFO | CategoriaService | Categoria criada: Fruta
+2025-03-20 12:16:48,546 | INFO | models.abstrata | Objeto convertido para JSON.
+2025-03-20 12:16:48,546 | INFO | routes.api.categorias | Nova categoria criada Fruta
+2025-03-20 12:16:49,663 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 12:16:49,663 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 12:16:50,021 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 12:16:50,022 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 12:16:50,031 | INFO | CategoriaService | Categoria criada: Categoria Teste
+2025-03-20 12:16:50,032 | INFO | models.abstrata | Objeto convertido para JSON.
+2025-03-20 12:16:50,032 | INFO | routes.api.categorias | Nova categoria criada Categoria Teste
+2025-03-20 12:16:50,035 | INFO | ProdutoService | Parâmetros recebidos: nome=banana, preco=3.0, quantidade_estoque=10, categoria_id=2
+2025-03-20 12:16:50,047 | INFO | ProdutoService | Produto criado: banana, Preço: 3.0, Estoque: 10
+2025-03-20 12:16:50,048 | INFO | models.abstrata | Objeto convertido para JSON.
+2025-03-20 12:16:50,048 | INFO | routes.api.produtos | Produto criado com sucesso: {'id': 1, 'nome': 'banana', 'descricao': None, 'preco': 3.0, 'quantidade_estoque': 10, 'ativo': True, 'categoria_id': 2, 'criado_em': datetime.datetime(2025, 3, 20, 12, 16, 50, 42963), 'atualizado_em': datetime.datetime(2025, 3, 20, 12, 16, 50, 42963)}
+2025-03-20 12:16:51,148 | DEBUG | routes.api.auth | Rota /api/auth/login chamada.
+2025-03-20 12:16:51,149 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 12:16:51,535 | INFO | ProdutoService | Utilizador admin@email.com autenticado.
+2025-03-20 12:16:51,536 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 12:16:51,540 | INFO | routes.api.produtos | Listando produtos ativos.
+2025-03-20 12:16:51,545 | INFO | models.abstrata | Objeto convertido para JSON.
