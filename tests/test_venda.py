@@ -1,12 +1,26 @@
+import jwt
+from config import Config
+
 def test_registrar_venda(client):
-    token, user_id = get_token(client)
+    # Faz login para obter um token válido
+    response_login = client.post("/api/auth/login", json={
+        "email": "admin@email.com",
+        "password": "123456"
+    })
+    assert response_login.status_code == 200
+    access_token = response_login.json["access_token"]
+
+    # Decodifica o token 
+    payload = jwt.decode(access_token, Config.SECRET_KEY, algorithms=["HS256"])
+    user_id = payload["id"]
+
     # Para registrar uma venda, precisamos criar uma categoria, um produto e um cliente
 
     # Cria categoria
     cat_resp = client.post(
         "/api/categoria/nova",
         json={"nome": "VendaCat"},
-        headers={"Authorization": f"Bearer {token}"}
+        headers={"Authorization": f"Bearer {access_token}"}
     )
     assert cat_resp.status_code == 201
     cat_id = cat_resp.get_json()["categoria"]["id"]
@@ -20,7 +34,7 @@ def test_registrar_venda(client):
             "quantidade_estoque": 100,
             "categoria_id": cat_id
         },
-        headers={"Authorization": f"Bearer {token}"}
+        headers={"Authorization": f"Bearer {access_token}"}
     )
     assert prod_resp.status_code == 201
     prod_id = prod_resp.get_json()["produto"]["id"]
@@ -29,7 +43,7 @@ def test_registrar_venda(client):
     cli_resp = client.post(
         "/api/cliente/novo",
         json={"nome": "Cliente Venda", "email": "clientevenda@test.com"},
-        headers={"Authorization": f"Bearer {token}"}
+        headers={"Authorization": f"Bearer {access_token}"}
     )
     assert cli_resp.status_code == 201
     cli_data = cli_resp.get_json()
@@ -45,7 +59,7 @@ def test_registrar_venda(client):
             "produto_id": prod_id,
             "quantidade": 2
         },
-        headers={"Authorization": f"Bearer {token}"}
+        headers={"Authorization": f"Bearer {access_token}"}
     )
     assert venda_resp.status_code == 201
     data = venda_resp.get_json()
@@ -54,11 +68,18 @@ def test_registrar_venda(client):
     assert "venda" in data
 
 def test_listar_vendas(client):
-    token, _ = get_token(client)
+    # Faz login para obter um token válido
+    response_login = client.post("/api/auth/login", json={
+        "email": "admin@email.com",
+        "password": "123456"
+    })
+    assert response_login.status_code == 200
+    access_token = response_login.json["access_token"]
+
     # Mesmo que as rotas de vendas não requeiram token, incluímos o header para padronização
     resp = client.get(
         "/api/venda/lista",
-        headers={"Authorization": f"Bearer {token}"}
+        headers={"Authorization": f"Bearer {access_token}"}
     )
     assert resp.status_code == 200
     data = resp.get_json()
