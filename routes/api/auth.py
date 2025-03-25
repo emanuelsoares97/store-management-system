@@ -112,8 +112,8 @@ def refresh_token():
     try:
         payload = jwt.decode(token, Config.SECRET_KEY, algorithms=["HS256"])
         
-        Utilizador = namedtuple("Utilizador", ["id", "email", "role"])
-        utilizador_obj = Utilizador(id=payload["id"], email="", role="")
+        Utilizador = namedtuple("Utilizador", ["id", "nome", "email", "role"])
+        utilizador_obj = Utilizador(id=payload["id"], nome=payload.get("nome", ""), email="", role="")
 
         novo_access_token, _ = AuthService.gerar_tokens(utilizador_obj)
 
