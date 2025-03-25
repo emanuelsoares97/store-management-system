@@ -1,11 +1,14 @@
 from flask import Blueprint, jsonify, request
 from services.vendasmanager import VendaService
 from util.logger_util import get_logger
+from services.authmanager import AuthService
 
 venda_bp = Blueprint("venda", __name__)
 logger = get_logger(__name__)
 
 @venda_bp.route("/lista", methods=["GET"])
+@AuthService.token_required
+@AuthService.role_required("admin", "gerente", "user")
 def listar_vendas():
     """Endpoint para listar todas as vendas"""
     try:
@@ -16,6 +19,8 @@ def listar_vendas():
         return jsonify({"erro": "Erro ao carregar vendas."}), 500
 
 @venda_bp.route("/registrar", methods=["POST"])
+@AuthService.token_required
+@AuthService.role_required("admin", "gerente", "user")
 def registrar_venda():
     """Endpoint para registrar uma venda"""
     try:
