@@ -23,6 +23,7 @@ class AuthService:
             access_token = jwt.encode(
                 {
                     "id": utilizador.id, 
+                    "nome": utilizador.nome,
                     "email": utilizador.email,
                     "role": utilizador.role,
                     "jti": jti_access,  # `jti` ao access token
@@ -93,6 +94,7 @@ class AuthService:
             
             g.current_user = {
                 "email": payload["email"],
+                "nome": payload["nome"],
                 "role": payload["role"],
                 "jti": payload["jti"]  # identificador único do token
             }
