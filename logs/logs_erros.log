@@ -345,3 +345,10 @@ Traceback (most recent call last):
     "id": utilizador["id"],
           ~~~~~~~~~~^^^^^^
 TypeError: 'Utilizador' object is not subscriptable
+2025-03-20 20:58:17,092 | ERROR | services.authmanager | Tentativa de gerar token, erro: 'Utilizador' object has no attribute 'nome'
+2025-03-20 20:58:54,652 | ERROR | services.authmanager | Tentativa de gerar token, erro: 'Utilizador' object has no attribute 'nome'
+2025-03-20 20:59:01,918 | ERROR | services.authmanager | Tentativa de gerar token, erro: 'Utilizador' object has no attribute 'nome'
+2025-03-20 21:04:31,945 | ERROR | services.authmanager | Tentativa de gerar token, erro: 'Utilizador' object has no attribute 'nome'
+2025-03-20 21:04:31,945 | ERROR | services.authmanager | Tentativa de gerar token, erro: 'Utilizador' object has no attribute 'nome'
+2025-03-20 21:04:55,507 | ERROR | services.authmanager | Tentativa de gerar token, erro: 'Utilizador' object has no attribute 'nome'
+2025-03-20 21:04:55,507 | ERROR | services.authmanager | Tentativa de gerar token, erro: 'Utilizador' object has no attribute 'nome'

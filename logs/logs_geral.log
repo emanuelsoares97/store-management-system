@@ -911,3 +911,371 @@ TypeError: 'Utilizador' object is not subscriptable
 2025-03-20 12:16:51,536 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
 2025-03-20 12:16:51,540 | INFO | routes.api.produtos | Listando produtos ativos.
 2025-03-20 12:16:51,545 | INFO | models.abstrata | Objeto convertido para JSON.
+2025-03-20 20:50:01,856 | INFO | models.abstrata | Classe Abstrata iniciada
+2025-03-20 20:50:01,958 | INFO | database | Resetando a instância do Database.
+2025-03-20 20:50:01,961 | INFO | app | Inicializando a aplicação Flask.
+2025-03-20 20:50:01,961 | INFO | database | Criando nova instância do Database.
+2025-03-20 20:50:01,961 | INFO | database | Usando o banco de dados: sqlite:///:memory:
+2025-03-20 20:50:02,002 | INFO | database | Registrando modelos e criando tabelas, se necessário.
+2025-03-20 20:50:02,018 | INFO | app | Banco de dados configurado e modelos registrados com sucesso.
+2025-03-20 20:50:02,034 | INFO | app | Rotas inicializadas com sucesso.
+2025-03-20 20:50:02,035 | INFO | models.abstrata | Tabelas criadas para testes.
+2025-03-20 20:50:02,492 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 20:50:02,626 | INFO | services.utilizadoresmanager | Utilizador admin@email.com autenticado.
+2025-03-20 20:50:02,627 | INFO | services.authmanager | Token gerado com sucesso.
+2025-03-20 20:50:02,627 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 20:50:03,019 | INFO | routes.api.auth | Dados recebidos: {'email': 'user@email.com', 'password': '123456'}
+2025-03-20 20:50:03,148 | INFO | services.utilizadoresmanager | Utilizador user@email.com autenticado.
+2025-03-20 20:50:03,149 | INFO | services.authmanager | Token gerado com sucesso.
+2025-03-20 20:50:03,149 | INFO | routes.api.auth | Utilizador autenticado: user@email.com
+2025-03-20 20:50:03,544 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': 'teste errado'}
+2025-03-20 20:50:03,673 | INFO | services.utilizadoresmanager | Token não gerado, dados não autenticados, email: admin@email.com
+2025-03-20 20:50:03,673 | WARNING | routes.api.auth | Falha na autenticação para o email: admin@email.com
+2025-03-20 20:50:04,064 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 20:50:04,193 | INFO | services.utilizadoresmanager | Utilizador admin@email.com autenticado.
+2025-03-20 20:50:04,193 | INFO | services.authmanager | Token gerado com sucesso.
+2025-03-20 20:50:04,194 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 20:50:04,196 | INFO | services.tokenrevogadomanager | Token revogado: <models.tokenrevogado.TokenRevogado object at 0x0000021B7CABE210>
+2025-03-20 20:50:04,198 | INFO | routes.api.auth | Logout com sucesso
+2025-03-20 20:50:04,586 | INFO | routes.api.auth | Dados recebidos: {}
+2025-03-20 20:50:04,586 | WARNING | routes.api.auth | Tentativa de login sem credenciais fornecidas.
+2025-03-20 20:50:04,976 | INFO | routes.api.auth | Dados recebidos: {'email': 'naoexiste@email.com', 'password': '123456'}
+2025-03-20 20:50:04,977 | INFO | services.utilizadoresmanager | Token não gerado, dados não autenticados, email: naoexiste@email.com
+2025-03-20 20:50:04,977 | WARNING | routes.api.auth | Falha na autenticação para o email: naoexiste@email.com
+2025-03-20 20:50:05,365 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': 'senhaerrada'}
+2025-03-20 20:50:05,493 | INFO | services.utilizadoresmanager | Token não gerado, dados não autenticados, email: admin@email.com
+2025-03-20 20:50:05,493 | WARNING | routes.api.auth | Falha na autenticação para o email: admin@email.com
+2025-03-20 20:50:05,885 | INFO | routes.api.auth | Dados recebidos: {'email': 'email-invalido', 'password': '123456'}
+2025-03-20 20:50:05,885 | WARNING | routes.api.auth | Tenativa de login de email envalido.
+2025-03-20 20:50:06,666 | INFO | routes.api.auth | Formato de envio incorreto, não foi JSON
+2025-03-20 20:50:07,058 | WARNING | services.authmanager | Tentativa de validar token expirado
+2025-03-20 20:50:07,447 | WARNING | services.authmanager | Tentativa de válidar token inválido.
+2025-03-20 20:50:08,235 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 20:50:08,365 | INFO | services.utilizadoresmanager | Utilizador admin@email.com autenticado.
+2025-03-20 20:50:08,366 | INFO | services.authmanager | Token gerado com sucesso.
+2025-03-20 20:50:08,366 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 20:50:08,367 | INFO | services.tokenrevogadomanager | Token revogado: <models.tokenrevogado.TokenRevogado object at 0x0000021B7CBDA000>
+2025-03-20 20:50:08,368 | INFO | routes.api.auth | Logout com sucesso
+2025-03-20 20:50:08,765 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 20:50:08,894 | INFO | services.utilizadoresmanager | Utilizador admin@email.com autenticado.
+2025-03-20 20:50:08,895 | INFO | services.authmanager | Token gerado com sucesso.
+2025-03-20 20:50:08,895 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 20:50:08,896 | INFO | services.authmanager | Token gerado com sucesso.
+2025-03-20 20:50:10,455 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 20:50:10,586 | INFO | services.utilizadoresmanager | Utilizador admin@email.com autenticado.
+2025-03-20 20:50:10,587 | INFO | services.authmanager | Token gerado com sucesso.
+2025-03-20 20:50:10,587 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 20:50:11,179 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 20:50:11,306 | INFO | services.utilizadoresmanager | Utilizador admin@email.com autenticado.
+2025-03-20 20:50:11,307 | INFO | services.authmanager | Token gerado com sucesso.
+2025-03-20 20:50:11,307 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 20:50:11,777 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 20:50:11,906 | INFO | services.utilizadoresmanager | Utilizador admin@email.com autenticado.
+2025-03-20 20:50:11,906 | INFO | services.authmanager | Token gerado com sucesso.
+2025-03-20 20:50:11,906 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 20:51:03,439 | INFO | models.abstrata | Classe Abstrata iniciada
+2025-03-20 20:51:40,913 | INFO | models.abstrata | Classe Abstrata iniciada
+2025-03-20 20:51:40,969 | INFO | database | Resetando a instância do Database.
+2025-03-20 20:51:40,971 | INFO | app | Inicializando a aplicação Flask.
+2025-03-20 20:51:40,971 | INFO | database | Criando nova instância do Database.
+2025-03-20 20:51:40,971 | INFO | database | Usando o banco de dados: sqlite:///:memory:
+2025-03-20 20:51:40,986 | INFO | database | Registrando modelos e criando tabelas, se necessário.
+2025-03-20 20:51:40,990 | INFO | app | Banco de dados configurado e modelos registrados com sucesso.
+2025-03-20 20:51:40,996 | INFO | app | Rotas inicializadas com sucesso.
+2025-03-20 20:51:40,997 | INFO | models.abstrata | Tabelas criadas para testes.
+2025-03-20 20:51:41,413 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 20:51:41,544 | INFO | services.utilizadoresmanager | Utilizador admin@email.com autenticado.
+2025-03-20 20:51:41,545 | INFO | services.authmanager | Token gerado com sucesso.
+2025-03-20 20:51:41,545 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 20:51:46,271 | INFO | models.abstrata | Classe Abstrata iniciada
+2025-03-20 20:51:46,322 | INFO | database | Resetando a instância do Database.
+2025-03-20 20:51:46,323 | INFO | app | Inicializando a aplicação Flask.
+2025-03-20 20:51:46,323 | INFO | database | Criando nova instância do Database.
+2025-03-20 20:51:46,323 | INFO | database | Usando o banco de dados: sqlite:///:memory:
+2025-03-20 20:51:46,339 | INFO | database | Registrando modelos e criando tabelas, se necessário.
+2025-03-20 20:51:46,343 | INFO | app | Banco de dados configurado e modelos registrados com sucesso.
+2025-03-20 20:51:46,350 | INFO | app | Rotas inicializadas com sucesso.
+2025-03-20 20:51:46,351 | INFO | models.abstrata | Tabelas criadas para testes.
+2025-03-20 20:51:46,785 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 20:51:46,925 | INFO | services.utilizadoresmanager | Utilizador admin@email.com autenticado.
+2025-03-20 20:51:46,926 | INFO | services.authmanager | Token gerado com sucesso.
+2025-03-20 20:51:46,926 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 20:53:36,854 | INFO | models.abstrata | Classe Abstrata iniciada
+2025-03-20 20:53:36,907 | INFO | database | Resetando a instância do Database.
+2025-03-20 20:53:36,908 | INFO | app | Inicializando a aplicação Flask.
+2025-03-20 20:53:36,909 | INFO | database | Criando nova instância do Database.
+2025-03-20 20:53:36,910 | INFO | database | Usando o banco de dados: sqlite:///:memory:
+2025-03-20 20:53:36,935 | INFO | database | Registrando modelos e criando tabelas, se necessário.
+2025-03-20 20:53:36,939 | INFO | app | Banco de dados configurado e modelos registrados com sucesso.
+2025-03-20 20:53:36,949 | INFO | app | Rotas inicializadas com sucesso.
+2025-03-20 20:53:36,950 | INFO | models.abstrata | Tabelas criadas para testes.
+2025-03-20 20:53:37,378 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 20:53:37,517 | INFO | services.utilizadoresmanager | Utilizador admin@email.com autenticado.
+2025-03-20 20:53:37,517 | INFO | services.authmanager | Token gerado com sucesso.
+2025-03-20 20:53:37,517 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 20:53:37,523 | INFO | services.categoriamanager | Categoria criada: Fruta
+2025-03-20 20:53:37,523 | INFO | models.abstrata | Objeto convertido para JSON.
+2025-03-20 20:53:37,523 | INFO | routes.api.categorias | Nova categoria criada Fruta
+2025-03-20 20:55:12,997 | INFO | models.abstrata | Classe Abstrata iniciada
+2025-03-20 20:55:13,050 | INFO | database | Resetando a instância do Database.
+2025-03-20 20:55:13,051 | INFO | app | Inicializando a aplicação Flask.
+2025-03-20 20:55:13,051 | INFO | database | Criando nova instância do Database.
+2025-03-20 20:55:13,051 | INFO | database | Usando o banco de dados: sqlite:///:memory:
+2025-03-20 20:55:13,066 | INFO | database | Registrando modelos e criando tabelas, se necessário.
+2025-03-20 20:55:13,069 | INFO | app | Banco de dados configurado e modelos registrados com sucesso.
+2025-03-20 20:55:13,077 | INFO | app | Rotas inicializadas com sucesso.
+2025-03-20 20:55:13,077 | INFO | models.abstrata | Tabelas criadas para testes.
+2025-03-20 20:55:13,484 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 20:55:13,617 | INFO | services.utilizadoresmanager | Utilizador admin@email.com autenticado.
+2025-03-20 20:55:13,617 | INFO | services.authmanager | Token gerado com sucesso.
+2025-03-20 20:55:13,617 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 20:57:02,984 | INFO | models.abstrata | Classe Abstrata iniciada
+2025-03-20 20:57:03,036 | INFO | database | Resetando a instância do Database.
+2025-03-20 20:57:03,037 | INFO | app | Inicializando a aplicação Flask.
+2025-03-20 20:57:03,038 | INFO | database | Criando nova instância do Database.
+2025-03-20 20:57:03,038 | INFO | database | Usando o banco de dados: sqlite:///:memory:
+2025-03-20 20:57:03,052 | INFO | database | Registrando modelos e criando tabelas, se necessário.
+2025-03-20 20:57:03,057 | INFO | app | Banco de dados configurado e modelos registrados com sucesso.
+2025-03-20 20:57:03,064 | INFO | app | Rotas inicializadas com sucesso.
+2025-03-20 20:57:03,065 | INFO | models.abstrata | Tabelas criadas para testes.
+2025-03-20 20:57:03,473 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 20:57:03,604 | INFO | services.utilizadoresmanager | Utilizador admin@email.com autenticado.
+2025-03-20 20:57:03,605 | INFO | services.authmanager | Token gerado com sucesso.
+2025-03-20 20:57:03,605 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 20:57:40,280 | INFO | models.abstrata | Classe Abstrata iniciada
+2025-03-20 20:57:40,331 | INFO | database | Resetando a instância do Database.
+2025-03-20 20:57:40,333 | INFO | app | Inicializando a aplicação Flask.
+2025-03-20 20:57:40,333 | INFO | database | Criando nova instância do Database.
+2025-03-20 20:57:40,333 | INFO | database | Usando o banco de dados: sqlite:///:memory:
+2025-03-20 20:57:40,348 | INFO | database | Registrando modelos e criando tabelas, se necessário.
+2025-03-20 20:57:40,352 | INFO | app | Banco de dados configurado e modelos registrados com sucesso.
+2025-03-20 20:57:40,359 | INFO | app | Rotas inicializadas com sucesso.
+2025-03-20 20:57:40,360 | INFO | models.abstrata | Tabelas criadas para testes.
+2025-03-20 20:57:40,782 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 20:57:40,921 | INFO | services.utilizadoresmanager | Utilizador admin@email.com autenticado.
+2025-03-20 20:57:40,922 | INFO | services.authmanager | Token gerado com sucesso.
+2025-03-20 20:57:40,922 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 20:57:40,928 | INFO | services.categoriamanager | Categoria criada: Fruta
+2025-03-20 20:57:40,928 | INFO | models.abstrata | Objeto convertido para JSON.
+2025-03-20 20:57:40,928 | INFO | routes.api.categorias | Nova categoria criada Fruta
+2025-03-20 20:58:10,062 | INFO | models.abstrata | Classe Abstrata iniciada
+2025-03-20 20:58:10,130 | INFO | database | Resetando a instância do Database.
+2025-03-20 20:58:10,132 | INFO | app | Inicializando a aplicação Flask.
+2025-03-20 20:58:10,132 | INFO | database | Criando nova instância do Database.
+2025-03-20 20:58:10,132 | INFO | database | Usando o banco de dados: sqlite:///:memory:
+2025-03-20 20:58:10,147 | INFO | database | Registrando modelos e criando tabelas, se necessário.
+2025-03-20 20:58:10,151 | INFO | app | Banco de dados configurado e modelos registrados com sucesso.
+2025-03-20 20:58:10,160 | INFO | app | Rotas inicializadas com sucesso.
+2025-03-20 20:58:10,161 | INFO | models.abstrata | Tabelas criadas para testes.
+2025-03-20 20:58:10,569 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 20:58:10,700 | INFO | services.utilizadoresmanager | Utilizador admin@email.com autenticado.
+2025-03-20 20:58:10,700 | INFO | services.authmanager | Token gerado com sucesso.
+2025-03-20 20:58:10,700 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 20:58:11,104 | INFO | routes.api.auth | Dados recebidos: {'email': 'user@email.com', 'password': '123456'}
+2025-03-20 20:58:11,235 | INFO | services.utilizadoresmanager | Utilizador user@email.com autenticado.
+2025-03-20 20:58:11,236 | INFO | services.authmanager | Token gerado com sucesso.
+2025-03-20 20:58:11,236 | INFO | routes.api.auth | Utilizador autenticado: user@email.com
+2025-03-20 20:58:11,628 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': 'teste errado'}
+2025-03-20 20:58:11,758 | INFO | services.utilizadoresmanager | Token não gerado, dados não autenticados, email: admin@email.com
+2025-03-20 20:58:11,759 | WARNING | routes.api.auth | Falha na autenticação para o email: admin@email.com
+2025-03-20 20:58:12,170 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 20:58:12,303 | INFO | services.utilizadoresmanager | Utilizador admin@email.com autenticado.
+2025-03-20 20:58:12,303 | INFO | services.authmanager | Token gerado com sucesso.
+2025-03-20 20:58:12,303 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 20:58:12,306 | INFO | services.tokenrevogadomanager | Token revogado: <models.tokenrevogado.TokenRevogado object at 0x000001E41E00FA70>
+2025-03-20 20:58:12,308 | INFO | routes.api.auth | Logout com sucesso
+2025-03-20 20:58:12,705 | INFO | routes.api.auth | Dados recebidos: {}
+2025-03-20 20:58:12,705 | WARNING | routes.api.auth | Tentativa de login sem credenciais fornecidas.
+2025-03-20 20:58:13,100 | INFO | routes.api.auth | Dados recebidos: {'email': 'naoexiste@email.com', 'password': '123456'}
+2025-03-20 20:58:13,101 | INFO | services.utilizadoresmanager | Token não gerado, dados não autenticados, email: naoexiste@email.com
+2025-03-20 20:58:13,101 | WARNING | routes.api.auth | Falha na autenticação para o email: naoexiste@email.com
+2025-03-20 20:58:13,495 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': 'senhaerrada'}
+2025-03-20 20:58:13,638 | INFO | services.utilizadoresmanager | Token não gerado, dados não autenticados, email: admin@email.com
+2025-03-20 20:58:13,638 | WARNING | routes.api.auth | Falha na autenticação para o email: admin@email.com
+2025-03-20 20:58:14,033 | INFO | routes.api.auth | Dados recebidos: {'email': 'email-invalido', 'password': '123456'}
+2025-03-20 20:58:14,033 | WARNING | routes.api.auth | Tenativa de login de email envalido.
+2025-03-20 20:58:14,815 | INFO | routes.api.auth | Formato de envio incorreto, não foi JSON
+2025-03-20 20:58:15,231 | WARNING | services.authmanager | Tentativa de validar token expirado
+2025-03-20 20:58:15,624 | WARNING | services.authmanager | Tentativa de válidar token inválido.
+2025-03-20 20:58:16,422 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 20:58:16,563 | INFO | services.utilizadoresmanager | Utilizador admin@email.com autenticado.
+2025-03-20 20:58:16,563 | INFO | services.authmanager | Token gerado com sucesso.
+2025-03-20 20:58:16,563 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 20:58:16,565 | INFO | services.tokenrevogadomanager | Token revogado: <models.tokenrevogado.TokenRevogado object at 0x000001E41E155FA0>
+2025-03-20 20:58:16,565 | INFO | routes.api.auth | Logout com sucesso
+2025-03-20 20:58:16,962 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 20:58:17,091 | INFO | services.utilizadoresmanager | Utilizador admin@email.com autenticado.
+2025-03-20 20:58:17,091 | INFO | services.authmanager | Token gerado com sucesso.
+2025-03-20 20:58:17,091 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 20:58:17,092 | ERROR | services.authmanager | Tentativa de gerar token, erro: 'Utilizador' object has no attribute 'nome'
+2025-03-20 20:58:18,898 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 20:58:19,025 | INFO | services.utilizadoresmanager | Utilizador admin@email.com autenticado.
+2025-03-20 20:58:19,026 | INFO | services.authmanager | Token gerado com sucesso.
+2025-03-20 20:58:19,026 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 20:58:19,031 | INFO | services.categoriamanager | Categoria criada: Fruta
+2025-03-20 20:58:19,031 | INFO | models.abstrata | Objeto convertido para JSON.
+2025-03-20 20:58:19,031 | INFO | routes.api.categorias | Nova categoria criada Fruta
+2025-03-20 20:58:19,428 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 20:58:19,561 | INFO | services.utilizadoresmanager | Utilizador admin@email.com autenticado.
+2025-03-20 20:58:19,561 | INFO | services.authmanager | Token gerado com sucesso.
+2025-03-20 20:58:19,561 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 20:58:19,564 | INFO | services.categoriamanager | Categoria criada: Categoria Teste
+2025-03-20 20:58:19,564 | INFO | models.abstrata | Objeto convertido para JSON.
+2025-03-20 20:58:19,564 | INFO | routes.api.categorias | Nova categoria criada Categoria Teste
+2025-03-20 20:58:19,566 | INFO | services.produtomanager | Parâmetros recebidos: nome=banana, preco=3.0, quantidade_estoque=10, categoria_id=2
+2025-03-20 20:58:19,569 | INFO | services.produtomanager | Produto criado: banana, Preço: 3.0, Estoque: 10
+2025-03-20 20:58:19,569 | INFO | models.abstrata | Objeto convertido para JSON.
+2025-03-20 20:58:19,569 | INFO | routes.api.produtos | Produto criado com sucesso: {'id': 1, 'nome': 'banana', 'descricao': None, 'preco': 3.0, 'quantidade_estoque': 10, 'ativo': True, 'categoria_id': 2, 'criado_em': datetime.datetime(2025, 3, 20, 20, 58, 19, 568607), 'atualizado_em': datetime.datetime(2025, 3, 20, 20, 58, 19, 568607)}
+2025-03-20 20:58:19,999 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 20:58:20,130 | INFO | services.utilizadoresmanager | Utilizador admin@email.com autenticado.
+2025-03-20 20:58:20,131 | INFO | services.authmanager | Token gerado com sucesso.
+2025-03-20 20:58:20,131 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 20:58:20,133 | INFO | routes.api.produtos | Listando produtos ativos.
+2025-03-20 20:58:20,134 | INFO | models.abstrata | Objeto convertido para JSON.
+2025-03-20 20:58:41,579 | INFO | models.abstrata | Classe Abstrata iniciada
+2025-03-20 20:58:54,007 | INFO | models.abstrata | Classe Abstrata iniciada
+2025-03-20 20:58:54,060 | INFO | database | Resetando a instância do Database.
+2025-03-20 20:58:54,062 | INFO | app | Inicializando a aplicação Flask.
+2025-03-20 20:58:54,062 | INFO | database | Criando nova instância do Database.
+2025-03-20 20:58:54,062 | INFO | database | Usando o banco de dados: sqlite:///:memory:
+2025-03-20 20:58:54,077 | INFO | database | Registrando modelos e criando tabelas, se necessário.
+2025-03-20 20:58:54,081 | INFO | app | Banco de dados configurado e modelos registrados com sucesso.
+2025-03-20 20:58:54,089 | INFO | app | Rotas inicializadas com sucesso.
+2025-03-20 20:58:54,090 | INFO | models.abstrata | Tabelas criadas para testes.
+2025-03-20 20:58:54,511 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 20:58:54,650 | INFO | services.utilizadoresmanager | Utilizador admin@email.com autenticado.
+2025-03-20 20:58:54,650 | INFO | services.authmanager | Token gerado com sucesso.
+2025-03-20 20:58:54,651 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 20:58:54,652 | ERROR | services.authmanager | Tentativa de gerar token, erro: 'Utilizador' object has no attribute 'nome'
+2025-03-20 20:59:01,262 | INFO | models.abstrata | Classe Abstrata iniciada
+2025-03-20 20:59:01,316 | INFO | database | Resetando a instância do Database.
+2025-03-20 20:59:01,317 | INFO | app | Inicializando a aplicação Flask.
+2025-03-20 20:59:01,317 | INFO | database | Criando nova instância do Database.
+2025-03-20 20:59:01,317 | INFO | database | Usando o banco de dados: sqlite:///:memory:
+2025-03-20 20:59:01,332 | INFO | database | Registrando modelos e criando tabelas, se necessário.
+2025-03-20 20:59:01,336 | INFO | app | Banco de dados configurado e modelos registrados com sucesso.
+2025-03-20 20:59:01,344 | INFO | app | Rotas inicializadas com sucesso.
+2025-03-20 20:59:01,345 | INFO | models.abstrata | Tabelas criadas para testes.
+2025-03-20 20:59:01,780 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 20:59:01,917 | INFO | services.utilizadoresmanager | Utilizador admin@email.com autenticado.
+2025-03-20 20:59:01,917 | INFO | services.authmanager | Token gerado com sucesso.
+2025-03-20 20:59:01,917 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 20:59:01,918 | ERROR | services.authmanager | Tentativa de gerar token, erro: 'Utilizador' object has no attribute 'nome'
+2025-03-20 21:04:31,303 | INFO | models.abstrata | Classe Abstrata iniciada
+2025-03-20 21:04:31,357 | INFO | database | Resetando a instância do Database.
+2025-03-20 21:04:31,358 | INFO | app | Inicializando a aplicação Flask.
+2025-03-20 21:04:31,359 | INFO | database | Criando nova instância do Database.
+2025-03-20 21:04:31,359 | INFO | database | Usando o banco de dados: sqlite:///:memory:
+2025-03-20 21:04:31,373 | INFO | database | Registrando modelos e criando tabelas, se necessário.
+2025-03-20 21:04:31,378 | INFO | app | Banco de dados configurado e modelos registrados com sucesso.
+2025-03-20 21:04:31,386 | INFO | app | Rotas inicializadas com sucesso.
+2025-03-20 21:04:31,388 | INFO | models.abstrata | Tabelas criadas para testes.
+2025-03-20 21:04:31,810 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 21:04:31,943 | INFO | services.utilizadoresmanager | Utilizador admin@email.com autenticado.
+2025-03-20 21:04:31,943 | INFO | services.authmanager | Token gerado com sucesso.
+2025-03-20 21:04:31,944 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 21:04:31,945 | ERROR | services.authmanager | Tentativa de gerar token, erro: 'Utilizador' object has no attribute 'nome'
+2025-03-20 21:04:31,945 | ERROR | services.authmanager | Tentativa de gerar token, erro: 'Utilizador' object has no attribute 'nome'
+2025-03-20 21:04:54,879 | INFO | models.abstrata | Classe Abstrata iniciada
+2025-03-20 21:04:54,939 | INFO | database | Resetando a instância do Database.
+2025-03-20 21:04:54,940 | INFO | app | Inicializando a aplicação Flask.
+2025-03-20 21:04:54,941 | INFO | database | Criando nova instância do Database.
+2025-03-20 21:04:54,941 | INFO | database | Usando o banco de dados: sqlite:///:memory:
+2025-03-20 21:04:54,957 | INFO | database | Registrando modelos e criando tabelas, se necessário.
+2025-03-20 21:04:54,962 | INFO | app | Banco de dados configurado e modelos registrados com sucesso.
+2025-03-20 21:04:54,970 | INFO | app | Rotas inicializadas com sucesso.
+2025-03-20 21:04:54,971 | INFO | models.abstrata | Tabelas criadas para testes.
+2025-03-20 21:04:55,375 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 21:04:55,505 | INFO | services.utilizadoresmanager | Utilizador admin@email.com autenticado.
+2025-03-20 21:04:55,505 | INFO | services.authmanager | Token gerado com sucesso.
+2025-03-20 21:04:55,505 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 21:04:55,507 | ERROR | services.authmanager | Tentativa de gerar token, erro: 'Utilizador' object has no attribute 'nome'
+2025-03-20 21:04:55,507 | ERROR | services.authmanager | Tentativa de gerar token, erro: 'Utilizador' object has no attribute 'nome'
+2025-03-20 21:06:12,639 | INFO | models.abstrata | Classe Abstrata iniciada
+2025-03-20 21:06:12,691 | INFO | database | Resetando a instância do Database.
+2025-03-20 21:06:12,692 | INFO | app | Inicializando a aplicação Flask.
+2025-03-20 21:06:12,693 | INFO | database | Criando nova instância do Database.
+2025-03-20 21:06:12,693 | INFO | database | Usando o banco de dados: sqlite:///:memory:
+2025-03-20 21:06:12,710 | INFO | database | Registrando modelos e criando tabelas, se necessário.
+2025-03-20 21:06:12,714 | INFO | app | Banco de dados configurado e modelos registrados com sucesso.
+2025-03-20 21:06:12,724 | INFO | app | Rotas inicializadas com sucesso.
+2025-03-20 21:06:12,725 | INFO | models.abstrata | Tabelas criadas para testes.
+2025-03-20 21:06:13,187 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 21:06:13,334 | INFO | services.utilizadoresmanager | Utilizador admin@email.com autenticado.
+2025-03-20 21:06:13,334 | INFO | services.authmanager | Token gerado com sucesso.
+2025-03-20 21:06:13,336 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 21:06:13,337 | INFO | services.authmanager | Token gerado com sucesso.
+2025-03-20 21:06:19,783 | INFO | models.abstrata | Classe Abstrata iniciada
+2025-03-20 21:06:19,850 | INFO | database | Resetando a instância do Database.
+2025-03-20 21:06:19,851 | INFO | app | Inicializando a aplicação Flask.
+2025-03-20 21:06:19,851 | INFO | database | Criando nova instância do Database.
+2025-03-20 21:06:19,851 | INFO | database | Usando o banco de dados: sqlite:///:memory:
+2025-03-20 21:06:19,868 | INFO | database | Registrando modelos e criando tabelas, se necessário.
+2025-03-20 21:06:19,872 | INFO | app | Banco de dados configurado e modelos registrados com sucesso.
+2025-03-20 21:06:19,880 | INFO | app | Rotas inicializadas com sucesso.
+2025-03-20 21:06:19,881 | INFO | models.abstrata | Tabelas criadas para testes.
+2025-03-20 21:06:20,313 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 21:06:20,447 | INFO | services.utilizadoresmanager | Utilizador admin@email.com autenticado.
+2025-03-20 21:06:20,447 | INFO | services.authmanager | Token gerado com sucesso.
+2025-03-20 21:06:20,447 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 21:06:20,849 | INFO | routes.api.auth | Dados recebidos: {'email': 'user@email.com', 'password': '123456'}
+2025-03-20 21:06:20,984 | INFO | services.utilizadoresmanager | Utilizador user@email.com autenticado.
+2025-03-20 21:06:20,984 | INFO | services.authmanager | Token gerado com sucesso.
+2025-03-20 21:06:20,984 | INFO | routes.api.auth | Utilizador autenticado: user@email.com
+2025-03-20 21:06:21,383 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': 'teste errado'}
+2025-03-20 21:06:21,513 | INFO | services.utilizadoresmanager | Token não gerado, dados não autenticados, email: admin@email.com
+2025-03-20 21:06:21,513 | WARNING | routes.api.auth | Falha na autenticação para o email: admin@email.com
+2025-03-20 21:06:21,926 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 21:06:22,060 | INFO | services.utilizadoresmanager | Utilizador admin@email.com autenticado.
+2025-03-20 21:06:22,060 | INFO | services.authmanager | Token gerado com sucesso.
+2025-03-20 21:06:22,061 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 21:06:22,063 | INFO | services.tokenrevogadomanager | Token revogado: <models.tokenrevogado.TokenRevogado object at 0x000002C898F99E80>
+2025-03-20 21:06:22,064 | INFO | routes.api.auth | Logout com sucesso
+2025-03-20 21:06:22,468 | INFO | routes.api.auth | Dados recebidos: {}
+2025-03-20 21:06:22,469 | WARNING | routes.api.auth | Tentativa de login sem credenciais fornecidas.
+2025-03-20 21:06:22,873 | INFO | routes.api.auth | Dados recebidos: {'email': 'naoexiste@email.com', 'password': '123456'}
+2025-03-20 21:06:22,874 | INFO | services.utilizadoresmanager | Token não gerado, dados não autenticados, email: naoexiste@email.com
+2025-03-20 21:06:22,874 | WARNING | routes.api.auth | Falha na autenticação para o email: naoexiste@email.com
+2025-03-20 21:06:23,281 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': 'senhaerrada'}
+2025-03-20 21:06:23,412 | INFO | services.utilizadoresmanager | Token não gerado, dados não autenticados, email: admin@email.com
+2025-03-20 21:06:23,412 | WARNING | routes.api.auth | Falha na autenticação para o email: admin@email.com
+2025-03-20 21:06:23,813 | INFO | routes.api.auth | Dados recebidos: {'email': 'email-invalido', 'password': '123456'}
+2025-03-20 21:06:23,813 | WARNING | routes.api.auth | Tenativa de login de email envalido.
+2025-03-20 21:06:24,614 | INFO | routes.api.auth | Formato de envio incorreto, não foi JSON
+2025-03-20 21:06:25,020 | WARNING | services.authmanager | Tentativa de validar token expirado
+2025-03-20 21:06:25,425 | WARNING | services.authmanager | Tentativa de válidar token inválido.
+2025-03-20 21:06:26,237 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 21:06:26,384 | INFO | services.utilizadoresmanager | Utilizador admin@email.com autenticado.
+2025-03-20 21:06:26,384 | INFO | services.authmanager | Token gerado com sucesso.
+2025-03-20 21:06:26,386 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 21:06:26,387 | INFO | services.tokenrevogadomanager | Token revogado: <models.tokenrevogado.TokenRevogado object at 0x000002C898FC5E80>
+2025-03-20 21:06:26,388 | INFO | routes.api.auth | Logout com sucesso
+2025-03-20 21:06:26,804 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 21:06:26,962 | INFO | services.utilizadoresmanager | Utilizador admin@email.com autenticado.
+2025-03-20 21:06:26,962 | INFO | services.authmanager | Token gerado com sucesso.
+2025-03-20 21:06:26,962 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 21:06:26,963 | INFO | services.authmanager | Token gerado com sucesso.
+2025-03-20 21:06:28,667 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 21:06:28,800 | INFO | services.utilizadoresmanager | Utilizador admin@email.com autenticado.
+2025-03-20 21:06:28,800 | INFO | services.authmanager | Token gerado com sucesso.
+2025-03-20 21:06:28,800 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 21:06:28,805 | INFO | services.categoriamanager | Categoria criada: Fruta
+2025-03-20 21:06:28,805 | INFO | models.abstrata | Objeto convertido para JSON.
+2025-03-20 21:06:28,805 | INFO | routes.api.categorias | Nova categoria criada Fruta
+2025-03-20 21:06:29,226 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 21:06:29,363 | INFO | services.utilizadoresmanager | Utilizador admin@email.com autenticado.
+2025-03-20 21:06:29,364 | INFO | services.authmanager | Token gerado com sucesso.
+2025-03-20 21:06:29,364 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 21:06:29,367 | INFO | services.categoriamanager | Categoria criada: Categoria Teste
+2025-03-20 21:06:29,367 | INFO | models.abstrata | Objeto convertido para JSON.
+2025-03-20 21:06:29,368 | INFO | routes.api.categorias | Nova categoria criada Categoria Teste
+2025-03-20 21:06:29,370 | INFO | services.produtomanager | Parâmetros recebidos: nome=banana, preco=3.0, quantidade_estoque=10, categoria_id=2
+2025-03-20 21:06:29,375 | INFO | services.produtomanager | Produto criado: banana, Preço: 3.0, Estoque: 10
+2025-03-20 21:06:29,375 | INFO | models.abstrata | Objeto convertido para JSON.
+2025-03-20 21:06:29,375 | INFO | routes.api.produtos | Produto criado com sucesso: {'id': 1, 'nome': 'banana', 'descricao': None, 'preco': 3.0, 'quantidade_estoque': 10, 'ativo': True, 'categoria_id': 2, 'criado_em': datetime.datetime(2025, 3, 20, 21, 6, 29, 373042), 'atualizado_em': datetime.datetime(2025, 3, 20, 21, 6, 29, 373042)}
+2025-03-20 21:06:29,781 | INFO | routes.api.auth | Dados recebidos: {'email': 'admin@email.com', 'password': '123456'}
+2025-03-20 21:06:29,917 | INFO | services.utilizadoresmanager | Utilizador admin@email.com autenticado.
+2025-03-20 21:06:29,917 | INFO | services.authmanager | Token gerado com sucesso.
+2025-03-20 21:06:29,917 | INFO | routes.api.auth | Utilizador autenticado: admin@email.com
+2025-03-20 21:06:29,918 | INFO | routes.api.produtos | Listando produtos ativos.
+2025-03-20 21:06:29,920 | INFO | models.abstrata | Objeto convertido para JSON.
