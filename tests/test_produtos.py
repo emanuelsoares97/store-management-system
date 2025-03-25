@@ -24,11 +24,9 @@ def test_criar_categoria_admin(client):
     assert response.json["mensagem"] == "Categoria criada com sucesso!"  # ✅ Confirma a mensagem
 
 
-
-
 def test_criar_produto_admin(client):
     """Testa se o admin consegue criar um produto"""
-    # 1️⃣ Faz login para obter um token válido
+    # 1Faz login para obter um token válido
     response_login = client.post("/api/auth/login", json={
         "email": "admin@email.com",
         "password": "123456"
@@ -36,7 +34,7 @@ def test_criar_produto_admin(client):
     assert response_login.status_code == 200
     access_token = response_login.json["access_token"]
 
-    # 2️⃣ Cria uma categoria de teste para o produto
+    # 2Cria uma categoria de teste para o produto
     response_categoria = client.post(
         "/api/categoria/nova", 
         json={"nome": "Categoria Teste"}, 
@@ -47,7 +45,7 @@ def test_criar_produto_admin(client):
 
     categoria_id = response_categoria.json["categoria"]["id"]
 
-    # 3️⃣ Define os dados do produto, usando a categoria recém-criada
+    # Define os dados do produto, usando a categoria recém-criada
     produto_data = {
         "nome": "banana",
         "preco": 3.0,
@@ -55,14 +53,14 @@ def test_criar_produto_admin(client):
         "categoria_id": categoria_id
     }
 
-    # 4️⃣ Envia a requisição POST para criar o produto
+    # Envia a requisição POST para criar o produto
     response_produto = client.post(
         "/api/produto/novo",
         json=produto_data,
         headers={"Authorization": f"Bearer {access_token}"}
     )
     
-    # 5️⃣ Verifica a resposta
+    # Verifica a resposta
     assert response_produto.status_code == 201, "Deveria retornar 201 Created"
     data = response_produto.get_json()
     assert "produto" in data, "Resposta deve conter a chave 'produto'"
@@ -86,7 +84,7 @@ def test_validar_lista_de_produtos(client):
     # entra numa rota get e usa o token para ter autorizaçao de acesso a rota
     response = client.get("/api/produto/ativos", headers={"Authorization": f"Bearer {access_token}"})
 
-    # 3️⃣ Valida se a resposta foi bem-sucedida
+    # Valida se a resposta foi bem-sucedida
     assert response.status_code == 200
     assert "produtos" in response.json  # Garante que a chave 'produtos' existe na resposta.
     assert isinstance(response.json["produtos"], list)  # Agora verificamos corretamente a lista.
