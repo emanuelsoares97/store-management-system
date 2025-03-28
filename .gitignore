@@ -20,7 +20,7 @@ __pycache__/
 # Cache de testes
 .pytest_cache/
 
-# Banco SQLite local
+# Banco de dados local
 db/*.db
 *.sqlite3
 
