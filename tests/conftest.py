@@ -1,9 +1,13 @@
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 import pytest
 from app import create_app
-from database import Database
-from models.abstrata import BaseModel
+from app.database import Database
+from app.models.abstrata import BaseModel
 from config import TestConfig
-from models.utilizador import Utilizador
+from app.models.utilizador import Utilizador
 from werkzeug.security import generate_password_hash
 
 @pytest.fixture(scope="session")
