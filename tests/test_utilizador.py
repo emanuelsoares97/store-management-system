@@ -115,7 +115,11 @@ def test_atualizar_utilizador(client):
     )
     assert update_resp.status_code == 200
     data = update_resp.get_json()
-    assert "nome" in data and data["nome"] == "User Updated"
+    utilizador = data["utilizador"]
+    assert utilizador["nome"] == "User Updated"
+    assert utilizador["email"] == "updateuser@test.com"
+
+
 
 def test_criar_utilizador(client):
     # Faz login para obter um token válido
