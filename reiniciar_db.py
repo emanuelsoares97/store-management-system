@@ -1,9 +1,9 @@
-from database import Database
-from models.utilizador import Utilizador
-from models.categoria import Categoria
-from models.produto import Produto
-from models.cliente import Cliente
-from models.vendas import Venda
+from app.database import Database
+from app.models.utilizador import Utilizador
+from app.models.categoria import Categoria
+from app.models.produto import Produto
+from app.models.cliente import Cliente
+from app.models.vendas import Venda
 from app import create_app
 
 app = create_app()
@@ -27,16 +27,16 @@ def limpar_tabelas():
 import os
 import pandas as pd
 from datetime import datetime
-from database import Database
-from models.utilizador import Utilizador
-from models.categoria import Categoria
-from models.produto import Produto
-from models.cliente import Cliente
-from models.vendas import Venda
+from app.database import Database
+from app.models.utilizador import Utilizador
+from app.models.categoria import Categoria
+from app.models.produto import Produto
+from app.models.cliente import Cliente
+from app.models.vendas import Venda
 from app import create_app
 from werkzeug.security import generate_password_hash
 from sqlalchemy.exc import IntegrityError
-from util.logger_util import get_logger
+from app.util.logger_util import get_logger
 
 # Criar app Flask para contexto
 app = create_app()
@@ -124,8 +124,8 @@ def popular_base():
 
         session.close()
 
-from database import Database
-from models.utilizador import Utilizador
+from app.database import Database
+from app.models.utilizador import Utilizador
 from werkzeug.security import generate_password_hash
 from sqlalchemy.exc import IntegrityError
 
