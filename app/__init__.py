@@ -39,11 +39,3 @@ def create_app(config_class=Config):
         raise e
 
     return app
-
-if __name__ == "__main__":
-    try:
-        app = create_app()
-        logger.info("Aplicação iniciada com sucesso. Rodando em modo debug: %s", Config.DEBUG)
-        app.run(debug=Config.DEBUG)
-    except Exception as e:
-        logger.critical("Falha ao iniciar a aplicação.", exc_info=True)
