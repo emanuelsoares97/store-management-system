@@ -1,62 +1,62 @@
-from app.models.sale import Venda
-from app.models.product import Produto
+from app.models.Sale import Sale
+from app.models.Product import Product
 from app.database import Database
 from app.util.logger_util import get_logger
 
-class VendaService:
+class SaleService:
     """Gerencia as vendas no sistema"""
-    
+
     logger = get_logger(__name__)
 
     @classmethod
-    def list_vendas(cls):
+    def list_sales(cls):
         """Lista todas as vendas"""
         session = Database.get_session()
         try:
-            vendas = session.query(Venda).all()
-            cls.logger.info(f"Lista de vendas carregadas, com {len(vendas)} vendas.")
-            return [venda.to_dict() for venda in vendas]
+            sales = session.query(Sale).all()
+            cls.logger.info(f"Lista de vendas carregadas, com {len(sales)} vendas.")
+            return {"sales": [sale.to_dict() for sale in sales]}, 200
         finally:
             session.close()
 
     @classmethod
-    def registrar_venda(cls, cliente_id, utilizador_id, produto_id, quantidade):
+    def register_sale(cls, customer_id, user_id, product_id, quantity):
         """Registra uma nova venda"""
         session = Database.get_session()
         try:
-            produto = session.query(Produto).filter_by(id=produto_id).first()
-            if not produto:
-                cls.logger.info(f"Tentativa de procurar produto não registado, {produto_id}.")
-                raise ValueError("Produto não encontrado!")
+            product = session.query(Product).filter_by(id=product_id).first()
+            if not product:
+                cls.logger.warning(f"Produto com ID {product_id} não encontrado.")
+                return {"erro": "Produto não encontrado!"}, 404
 
-            if quantidade <= 0:
+            if quantity <= 0:
                 cls.logger.warning("A quantidade deve ser maior que zero!")
-                raise ValueError("A quantidade deve ser maior que zero!")
+                return {"erro": "A quantidade deve ser maior que zero!"}, 400
 
-            if produto.quantidade_estoque < quantidade:
+            if product.stock_quantity < quantity:
                 cls.logger.warning("Estoque insuficiente para essa venda!")
-                raise ValueError("Estoque insuficiente para essa venda!")
+                return {"erro": "Estoque insuficiente para essa venda!"}, 400
 
-            valor_total = produto.preco * quantidade
+            total_value = product.price * quantity
 
-            nova_venda = Venda(
-                cliente_id=cliente_id,
-                utilizador_id=utilizador_id,
-                produto_id=produto_id,
-                quantidade=quantidade,
-                valor_total=valor_total
+            new_sale = Sale(
+                customer_id=customer_id,
+                user_id=user_id,
+                product_id=product_id,
+                quantity=quantity,
+                total_value=total_value
             )
-            session.add(nova_venda)
-            produto.quantidade_estoque -= quantidade  # Atualiza o estoque do produto
+            session.add(new_sale)
+            product.stock_quantity -= quantity
             session.commit()
-            session.refresh(nova_venda)
+            session.refresh(new_sale)
 
-            cls.logger.info(f"Venda registrada: Cliente {cliente_id}, Produto {produto_id}, Quantidade {quantidade}")
-            return nova_venda.to_dict()
+            cls.logger.info(f"Venda registrada: Cliente {customer_id}, Produto {product_id}, Quantidade {quantity}")
+            return new_sale.to_dict(), 201
 
         except Exception as e:
             session.rollback()
             cls.logger.error(f"Erro ao registrar venda: {e}")
-            raise Exception("Erro ao registrar venda")
+            return {"erro": "Erro ao registrar venda"}, 500
         finally:
             session.close()
