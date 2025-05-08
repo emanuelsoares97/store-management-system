@@ -9,7 +9,7 @@ def init_routes(app: Flask):
         (utilizador.utilizador_bp, "/api/utilizador"),
         (clientes.cliente_bp, "/api/cliente"),
         (vendas.venda_bp, "/api/venda"),
-        (categorias.categoria_bp, "/api/categoria")
+        (categorias.category_bp, "/api/categories")
     ]
     for bp, prefix in blueprints:
         app.register_blueprint(bp, url_prefix=prefix)  # Registra cada um dinamicamente
