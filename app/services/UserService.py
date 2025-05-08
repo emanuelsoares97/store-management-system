@@ -1,178 +1,168 @@
-
 from app.database import Database
-from app.models.user import Utilizador
+from app.models.User import User
 from sqlalchemy.exc import IntegrityError
-import re
 from werkzeug.security import generate_password_hash, check_password_hash
 from app.util.logger_util import get_logger
+from app.util.validate_email_phone import validate_email
 from flask import g
-from app.util.validate_email_phone import validar_email
-from app.util.logger_util import get_logger
 
-logger=get_logger(__name__)
-
-class UtilizadorService:
-    """Gerencia autenticação e operações com utilizadores"""
+class UserService:
+    """Gerencia autenticação e operações com usuários"""
 
     logger = get_logger(__name__)
 
     @classmethod
-    def autenticar(cls, email, password):
+    def auth_user(cls, email, password):
         """Verifica credenciais e retorna o utilizador autenticado"""
         session = Database.get_session()
-        utilizador = session.query(Utilizador).filter_by(email=email).first()
-
-        if utilizador and check_password_hash(utilizador.password, password):
-            cls.logger.info(f"Utilizador {utilizador.email} autenticado.")
-            return utilizador
-        
-        cls.logger.info(f"Token não gerado, dados não autenticados, email: {email}")
-        return None
-
-
-    @classmethod
-    def create_utilizador(cls, nome, email, password, role="user"):
-        """Cria um novo utilizador se não existir"""
-        session = Database.get_session()
-
-        if not nome or not email or not password:
-            cls.logger.error(f"Tentativa de criar utilizador com dados em falta.")
-            return {"erro": "Nome, email e senha são obrigatórios!"}, 400
-
-        if not validar_email(email):
-            cls.logger.error(f"Tentativa de email inválido: {email}.")
-            return {"erro": "Email inválido!"}, 400
-        email = email
-
-        if session.query(Utilizador).filter_by(email=email).first():
-            cls.logger.info(f"Tentativa de criar utilizador com email já registado, {email}.")
-            return {"erro": "Já existe um utilizador com este email!"}, 400
-        
-        if role == "admin" and not g.current_user["role"] != "admin":  
-            cls.logger.error("Tentativa de criar utilizador admin sem permissão.")  
-            return {"erro": "Apenas administradores podem criar contas com permissão de admin."}, 403
-        
-        hashed_password = generate_password_hash(password)
-
-        if role not in ["admin", "gerente", "estoque", "user"]:
-            return {"erro": "Tipo de role inválido!"}, 400
-
-        novo_utilizador = Utilizador(nome=nome, email=email, password=hashed_password, role=role)
-
         try:
-            session.add(novo_utilizador)
-            session.commit()
-            return {
-        "mensagem": "Utilizador criado com sucesso!",
-        "utilizador": {
-            "id": novo_utilizador.id,
-            "nome": novo_utilizador.nome,
-            "email": novo_utilizador.email
-        }
-    }, 201
-        except IntegrityError:
-            session.rollback()
-            return {"erro": "Erro ao criar utilizador."}, 500
+            user = session.query(User).filter_by(email=email).first()
 
+            if user and check_password_hash(user.password, password):
+                cls.logger.info(f"Utilizador {user.email} autenticado.")
+                return user
+
+            cls.logger.info(f"Token não gerado. Dados inválidos para o email: {email}")
+            return None
+        finally:
+            session.close()
 
     @classmethod
-    def list_utilizadores(cls, ativos=True):
-        """Lista utilizadores, podendo filtrar apenas os ativos"""
+    def create_user(cls, name, email, password, role="user"):
+        """Cria um novo utilizador"""
         session = Database.get_session()
+        try:
+            if not name or not email or not password:
+                cls.logger.error("Dados obrigatórios ausentes na criação de utilizador.")
+                return {"erro": "Nome, email e senha são obrigatórios!"}, 400
 
-        if ativos:
-            utilizadores = session.query(Utilizador).filter_by(ativo=True).all()
-        else:
-            utilizadores = session.query(Utilizador).all()
+            if not validate_email(email):
+                cls.logger.error(f"Email inválido: {email}")
+                return {"erro": "Email inválido!"}, 400
 
-        return [{"id": u.id, "nome": u.nome, "email": u.email, "role": u.role, "ativo": u.ativo} for u in utilizadores]
+            if session.query(User).filter_by(email=email).first():
+                cls.logger.info(f"Tentativa de criar utilizador com email já registado: {email}")
+                return {"erro": "Já existe um utilizador com este email!"}, 409
 
-
-    @classmethod
-    def update_utilizador(cls, utilizador_id, nome=None, email=None, password=None, role=None, ativo=None):
-        """Atualiza um utilizador"""
-        session = Database.get_session()
-        utilizador = session.query(Utilizador).filter_by(id=utilizador_id).first()
-
-        if not utilizador:
-            return {"erro": "Utilizador não encontrado!"}, 404
-
-        if nome:
-            utilizador.nome = nome
-
-        if email:
-                if not validar_email(email):
-                    cls.logger.error(f"Tentativa de email inválido: {email}.")
-                    return {"erro": "Email inválido!"}, 400
-                utilizador.email = email
-        
-        if password:
-            utilizador.password = generate_password_hash(password)
-
-        # Só valida e atualiza o role se ele foi enviado (não for None)
-        if role is not None:
-            # Somente admins podem alterar a role de outro utilizador para admin
-            if role == "admin" and g.current_user["role"] != "admin":
-                cls.logger.error("Tentativa de promover um utilizador para admin sem autorização.")
-                return {"erro": "Apenas administradores podem promover contas para admin."}, 403
-
-            # Somente admins podem modificar um utilizador que já seja admin
-            if utilizador.role == "admin" and g.current_user["role"] != "admin":
-                cls.logger.error("Tentativa de modificar um administrador sem autorização.")
-                return {"erro": "Apenas administradores podem alterar contas de outros administradores."}, 403
+            if role == "admin" and g.current_user.role != "admin":
+                cls.logger.error("Tentativa de criar utilizador admin sem permissão.")
+                return {"erro": "Apenas administradores podem criar contas com permissão de admin."}, 403
 
             if role not in ["admin", "gerente", "estoque", "user"]:
                 return {"erro": "Tipo de role inválido!"}, 400
 
-            utilizador.role = role
+            hashed_password = generate_password_hash(password)
+            new_user = User(name=name, email=email, password=hashed_password, role=role)
 
-        # Atualiza o campo ativo, se fornecido
-        if ativo is not None:
-            utilizador.ativo = ativo
+            session.add(new_user)
+            session.commit()
+            session.refresh(new_user)
 
-        session.commit()
-        return {
-            "mensagem": "Utilizador atualizado com sucesso!",
-            "utilizador": {
-                "id": utilizador.id,
-                "nome": utilizador.nome,
-                "email": utilizador.email,
-                "role": utilizador.role,
-                "ativo": utilizador.ativo
-            }
-        }
+            return {
+                "mensagem": "Utilizador criado com sucesso!",
+                "utilizador": new_user.to_dict()
+            }, 201
 
-
+        except IntegrityError:
+            session.rollback()
+            cls.logger.error("Erro de integridade ao criar utilizador.")
+            return {"erro": "Erro ao criar utilizador."}, 500
+        finally:
+            session.close()
 
     @classmethod
-    def desativar_utilizador(cls, utilizador_id):
-        """Marca um utilizador como inativo em vez de remover"""
+    def list_users(cls, active=True):
+        """Lista utilizadores, com opção de filtrar apenas os ativos"""
         session = Database.get_session()
-        utilizador = session.query(Utilizador).filter_by(id=utilizador_id).first()
+        try:
+            query = session.query(User)
+            if active:
+                query = query.filter_by(active=True)
+            users = query.all()
+            return {"utilizadores": [user.to_dict() for user in users]}, 200
+        finally:
+            session.close()
 
-        if not utilizador:
-            return {"erro": "Utilizador não encontrado!"}, 404
-
-        utilizador.ativo = False  # nao elimina da db apenas coloca como inativo
-        session.commit()
-
-        return {"mensagem": f"Utilizador '{utilizador.nome}' desativado com sucesso!"}, 200
-    
     @classmethod
-    def reativar_utilizador(cls, utilizador_id):
-        """Reativa um utilizador marcado como inativo"""
+    def update_user(cls, user_id, name=None, email=None, password=None, role=None, active=None):
+        """Atualiza um utilizador"""
         session = Database.get_session()
-        utilizador = session.query(Utilizador).filter_by(id=utilizador_id).first()
+        try:
+            user = session.query(User).filter_by(id=user_id).first()
+            if not user:
+                return {"erro": "Utilizador não encontrado!"}, 404
 
-        if not utilizador:
-            return {"erro": "Utilizador não encontrado!"}, 404
+            if name:
+                user.name = name
 
-        if utilizador.ativo:
-            return {"erro": "O utilizador já está ativo!"}, 400
+            if email:
+                if not validate_email(email):
+                    return {"erro": "Email inválido!"}, 400
+                user.email = email
 
-        utilizador.ativo = True  # reativar o utilizador
-        session.commit()
+            if password:
+                user.password = generate_password_hash(password)
 
-        return {"mensagem": f"Utilizador '{utilizador.nome}' foi reativado com sucesso!"}, 200
+            if role is not None:
+                if role == "admin" and g.current_user.role != "admin":
+                    return {"erro": "Apenas administradores podem promover contas para admin."}, 403
 
+                if user.role == "admin" and g.current_user.role != "admin":
+                    return {"erro": "Apenas administradores podem alterar contas de administradores."}, 403
 
+                if role not in ["admin", "gerente", "estoque", "user"]:
+                    return {"erro": "Tipo de role inválido!"}, 400
+
+                user.role = role
+
+            if active is not None:
+                user.active = active
+
+            session.commit()
+            return {
+                "mensagem": "Utilizador atualizado com sucesso!",
+                "utilizador": user.to_dict()
+            }, 200
+
+        except Exception as e:
+            session.rollback()
+            cls.logger.error(f"Erro ao atualizar utilizador: {e}")
+            return {"erro": "Erro interno ao atualizar utilizador."}, 500
+        finally:
+            session.close()
+
+    @classmethod
+    def deactivate_user(cls, user_id):
+        """Marca um utilizador como inativo"""
+        session = Database.get_session()
+        try:
+            user = session.query(User).filter_by(id=user_id).first()
+            if not user:
+                return {"erro": "Utilizador não encontrado!"}, 404
+
+            user.active = False
+            session.commit()
+            return {"mensagem": f"Utilizador '{user.name}' desativado com sucesso!"}, 200
+        finally:
+            session.close()
+
+    @classmethod
+    def reactivate_user(cls, user_id):
+        """Reativa um utilizador inativo"""
+        session = Database.get_session()
+        try:
+            user = session.query(User).filter_by(id=user_id).first()
+            if not user:
+                return {"erro": "Utilizador não encontrado!"}, 404
+
+            if user.active:
+                return {"erro": "O utilizador já está ativo!"}, 400
+
+            user.active = True
+            session.commit()
+            return {
+                "mensagem": f"Utilizador '{user.name}' foi reativado com sucesso!",
+                "utilizador": user.to_dict()
+            }, 200
+        finally:
+            session.close()
