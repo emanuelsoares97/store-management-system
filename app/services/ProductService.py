@@ -1,133 +1,136 @@
-from app.models.product import Produto
+from app.models.Product import Product
 from app.database import Database
 from app.util.logger_util import get_logger
 
-class ProdutoService:
+class ProductService:
     """Classe responsável pelo gerenciamento de produtos no banco de dados"""
-    
+
     logger = get_logger(__name__)
 
     @classmethod
-    def list_produtos(cls, apenas_ativos=True):
+    def list_products(cls, only_actives=True):
         """Retorna a lista de produtos (ativos por padrão)"""
         session = Database.get_session()
         try:
-            query = session.query(Produto)
-            if apenas_ativos:
-                query = query.filter_by(ativo=True)
-            produtos = query.all()
-            return [produto.to_dict() for produto in produtos]
+            query = session.query(Product)
+            if only_actives:
+                query = query.filter_by(active=True)
+            products = query.all()
+            return {"produtos": [product.to_dict() for product in products]}, 200
         finally:
             session.close()
 
     @classmethod
-    def create_produto(cls, nome, preco, quantidade_estoque, categoria_id):
+    def create_product(cls, name, price, stock_quantity, category_id):
         """Cria e adiciona um novo produto no banco de dados"""
         session = Database.get_session()
-        cls.logger.info(f"Parâmetros recebidos: nome={nome}, preco={preco}, quantidade_estoque={quantidade_estoque}, categoria_id={categoria_id}")
-
         try:
+            if not name or price is None or stock_quantity is None or not category_id:
+                return {"erro": "Nome, preço, estoque e categoria são obrigatórios!"}, 400
 
-            if not nome or preco is None or quantidade_estoque is None or not categoria_id:
-                raise ValueError("Nome, preço, estoque e categoria são obrigatórios!")
+            if price < 0 or stock_quantity < 0:
+                return {"erro": "Preço e estoque devem ser valores positivos!"}, 400
 
-            if preco < 0 or quantidade_estoque < 0:
-                raise ValueError("Preço e estoque devem ser valores positivos!")
+            existing_product = session.query(Product).filter_by(name=name).first()
+            if existing_product:
+                return {"erro": "Já existe um produto com esse nome!"}, 409
 
-            produto_existente = session.query(Produto).filter_by(nome=nome).first()
-            if produto_existente:
-                raise ValueError("Já existe um produto com esse nome!")
-
-            novo_produto = Produto(
-                nome=nome, preco=preco, quantidade_estoque=quantidade_estoque, categoria_id=categoria_id, ativo=True
+            new_product = Product(
+                name=name,
+                price=price,
+                stock_quantity=stock_quantity,
+                category_id=category_id,
+                active=True
             )
-            session.add(novo_produto)
+            session.add(new_product)
             session.commit()
-            session.refresh(novo_produto)
+            session.refresh(new_product)
 
-            cls.logger.info(f"Produto criado: {novo_produto.nome}, Preço: {novo_produto.preco}, Estoque: {quantidade_estoque}")
-            return novo_produto.to_dict()
+            return new_product.to_dict(), 201
 
         except Exception as e:
             session.rollback()
             cls.logger.error(f"Erro ao criar produto: {e}")
-            raise Exception("Erro ao criar produto")
+            return {"erro": "Erro ao criar produto"}, 500
         finally:
             session.close()
 
     @classmethod
-    def update_dados(cls, produto_id, nome=None, preco=None, quantidade_estoque=None, ativo=None, categoria_id=None):
+    def update_product(cls, product_id, name=None, price=None, stock_quantity=None, active=None, category_id=None):
         """Atualiza um produto pelo ID"""
         session = Database.get_session()
         try:
-            produto = session.query(Produto).filter_by(id=produto_id).first()
-            if not produto:
-                raise ValueError("Produto não encontrado!")
+            product = session.query(Product).filter_by(id=product_id).first()
+            if not product:
+                return {"erro": "Produto não encontrado!"}, 404
 
-            if nome:
-                produto.nome = nome
-            if preco is not None:
-                if preco < 0:
-                    raise ValueError("O preço não pode ser negativo!")
-                produto.preco = preco
-            if quantidade_estoque is not None:
-                if quantidade_estoque < 0:
-                    raise ValueError("O estoque não pode ser negativo!")
-                produto.quantidade_estoque = quantidade_estoque
-            if ativo is not None:
-                produto.ativo = ativo
-            if categoria_id:
-                produto.categoria_id = categoria_id
+            if name:
+                product.name = name
+            if price is not None:
+                if price < 0:
+                    return {"erro": "O preço não pode ser negativo!"}, 400
+                product.price = price
+            if stock_quantity is not None:
+                if stock_quantity < 0:
+                    return {"erro": "O estoque não pode ser negativo!"}, 400
+                product.stock_quantity = stock_quantity
+            if active is not None:
+                product.active = active
+            if category_id:
+                product.category_id = category_id
 
             session.commit()
-            return produto.to_dict()
+            return product.to_dict(), 200
 
         except Exception as e:
             session.rollback()
-            raise Exception(f"Erro ao atualizar produto: {e}")
+            cls.logger.error(f"Erro ao atualizar produto: {e}")
+            return {"erro": "Erro ao atualizar produto"}, 500
         finally:
             session.close()
 
     @classmethod
-    def desativar_produto(cls, produto_id):
+    def desactivate_product(cls, product_id):
         """Desativa um produto sem removê-lo"""
         session = Database.get_session()
         try:
-            produto = session.query(Produto).filter_by(id=produto_id).first()
-            if not produto:
-                raise ValueError("Produto não encontrado!")
+            product = session.query(Product).filter_by(id=product_id).first()
+            if not product:
+                return {"erro": "Produto não encontrado!"}, 404
 
-            if not produto.ativo:
-                raise ValueError("O produto já está desativado!")
+            if not product.active:
+                return {"erro": "O produto já está desativado!"}, 400
 
-            produto.ativo = False
+            product.active = False
             session.commit()
-            return {"mensagem": f"Produto '{produto.nome}' foi desativado!"}
+            return {"mensagem": f"Produto '{product.name}' foi desativado com sucesso."}, 200
 
         except Exception as e:
             session.rollback()
-            raise Exception(f"Erro ao desativar produto: {e}")
+            cls.logger.error(f"Erro ao desativar produto: {e}")
+            return {"erro": "Erro ao desativar produto"}, 500
         finally:
             session.close()
 
     @classmethod
-    def reativar_produto(cls, produto_id):
+    def reactivate_product(cls, product_id):
         """Reativa um produto inativo"""
         session = Database.get_session()
         try:
-            produto = session.query(Produto).filter_by(id=produto_id).first()
-            if not produto:
-                raise ValueError("Produto não encontrado!")
+            product = session.query(Product).filter_by(id=product_id).first()
+            if not product:
+                return {"erro": "Produto não encontrado!"}, 404
 
-            if produto.ativo:
-                raise ValueError("O produto já está ativo!")
+            if product.active:
+                return {"erro": "O produto já está ativo!"}, 400
 
-            produto.ativo = True
+            product.active = True
             session.commit()
-            return {"mensagem": f"Produto '{produto.nome}' foi reativado!"}
+            return {"mensagem": f"Produto '{product.name}' foi reativado com sucesso."}, 200
 
         except Exception as e:
             session.rollback()
-            raise Exception(f"Erro ao reativar produto: {e}")
+            cls.logger.error(f"Erro ao reativar produto: {e}")
+            return {"erro": "Erro ao reativar produto"}, 500
         finally:
             session.close()
