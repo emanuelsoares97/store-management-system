@@ -1,64 +1,72 @@
-from app.models.category import Categoria
+from app.models.Category import Category
 from app.database import Database
 from app.util.logger_util import get_logger
 
-class CategoriaService:
+class CategoryService:
     """Gerencia as categorias no banco de dados"""
 
     logger = get_logger(__name__)
 
     @classmethod
-    def list_categorias(cls):
+    def list_categories(cls):
         """Retorna a lista de todas as categorias"""
         session = Database.get_session()
         try:
-            categorias = session.query(Categoria).all()
-            return [categoria.to_dict() for categoria in categorias]
+            categories = session.query(Category).all()
+            return {"categorias": [c.to_dict() for c in categories]}, 200
         finally:
             session.close()
 
     @classmethod
-    def create_categoria(cls, nome):
+    def create_category(cls, name):
         """Cria uma nova categoria"""
         session = Database.get_session()
         try:
-            if not nome:
-                raise ValueError("Nome da categoria é obrigatório!")
+            if not name:
+                return {"erro": "Nome da categoria é obrigatório!"}, 400
 
-            categoria_existente = session.query(Categoria).filter_by(nome=nome).first()
-            if categoria_existente:
-                raise ValueError("Já existe uma categoria com esse nome!")
+            existing = session.query(Category).filter_by(name=name).first()
+            if existing:
+                return {"erro": "Já existe uma categoria com esse nome!"}, 400
 
-            nova_categoria = Categoria(nome=nome)
-            session.add(nova_categoria)
+            new_category = Category(name=name)
+            session.add(new_category)
             session.commit()
-            session.refresh(nova_categoria)
+            session.refresh(new_category)
 
-            cls.logger.info(f"Categoria criada: {nova_categoria.nome}")
-            return nova_categoria.to_dict()
+            cls.logger.info(f"Categoria criada: {new_category.name}")
+            return {
+                "mensagem": "Categoria criada com sucesso!",
+                "categoria": new_category.to_dict()
+            }, 201
 
         except Exception as e:
             session.rollback()
             cls.logger.error(f"Erro ao criar categoria: {e}")
-            raise Exception("Erro ao criar categoria")
+            return {"erro": "Erro ao criar categoria."}, 500
         finally:
             session.close()
 
     @classmethod
-    def update_categoria(cls, categoria_id, nome):
+    def update_category(cls, category_id, name):
         """Atualiza o nome de uma categoria"""
         session = Database.get_session()
         try:
-            categoria = session.query(Categoria).filter_by(id=categoria_id).first()
-            if not categoria:
-                raise ValueError("Categoria não encontrada!")
+            category = session.query(Category).filter_by(id=category_id).first()
+            if not category:
+                return {"erro": "Categoria não encontrada!"}, 404
 
-            categoria.nome = nome
+            category.name = name
             session.commit()
-            return categoria.to_dict()
+
+            return {
+                "mensagem": "Categoria atualizada com sucesso!",
+                "categoria": category.to_dict()
+            }, 200
 
         except Exception as e:
             session.rollback()
-            raise Exception(f"Erro ao atualizar categoria: {e}")
+            cls.logger.error(f"Erro ao atualizar categoria: {e}")
+            return {"erro": "Erro ao atualizar categoria."}, 500
         finally:
             session.close()
