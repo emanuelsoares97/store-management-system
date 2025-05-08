@@ -1,5 +1,5 @@
 from app.database import Database
-from app.models.tokenrevogado import TokenRevogado
+from app.models.revoked_token import TokenRevogado
 from app.util.logger_util import get_logger
 
 logger= get_logger(__name__)

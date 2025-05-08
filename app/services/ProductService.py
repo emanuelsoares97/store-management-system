@@ -1,4 +1,4 @@
-from app.models.produto import Produto
+from app.models.product import Produto
 from app.database import Database
 from app.util.logger_util import get_logger
 
@@ -8,7 +8,7 @@ class ProdutoService:
     logger = get_logger(__name__)
 
     @classmethod
-    def listar_produtos(cls, apenas_ativos=True):
+    def list_produtos(cls, apenas_ativos=True):
         """Retorna a lista de produtos (ativos por padrão)"""
         session = Database.get_session()
         try:
@@ -21,7 +21,7 @@ class ProdutoService:
             session.close()
 
     @classmethod
-    def criar_produto(cls, nome, preco, quantidade_estoque, categoria_id):
+    def create_produto(cls, nome, preco, quantidade_estoque, categoria_id):
         """Cria e adiciona um novo produto no banco de dados"""
         session = Database.get_session()
         cls.logger.info(f"Parâmetros recebidos: nome={nome}, preco={preco}, quantidade_estoque={quantidade_estoque}, categoria_id={categoria_id}")
@@ -56,7 +56,7 @@ class ProdutoService:
             session.close()
 
     @classmethod
-    def atualizar_dados(cls, produto_id, nome=None, preco=None, quantidade_estoque=None, ativo=None, categoria_id=None):
+    def update_dados(cls, produto_id, nome=None, preco=None, quantidade_estoque=None, ativo=None, categoria_id=None):
         """Atualiza um produto pelo ID"""
         session = Database.get_session()
         try:

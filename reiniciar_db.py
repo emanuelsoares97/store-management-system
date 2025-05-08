@@ -1,9 +1,9 @@
 from app.database import Database
-from app.models.utilizador import Utilizador
-from app.models.categoria import Categoria
-from app.models.produto import Produto
-from app.models.cliente import Cliente
-from app.models.vendas import Venda
+from app.models.user import Utilizador
+from app.models.category import Categoria
+from app.models.product import Produto
+from app.models.customer import Cliente
+from app.models.sale import Venda
 from app import create_app
 
 app = create_app()
@@ -28,11 +28,11 @@ import os
 import pandas as pd
 from datetime import datetime
 from app.database import Database
-from app.models.utilizador import Utilizador
-from app.models.categoria import Categoria
-from app.models.produto import Produto
-from app.models.cliente import Cliente
-from app.models.vendas import Venda
+from app.models.user import Utilizador
+from app.models.category import Categoria
+from app.models.product import Produto
+from app.models.customer import Cliente
+from app.models.sale import Venda
 from app import create_app
 from werkzeug.security import generate_password_hash
 from sqlalchemy.exc import IntegrityError
@@ -64,10 +64,10 @@ def popular_base():
             file_path = os.path.join(DATA_DIR, filename)
 
             if not os.path.exists(file_path):
-                logger.warning(f"⚠ Arquivo {filename} não encontrado. Pulando...")
+                logger.warning(f" Arquivo {filename} não encontrado. Pulando...")
                 continue
 
-            logger.info(f"📂 Carregando {filename} para a tabela {model.__tablename__}...")
+            logger.info(f"Carregando {filename} para a tabela {model.__tablename__}...")
 
             df = pd.read_csv(file_path)
 
@@ -125,7 +125,7 @@ def popular_base():
         session.close()
 
 from app.database import Database
-from app.models.utilizador import Utilizador
+from app.models.user import Utilizador
 from werkzeug.security import generate_password_hash
 from sqlalchemy.exc import IntegrityError
 

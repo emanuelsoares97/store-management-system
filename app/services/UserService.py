@@ -1,12 +1,12 @@
 
 from app.database import Database
-from app.models.utilizador import Utilizador
+from app.models.user import Utilizador
 from sqlalchemy.exc import IntegrityError
 import re
 from werkzeug.security import generate_password_hash, check_password_hash
 from app.util.logger_util import get_logger
 from flask import g
-from app.util.validacao import validar_email
+from app.util.validate_email_phone import validar_email
 from app.util.logger_util import get_logger
 
 logger=get_logger(__name__)
@@ -31,7 +31,7 @@ class UtilizadorService:
 
 
     @classmethod
-    def criar_utilizador(cls, nome, email, password, role="user"):
+    def create_utilizador(cls, nome, email, password, role="user"):
         """Cria um novo utilizador se não existir"""
         session = Database.get_session()
 
@@ -76,7 +76,7 @@ class UtilizadorService:
 
 
     @classmethod
-    def listar_utilizadores(cls, ativos=True):
+    def list_utilizadores(cls, ativos=True):
         """Lista utilizadores, podendo filtrar apenas os ativos"""
         session = Database.get_session()
 
@@ -89,7 +89,7 @@ class UtilizadorService:
 
 
     @classmethod
-    def atualizar_utilizador(cls, utilizador_id, nome=None, email=None, password=None, role=None, ativo=None):
+    def update_utilizador(cls, utilizador_id, nome=None, email=None, password=None, role=None, ativo=None):
         """Atualiza um utilizador"""
         session = Database.get_session()
         utilizador = session.query(Utilizador).filter_by(id=utilizador_id).first()

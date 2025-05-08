@@ -1,5 +1,5 @@
-from app.models.vendas import Venda
-from app.models.produto import Produto
+from app.models.sale import Venda
+from app.models.product import Produto
 from app.database import Database
 from app.util.logger_util import get_logger
 
@@ -9,7 +9,7 @@ class VendaService:
     logger = get_logger(__name__)
 
     @classmethod
-    def listar_vendas(cls):
+    def list_vendas(cls):
         """Lista todas as vendas"""
         session = Database.get_session()
         try:
