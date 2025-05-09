@@ -1,9 +1,9 @@
 from app.database import Database
-from app.models.user import Utilizador
-from app.models.category import Categoria
-from app.models.product import Produto
-from app.models.customer import Cliente
-from app.models.sale import Venda
+from app.models.User import User
+from app.models.Category import Category
+from app.models.Product import Product
+from app.models.Customer import Customer
+from app.models.Sale import Sale
 from app import create_app
 
 app = create_app()
@@ -18,7 +18,7 @@ def limpar_tabelas():
         session.query(Produto).delete()
         session.query(Categoria).delete()
         session.query(Cliente).delete()
-        session.query(Utilizador).delete()
+        session.query(User).delete()
 
         session.commit()
         session.close()
@@ -28,11 +28,11 @@ import os
 import pandas as pd
 from datetime import datetime
 from app.database import Database
-from app.models.user import Utilizador
-from app.models.category import Categoria
-from app.models.product import Produto
+from app.models.User import User
+from app.models.Category import Categoria
+from app.models.Product import Produto
 from app.models.customer import Cliente
-from app.models.sale import Venda
+from app.models.sale import Sale
 from app import create_app
 from werkzeug.security import generate_password_hash
 from sqlalchemy.exc import IntegrityError
@@ -48,11 +48,11 @@ DATA_DIR = os.path.join(BASE_DIR, "data")
 
 # Mapear tabelas para os arquivos CSV
 TABELAS = {
-    "users.csv": Utilizador,
-    "categorias.csv": Categoria,
-    "produtos.csv": Produto,
-    "clientes.csv": Cliente,
-    "vendas.csv": Venda,
+    "users.csv": User,
+    "categorias.csv": Category,
+    "produtos.csv": Product,
+    "clientes.csv": Customer,
+    "vendas.csv": Sale,
 }
 
 def popular_base():
@@ -79,8 +79,8 @@ def popular_base():
                             logger.info(f"🔍 Categoria '{row['nome']}' já existe. Ignorando...")
                             continue
 
-                    elif model == Utilizador:
-                        if session.query(Utilizador).filter_by(email=row["email"]).first():
+                    elif model == User:
+                        if session.query(User).filter_by(email=row["email"]).first():
                             logger.info(f"🔍 Usuário '{row['email']}' já existe. Ignorando...")
                             continue
                         row["password"] = generate_password_hash(row["password"], method="pbkdf2:sha256")
@@ -125,7 +125,7 @@ def popular_base():
         session.close()
 
 from app.database import Database
-from app.models.user import Utilizador
+from app.models.user import User
 from werkzeug.security import generate_password_hash
 from sqlalchemy.exc import IntegrityError
 
@@ -134,9 +134,9 @@ def criar_admin():
     session = Database.get_session()  # Obtém a sessão diretamente
     try:
         print("🔍 Verificando se existe um usuário admin...")
-        if not session.query(Utilizador).filter_by(email="admin@store.com").first():
+        if not session.query(User).filter_by(email="admin@store.com").first():
             print("✅ Criando usuário admin...")
-            admin = Utilizador(
+            admin = User(
                 nome="Admin",
                 email="admin@store.com",
                 password=generate_password_hash("admin123", method="pbkdf2:sha256"),
