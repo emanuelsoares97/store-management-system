@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String, DateTime
 from datetime import datetime, timezone
-from app.models.basemodel import BaseModel
+from app.models.BaseModel import BaseModel
 
 class RevokedToken(BaseModel):
     __tablename__ = "revoked_tokens"
