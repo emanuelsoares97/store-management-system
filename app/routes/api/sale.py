@@ -1,12 +1,12 @@
 from flask import Blueprint, jsonify, request
-from app.services.SaleService import VendaService
+from app.services.SaleService import SaleService
 from app.util.logger_util import get_logger
 from app.services.AuthService import AuthService
 
 sale_bp = Blueprint("venda", __name__)
 logger = get_logger(__name__)
 
-@sale_bp.route("/lista", methods=["GET"])
+@sale_bp.route("/list", methods=["GET"])
 @AuthService.token_required
 @AuthService.role_required("admin", "gerente", "user")
 def listar_vendas():
