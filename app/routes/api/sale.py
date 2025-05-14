@@ -12,7 +12,7 @@ logger = get_logger(__name__)
 def listar_vendas():
     """Endpoint para listar todas as vendas"""
     try:
-        vendas = VendaService.listar_vendas()
+        vendas = SaleService.list_sales()
         return jsonify({"vendas": vendas}), 200
     except Exception as e:
         logger.error(f"Erro ao listar vendas: {str(e)}")
@@ -37,7 +37,7 @@ def registrar_venda():
         if not all([cliente_id, utilizador_id, produto_id, quantidade]):
             return jsonify({"erro": "Todos os campos são obrigatórios!"}), 400
 
-        nova_venda = VendaService.registrar_venda(cliente_id, utilizador_id, produto_id, quantidade)
+        nova_venda = SaleService.register_sale(cliente_id, utilizador_id, produto_id, quantidade)
 
         logger.info(f"Venda registada com sucesso {nova_venda}")
         return jsonify({"mensagem": "Venda registrada com sucesso!", "venda": nova_venda}), 201
