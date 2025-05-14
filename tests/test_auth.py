@@ -16,15 +16,15 @@ def test_login_admin(client):
 
     assert "access_token" in json_data  # Verifica se há um access token
     assert "refresh_token" in json_data  # Verifica se há um refresh token
-    assert "utilizador" in json_data  # Verifica se há os dados do utilizador
+    assert "user" in json_data  # Verifica se há os dados do user
 
     assert json_data["access_token"]  # Garante que o access token não está vazio
     assert json_data["refresh_token"]  # Garante que o refresh token não está vazio
 
-    # Valida se os dados do utilizador foram retornados corretamente
-    assert json_data["utilizador"]["email"] == "admin@email.com"
-    assert "id" in json_data["utilizador"]
-    assert "role" in json_data["utilizador"]
+    # Valida se os dados do user foram retornados corretamente
+    assert json_data["user"]["email"] == "admin@email.com"
+    assert "id" in json_data["user"]
+    assert "role" in json_data["user"]
 
 def test_login_user(client):
     """Testa se o login retorna um access token e um refresh token válidos"""
@@ -39,15 +39,15 @@ def test_login_user(client):
 
     assert "access_token" in json_data  # Verifica se há um access token
     assert "refresh_token" in json_data  # Verifica se há um refresh token
-    assert "utilizador" in json_data  # Verifica se há os dados do utilizador
+    assert "user" in json_data  # Verifica se há os dados do user
 
     assert json_data["access_token"]  # Garante que o access token não está vazio
     assert json_data["refresh_token"]  # Garante que o refresh token não está vazio
 
-    # Valida se os dados do utilizador foram retornados corretamente
-    assert json_data["utilizador"]["email"] == "user@email.com"
-    assert "id" in json_data["utilizador"]
-    assert "role" in json_data["utilizador"]
+    # Valida se os dados do user foram retornados corretamente
+    assert json_data["user"]["email"] == "user@email.com"
+    assert "id" in json_data["user"]
+    assert "role" in json_data["user"]
 
 def test_login_invalido(client):
     """Testa login com credenciais erradas"""
