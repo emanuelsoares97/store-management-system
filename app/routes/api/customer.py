@@ -6,7 +6,7 @@ from app.services.AuthService import AuthService
 customer_bp = Blueprint("customer", __name__)
 logger = get_logger(__name__)
 
-@customer_bp.route("/", methods=["GET"])
+@customer_bp.route("/active", methods=["GET"])
 @AuthService.token_required
 @AuthService.role_required("admin", "gerente", "user") 
 def listar_clientes():
