@@ -12,6 +12,11 @@ logger = get_logger(__name__)
 
 auth_bp = Blueprint("auth", __name__)
 
+@auth_bp.route("/", methods=["GET"])
+def home():
+    return jsonify({"status": "alive"}), 200
+
+
 @auth_bp.route("/login", methods=["POST"])
 def login():
     """Autenticação de utilizador"""
