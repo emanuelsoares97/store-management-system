@@ -39,7 +39,7 @@ def login():
             logger.warning("Tentativa de login com email inválido.")
             return jsonify({"erro": "Email inválido"}), 400
 
-        user = UserService.authenticate(data.get("email"), data.get("password")) 
+        user = UserService.auth_user(data.get("email"), data.get("password")) 
 
         if not user:
             logger.warning(f"Falha na autenticação para o email: {data.get('email')}")
