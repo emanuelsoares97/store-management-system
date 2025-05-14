@@ -1,0 +1,7 @@
+name,price,stock_quantity,category_id
+Smartphone,1500,10,1
+Notebook,3500,5,1
+Camiseta,50,50,2
+Calça Jeans,120,40,2
+Livro Python,80,30,3
+Chocolate,10,100,4
