@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, ForeignKey, DateTime, DECIMAL
 from sqlalchemy.orm import relationship
 from datetime import datetime, timezone
-from app.models.basemodel import BaseModel
+from app.models.BaseModel import BaseModel
 from datetime import datetime
 
 class Sale(BaseModel):  
