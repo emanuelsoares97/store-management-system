@@ -36,3 +36,5 @@ db/*.db
 # Arquivos do sistema
 .DS_Store
 Thumbs.db
+
+reiniciar_db.py
