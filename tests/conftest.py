@@ -5,7 +5,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import pytest
 from app import create_app
 from app.database import Database
-from app.models.basemodel import BaseModel
+from app.models.BaseModel import BaseModel
 from config import TestConfig
 from app.models.user import Utilizador
 from werkzeug.security import generate_password_hash
