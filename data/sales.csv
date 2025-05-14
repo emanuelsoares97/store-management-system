@@ -1,0 +1,4 @@
+customer_id,product_id,quantity,total_value,user_id,sale_date
+1,1,1,1500,1,2024-03-20 10:30:00
+2,3,2,100,1,2024-03-20 11:00:00
+3,5,1,80,2,2024-03-20 12:15:00
