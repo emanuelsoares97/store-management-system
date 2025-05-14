@@ -1,162 +1,135 @@
+import os
+import pandas as pd
+from datetime import datetime
+from flask import Flask
+from werkzeug.security import generate_password_hash
+from sqlalchemy.exc import IntegrityError
+
+from app import create_app
 from app.database import Database
 from app.models.User import User
 from app.models.Category import Category
 from app.models.Product import Product
 from app.models.Customer import Customer
 from app.models.Sale import Sale
-from app import create_app
-
-app = create_app()
-
-def limpar_tabelas():
-    """Remove todos os dados das tabelas mantendo a estrutura."""
-    with app.app_context():
-        session = Database.get_session()
-        
-        # Apagar os dados sem remover a estrutura das tabelas
-        session.query(Venda).delete()
-        session.query(Produto).delete()
-        session.query(Categoria).delete()
-        session.query(Cliente).delete()
-        session.query(User).delete()
-
-        session.commit()
-        session.close()
-        print("✅ Todas as tabelas foram limpas com sucesso!")
-
-import os
-import pandas as pd
-from datetime import datetime
-from app.database import Database
-from app.models.User import User
-from app.models.Category import Categoria
-from app.models.Product import Produto
-from app.models.customer import Cliente
-from app.models.sale import Sale
-from app import create_app
-from werkzeug.security import generate_password_hash
-from sqlalchemy.exc import IntegrityError
 from app.util.logger_util import get_logger
 
-# Criar app Flask para contexto
-app = create_app()
+# Cria a aplicação Flask e o logger
+env_app = create_app()
 logger = get_logger(__name__)
 
-# Pasta onde estão os arquivos CSV
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DATA_DIR = os.path.join(BASE_DIR, "data")
+# Pasta com os CSVs
+base_dir = os.path.dirname(os.path.abspath(__file__))
+data_dir = os.path.join(base_dir, "data")
 
-# Mapear tabelas para os arquivos CSV
-TABELAS = {
+# Mapeamento de arquivos CSV para os modelos ORM
+csv_to_model = {
     "users.csv": User,
-    "categorias.csv": Category,
-    "produtos.csv": Product,
-    "clientes.csv": Customer,
-    "vendas.csv": Sale,
+    "categories.csv": Category,
+    "products.csv": Product,
+    "customers.csv": Customer,
+    "sales.csv": Sale,
 }
 
-def popular_base():
-    """Lê arquivos CSV na pasta 'data/' e popula a base de dados."""
-    with app.app_context():
+def clear_tables():
+    """Zera todas as tabelas sem apagar a estrutura."""
+    with env_app.app_context():
+        session = Database.get_session()
+        # Deleta na ordem inversa para não quebrar chaves estrangeiras
+        session.query(Sale).delete()
+        session.query(Product).delete()
+        session.query(Category).delete()
+        session.query(Customer).delete()
+        session.query(User).delete()
+        session.commit()
+        session.close()
+        logger.info("Todas as tabelas foram limpas.")
+
+def populate_database():
+    """Lê os CSVs e insere os dados no banco de dados."""
+    with env_app.app_context():
         session = Database.get_session()
 
-        for filename, model in TABELAS.items():
-            file_path = os.path.join(DATA_DIR, filename)
-
+        for filename, model in csv_to_model.items():
+            file_path = os.path.join(data_dir, filename)
             if not os.path.exists(file_path):
-                logger.warning(f" Arquivo {filename} não encontrado. Pulando...")
+                logger.warning(f"Não achei o arquivo {filename}. Pulando.")
                 continue
 
-            logger.info(f"Carregando {filename} para a tabela {model.__tablename__}...")
-
+            logger.info(f"Importando {filename} para {model.__tablename__}...")
             df = pd.read_csv(file_path)
 
             for _, row in df.iterrows():
                 try:
-                    # Evita duplicação em tabelas com UNIQUE
-                    if model == Categoria:
-                        if session.query(Categoria).filter_by(nome=row["nome"]).first():
-                            logger.info(f"🔍 Categoria '{row['nome']}' já existe. Ignorando...")
+                    # Verifica registros existentes e aplica transformações
+                    if model is Category:
+                        if session.query(Category).filter_by(name=row.get("name")).first():
                             continue
 
-                    elif model == User:
-                        if session.query(User).filter_by(email=row["email"]).first():
-                            logger.info(f"🔍 Usuário '{row['email']}' já existe. Ignorando...")
+                    elif model is User:
+                        if session.query(User).filter_by(email=row.get("email")).first():
                             continue
-                        row["password"] = generate_password_hash(row["password"], method="pbkdf2:sha256")
+                        row["password"] = generate_password_hash(row.get("password"), method="pbkdf2:sha256")
 
-                    elif model == Produto:
-                        if session.query(Produto).filter_by(nome=row["nome"]).first():
-                            logger.info(f"🔍 Produto '{row['nome']}' já existe. Ignorando...")
+                    elif model is Product:
+                        if session.query(Product).filter_by(name=row.get("name")).first():
                             continue
 
-                    elif model == Cliente:
-                        if session.query(Cliente).filter_by(email=row["email"]).first():
-                            logger.info(f"🔍 Cliente '{row['email']}' já existe. Ignorando...")
+                    elif model is Customer:
+                        if session.query(Customer).filter_by(email=row.get("email")).first():
                             continue
 
-                    elif model == Venda:
-                        # Verifica se os IDs existem antes de inserir a venda
-                        cliente = session.query(Cliente).filter_by(id=row["cliente_id"]).first()
-                        produto = session.query(Produto).filter_by(id=row["produto_id"]).first()
-
-                        if not cliente or not produto:
-                            logger.warning(f"⚠ Venda ignorada: Cliente ID {row['cliente_id']} ou Produto ID {row['produto_id']} não existem.")
+                    elif model is Sale:
+                        cust_id = row.get("customer_id")
+                        prod_id = row.get("product_id")
+                        # Se a coluna não existir ou for NaN, salta
+                        if not cust_id or not prod_id:
                             continue
-
-                        # Verifica e converte `data_venda` para datetime
-                        if "data_venda" in row and not pd.isna(row["data_venda"]):
-                            row["data_venda"] = datetime.strptime(row["data_venda"], "%Y-%m-%d %H:%M:%S")
+                        cust = session.query(Customer).filter_by(id=cust_id).first()
+                        prod = session.query(Product).filter_by(id=prod_id).first()
+                        if not cust or not prod:
+                            continue
+                        # Converte ou define data da venda
+                        raw_date = row.get("sale_date")
+                        if raw_date and pd.notna(raw_date):
+                            row["sale_date"] = datetime.strptime(raw_date, "%Y-%m-%d %H:%M:%S")
                         else:
-                            row["data_venda"] = datetime.now()
+                            row["sale_date"] = datetime.now()
 
-                    # Criar e adicionar registro
-                    novo_registro = model(**row.to_dict())
-                    session.add(novo_registro)
+                    record = model(**row.to_dict())
+                    session.add(record)
                     session.commit()
-                    logger.info(f"✅ Registro inserido em {model.__tablename__}: {row.to_dict()}")
-
                 except IntegrityError:
                     session.rollback()
-                    logger.warning(f"⚠ Erro ao inserir um registro em {filename}. Possível duplicação.")
-
-            logger.info(f"✅ Dados de {filename} carregados com sucesso!")
 
         session.close()
+        logger.info("Dados iniciais importados.")
 
-from app.database import Database
-from app.models.user import User
-from werkzeug.security import generate_password_hash
-from sqlalchemy.exc import IntegrityError
+def create_admin_user():
+    """Garante que exista um admin no banco."""
+    with env_app.app_context():
+        session = Database.get_session()
+        try:
+            if not session.query(User).filter_by(email="admin@store.com").first():
+                admin = User(
+                    name="Admin",
+                    email="admin@store.com",
+                    password=generate_password_hash("admin123", method="pbkdf2:sha256"),
+                    role="admin"
+                )
+                session.add(admin)
+                session.commit()
+        except IntegrityError:
+            session.rollback()
+        finally:
+            session.close()
 
-def criar_admin():
-    """Cria um usuário admin se ainda não existir"""
-    session = Database.get_session()  # Obtém a sessão diretamente
-    try:
-        print("🔍 Verificando se existe um usuário admin...")
-        if not session.query(User).filter_by(email="admin@store.com").first():
-            print("✅ Criando usuário admin...")
-            admin = User(
-                nome="Admin",
-                email="admin@store.com",
-                password=generate_password_hash("admin123", method="pbkdf2:sha256"),
-                role="admin"
-            )
-            session.add(admin)
-            session.commit()
-            print("✅ Usuário admin criado com sucesso!")
-        else:
-            print("🔍 Usuário admin já existe.")
-    except IntegrityError:
-        session.rollback()
-        print("⚠ Erro ao tentar criar usuário admin (já pode existir).")
-    finally:
-        session.close()
 
-def reiniciar():
-    limpar_tabelas()
-    popular_base()
-    criar_admin()
+def reset_database():
+    """Roda tudo: limpa tabelas, importa dados e cria admin."""
+    clear_tables()
+    populate_database()
+    create_admin_user()
 
 if __name__ == "__main__":
-    reiniciar()
+    reset_database()
