@@ -1,6 +1,6 @@
 from flask import Flask
 from config import Config
-from app.database import Database
+from app.extensions import db, migrate
 from app.routes.api import init_routes
 from app.util.logger_util import get_logger
 
@@ -15,7 +15,7 @@ def create_app(config_class=Config):
     Returns:
         Flask: Instância configurada da aplicação Flask.
     """
-    app = Flask(__name__)
+    app = Flask(__name__, instance_relative_config=True)
     app.config.from_object(config_class)
     
     logger.info("Inicializando a aplicação Flask.")
@@ -23,8 +23,11 @@ def create_app(config_class=Config):
 
     # Configura o banco de dados e registra os modelos
     try:
-        db = Database(app.config["SQLALCHEMY_DATABASE_URI"])
-        db.registrar_modelos()
+        #inicia o flask-sqlalchemy e flask migrate
+        db.init_app(app)
+        migrate.init_app(app, db)
+
+
         logger.info("Banco de dados configurado e modelos registrados com sucesso.")
     except Exception as e:
         logger.error("Erro ao inicializar o banco de dados.", exc_info=True)
