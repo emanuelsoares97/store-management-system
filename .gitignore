@@ -38,3 +38,9 @@ db/*.db
 Thumbs.db
 
 reiniciar_db.py
+
+testtt.py
+
+instance/
+
+notas.txt
