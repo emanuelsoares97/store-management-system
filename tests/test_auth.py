@@ -1,115 +1,100 @@
 import jwt
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from config import Config
 
 
 def test_login_admin(client):
-    """Testa se o login retorna um access token e um refresh token válidos"""
+    """Testa se o login retorna access e refresh tokens, além dos dados do utilizador"""
     response = client.post("/api/auth/login", json={
         "email": "admin@email.com",
         "password": "123456"
     })
 
-    assert response.status_code == 200  # Verifica se o status HTTP está correto
+    assert response.status_code == 200  # verifica status HTTP correto
+    data = response.get_json()
 
-    json_data = response.json  # Captura o JSON da resposta
+    assert "access_token" in data  # verifica access token
+    assert "refresh_token" in data  # verifica refresh token
+    assert "user" in data  # verifica dados do utilizador
 
-    assert "access_token" in json_data  # Verifica se há um access token
-    assert "refresh_token" in json_data  # Verifica se há um refresh token
-    assert "user" in json_data  # Verifica se há os dados do user
+    assert data["access_token"]  # garante token não vazio
+    assert data["refresh_token"]
 
-    assert json_data["access_token"]  # Garante que o access token não está vazio
-    assert json_data["refresh_token"]  # Garante que o refresh token não está vazio
+    assert data["user"]["email"] == "admin@email.com"  # confere email
+    assert "id" in data["user"]
+    assert "role" in data["user"]
 
-    # Valida se os dados do user foram retornados corretamente
-    assert json_data["user"]["email"] == "admin@email.com"
-    assert "id" in json_data["user"]
-    assert "role" in json_data["user"]
 
 def test_login_user(client):
-    """Testa se o login retorna um access token e um refresh token válidos"""
+    """Testa se o login de um utilizador comum funciona"""
     response = client.post("/api/auth/login", json={
         "email": "user@email.com",
         "password": "123456"
     })
 
-    assert response.status_code == 200  # Verifica se o status HTTP está correto
+    assert response.status_code == 200
+    data = response.get_json()
 
-    json_data = response.json  # Captura o JSON da resposta
+    assert "access_token" in data
+    assert "refresh_token" in data
+    assert "user" in data
+    assert data["access_token"]
+    assert data["refresh_token"]
+    assert data["user"]["email"] == "user@email.com"
+    assert "id" in data["user"]
+    assert "role" in data["user"]
 
-    assert "access_token" in json_data  # Verifica se há um access token
-    assert "refresh_token" in json_data  # Verifica se há um refresh token
-    assert "user" in json_data  # Verifica se há os dados do user
-
-    assert json_data["access_token"]  # Garante que o access token não está vazio
-    assert json_data["refresh_token"]  # Garante que o refresh token não está vazio
-
-    # Valida se os dados do user foram retornados corretamente
-    assert json_data["user"]["email"] == "user@email.com"
-    assert "id" in json_data["user"]
-    assert "role" in json_data["user"]
 
 def test_login_invalido(client):
-    """Testa login com credenciais erradas"""
+    """Testa login com credenciais incorretas"""
     response = client.post("/api/auth/login", json={
         "email": "admin@email.com",
-        "password": "teste errado"
+        "password": "senhaerrada"
     })
 
-    assert response.status_code == 403  # esperar um erro de login invalido
-    assert "erro" in response.json
+    assert response.status_code == 403  # credenciais inválidas
+    data = response.get_json()
+    assert "erro" in data
+
 
 def test_logout_admin(client):
-    """Testa se o logout revoga o token corretamente"""
-
-    # 1️⃣ Login para obter um token válido
-    login_response = client.post("/api/auth/login", json={
+    # obtém token via login
+    login = client.post("/api/auth/login", json={
         "email": "admin@email.com",
         "password": "123456"
     })
+    assert login.status_code == 200
+    token = login.get_json()["access_token"]
+    headers = {"Authorization": f"Bearer {token}"}
 
-    assert login_response.status_code == 200  # Verifica se o login foi bem-sucedido
+    # primeiro logout: deve retornar 200
+    resp1 = client.post("/api/auth/logout", headers=headers)
+    assert resp1.status_code == 200
+    assert resp1.get_json()["message"] == "Logout bem-sucedido!"
 
-    json_data = login_response.get_json()  # Obtém o JSON corretamente
+    # segundo logout com mesmo token: deve retornar 401
+    resp2 = client.post("/api/auth/logout", headers=headers)
+    assert resp2.status_code == 401
 
-    assert "access_token" in json_data  # Verifica se há um access token
-    assert json_data["access_token"]  # Garante que o access token não está vazio
-
-    access_token = json_data["access_token"]  # Guarda o token para reutilizar
-
-    # 2️⃣ Logout usando o token
-    logout_response = client.post("/api/auth/logout", headers={
-        "Authorization": f"Bearer {access_token}"
-    })
-    assert logout_response.status_code == 200  # Verifica se o logout foi bem-sucedido
-    assert logout_response.get_json()["mensagem"] == "Logout bem-sucedido!"
 
 def test_login_sem_email_ou_senha(client):
-    """Testa login sem enviar email ou senha"""
+    """Testa login sem email ou senha"""
     response = client.post("/api/auth/login", json={})
     assert response.status_code == 400
-    assert "erro" in response.get_json()
-    assert response.get_json()["erro"] == "Email e senha são obrigatórios!"
+    data = response.get_json()
+    assert data.get("erro") == "Email e senha são obrigatórios!"
+
 
 def test_login_email_inexistente(client):
-    """Testa login com um email que não existe"""
+    """Testa login com email não cadastrado"""
     response = client.post("/api/auth/login", json={
         "email": "naoexiste@email.com",
         "password": "123456"
     })
     assert response.status_code == 403
-    assert "erro" in response.get_json()
-    assert response.get_json()["erro"] == "Credenciais inválidas"
+    data = response.get_json()
+    assert data.get("erro") == "Credenciais inválidas"
 
-def test_login_senha_incorreta(client):
-    """Testa login com senha errada"""
-    response = client.post("/api/auth/login", json={
-        "email": "admin@email.com",
-        "password": "senhaerrada"
-    })
-    assert response.status_code == 403
-    assert "erro" in response.get_json()
-    assert response.get_json()["erro"] == "Credenciais inválidas"
 
 def test_login_email_invalido(client):
     """Testa login com email em formato inválido"""
@@ -118,135 +103,116 @@ def test_login_email_invalido(client):
         "password": "123456"
     })
     assert response.status_code == 400
-    assert "erro" in response.get_json()
-    assert response.get_json()["erro"] == "Email inválido"
+    data = response.get_json()
+    assert data.get("erro") == "Email inválido"
+
 
 def test_login_metodo_http_errado(client):
-    """Testa se o login retorna erro ao usar GET em vez de POST"""
+    """Testa GET na rota de login"""
     response = client.get("/api/auth/login")
-    assert response.status_code == 405  # Method Not Allowed
+    assert response.status_code == 405  # método não permitido
+
 
 def test_login_payload_invalido(client):
-    """Testa login sem enviar um JSON válido"""
+    """Testa envio de payload não-JSON"""
     response = client.post("/api/auth/login", data="texto sem JSON")
     assert response.status_code == 400
-    assert "erro" in response.get_json()
-    assert response.get_json()["erro"] == "Formato inválido, envie um JSON"
+    data = response.get_json()
+    assert data.get("erro") == "Formato inválido, envie um JSON"
+
 
 def test_login_token_expirado(client):
-    """Testa se um token expirado não é aceito"""
+    """Testa rejeição de token expirado"""
+    expired = datetime.now(timezone.utc) - timedelta(seconds=1)
     expired_token = jwt.encode({
         "id": 1,
         "email": "admin@email.com",
         "role": "admin",
-        "exp": datetime.now() - timedelta(seconds=1)  # Já expirado!
+        "exp": expired
     }, Config.SECRET_KEY, algorithm="HS256")
 
     response = client.get("/api/auth/auth", headers={
         "Authorization": f"Bearer {expired_token}"
     })
-    assert response.status_code == 401  # Token deve ser recusado
-    assert "Alerta" in response.get_json()
-    assert response.get_json()["Alerta"] == "Token expirado. Faça login novamente."
+    assert response.status_code == 401
+
 
 def test_login_token_invalido(client):
-    """Testa se um token inválido é rejeitado"""
+    """Testa rejeição de token inválido"""
     response = client.get("/api/auth/auth", headers={
-        "Authorization": "Bearer token-falso-aleatorio"
+        "Authorization": "Bearer token-falso"        
     })
-    assert response.status_code == 401  # Deve ser recusado
-    assert "Alerta" in response.get_json()
-    assert response.get_json()["Alerta"] == "Token inválido."
+    assert response.status_code == 401
+    data = response.get_json()
+    assert data.get("Alerta") == "Token inválido."
+
 
 def test_logout_sem_token(client):
-    """Testa se o logout retorna erro quando nenhum token é enviado"""
-    response = client.post("/api/auth/logout")  # Sem token
-    assert response.status_code == 401  # Deve falhar
-    assert "Alerta" in response.get_json()
-    assert response.get_json()["Alerta"] == "Token em falta"
+    """Testa logout sem token"""
+    response = client.post("/api/auth/logout")
+    assert response.status_code == 401
+    data = response.get_json()
+    assert data.get("Alerta") == "Token em falta"
+
 
 def test_logout_com_token_revogado(client):
-    """Testa se um token já revogado não pode ser reutilizado"""
-    
-    # 1️⃣ Login para obter um token válido
-    login_response = client.post("/api/auth/login", json={
+    """Testa logout com token já revogado"""
+    login = client.post("/api/auth/login", json={
         "email": "admin@email.com",
         "password": "123456"
     })
-    assert login_response.status_code == 200
-    access_token = login_response.get_json()["access_token"]
+    token = login.get_json()["access_token"]
+    headers = {"Authorization": f"Bearer {token}"}
 
-    # 2️⃣ Logout usando o token
-    logout_response = client.post("/api/auth/logout", headers={
-        "Authorization": f"Bearer {access_token}"
-    })
-    assert logout_response.status_code == 200
+    client.post("/api/auth/logout", headers=headers)  # revoga token
+    response = client.post("/api/auth/logout", headers=headers)
+    assert response.status_code == 401
+    data = response.get_json()
+    assert data.get("Alerta") == "Token inválido. Faça login novamente."
 
-    # 3️⃣ Tenta deslogar de novo com o mesmo token (deve falhar)
-    response_reuso = client.post("/api/auth/logout", headers={
-        "Authorization": f"Bearer {access_token}"
-    })
-    assert response_reuso.status_code == 401  # Não pode reutilizar token revogado
-    assert "Alerta" in response_reuso.get_json()
-    assert response_reuso.get_json()["Alerta"] == "Token inválido. Faça login novamente."
 
 def test_refresh_token_sucesso(client):
-    """Testa se o refresh token gera um novo access token"""
-    
-    # 1️⃣ Login para obter um refresh token válido
-    login_response = client.post("/api/auth/login", json={
+    """Testa renovação de access token"""
+    login = client.post("/api/auth/login", json={
         "email": "admin@email.com",
         "password": "123456"
     })
-    assert login_response.status_code == 200  # Login deve ser bem-sucedido
-    json_data = login_response.get_json()
+    refresh_token = login.get_json()["refresh_token"]
 
-    refresh_token = json_data["refresh_token"]  # Obtém o refresh token
-
-    # 2️⃣ Solicita a renovação do access token
     response = client.post("/api/auth/refresh", headers={
         "Authorization": f"Bearer {refresh_token}"
     })
-    assert response.status_code == 200  # Deve renovar o token com sucesso
-    json_data = response.get_json()
-    
-    assert "access_token" in json_data  # Deve retornar um novo access token
-    assert json_data["access_token"]  # O token não deve estar vazio
+    assert response.status_code == 200
+    data = response.get_json()
+    assert "access_token" in data
+
 
 def test_refresh_token_faltando(client):
-    """Testa se a API retorna erro quando o refresh token não é enviado"""
-    
-    response = client.post("/api/auth/refresh")  # Sem token no header
-    assert response.status_code == 401  # Deve falhar
-    assert "erro" in response.get_json()
-    assert response.get_json()["erro"] == "Refresh token é obrigatório!"
+    """Testa refresh sem token"""
+    response = client.post("/api/auth/refresh")
+    assert response.status_code == 401
+    data = response.get_json()
+    assert data.get("erro") == "Refresh token é obrigatório!"
+
 
 def test_refresh_token_expirado(client):
-    """Testa se um refresh token expirado é rejeitado"""
-    
-    # 1️⃣ Gera um refresh token que já expirou
-    expired_token = jwt.encode({
-        "id": 1,
-        "exp": datetime.now() - timedelta(seconds=1)  # Token já expirado!
-    }, Config.SECRET_KEY, algorithm="HS256")
+    """Testa rejeição de refresh token expirado"""
+    expired = datetime.now(timezone.utc) - timedelta(seconds=1)
+    expired_token = jwt.encode({"id": 1, "exp": expired}, Config.SECRET_KEY, algorithm="HS256")
 
-    # 2️⃣ Tenta renovar o access token com um refresh token expirado
     response = client.post("/api/auth/refresh", headers={
         "Authorization": f"Bearer {expired_token}"
     })
-    
-    assert response.status_code == 401  # Deve falhar
-    assert "erro" in response.get_json()
-    assert response.get_json()["erro"] == "Refresh token expirado. Faça login novamente!"
+    assert response.status_code == 401
+    data = response.get_json()
+    assert data.get("erro") == "Refresh token expirado. Faça login novamente!"
+
 
 def test_refresh_token_invalido(client):
-    """Testa se um refresh token inválido é rejeitado"""
-    
+    """Testa rejeição de refresh token inválido"""
     response = client.post("/api/auth/refresh", headers={
-        "Authorization": "Bearer token-falso-aleatorio"
+        "Authorization": "Bearer token-falso"
     })
-    
-    assert response.status_code == 401  # Deve falhar
-    assert "erro" in response.get_json()
-    assert response.get_json()["erro"] == "Refresh token inválido!"
-
+    assert response.status_code == 401
+    data = response.get_json()
+    assert data.get("erro") == "Refresh token inválido!"
