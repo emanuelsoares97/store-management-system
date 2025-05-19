@@ -3,7 +3,7 @@ from app.services.CategoryService import CategoryService
 from app.services.AuthService import AuthService
 from app.util.logger_util import get_logger
 
-category_bp = Blueprint("categories", __name__)
+category_bp = Blueprint("category", __name__)
 logger = get_logger(__name__)
 
 @category_bp.route("/list", methods=["GET"])
