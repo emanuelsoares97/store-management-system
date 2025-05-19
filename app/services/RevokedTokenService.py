@@ -1,24 +1,21 @@
-from app.database import Database
+from app.extensions import db
 from app.models.Revoked_Token import RevokedToken
 from app.util.logger_util import get_logger
 
-logger= get_logger(__name__)
+logger = get_logger(__name__)
 
 class TokenService:
     """Gerencia a blacklist de tokens JWT"""
 
-    @staticmethod
-    def add_token_to_blacklist(token_jti):
+    @classmethod
+    def add_to_blacklist(cls, token_jti):
         """Adiciona um token revogado ao banco de dados"""
-        token_revoked= RevokedToken(token_jti=token_jti)
-        logger.info(f"Token revogado: {token_revoked}")
+        revoked = RevokedToken(token_jti=token_jti)
+        db.session.add(revoked)
+        db.session.commit()
+        logger.info(f"Token revogado cadastrado: {token_jti}")
 
-        session = Database.get_session()
-        session.add(token_revoked)
-        session.commit()
-
-    @staticmethod
-    def token_on_blacklist(token_jti):
+    @classmethod
+    def in_blacklist(cls, token_jti: str) -> bool:
         """Verifica se um token está na blacklist"""
-        session = Database.get_session()
-        return session.query(RevokedToken).filter_by(token_jti=token_jti).first() is not None
+        return RevokedToken.query.filter_by(token_jti=token_jti).first() is not None
