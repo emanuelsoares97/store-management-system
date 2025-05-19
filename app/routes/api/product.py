@@ -15,7 +15,7 @@ logger = get_logger(__name__)
     - PATCH  /api/product/<id>/reativar -> Reativar um product
 """
 
-@product_bp.route("/ativos", methods=["GET"])
+@product_bp.route("/active", methods=["GET"])
 @AuthService.token_required
 @AuthService.role_required("admin", "gerente", "estoque", "user") 
 def list_products():
@@ -41,21 +41,21 @@ def create_product():
             return jsonify({"erro": "Nenhum dado enviado!"}), 400
 
         name = data.get("name")
-        preco = data.get("preco")
-        quantidade_estoque = data.get("quantidade_estoque")
-        categoria_id = data.get("categoria_id")
+        price = data.get("price")
+        stock_quantity = data.get("stock_quantity")
+        category_id = data.get("category_id")
 
-        new_product, status = ProductService.create_product(name, preco, quantidade_estoque, categoria_id)
+        new_product, status = ProductService.create_product(name, price, stock_quantity, category_id)
         logger.info(f"product criado com sucesso: {new_product}")
         return jsonify(new_product), status
 
     except ValueError as e:
         logger.warning(f"Erro de validação: {str(e)}")
-        return jsonify({"erro": str(e)}), 400
+        return jsonify({"error": str(e)}), 400
 
     except Exception as e:
         logger.error(f"Erro inesperado ao criar product: {str(e)}")
-        return jsonify({"erro": "Erro ao criar product."}), 500
+        return jsonify({"error": "Erro ao criar product."}), 500
 
 
 @product_bp.route("/<int:product_id>/update", methods=["PUT"])
