@@ -55,7 +55,7 @@ def login():
         return jsonify({
             "access_token": access_token,
             "refresh_token": refresh_token,
-            "utilizador": {
+            "user": {
                 "id": user.id,
                 "email": user.email,
                 "role": user.role
@@ -73,7 +73,7 @@ def auth():
     """Rota protegida que verifica se o token é válido"""
     try:
         logger.info("Token validado com sucesso!")
-        return jsonify({"mensagem": "Token válido, utilizador autenticado!"})
+        return jsonify({"message": "Token válido, utilizador autenticado!"})
 
     except Exception as e:
         logger.error(f"Erro ao validar token: {str(e)}", exc_info=True)
@@ -85,14 +85,14 @@ def auth():
 def logout():
     """Revoga o access token do utilizador"""
     try:
-        TokenService.add_token_to_blacklist(g.token_jti)
+        TokenService.add_to_blacklist(g.token_jti)
 
         logger.info("Logout com sucesso")
-        return jsonify({"mensagem": "Logout bem-sucedido!"}), 200
+        return jsonify({"message": "Logout bem-sucedido!"}), 200
 
     except Exception as e:
         logger.error(f"Erro ao efetuar logout: {str(e)}", exc_info=True)
-        return jsonify({"mensagem": "Token em falta para logout"}), 401
+        return jsonify({"message": "Token em falta para logout"}), 401
 
 
 @auth_bp.route("/refresh", methods=["POST"])
