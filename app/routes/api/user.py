@@ -14,7 +14,7 @@ user_bp = Blueprint("user", __name__)
 @user_bp.route("/actives", methods=["GET"])
 @AuthService.token_required
 @AuthService.role_required("admin", "gerente")
-def listar_useres_actives():
+def list_users_actives():
     """Lista apenas os useres actives"""
     try:
         logger.info("Tentativa de listar useres active.")
@@ -27,11 +27,11 @@ def listar_useres_actives():
 @user_bp.route("/all", methods=["GET"])
 @AuthService.token_required
 @AuthService.role_required("admin")
-def listar_all_useres():
+def list_all_users():
     """Lista all os useres, incluindo inactives"""
     try:
         logger.info("Tentativa de listar all os useres.")
-        useres = UserService.listar_useres(actives=False)
+        useres = UserService.list_users(actives=False)
         return jsonify(useres), 200
     except Exception as e:
         logger.error(f"Erro ao listar all os useres: {str(e)}", exc_info=True)
