@@ -11,7 +11,7 @@ from app.models.category import Category
 from app.models.product import Product
 from app.models.customer import Customer
 from app.models.sale import Sale
-from app.util.logger_util import get_logger
+from app.utils.logger_util import get_logger
 
 # Cria a aplicação Flask e o logger
 env_app = create_app()
