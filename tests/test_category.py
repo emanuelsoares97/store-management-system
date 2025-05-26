@@ -1,6 +1,6 @@
 
 
-def test_listar_categories(client):
+def test_list_categories(client):
     # Faz login para obter token válido
     login = client.post(
         "/api/auth/login", json={
@@ -68,10 +68,10 @@ def test_update_category(client):
     assert "message" in data
     assert data["category"]["name"] == "nome2"
 
-def test_criar_categoria_admin(client):
+def test_create_new_category(client):
     """Teste para criar categoria"""
 
-    # 1️⃣ Faz login e pega o token
+    # Faz login e pega o token
     response_login = client.post("/api/auth/login", json={
         "email": "admin@email.com",
         "password": "123456"
@@ -79,14 +79,14 @@ def test_criar_categoria_admin(client):
     assert response_login.status_code == 200
     access_token = response_login.json["access_token"]
 
-    # 2️⃣ Envia requisição para criar a categoria usando o token correto
-    response = client.post("/api/categoria/nova", json={"nome": "Fruta"}, headers={
+    # Envia requisição para criar a categoria usando o token correto
+    response = client.post("/api/category/new", json={"name": "Fruta"}, headers={
         "Authorization": f"Bearer {access_token}"
     })
 
-    # 3️⃣ Verifica se a categoria foi criada com sucesso
+    # Verifica se a categoria foi criada com sucesso
     assert response.status_code == 201
-    assert "categoria" in response.json  # ✅ Agora verifica a chave correta
-    assert "id" in response.json["categoria"]  # ✅ Verifica dentro de "categoria"
-    assert response.json["categoria"]["nome"] == "Fruta"  # ✅ Confirma o nome correto
-    assert response.json["mensagem"] == "Categoria criada com sucesso!"  # ✅ Confirma a mensagem
+    assert "category" in response.json 
+    assert "id" in response.json["category"] 
+    assert response.json["category"]["name"] == "Fruta" 
+    assert response.json["message"] == "Categoria criada com sucesso!"
