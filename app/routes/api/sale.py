@@ -1,9 +1,9 @@
 from flask import Blueprint, jsonify, request
 from app.services.SaleService import SaleService
-from app.util.logger_util import get_logger
+from app.utils.logger_util import get_logger
 from app.services.AuthService import AuthService
 
-sale_bp = Blueprint("venda", __name__)
+sale_bp = Blueprint("sale", __name__)
 logger = get_logger(__name__)
 
 @sale_bp.route("/list", methods=["GET"])
@@ -11,14 +11,17 @@ logger = get_logger(__name__)
 @AuthService.role_required("admin", "gerente", "user")
 def listar_vendas():
     """Endpoint para listar todas as vendas"""
+
     try:
-        vendas = SaleService.list_sales()
-        return jsonify({"vendas": vendas}), 200
+
+        sales, status = SaleService.list_sales()
+        return jsonify(sales), status
+    
     except Exception as e:
         logger.error(f"Erro ao listar vendas: {str(e)}")
         return jsonify({"erro": "Erro ao carregar vendas."}), 500
 
-@sale_bp.route("/registrar", methods=["POST"])
+@sale_bp.route("/register", methods=["POST"])
 @AuthService.token_required
 @AuthService.role_required("admin", "gerente", "user")
 def registrar_venda():
@@ -27,24 +30,24 @@ def registrar_venda():
         data = request.get_json()
         if not data:
             logger.erro("Tentativa de registar venda sem dados")
-            return jsonify({"erro": "Nenhum dado enviado!"}), 400
+            return jsonify({"error": "Nenhum dado enviado!"}), 400
 
-        cliente_id = data.get("cliente_id")
-        utilizador_id = data.get("utilizador_id")
-        produto_id = data.get("produto_id")
-        quantidade = data.get("quantidade")
+        customer_id = data.get("customer_id")
+        user_id = data.get("user_id")
+        product_id = data.get("product_id")
+        quantity = data.get("quantity")
 
-        if not all([cliente_id, utilizador_id, produto_id, quantidade]):
-            return jsonify({"erro": "Todos os campos são obrigatórios!"}), 400
+        if not all([customer_id, user_id, product_id, quantity]):
+            return jsonify({"error": "Todos os campos são obrigatórios!"}), 400
 
-        nova_venda = SaleService.register_sale(cliente_id, utilizador_id, produto_id, quantidade)
+        new_sale, status = SaleService.register_sale(customer_id, user_id, product_id, quantity)
 
-        logger.info(f"Venda registada com sucesso {nova_venda}")
-        return jsonify({"mensagem": "Venda registrada com sucesso!", "venda": nova_venda}), 201
+        logger.info(f"Venda registada com sucesso {new_sale}")
+        return jsonify(new_sale), status
 
     except ValueError as e:
         logger.warning(f"Erro ao registar venda: {str(e)}")
-        return jsonify({"erro": str(e)}), 400
+        return jsonify({"error": str(e)}), 400
     except Exception as e:
         logger.error(f"Erro ao registar venda: {str(e)}")
-        return jsonify({"erro": "Erro ao registrar venda."}), 500
+        return jsonify({"error": "Erro ao registrar venda."}), 500
