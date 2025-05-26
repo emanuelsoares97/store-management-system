@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import relationship
 from app.models.BaseModel import BaseModel
-from app.util.logger_util import get_logger
+from app.utils.logger_util import get_logger
 
 logger=get_logger(__name__)
 
