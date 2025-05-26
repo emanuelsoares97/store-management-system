@@ -1,4 +1,4 @@
-def test_reativar_utilizador(client):
+def test_reactivate_user(client):
     # Faz login para obter um token válido
     response_login = client.post("/api/auth/login", json={
         "email": "admin@email.com",
@@ -7,39 +7,37 @@ def test_reativar_utilizador(client):
     assert response_login.status_code == 200
     access_token = response_login.json["access_token"]
 
-    # Cria um utilizador para reativar
-    user_data = {
-        "nome": "User to Reactivate",
-        "email": "reactivateuser@test.com",
-        "password": "123456"
-    }
     create_resp = client.post(
-        "/api/utilizador/novo",
-        json=user_data,
+        "/api/user/new",
+        json={
+            "name": "User to Reactivate",
+            "email": "reactivateuser@test.com",
+            "password": "123456"
+        },
         headers={"Authorization": f"Bearer {access_token}"}
     )
-    assert create_resp.status_code in (200, 201)
-    user_id = create_resp.get_json().get("id") or create_resp.get_json().get("utilizador", {}).get("id")
+    assert create_resp.status_code == 201
+    user_id = create_resp.get_json().get("id") or create_resp.get_json().get("user", {}).get("id")
     assert user_id is not None
 
-    # Desativa o utilizador
+    # Desativa o user
     disable_resp = client.patch(
-        f"/api/utilizador/{user_id}/desativar",
+        f"/api/user/{user_id}/desactivate",
         headers={"Authorization": f"Bearer {access_token}"}
     )
     assert disable_resp.status_code == 200
 
-    # Reativa o utilizador
+    # Reativa o user
     reactivate_resp = client.patch(
-        f"/api/utilizador/{user_id}/reativar",
+        f"/api/user/{user_id}/reactivate",
         headers={"Authorization": f"Bearer {access_token}"}
     )
     assert reactivate_resp.status_code == 200
     data = reactivate_resp.get_json()
-    if "ativo" in data:
-        assert data["ativo"] is True
+    if "active" in data:
+        assert data["active"] is True
 
-def test_desativar_utilizador(client):
+def test_desactivate_user(client):
     # Faz login para obter um token válido
     response_login = client.post("/api/auth/login", json={
         "email": "admin@email.com",
@@ -48,34 +46,33 @@ def test_desativar_utilizador(client):
     assert response_login.status_code == 200
     access_token = response_login.json["access_token"]
 
-    # Cria um utilizador para desativar
+    # Cria um user para desativar
     user_data = {
-        "nome": "User to Disable",
+        "name": "User to Disable",
         "email": "disableuser@test.com",
         "password": "123456"
     }
     create_resp = client.post(
-        "/api/utilizador/novo",
+        "/api/user/new",
         json=user_data,
         headers={"Authorization": f"Bearer {access_token}"}
     )
-    assert create_resp.status_code in (200, 201)
-    user_id = create_resp.get_json().get("id") or create_resp.get_json().get("utilizador", {}).get("id")
+    assert create_resp.status_code == 201
+    user_id = create_resp.get_json().get("id") or create_resp.get_json().get("user", {}).get("id")
     assert user_id is not None
 
-    # Desativa o utilizador
+    # Desativa o user
     disable_resp = client.patch(
-        f"/api/utilizador/{user_id}/desativar",
+        f"/api/user/{user_id}/desactivate",
         headers={"Authorization": f"Bearer {access_token}"}
     )
     assert disable_resp.status_code == 200
     data = disable_resp.get_json()
-    # Se a resposta retornar o campo 'ativo', deve ser False
-    if "ativo" in data:
-        assert data["ativo"] is False
+    # Se a resposta retornar o campo 'active', deve ser False
+    if "active" in data:
+        assert data["active"] is False
 
-
-def test_atualizar_utilizador(client):
+def test_update_user(client):
     # Faz login para obter um token válido
     response_login = client.post("/api/auth/login", json={
         "email": "admin@email.com",
@@ -84,44 +81,42 @@ def test_atualizar_utilizador(client):
     assert response_login.status_code == 200
     access_token = response_login.json["access_token"]
 
-    # Cria um utilizador para atualizar
+    # Cria um user para atualizar
     user_data = {
-        "nome": "User To Update",
+        "name": "User To Update",
         "email": "updateuser@test.com",
         "password": "123456"
     }
     create_resp = client.post(
-        "/api/utilizador/novo",
+        "/api/user/new",
         json=user_data,
         headers={"Authorization": f"Bearer {access_token}"}
     )
-    assert create_resp.status_code in (200, 201)
-    # Obtém o ID do novo utilizador
-    user_id = create_resp.get_json().get("id") or create_resp.get_json().get("utilizador", {}).get("id")
+    assert create_resp.status_code == 201
+    # Obtém o ID do novo user
+    user_id = create_resp.get_json().get("id") or create_resp.get_json().get("user", {}).get("id")
     assert user_id is not None
 
-    # Atualiza os dados do utilizador
+    # Atualiza os dados do user
     update_data = {
-        "nome": "User Updated",
+        "name": "User Updated",
         "email": "updateuser@test.com",
         "password": "123456",
         "role": "user",
-        "ativo": True
+        "active": True
     }
     update_resp = client.put(
-        f"/api/utilizador/{user_id}/editar",
+        f"/api/user/{user_id}/update",
         json=update_data,
         headers={"Authorization": f"Bearer {access_token}"}
     )
     assert update_resp.status_code == 200
     data = update_resp.get_json()
-    utilizador = data["utilizador"]
-    assert utilizador["nome"] == "User Updated"
-    assert utilizador["email"] == "updateuser@test.com"
+    user = data["user"]
+    assert user["name"] == "User Updated"
+    assert user["email"] == "updateuser@test.com"
 
-
-
-def test_criar_utilizador(client):
+def test_create_user(client):
     # Faz login para obter um token válido
     response_login = client.post("/api/auth/login", json={
         "email": "admin@email.com",
@@ -130,26 +125,26 @@ def test_criar_utilizador(client):
     assert response_login.status_code == 200
     access_token = response_login.json["access_token"]
 
-    # Dados do novo utilizador; use um email único se necessário
+    # Dados do novo user; use um email único se necessário
     user_data = {
-        "nome": "User Teste Novo",
+        "name": "User Teste Novo",
         "email": "userteste_novo@test.com",
         "password": "123456"
     }
     resp = client.post(
-        "/api/utilizador/novo",
+        "/api/user/new",
         json=user_data,
         headers={"Authorization": f"Bearer {access_token}"}
     )
-    assert resp.status_code in (200, 201)
+    assert resp.status_code == 201
     data = resp.get_json()
-    # Verifica se o email do utilizador criado corresponde
-    if "utilizador" in data:
-        assert data["utilizador"]["email"] == "userteste_novo@test.com"
+    # Verifica se o email do user criado corresponde
+    if "user" in data:
+        assert data["user"]["email"] == "userteste_novo@test.com"
     else:
         assert data.get("email") == "userteste_novo@test.com"
 
-def test_listar_utilizadores_ativos(client):
+def test_list_users_actives(client):
     # Faz login para obter um token válido
     response_login = client.post("/api/auth/login", json={
         "email": "admin@email.com",
@@ -159,17 +154,16 @@ def test_listar_utilizadores_ativos(client):
     access_token = response_login.json["access_token"]
 
     resp = client.get(
-        "/api/utilizador/ativos",
+        "/api/user/actives",
         headers={"Authorization": f"Bearer {access_token}"}
     )
     assert resp.status_code == 200
     data = resp.get_json()
-    # A resposta deve ser uma lista de utilizadores ativos
-    assert isinstance(data, list)
-    # Verifica se o admin está na lista
-    assert any(u.get("email") == "admin@email.com" for u in data)
+    users = data.get("users", [])
+    assert isinstance(users, list)
+    assert any(user["email"] == "admin@email.com" for user in users)
 
-def test_listar_todos_utilizadores(client):
+def test_list_all_users(client):
     # Faz login para obter um token válido
     response_login = client.post("/api/auth/login", json={
         "email": "admin@email.com",
@@ -179,7 +173,7 @@ def test_listar_todos_utilizadores(client):
     access_token = response_login.json["access_token"]
 
     resp = client.get(
-        "/api/utilizador/todos",
+        "/api/user/all",
         headers={"Authorization": f"Bearer {access_token}"}
     )
     assert resp.status_code == 200
