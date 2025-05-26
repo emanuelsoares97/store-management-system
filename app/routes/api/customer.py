@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify, request
 from app.services.CustomerService import CustomerService
-from app.util.logger_util import get_logger
+from app.utils.logger_util import get_logger
 from app.services.AuthService import AuthService
 
 customer_bp = Blueprint("customer", __name__)
