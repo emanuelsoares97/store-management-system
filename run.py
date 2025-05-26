@@ -9,10 +9,14 @@ from app.utils.logger_util import get_logger
 
 logger = get_logger(__name__)
 
+app = create_app()
+
 if __name__ == "__main__":
+    
     try:
-        app = create_app()
+        
         logger.info("Aplicação iniciada com sucesso. Rodando em modo debug: %s", Config.DEBUG)
         app.run(debug=Config.DEBUG)
+
     except Exception as e:
         logger.critical("Falha ao iniciar a aplicação.", exc_info=True)
