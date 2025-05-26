@@ -8,7 +8,7 @@ from config import Config
 from app.extensions import db
 from app.models.User import User
 from app.services.RevokedTokenService import TokenService
-from app.util.logger_util import get_logger
+from app.utils.logger_util import get_logger
 
 logger = get_logger(__name__)
 
