@@ -9,9 +9,9 @@ class Config:
     SECRET_KEY = os.environ.get("SECRET_KEY", "default-secret-key")
 
     SQLALCHEMY_DATABASE_URI = os.environ.get(
-        "DATABASE_URL",
-        f"sqlite:///{os.path.join(os.path.dirname(os.path.abspath(__file__)), 'db', 'database.db')}"
-    )
+    "DATABASE_URL",
+    f"sqlite:///{os.path.join('instance', 'db', 'database.db')}"
+)
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 

@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: store-management-system
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn run:app
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.11
+      - key: FLASK_ENV
+        value: production
+      - key: SECRET_KEY
+        value: supersecreta123
+      - key: DEBUG
+        value: "True"
+      - key: DATABASE_URL
+        value: sqlite:///instance/db/database.db
+      - key: PORT
+        value: 10000
+    autoDeploy: true
