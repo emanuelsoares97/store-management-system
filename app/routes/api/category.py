@@ -1,7 +1,7 @@
 from flask import Blueprint, jsonify, request
 from app.services.CategoryService import CategoryService
 from app.services.AuthService import AuthService
-from app.util.logger_util import get_logger
+from app.utils.logger_util import get_logger
 
 category_bp = Blueprint("category", __name__)
 logger = get_logger(__name__)
