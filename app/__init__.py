@@ -2,7 +2,7 @@ from flask import Flask
 from config import Config
 from app.extensions import db, migrate
 from app.routes.api import init_routes
-from app.util.logger_util import get_logger
+from app.utils.logger_util import get_logger
 
 logger = get_logger(__name__)
 

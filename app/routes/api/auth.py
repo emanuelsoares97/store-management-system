@@ -1,7 +1,7 @@
 from flask import Blueprint, request, jsonify, make_response, g
 from app.services.UserService import UserService
 from app.services.AuthService import AuthService 
-from app.util.logger_util import get_logger
+from app.utils.logger_util import get_logger
 from app.services.RevokedTokenService import TokenService
 import re
 import jwt

@@ -41,10 +41,10 @@ def test_create_product_admin(client):
     assert product["stock_quantity"] == 10
 
 
-def test_validar_lista_de_produtos(client):
+def test_validate_list_products(client):
     """Testa se uma rota protegida retorna 200 com token válido"""
 
-    # faz o login e pega o token
+        # Faz login para obter um token válido
     response_login = client.post("/api/auth/login", json={
         "email": "admin@email.com",
         "password": "123456"
@@ -53,9 +53,10 @@ def test_validar_lista_de_produtos(client):
     access_token = response_login.json["access_token"]
 
     # entra numa rota get e usa o token para ter autorizaçao de acesso a rota
-    response = client.get("/api/produto/ativos", headers={"Authorization": f"Bearer {access_token}"})
+    response = client.get("/api/product/active", 
+                headers={"Authorization": f"Bearer {access_token}"})
 
     # Valida se a resposta foi bem-sucedida
     assert response.status_code == 200
-    assert "produtos" in response.json  # Garante que a chave 'produtos' existe na resposta.
-    assert isinstance(response.json["produtos"], list)  # Agora verificamos corretamente a lista.
+    assert "products" in response.json 
+    assert isinstance(response.json["products"], list) 
