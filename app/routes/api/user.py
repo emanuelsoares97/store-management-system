@@ -1,7 +1,7 @@
 from flask import Blueprint, request, jsonify
 from app.services.UserService import UserService
 from app.services.AuthService import AuthService
-from app.util.logger_util import get_logger
+from app.utils.logger_util import get_logger
 from config import Config
 import jwt
 from flask import g
@@ -18,8 +18,8 @@ def list_users_actives():
     """Lista apenas os useres actives"""
     try:
         logger.info("Tentativa de listar useres active.")
-        useres = UserService.listar_useres(active=True)
-        return jsonify(useres), 200
+        users, status = UserService.list_users(active=True)
+        return jsonify(users), status
     except Exception as e:
         logger.error(f"Erro ao listar useres actives: {str(e)}", exc_info=True)
         return jsonify({"erro": "Erro ao listar useres"}), 500
@@ -31,7 +31,7 @@ def list_all_users():
     """Lista all os useres, incluindo inactives"""
     try:
         logger.info("Tentativa de listar all os useres.")
-        useres = UserService.list_users(actives=False)
+        useres = UserService.list_users(active=False)
         return jsonify(useres), 200
     except Exception as e:
         logger.error(f"Erro ao listar all os useres: {str(e)}", exc_info=True)
@@ -42,22 +42,22 @@ def list_all_users():
 @user_bp.route("/new", methods=["POST"])
 @AuthService.token_required
 @AuthService.role_required("admin", "gerente")
-def criar_user():
+def create_user():
     """Cria um new user"""
     try:
         data = request.get_json()
         
-        if not data or "nome" not in data or "email" not in data or "password" not in data:
+        if not data or "name" not in data or "email" not in data or "password" not in data:
             logger.warning("Tentativa de criar user sem dados completos.")
-            return jsonify({"erro": "Nome, email e senha são obrigatórios!"}), 400
+            return jsonify({"error": "Nome, email e senha são obrigatórios!"}), 400
 
         logger.info(f"Tentativa de criar user: {data.get('email')}")
-        resposta, status = UserService.criar_user(data["nome"], data["email"], data["password"])
-        return jsonify(resposta), status
+        response, status = UserService.create_user(data.get("name"), data.get("email"), data.get("password"))
+        return jsonify(response), status
 
     except Exception as e:
         logger.error(f"Erro ao criar user: {str(e)}", exc_info=True)
-        return jsonify({"erro": "Erro interno no servidor"}), 500
+        return jsonify({"error": "Erro interno no servidor"}), 500
 
 @user_bp.route("/<int:user_id>/update", methods=["PUT"])
 @AuthService.token_required
@@ -68,7 +68,7 @@ def atualizar_user(user_id):
         data = request.get_json()
         
         if not data:
-            return jsonify({"erro": "Nenhum dado enviado!"}), 400
+            return jsonify({"error": "Nenhum dado enviado!"}), 400
 
         logger.info(f"Tentativa de atualizar user ID: {user_id}")
 
@@ -101,7 +101,7 @@ def desaivar_user(user_id):
     
     except Exception as e:
         logger.error(f"Erro ao remover user ID {user_id}: {str(e)}", exc_info=True)
-        return jsonify({"erro": "Erro interno no servidor"}), 500
+        return jsonify({"error": "Erro interno no servidor"}), 500
 
 
 @user_bp.route("/<int:user_id>/reactivate", methods=["PATCH"])
