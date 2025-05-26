@@ -5,7 +5,7 @@ sys.path.append(os.path.abspath(os.path.dirname(__file__)))
 
 from app import create_app
 from config import Config
-from app.util.logger_util import get_logger
+from app.utils.logger_util import get_logger
 
 logger = get_logger(__name__)
 
