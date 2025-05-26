@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify, request
 from app.services.ProductService import ProductService
-from app.util.logger_util import get_logger
+from app.utils.logger_util import get_logger
 from app.services.AuthService import AuthService
 
 product_bp = Blueprint("product", __name__)
@@ -21,12 +21,15 @@ logger = get_logger(__name__)
 def list_products():
     """Endpoint para listar todos os products ativos"""
     try:
-        logger.info("Listando products ativos.")
+
         products, status = ProductService.list_products()
+
+        logger.info("Listando products ativos.")
         return jsonify(products), status
+    
     except Exception as e:
         logger.error(f"Erro ao listar products: {str(e)}")
-        return jsonify({"erro": "Erro ao carregar products."}), 500
+        return jsonify({"error": "Erro ao carregar products."}), 500
 
 
 @product_bp.route("/new", methods=["POST"])
@@ -38,7 +41,7 @@ def create_product():
         data = request.get_json()
         if not data:
             logger.warning("Tentativa de criar product sem dados.")
-            return jsonify({"erro": "Nenhum dado enviado!"}), 400
+            return jsonify({"error": "Nenhum dado enviado!"}), 400
 
         name = data.get("name")
         price = data.get("price")
@@ -66,7 +69,7 @@ def update_product(product_id):
     try:
         data = request.get_json()
         if not data:
-            return jsonify({"erro": "Nenhum dado enviado!"}), 400
+            return jsonify({"error": "Nenhum dado enviado!"}), 400
 
         result, status = ProductService.update_product(
             product_id,
@@ -77,15 +80,15 @@ def update_product(product_id):
             category_id=data.get("category_id")
         )
 
-        return jsonify({"mensagem": "product atualizado com sucesso!", "product": result}), status
+        return jsonify({"message": "product atualizado com sucesso!", "product": result}), status
 
     except ValueError as e:
         logger.warning(f"Erro ao atualizar product: {str(e)}")
-        return jsonify({"erro": str(e)}), 400
+        return jsonify({"error": str(e)}), 400
 
     except Exception as e:
         logger.error(f"Erro inesperado ao atualizar product: {str(e)}")
-        return jsonify({"erro": "Erro ao atualizar product."}), 500
+        return jsonify({"error": "Erro ao atualizar product."}), 500
 
 
 @product_bp.route("/<int:product_id>/reactivate", methods=["PATCH"])
@@ -101,11 +104,11 @@ def reativar_product(product_id):
     
     except ValueError as e:
         logger.warning(f"Erro ao reativar product {str(e)}")
-        return jsonify({"erro": str(e)}), 400
+        return jsonify({"error": str(e)}), 400
     
     except Exception as e:
         logger.error(f"Erro ao reativar product {str(e)}")
-        return jsonify({"erro": "Erro ao reativar product."}), 500
+        return jsonify({"error": "Erro ao reativar product."}), 500
 
 @product_bp.route("/<int:product_id>/desactivate", methods=["PATCH"])
 @AuthService.token_required
@@ -119,8 +122,8 @@ def desativar_product(product_id):
     
     except ValueError as e:
         logger.warning(f"Erro ao desativar product {str(e)}")
-        return jsonify({"erro": str(e)}), 400
+        return jsonify({"error": str(e)}), 400
     
     except Exception as e:
         logger.error(f"Erro ao desativar product {str(e)}")
-        return jsonify({"erro": "Erro ao desativar product."}), 500
+        return jsonify({"error": "Erro ao desativar product."}), 500
