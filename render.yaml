@@ -10,11 +10,11 @@ services:
       - key: FLASK_ENV
         value: production
       - key: SECRET_KEY
-        value: supersecreta123
+        sync: false
       - key: DEBUG
-        value: "True"
+        value: "False"  #em produçao deve ficar true
       - key: DATABASE_URL
-        value: sqlite:///instance/db/database.db
+        sync: false
       - key: PORT
         value: 10000
-    autoDeploy: false
+    autoDeploy: false  # deploy via deploy hook apos github actions ok
