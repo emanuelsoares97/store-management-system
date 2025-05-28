@@ -17,4 +17,4 @@ services:
         value: sqlite:///instance/db/database.db
       - key: PORT
         value: 10000
-    autoDeploy: true
+    autoDeploy: false
