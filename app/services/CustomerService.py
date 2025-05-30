@@ -30,16 +30,20 @@ class CustomerService:
     @classmethod
     def create_customer(cls, name, email, phone=None):
         """Endpoint-facing: valida e cria cliente, devolvendo JSON/HTTP response."""
+
         # validações básicas
         if not name or not email:
             return error_response("Nome e e-mail são obrigatórios!", 400)
+        
         email_norm = email.strip().lower()
         if not validate_email(email_norm):
             logger.error(f"Email inválido na criação de cliente: {email_norm}")
             return error_response("Email inválido!", 400)
+        
         if phone and not validate_phone(phone):
             logger.error(f"Telefone inválido na criação de cliente: {phone}")
             return error_response("Número de telemóvel inválido!", 400)
+        
         # verifica duplicado
         if Customer.query.filter_by(email=email_norm).first():
             return error_response("Já existe um cliente com esse e-mail!", 400)
