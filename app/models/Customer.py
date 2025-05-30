@@ -7,7 +7,7 @@ class Customer(BaseModel):
 
     id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String(100), nullable=False)
-    email = Column(String, nullable=True)
-    phone = Column(String(20), nullable=True)
+    email = Column(String(120), nullable=True, unique=True)
+    phone = Column(String(20), nullable=True, unique=True)
     registered_at = Column(DateTime, default=lambda: datetime.now(timezone.utc))
     active = Column(Boolean, default=True)

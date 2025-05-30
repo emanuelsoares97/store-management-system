@@ -12,8 +12,9 @@ logger = get_logger(__name__)
 def list_categories():
     """Endpoint para listar todas as categorias"""
     try:
-        categories, status = CategoryService.list_categories()
-        return jsonify(categories), status
+
+        return CategoryService.list_categories()
+    
     except Exception as e:
         logger.error(f"Erro ao listar categorias: {str(e)}", exc_info=True)
         return jsonify({"erro": "Erro ao carregar categorias."}), 500
@@ -24,19 +25,13 @@ def list_categories():
 def create_category():
     """Endpoint para criar uma nova categoria"""
     try:
-        data = request.get_json()
-        if not data:
-            logger.warning(f"Tentativa de registar nova categoria sem dados.")
-            return jsonify({"erro": "Nenhum dado enviado!"}), 400
+        # Tenta obter JSON do request, se for None ou inválido, usa dict vazio
+        data = request.get_json(silent=True) or {}
 
         name = data.get("name")
-        new_category, status = CategoryService.create_category(name)
         logger.info(f"Nova categoria criada {name}")
-        return jsonify(new_category), status
+        return CategoryService.create_category(name)
 
-    except ValueError as e:
-        logger.error(f"Erro ao criar nova categoria, {str(e)}", exc_info=True)
-        return jsonify({"erro": str(e)}), 400
     except Exception as e:
         logger.error(f"Erro ao criar categoria, {str(e)}", exc_info=True)
         return jsonify({"erro": "Erro ao criar categoria."}), 500
@@ -47,19 +42,14 @@ def create_category():
 def update_category(category_id):
     """Endpoint para atualizar uma categoria"""
     try:
-        data = request.get_json()
-        if not data:
-            return jsonify({"erro": "Nenhum dado enviado!"}), 400
+        # Tenta obter JSON do request, se for None ou inválido, usa dict vazio
+        data = request.get_json(silent=True) or {}
 
         name = data.get("name")
 
-        update_category, status = CategoryService.update_category(category_id, name)
         logger.info(f"Categoria atualizada: {name}")
-        return jsonify(update_category), status
+        return CategoryService.update_category(category_id, name)
 
-    except ValueError as e:
-        logger.error(f"Erro ao atualizar categoria, {str(e)}", exc_info=True)
-        return jsonify({"erro": str(e)}), 400
     except Exception as e:
         logger.error(f"Erro ao atualizar categoria, {str(e)}", exc_info=True)
         return jsonify({"erro": "Erro ao atualizar categoria."}), 500

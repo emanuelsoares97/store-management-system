@@ -21,33 +21,26 @@ def listar_vendas():
         logger.error(f"Erro ao listar vendas: {str(e)}")
         return jsonify({"erro": "Erro ao carregar vendas."}), 500
 
-@sale_bp.route("/register", methods=["POST"])
+@sale_bp.route('/register', methods=['POST'])
 @AuthService.token_required
-@AuthService.role_required("admin", "gerente", "user")
+@AuthService.role_required('admin', 'gerente', 'user')
 def registrar_venda():
-    """Endpoint para registrar uma venda"""
+    """Endpoint para registrar uma venda."""
+
     try:
-        data = request.get_json()
-        if not data:
-            logger.erro("Tentativa de registar venda sem dados")
-            return jsonify({"error": "Nenhum dado enviado!"}), 400
+        # Tenta obter JSON do request, se for None ou inválido, usa dict vazio
+        data = request.get_json(silent=True) or {}
 
-        customer_id = data.get("customer_id")
-        user_id = data.get("user_id")
-        product_id = data.get("product_id")
-        quantity = data.get("quantity")
+        customer_data = data.get('customer', {})
+        user_id = data.get('user_id')
+        product_id = data.get('product_id')
+        quantity = data.get('quantity')
 
-        if not all([customer_id, user_id, product_id, quantity]):
-            return jsonify({"error": "Todos os campos são obrigatórios!"}), 400
+        if not all([user_id, product_id, quantity]):
+            return {'error': 'Campos user_id, product_id e quantity são obrigatórios.'}, 400
 
-        new_sale, status = SaleService.register_sale(customer_id, user_id, product_id, quantity)
+        return SaleService.register_sale(customer_data, user_id, product_id, quantity)
 
-        logger.info(f"Venda registada com sucesso {new_sale}")
-        return jsonify(new_sale), status
-
-    except ValueError as e:
-        logger.warning(f"Erro ao registar venda: {str(e)}")
-        return jsonify({"error": str(e)}), 400
     except Exception as e:
-        logger.error(f"Erro ao registar venda: {str(e)}")
-        return jsonify({"error": "Erro ao registrar venda."}), 500
+        logger.error(f"Erro ao desativar product {str(e)}")
+        return jsonify({"error": "Erro ao desativar product."}), 500

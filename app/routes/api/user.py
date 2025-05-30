@@ -18,8 +18,9 @@ def list_users_actives():
     """Lista apenas os useres actives"""
     try:
         logger.info("Tentativa de listar useres active.")
-        users, status = UserService.list_users(active=True)
-        return jsonify(users), status
+
+        return UserService.list_users(active=True)
+    
     except Exception as e:
         logger.error(f"Erro ao listar useres actives: {str(e)}", exc_info=True)
         return jsonify({"erro": "Erro ao listar useres"}), 500
@@ -31,8 +32,9 @@ def list_all_users():
     """Lista all os useres, incluindo inactives"""
     try:
         logger.info("Tentativa de listar all os useres.")
-        useres = UserService.list_users(active=False)
-        return jsonify(useres), 200
+
+        return UserService.list_users(active=False)
+    
     except Exception as e:
         logger.error(f"Erro ao listar all os useres: {str(e)}", exc_info=True)
         return jsonify({"erro": "Erro ao listar useres"}), 500
@@ -45,15 +47,11 @@ def list_all_users():
 def create_user():
     """Cria um new user"""
     try:
-        data = request.get_json()
+        # Tenta obter JSON do request, se for None ou inválido, usa dict vazio
+        data = request.get_json(silent=True) or {}
         
-        if not data or "name" not in data or "email" not in data or "password" not in data:
-            logger.warning("Tentativa de criar user sem dados completos.")
-            return jsonify({"error": "Nome, email e senha são obrigatórios!"}), 400
-
         logger.info(f"Tentativa de criar user: {data.get('email')}")
-        response, status = UserService.create_user(data.get("name"), data.get("email"), data.get("password"))
-        return jsonify(response), status
+        return UserService.create_user(data.get("name"), data.get("email"), data.get("password"))
 
     except Exception as e:
         logger.error(f"Erro ao criar user: {str(e)}", exc_info=True)
@@ -65,14 +63,13 @@ def create_user():
 def atualizar_user(user_id):
     """Endpoint para atualizar um user"""
     try:
-        data = request.get_json()
+        # Tenta obter JSON do request, se for None ou inválido, usa dict vazio
+        data = request.get_json(silent=True) or {}
         
-        if not data:
-            return jsonify({"error": "Nenhum dado enviado!"}), 400
 
         logger.info(f"Tentativa de atualizar user ID: {user_id}")
 
-        result, status = UserService.update_user(
+        return UserService.update_user(
             user_id,
             name=data.get("name"),
             email=data.get("email"),
@@ -82,8 +79,6 @@ def atualizar_user(user_id):
             
             
         )
-
-        return jsonify(result), status
 
     except Exception as e:
         logger.error(f"Erro ao atualizar user ID {user_id}: {str(e)}", exc_info=True)
@@ -96,8 +91,8 @@ def desaivar_user(user_id):
     """Remove um user"""
     try:
         logger.info(f"Removido o user ID: {user_id}")
-        resposta, status = UserService.deactivate_user(user_id)
-        return jsonify(resposta), status
+ 
+        return UserService.deactivate_user(user_id)
     
     except Exception as e:
         logger.error(f"Erro ao remover user ID {user_id}: {str(e)}", exc_info=True)
@@ -109,8 +104,8 @@ def desaivar_user(user_id):
 @AuthService.role_required("admin")  # apenas admins podem reativar useres!
 def reactivate_user(user_id):
     """Reativa um user desativado"""
-    result, status = UserService.reactivate_user(user_id)
-    return jsonify(result), status
+
+    return UserService.reactivate_user(user_id)
 
 
 

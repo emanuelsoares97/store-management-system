@@ -3,6 +3,7 @@ from app.models.Product import Product
 from app.extensions import db
 from app.utils.logger_util import get_logger
 from app.utils.responses import success_response, error_response
+from app.services.CustomerService import CustomerService
 
 logger = get_logger(__name__)
 
@@ -10,25 +11,36 @@ class SaleService:
     @classmethod
     def list_sales(cls):
         sales = Sale.query.all()
-        logger.info(f"Lista de vendas carregadas, com {len(sales)} vendas.")
-        return success_response({"sales": [sale.to_dict() for sale in sales]})
+        logger.info(f"Lista de vendas carregadas: {len(sales)} registros.")
+        return success_response({"sales": [s.to_dict() for s in sales]})
 
     @classmethod
-    def register_sale(cls, customer_id, user_id, product_id, quantity):
+    def register_sale(cls, customer_data, user_id, product_id, quantity):
+        # obtém ou cria cliente (pode ser Guest)
+        customer = CustomerService.find_or_create(
+            name=customer_data.get("name"),
+            email=customer_data.get("email"),
+            phone=customer_data.get("phone")
+        )
+        if not customer:
+            return error_response("Erro ao obter/criar cliente.", 500)
+
+        # valida produto
         product = db.session.get(Product, product_id)
         if not product:
-            logger.warning(f"Produto com ID {product_id} não encontrado.")
+            logger.warning(f"Produto ID {product_id} não encontrado.")
             return error_response("Produto não encontrado!", 404)
         if quantity <= 0:
-            logger.warning("A quantidade deve ser maior que zero!")
-            return error_response("A quantidade deve ser maior que zero!", 400)
+            logger.warning("Quantidade deve ser maior que zero.")
+            return error_response("Quantidade inválida!", 400)
         if product.stock_quantity < quantity:
-            logger.warning("Estoque insuficiente para essa venda!")
-            return error_response("Estoque insuficiente para essa venda!", 400)
+            logger.warning("Estoque insuficiente.")
+            return error_response("Estoque insuficiente!", 400)
+
         try:
             total_value = product.price * quantity
             new_sale = Sale(
-                customer_id=customer_id,
+                customer_id=customer.id,
                 user_id=user_id,
                 product_id=product_id,
                 quantity=quantity,
@@ -38,9 +50,10 @@ class SaleService:
             product.stock_quantity -= quantity
             db.session.commit()
             db.session.refresh(new_sale)
-            logger.info(f"Venda registrada: Cliente {customer_id}, Produto {product_id}, Quantidade {quantity}")
+
+            logger.info(f"Venda registrada: Cliente {customer.name}, Produto {product.name}, Quantidade {quantity}")
             return success_response({"sale": new_sale.to_dict()}, "Venda registrada com sucesso!", 201)
         except Exception as e:
             db.session.rollback()
-            logger.error(f"Erro ao registrar venda: {e}")
+            logger.error(f"Erro ao registrar venda: {e}", exc_info=True)
             return error_response("Erro ao registrar venda", 500)

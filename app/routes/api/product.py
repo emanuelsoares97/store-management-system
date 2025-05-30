@@ -21,7 +21,6 @@ logger = get_logger(__name__)
 def list_products():
     """Endpoint para listar todos os products ativos"""
     try:
-
         products, status = ProductService.list_products()
 
         logger.info("Listando products ativos.")
@@ -38,10 +37,8 @@ def list_products():
 def create_product():
     """Endpoint para criar um novo product"""
     try:
-        data = request.get_json()
-        if not data:
-            logger.warning("Tentativa de criar product sem dados.")
-            return jsonify({"error": "Nenhum dado enviado!"}), 400
+        # Tenta obter JSON do request, se for None ou inválido, usa dict vazio
+        data = request.get_json(silent=True) or {}
 
         name = data.get("name")
         price = data.get("price")
@@ -67,20 +64,17 @@ def create_product():
 def update_product(product_id):
     """Endpoint para atualizar um product"""
     try:
-        data = request.get_json()
-        if not data:
-            return jsonify({"error": "Nenhum dado enviado!"}), 400
+        # Tenta obter JSON do request, se for None ou inválido, usa dict vazio
+        data = request.get_json(silent=True) or {}
 
-        result, status = ProductService.update_product(
+        return ProductService.update_product(
             product_id,
             name=data.get("name"),
-            price=data.get("name"),
-            stock=data.get("stock"),
+            price=data.get("price"),
+            stock=data.get("stock_quantity"),
             active=data.get("active"),
             category_id=data.get("category_id")
         )
-
-        return jsonify({"message": "product atualizado com sucesso!", "product": result}), status
 
     except ValueError as e:
         logger.warning(f"Erro ao atualizar product: {str(e)}")
@@ -98,13 +92,9 @@ def reativar_product(product_id):
     """Endpoint para reativar um product"""
 
     try:
-        result, status = ProductService.reactivate_product(product_id)
+
         logger.info(f"product reativo: {product_id}")
-        return jsonify(result), status
-    
-    except ValueError as e:
-        logger.warning(f"Erro ao reativar product {str(e)}")
-        return jsonify({"error": str(e)}), 400
+        return ProductService.reactivate_product(product_id)
     
     except Exception as e:
         logger.error(f"Erro ao reativar product {str(e)}")
@@ -116,13 +106,9 @@ def reativar_product(product_id):
 def desativar_product(product_id):
     """Endpoint para desativar um product"""
     try:
-        result, status = ProductService.desactivate_product(product_id)
+
         logger.info(f"product desativo: {product_id}")
-        return jsonify(result), status
-    
-    except ValueError as e:
-        logger.warning(f"Erro ao desativar product {str(e)}")
-        return jsonify({"error": str(e)}), 400
+        return ProductService.desactivate_product(product_id)
     
     except Exception as e:
         logger.error(f"Erro ao desativar product {str(e)}")

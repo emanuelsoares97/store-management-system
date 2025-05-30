@@ -9,11 +9,11 @@ logger = get_logger(__name__)
 @customer_bp.route("/active", methods=["GET"])
 @AuthService.token_required
 @AuthService.role_required("admin", "gerente", "user") 
-def listar_clientes():
+def list_customers():
     """Endpoint para listar clientes ativos"""
     try:
-        customer, status = CustomerService.list_customers()
-        return jsonify(customer), status
+        return CustomerService.list_customers()
+    
     except Exception as e:
         logger.error(f"Erro ao listar clientes: {str(e)}")
         return jsonify({"erro": "Erro ao carregar clientes."}), 500
@@ -24,19 +24,13 @@ def listar_clientes():
 def create_customer():
     """Endpoint para criar um novo cliente"""
     try:
-        data = request.get_json()
-        if not data:
-            logger.warning("Tentativa de criar cliente sem dados.")
-            return jsonify({"erro": "Nenhum dado enviado!"}), 400
+        # Tenta obter JSON do request, se for None ou inválido, usa dict vazio
+        data = request.get_json(silent=True) or {}
 
         name = data.get("name")
         email = data.get("email")
-
-        new_customer, status = CustomerService.create_customer(name, email)
         
-        return jsonify(new_customer), status
+        return CustomerService.create_customer(name, email)
 
-    except ValueError as e:
-        return jsonify({"erro": str(e)}), 400
     except Exception as e:
         return jsonify({"erro": "Erro ao criar cliente."}), 500

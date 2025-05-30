@@ -3,6 +3,7 @@ import re
 def validate_email(email: str) -> bool:
     """Valida se o email está em um formato correto."""
     padrao = r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$'
+    email = email.strip().lower()
     return bool(re.match(padrao, email))
 
 def validate_phone(telemovel: str) -> bool:

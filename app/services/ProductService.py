@@ -16,10 +16,13 @@ class ProductService:
 
     @classmethod
     def create_product(cls, name, price, stock_quantity, category_id):
+
         if not name or price is None or stock_quantity is None or not category_id:
             return error_response("Nome, preço, estoque e categoria são obrigatórios!", 400)
+        
         if price < 0 or stock_quantity < 0:
             return error_response("Preço e estoque devem ser valores positivos!", 400)
+        
         if Product.query.filter_by(name=name).first():
             return error_response("Já existe um produto com esse nome!", 409)
         try:

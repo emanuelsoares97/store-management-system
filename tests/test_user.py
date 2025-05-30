@@ -178,5 +178,7 @@ def test_list_all_users(client):
     )
     assert resp.status_code == 200
     data = resp.get_json()
-    assert isinstance(data, list)
+    assert isinstance(data, dict)
     assert len(data) > 0
+    assert isinstance(data["users"], list)
+    
