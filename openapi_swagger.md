@@ -449,4 +449,3 @@ Estes endpoints continuam existentes (ou podem ser mantidos em Blueprints puros)
 - Quando for expandir a documentação, adicione uma nova seção “**Fase 2**” e marque quais endpoints intermediários já foram migrados.  
 - Atualize as anotações de rota (ex.: `@ns.doc(...)` ou `@ns.expect(...)`) conforme for refinando os modelos de dados.  
 
-Dessa forma, você terá sempre documentado, no repositório, **o que é essencial para entregar o MVP** ao frontend e **o que pode ficar para uma fase posterior**. Boa sorte nos últimos ajustes, e sucesso nos estudos de Django!
