@@ -22,7 +22,13 @@ def create_app(config_class=Config):
 
     #configura CORS  para permitir requisições
 
-    CORS(app, resources={r"/api/*": {"origins": "*"}})
+    CORS(
+    app,
+    resources={r"/api/*": {"origins": "*"}},
+    supports_credentials=True,
+    methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"]
+)
+
         
     logger.info("Inicializando a aplicação Flask.")
     logger.debug(f"Configurações carregadas: {app.config}")
