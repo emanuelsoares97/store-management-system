@@ -8,20 +8,19 @@ basedir = Path(__file__).parent
 load_dotenv(basedir / '.env')
 
 raw_db = os.getenv("DATABASE_URL", "")
-if raw_db.startswith("sqlite:///"):
 
-    rel = raw_db.split("sqlite:///", 1)[1]
-    db_path = Path(rel)
-    if not db_path.is_absolute():
+# Render por vezes usa 'postgres://' garante que vai usar postgresql://
+if raw_db.startswith("postgres://"):
+    raw_db = raw_db.replace("postgres://", "postgresql://", 1)
 
-        db_path = basedir / db_path
-    db_uri = "sqlite:///" + db_path.resolve().as_posix()
-else:
-    # default para instance/db/database.db
+# Se não houver DATABASE_URL, usa SQLite local
+if not raw_db:
     db_path = basedir / "instance" / "db" / "database.db"
-    # garante a pasta
     os.makedirs(db_path.parent, exist_ok=True)
-    db_uri = "sqlite:///" + db_path.resolve().as_posix()
+    raw_db = "sqlite:///" + db_path.resolve().as_posix()
+
+db_uri = raw_db
+
 
 class Config:
     DEBUG = os.getenv("DEBUG", "False") == "True"
