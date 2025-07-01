@@ -5,6 +5,7 @@ from app.extensions import db, migrate
 from app.routes.api import init_routes
 from app.utils.logger_util import get_logger
 
+
 logger = get_logger(__name__)
 
 def create_app(config_class=Config):
