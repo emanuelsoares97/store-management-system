@@ -6,16 +6,16 @@ Este documento lista, em formato Markdown, quais endpoints devem estar obrigator
 
 ## 🚀 Endpoints Obrigatórios (MVP)
 
-Estes são os endpoints mínimos que o frontend vai consumir diretamente para o fluxo principal de autenticação, cadastro de cliente, listagem de produto e criação/listagem de vendas. Eles devem aparecer no Swagger/OpenAPI e estar funcionando antes de avançar com o frontend.
+Estes são os endpoints mínimos que o frontend vai consumir diretamente para o fluxo principal de autenticação, registo de cliente, listagem de produto e criação/listagem de vendas. Eles devem aparecer no Swagger/OpenAPI e estar funcionando antes de avançar com o frontend.
 
 ### 1. Autenticação
 
 - **POST `/auth/login`**  
-  - Descrição: Gera o token JWT (ou outro esquema de token) para o usuário fazer login.  
+  - Descrição: Gera o token JWT (ou outro esquema de token) para o utilizador fazer login.  
   - Payload (exemplo):
     ```json
     {
-      "email": "usuario@exemplo.com",
+      "email": "utilizador@exemplo.com",
       "password": "senha123"
     }
     ```

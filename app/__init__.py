@@ -1,4 +1,5 @@
 from flask import Flask
+from flask_cors import CORS
 from config import Config
 from app.extensions import db, migrate
 from app.routes.api import init_routes
@@ -17,6 +18,10 @@ def create_app(config_class=Config):
     """
     app = Flask(__name__, instance_relative_config=True)
     app.config.from_object(config_class)
+
+    #configura CORS  para permitir requisições
+
+    CORS(app, resources={r"/api/*": {"origins": "*"}})
         
     logger.info("Inicializando a aplicação Flask.")
     logger.debug(f"Configurações carregadas: {app.config}")
