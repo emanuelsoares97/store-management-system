@@ -20,8 +20,8 @@ def create_app(config_class=Config):
     app = Flask(__name__, instance_relative_config=True)
     app.config.from_object(config_class)
 
-    #configura CORS  para permitir requisições
 
+    #configura CORS  para permitir requisições
     CORS(
     app,
     resources={r"/api/*": {"origins": "*"}},

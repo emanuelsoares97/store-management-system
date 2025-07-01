@@ -17,10 +17,6 @@ if __name__ == "__main__":
     
     try:
         
-        with app.app_context():
-            migrate_upgrade()
-            seed_database()
-
         logger.info("Aplicação iniciada com sucesso. Rodando em modo debug: %s", Config.DEBUG)
         app.run(debug=Config.DEBUG)
 
