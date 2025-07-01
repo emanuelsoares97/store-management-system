@@ -9,7 +9,7 @@ load_dotenv(basedir / '.env')
 
 raw_db = os.getenv("DATABASE_URL", "")
 
-# Render por vezes usa 'postgres://' garante que vai usar postgresql://
+# garante que vai usar postgresql://
 if raw_db.startswith("postgres://"):
     raw_db = raw_db.replace("postgres://", "postgresql://", 1)
 
