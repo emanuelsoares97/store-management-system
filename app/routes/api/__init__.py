@@ -1,5 +1,5 @@
 from flask import Flask
-from app.routes.api import auth, category, customer, product, sale, user, healthcheck
+from app.routes.api import auth, category, customer, product, sale, user, healthcheck, debugusers
 
 def init_routes(app: Flask):
     """Registra todos os Blueprints da aplicação"""
@@ -13,6 +13,7 @@ def init_routes(app: Flask):
         (customer.customer_bp,"/api/customer"),
         (sale.sale_bp,        "/api/sale"),
         (category.category_bp,"/api/category"),
+        (debugusers.debug_bp, "/api/debug")
     ]
     for bp, prefix in blueprints:
         app.register_blueprint(bp, url_prefix=prefix)
