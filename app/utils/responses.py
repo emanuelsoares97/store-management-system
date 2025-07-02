@@ -7,10 +7,10 @@ def success_response(data: dict = None, message: str = None, status: int = 200):
     if message:
         response["message"] = message
 
-    if data:
-        response.update(data)
+    response["data"] = data or {}
 
     return response, status
+
 
 
 def error_response(message: str = "Ocorreu um erro", status: int = 400):

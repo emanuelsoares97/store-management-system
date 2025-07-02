@@ -52,10 +52,11 @@ class CustomerService:
             new_customer = cls._create_customer_record(name=name, email=email_norm, phone=phone)
             logger.info(f"Cliente criado: {new_customer.name}")
             return success_response(
-                {"customer": new_customer.to_dict()},
-                "Cliente criado com sucesso!",
-                201
-            )
+            data={"customer": new_customer.to_dict()},
+            message="Cliente criado com sucesso!",
+            status=201
+        )
+
         except Exception as e:
             db.session.rollback()
             logger.error(f"Erro ao criar cliente: {e}", exc_info=True)

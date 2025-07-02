@@ -97,7 +97,11 @@ class UserService:
             return error_response("Utilizador não encontrado!", 404)
         user.active = False
         db.session.commit()
-        return success_response(message=f"Utilizador '{user.name}' desativado com sucesso!")
+        return success_response(
+            data={"user": user.to_dict()},
+            message=f"Utilizador '{user.name}' desativado com sucesso!"
+    )
+
 
     @classmethod
     def reactivate_user(cls, user_id):

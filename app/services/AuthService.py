@@ -45,7 +45,7 @@ class AuthService:
     def validate_token(token):
         """Valida e decodifica um JWT, checando blacklist e expiração"""
         if not token:
-            return None, "Token em falta"
+            return None, "Token em falta para logout"
 
         if token.startswith("Bearer "):
             token = token.split(" ", 1)[1]
@@ -72,11 +72,11 @@ class AuthService:
             auth_header = request.headers.get("Authorization")
             payload, error = AuthService.validate_token(auth_header)
             if error:
-                return jsonify({"Alerta": error}), 401
+                return jsonify({"message": error}), 401
 
             user = db.session.get(User, payload.get("id"))
             if not user:
-                return jsonify({"Alerta": "Utilizador não encontrado"}), 401
+                return jsonify({"message": "Utilizador não encontrado"}), 401
 
             g.current_user = user
             g.token_jti = payload.get("jti")
@@ -92,7 +92,7 @@ class AuthService:
                 role = getattr(g.current_user, "role", None)
                 if role not in required_roles:
                     msg = f"Acesso negado, utilizador '{role}' sem permissão!"
-                    return jsonify({"Alerta": msg}), 403
+                    return jsonify({"message": msg}), 403
                 return f(*args, **kwargs)
             return decorated
         return wrapper

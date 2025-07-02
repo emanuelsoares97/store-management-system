@@ -24,6 +24,7 @@ class CategoryService:
             db.session.refresh(new_cat)
             logger.info(f"Categoria criada: {new_cat.name}")
             return success_response({"category": new_cat.to_dict()}, "Categoria criada com sucesso!", 201)
+        
         except Exception as e:
             db.session.rollback()
             logger.error(f"Erro ao criar categoria: {e}")
