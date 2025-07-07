@@ -16,6 +16,14 @@ class SaleService:
 
     @classmethod
     def register_sale(cls, customer_data, user_id, product_id, quantity):
+        try:
+            # Converte os dados recebidos do frontend para os tipos corretos
+            product_id = int(product_id)
+            quantity = int(quantity)
+        except (TypeError, ValueError):
+            logger.warning("product_id ou quantity inválidos.")
+            return error_response("Dados inválidos: product_id e quantity devem ser numéricos.", 400)
+
         # obtém ou cria cliente (pode ser Guest)
         customer = CustomerService.find_or_create(
             name=customer_data.get("name"),
