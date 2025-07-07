@@ -151,3 +151,52 @@ def test_reactivate_product(client):
     )
     assert response_reactivate.status_code == 200
     assert "reativado" in response_reactivate.json["message"].lower()
+
+def test_edit_product(client):
+    """Testa se um admin consegue editar um produto existente"""
+    # Login como admin
+    response_login = client.post("/api/auth/login", json={
+        "email": "admin@email.com",
+        "password": "123456"
+    })
+    assert response_login.status_code == 200
+    token = response_login.json["data"]["access_token"]
+
+    # Cria categoria
+    response_cat = client.post(
+        "/api/category/new",
+        json={"name": "Categoria Editar"},
+        headers={"Authorization": f"Bearer {token}"}
+    )
+    assert response_cat.status_code == 201
+    categoria_id = response_cat.json["data"]["category"]["id"]
+
+    # Cria produto
+    response_prod = client.post(
+        "/api/product/new",
+        json={
+            "name": "Produto Original",
+            "price": 10.0,
+            "stock_quantity": 5,
+            "category_id": categoria_id
+        },
+        headers={"Authorization": f"Bearer {token}"}
+    )
+    assert response_prod.status_code == 201
+    product_id = response_prod.json["data"]["product"]["id"]
+
+    # Edita produto
+    response_edit = client.patch(
+        f"/api/product/{product_id}/update",
+        json={
+            "name": "Produto Editado",
+            "price": 12.5,
+            "stock_quantity": 8
+        },
+        headers={"Authorization": f"Bearer {token}"}
+    )
+    assert response_edit.status_code == 201
+    data = response_edit.json["data"]["product"]
+    assert data["name"] == "Produto Editado"
+    assert data["price"] == 12.5
+    assert data["stock_quantity"] == 8

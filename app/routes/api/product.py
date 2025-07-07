@@ -50,7 +50,7 @@ def create_product():
         return error_response("Erro ao criar product.", 500)
 
 
-@product_bp.route("/<int:product_id>/update", methods=["PUT"])
+@product_bp.route("/<int:product_id>/update", methods=["PATCH"])
 @AuthService.token_required
 @AuthService.role_required("admin", "gerente")
 def update_product(product_id):
@@ -62,7 +62,7 @@ def update_product(product_id):
             product_id,
             name=data.get("name"),
             price=data.get("price"),
-            stock=data.get("stock_quantity"),
+            stock_quantity=data.get("stock_quantity"),
             active=data.get("active"),
             category_id=data.get("category_id")
         )
