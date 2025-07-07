@@ -9,7 +9,14 @@ class CategoryService:
     @classmethod
     def list_categories(cls):
         categories = Category.query.all()
-        return success_response({"categories": [c.to_dict() for c in categories]})
+        result = []
+        for c in categories:
+            try:
+                result.append(c.to_dict())
+            except Exception as e:
+                logger.error(f"Erro ao serializar categoria {c.id}: {e}")
+                continue
+        return success_response({"categories": result})
 
     @classmethod
     def create_category(cls, name: str):
