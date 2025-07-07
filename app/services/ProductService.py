@@ -70,7 +70,7 @@ class ProductService:
             return error_response("Erro ao atualizar produto", 500)
 
     @classmethod
-    def deactivate_product(cls, product_id):
+    def desactivate_product(cls, product_id):
         product = Product.query.get(product_id)
         if not product:
             return error_response("Produto não encontrado!", 404)
