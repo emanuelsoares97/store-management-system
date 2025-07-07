@@ -73,6 +73,9 @@ def update_product(product_id):
         logger.warning(f"Erro de validação ao atualizar product: {str(e)}")
         return error_response(str(e), 400)
     except Exception as e:
+        import traceback
+        print("ERRO AO EDITAR PRODUTO:")
+        traceback.print_exc()  # Mostra o erro completo no terminal
         logger.error(f"Erro inesperado ao atualizar product: {str(e)}", exc_info=True)
         return error_response("Erro ao atualizar product.", 500)
 
