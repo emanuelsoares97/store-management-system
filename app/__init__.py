@@ -26,7 +26,7 @@ def create_app(config_class=Config):
     app,
     resources={r"/api/*": {"origins": "*"}},
     supports_credentials=True,
-    methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"]
+    methods=["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"]
 )
 
         
