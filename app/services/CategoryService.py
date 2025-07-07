@@ -12,7 +12,7 @@ class CategoryService:
         result = []
         for c in categories:
             try:
-                result.append(c.to_dict())
+                result.append(c.to_dict_basic())
             except Exception as e:
                 logger.error(f"Erro ao serializar categoria {c.id}: {e}")
                 continue

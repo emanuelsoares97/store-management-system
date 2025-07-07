@@ -11,3 +11,9 @@ class Category(BaseModel):
     id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String(50), nullable=False, unique=True)
     products = relationship("Product", back_populates="category")
+
+    def to_dict_basic(self):
+        return {
+            "id": self.id,
+            "name": self.name
+        }
