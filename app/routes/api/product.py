@@ -45,6 +45,7 @@ def create_product():
         logger.warning(f"Erro de validação: {str(e)}")
         return error_response(str(e), 400)
     except Exception as e:
+
         logger.error(f"Erro inesperado ao criar product: {str(e)}", exc_info=True)
         return error_response("Erro ao criar product.", 500)
 
@@ -100,5 +101,9 @@ def desativar_product(product_id):
         logger.info(f"Product desativado: {product_id}")
         return deactivated
     except Exception as e:
+        import traceback
+        print("ERRO AO DESATIVAR PRODUTO:")
+        traceback.print_exc()  # Mostra o erro completo no terminal
         logger.error(f"Erro ao desativar product: {str(e)}", exc_info=True)
         return error_response("Erro ao desativar product.", 500)
+
