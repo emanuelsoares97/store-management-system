@@ -17,3 +17,11 @@ class Product(BaseModel):
     created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc))
     updated_at = Column(DateTime, default=lambda: datetime.now(timezone.utc), onupdate=lambda: datetime.now(timezone.utc))
 
+    def to_dict(self):
+        data = super().to_dict()
+        data['category'] = {
+            "id": self.category.id if self.category else None,
+            "name": self.category.name if self.category else None
+        }
+        return data
+
