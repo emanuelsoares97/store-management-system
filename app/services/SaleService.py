@@ -63,5 +63,8 @@ class SaleService:
             return success_response({"sale": new_sale.to_dict()}, "Venda registrada com sucesso!", 201)
         except Exception as e:
             db.session.rollback()
+            import traceback
+            print("ERRO AO EDITAR PRODUTO:")
+            traceback.print_exc()  # Mostra o erro completo no terminal
             logger.error(f"Erro ao registrar venda: {e}", exc_info=True)
             return error_response("Erro ao registrar venda", 500)
