@@ -47,20 +47,29 @@ class ProductService:
         product = Product.query.get(product_id)
         if not product:
             return error_response("Produto não encontrado!", 404)
+        
         if name:
             product.name = name
+
         if price is not None:
+            price = float(price)
             if price < 0:
-                return error_response("O preço não pode ser negativo!", 400)
+                raise ValueError("O preço não pode ser negativo.")
             product.price = price
+
         if stock_quantity is not None:
+            stock_quantity = int(stock_quantity)
             if stock_quantity < 0:
-                return error_response("O estoque não pode ser negativo!", 400)
+                raise ValueError("A quantidade em stock não pode ser negativa.")
+            
             product.stock_quantity = stock_quantity
+
         if active is not None:
             product.active = active
+
         if category_id:
             product.category_id = category_id
+            
         try:
             db.session.commit()
             return success_response({"product": product.to_dict()}, "Produto editado com sucesso!", 201)
