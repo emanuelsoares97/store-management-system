@@ -19,3 +19,26 @@ class Sale(BaseModel):
     customer = relationship("Customer", backref="purchases")
     user = relationship("User", backref="sales")
     product = relationship("Product", backref="sales")
+
+    def to_dict(self):
+        data = super().to_dict()
+        # Adiciona informações do usuário
+        data['user'] = {
+            "id": self.user.id if self.user else None,
+            "name": self.user.name if self.user else None,
+            "email": self.user.email if self.user else None
+        }
+        # Adiciona informações do produto
+        data['product'] = {
+            "id": self.product.id if self.product else None,
+            "name": self.product.name if self.product else None
+        }
+        # Adiciona informações do cliente
+        data['customer'] = {
+            "id": self.customer.id if self.customer else None,
+            "name": self.customer.name if self.customer else None
+        }
+
+        data['total_value']= self.total_value
+        
+        return data
