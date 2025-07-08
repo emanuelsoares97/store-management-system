@@ -16,6 +16,13 @@ class ProductService:
 
     @classmethod
     def create_product(cls, name, price, stock_quantity, category_id):
+        
+        try:
+            price = float(price)
+            stock_quantity = int(stock_quantity)
+            category_id = int(category_id)
+        except (TypeError, ValueError):
+            return error_response("Preço, estoque e categoria devem ser numéricos!", 400)
 
         if not name or price is None or stock_quantity is None or not category_id:
             return error_response("Nome, preço, estoque e categoria são obrigatórios!", 400)

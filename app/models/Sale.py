@@ -22,11 +22,11 @@ class Sale(BaseModel):
 
     def to_dict(self, include_relationships: bool = True, backref: bool = False):
         data = super().to_dict(include_relationships, backref)
-        # Garante que os campos simples estão presentes
+
         data['id'] = self.id
         data['quantity'] = self.quantity
         data['total_value'] = self.total_value
-        # Relacionamentos customizados
+
         data['user'] = {
             "id": self.user.id if self.user else None,
             "name": self.user.name if self.user else None,
