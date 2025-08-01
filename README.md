@@ -9,7 +9,7 @@ Este repositório foi criado para estudar e aprofundar conhecimentos no desenvol
 - Python (Flask) – Framework web para construção da API
 - SQLAlchemy – ORM para gerenciamento de banco de dados
 - JWT (JSON Web Token) – Autenticação segura para utilizadores
-- SQLite – Banco de dados relacional para armazenamento dos dados
+- PostgreSQL – Banco de dados relacional para armazenamento dos dados
 - Pytest – Testes automatizados
 - Werkzeug Security – Hash de senhas para segurança
 - Logging – Registro de eventos da aplicação
